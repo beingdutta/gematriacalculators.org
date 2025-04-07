@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+        
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1DQQSD51V4');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="#1 Advanced Gematria Calculator - Compute Hebrew, English and Simple Gematria values instantly. Best free Gematria calculation online for biblical numerology and text analysis.">
+    <meta name="keywords" content="Gematria calculator, Gematria calculation online, hebrew gematria calculator, best gematria calculator, gematria calculator hebrew, simple gematria calculator, free gematria calculator, gematria calculator free, english gematria calculator, bible gematria calculator, best hebrew gematria calculator">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/site-icon.png">
+    <title>Advanced Gematria Calculator - Hebrew/English/Simple Values</title>
+    <link rel="stylesheet" href="styles/gemat-style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="ad-space"></div>
+
+        <header class="header">
+            <img src="assets/header-image.webp" alt="Site Logo" id="themeLogo">
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            <h1>Advanced Gematria Calculator</h1>
+            <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy - To calculate gematria values)</p>
+        </header>
+
+        <main class="calculator">
+            <div class="input-group">
+                <input type="text" placeholder="Enter text to calculate..." id="inputText">
+                <button onclick="clearInput()" class="secondary" title="Clear input">Clear</button>
+            </div>
+            
+            <div class="button-container">
+                <button onclick="calculate()" class="calculate-btn">Calculate Gematria</button>
+            </div>
+
+            <div class="loading-container" id="loading">
+                <div class="spinner"></div>
+            </div>
+
+            <div class="result" id="result">
+                <div class="result-card">
+                    <button class="copy-btn" onclick="copyValue('hebrewValue', 'hebrewCopyNotification')">📋</button>
+                    <div class="copy-notification" id="hebrewCopyNotification">Copied!</div>
+                    <h3>Hebrew Gematria: <span id="hebrewValue">0</span></h3>
+                    <p id="hebrewBreakdown"></p>
+                </div>
+                <div class="result-card">
+                    <button class="copy-btn" onclick="copyValue('englishValue', 'englishCopyNotification')">📋</button>
+                    <div class="copy-notification" id="englishCopyNotification">Copied!</div>
+                    <h3>English Gematria: <span id="englishValue">0</span></h3>
+                    <p id="englishBreakdown"></p>
+                </div>
+                <div class="result-card">
+                    <button class="copy-btn" onclick="copyValue('simpleValue', 'simpleCopyNotification')">📋</button>
+                    <div class="copy-notification" id="simpleCopyNotification">Copied!</div>
+                    <h3>Simple Gematria: <span id="simpleValue">0</span></h3>
+                    <p id="simpleBreakdown"></p>
+                </div>
+
+                <div class="feedback">
+                    <p>How accurate do you feel these results are?</p>
+                    <button onclick="sendFeedback('😞')">😞</button>
+                    <button onclick="sendFeedback('😐')">😐</button>
+                    <button onclick="sendFeedback('😊')">😊</button>
+                    <div class="feedback-message" id="feedbackMessage"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="seo-section">
+            <h4>Discover Hidden Numerical Meanings</h4>
+            <p>Welcome to the best Gematria calculator online — your go-to tool for discovering the hidden numerical meanings behind words and phrases. Whether you're exploring the ancient secrets of Hebrew gematria, seeking spiritual insights through Bible Gematria, or simply curious about English or simple gematria values, our powerful and free gematria calculator makes it easy. Just enter your text, and get instant results in Hebrew, English, and Simple Gematria formats.</p>
+            <div class="example">
+                Example: Bible = 38 (Hebrew Gematria), 180 (English Gematria), 30 (Simple Gematria)
+            </div>
+        </div>
+
+        <div class="ad-space"></div>
+
+        <div class="seo-section">
+            <h4>Precision in Spiritual Numerology</h4>
+            <p>Our gematria calculation tool is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most reliable gematria calculator free today and dive into the world of symbolic number meanings with confidence.</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="recent-phrases">
+            <h4>Recent words and phrases calculated include:</h4>
+            <a href="#">divine matrix decoded</a> | 
+            <a href="#">elohim frequency 432</a> | 
+            <a href="#">sacred light of yahweh</a> | 
+            <a href="#">jesus lives forever in us</a> | 
+            <a href="#">truth hidden in plain sight</a> | 
+            <a href="#">metatron speaks in numbers</a> | 
+            <a href="#">alpha omega resonance</a> | 
+            <a href="#">peace over chaos always</a> | 
+            <a href="#">biblical codes revealed today</a>
+        </div>
+
+        <footer class="footer">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What is Gematria?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Gematria is an alphanumeric code of assigning a numerical value to a name, word or phrase based on its letters. It is commonly used in Jewish mysticism and biblical interpretation.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How accurate is this calculator?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Our calculator uses standardized Gematria values and is regularly updated to ensure accuracy. However, different traditions may use varying calculation methods.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I calculate phrases with spaces?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Yes! Our calculator automatically ignores spaces and special characters, focusing only on alphabetical characters.
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#blog">Blog</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+    <script src="gemat-script.js"></script>
+
+</body>
+</html>
