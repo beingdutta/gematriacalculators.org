@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set single header image
     const headerImage = document.getElementById('themeLogo');
     if (headerImage) {
-        headerImage.src = 'assets/header-image.webp';
+        headerImage.src = '/assets/header-image.webp';
     }
 });
 
