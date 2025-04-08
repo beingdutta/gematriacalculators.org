@@ -12,186 +12,20 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gematria Blog - Explore articles on biblical numerology, Hebrew gematria, and spiritual symbolism.">
-    <meta name="keywords" content="gematria blog, biblical numerology, hebrew numerology, spiritual symbolism, bible codes">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/site-icon.png">
+    <meta name="description" content="Gematria Calculator - Explore articles on biblical numerology, Hebrew gematria, and spiritual symbolism.">
+    <meta name="keywords" content="gematria name calculator, gematria value calculator, gematria numerology calculator, numerology gematria calculator, gematria.com calculator, how to use gematria calculator, what is a gematria calculator, what is gematria calculator, what is the gematria calculator, calculate gematria, calculator gematria">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/site-icon.png">
     <title>Gematria Insights Blog</title>
-    
-    <style>
-    /* Combined CSS Styles */
-    :root {
-        --primary: #2c3e50;
-        --secondary: #3498db;
-        --bg: #ffffff;
-        --text: #2c3e50;
-        --card-bg: #f8f9fa;
-        --transition: all 0.3s ease;
-        --error: #e74c3c;
-        --muted-text: #666;
-    }
+    <link rel="stylesheet" href="/styles/blog-collection.css">
 
-    [data-theme="dark"] {
-        --primary: #3498db;
-        --bg: #2c3e50;
-        --text: #ecf0f1;
-        --card-bg: #34495e;
-        --muted-text: #95a5a6;
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', system-ui, sans-serif;
-    }
-
-    body {
-        background: var(--bg);
-        color: var(--text);
-        transition: var(--transition);
-        line-height: 1.6;
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Header Styles */
-    .header {
-        text-align: center;
-        padding: 2rem 0;
-        position: relative;
-    }
-
-    #themeLogo {
-        max-width: 145px;
-        height: auto;
-        margin-bottom: 1rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .theme-toggle {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: 1px solid var(--primary);
-        color: var(--primary);
-        padding: 0.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: var(--transition);
-    }
-
-    /* Blog Content Styles */
-    .blog-content {
-        background: var(--card-bg);
-        border-radius: 12px;
-        padding: 2rem;
-        margin: 1rem 0;
-    }
-
-    .blog-heading {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: var(--primary);
-    }
-
-    .article-card {
-        background: var(--bg);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .article-card h3 {
-        transition: color 0.2s ease;
-    }
-
-    .article-card h3 a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .article-card h3:hover {
-        color: var(--secondary);
-    }
-
-    .article-date {
-        color: var(--muted-text);
-        font-size: 0.9rem;
-        margin: 0.5rem 0;
-    }
-
-    .article-excerpt {
-        color: var(--text);
-        margin: 1rem 0;
-        line-height: 1.6;
-    }
-
-    .read-more {
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 500;
-        display: inline-block;
-        margin-top: 1rem;
-    }
-
-    .read-more:hover {
-        text-decoration: underline;
-        color: var(--secondary);
-    }
-
-    /* Footer Styles */
-    .footer {
-        margin-top: auto;
-        padding: 2rem 0;
-        text-align: center;
-    }
-
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-    }
-
-    .footer-links a {
-        color: var(--text);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-        color: var(--primary);
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            padding: 10px;
-        }
-        .footer-links {
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="ad-space"></div>
 
         <header class="header">
-            <img src="assets/header-image.webp" alt="Site Logo" id="themeLogo">
+            <button class="back-button" onclick="window.history.back()">← Back</button>
+            <img src="/assets/header-image.webp" alt="Site Logo" id="themeLogo">
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
             <h1>Gematria Insights Blog</h1>
             <p class="subtitle">(Exploring the numerical mysteries of sacred texts)</p>
@@ -201,37 +35,37 @@
             <h2 class="blog-heading">Latest Articles</h2>
             
             <div class="article-card">
-                <h3><a href="./articles/article-1.html">The Secret Code of Genesis</a></h3>
-                <h4 class="article-date">Published: March 15, 2024</h4>
-                <p class="article-excerpt">Discover how gematria reveals hidden patterns in the first book of the Bible. Explore the numerical significance of creation narratives and patriarch ages...</p>
-                <a href="/article-secret-code-genesis" class="read-more">Read more →</a>
+                <h3><a href="/articles/What-is-a-Gematria-Calculator.html">What is a Gematria Calculator? Unveiling the Mystical Number Code</a></h3>
+                <h4 class="article-date">Published: April 08, 2025</h4>
+                <p class="article-excerpt">Gematria is most commonly associated with Hebrew, where each letter has a corresponding number. But it also exists in Greek, English, and other languages....</p>
+                <a href="/articles/What-is-a-Gematria-Calculator.html" class="read-more">Read more →</a>
             </div>
 
             <div class="article-card">
-                <h3><a href="/article-jesus-hebrew-numerology">Jesus in Hebrew Numerology</a></h3>
-                <h4 class="article-date">Published: March 12, 2024</h4>
-                <p class="article-excerpt">Uncover the messianic numbers associated with Jesus's name in Hebrew gematria. Learn how 888 connects to divine redemption concepts...</p>
-                <a href="/article-jesus-hebrew-numerology" class="read-more">Read more →</a>
+                <h3><a href="/articles/What-is-Gematria-in-your-own-words.html">What is Gematria in your own words?</a></h3>
+                <h4 class="article-date">Published: April 7, 2024</h4>
+                <p class="article-excerpt">Gematria is an ancient system of assigning numerical values to letters, words, or phrases. It’s most often associated with Hebrew, but it also appears in Greek, English...</p>
+                <a href="/articles/What-is-Gematria-in-your-own-words.html" class="read-more">Read more →</a>
             </div>
 
             <div class="article-card">
-                <h3><a href="/article-sacred-geometry-numbers">Sacred Geometry & Numbers</a></h3>
-                <h4 class="article-date">Published: March 8, 2024</h4>
-                <p class="article-excerpt">Explore the intersection of geometric patterns and biblical numerology. How the golden ratio appears in temple measurements and creation...</p>
-                <a href="/article-sacred-geometry-numbers" class="read-more">Read more →</a>
+                <h3><a href="/articles/What-is-the-truth-about-gematria.html">What is the Truth About Gematria?</a></h3>
+                <h4 class="article-date">Published: April 3, 2024</h4>
+                <p class="article-excerpt">Discover the truth about Gematria. Learn how Gematria calculators, including Hebrew, Jewish, and Bible Gematria tools, reveal hidden meanings through numerology....</p>
+                <a href="/articles/What-is-the-truth-about-gematria.html" class="read-more">Read more →</a>
             </div>
             
             <div class="article-card">
-                <h3><a href="/article-sacred-geometry-numbers">Sacred Geometry & Numbers</a></h3>
-                <h4 class="article-date">Published: March 8, 2024</h4>
-                <p class="article-excerpt">Explore the intersection of geometric patterns and biblical numerology. How the golden ratio appears in temple measurements and creation...</p>
-                <a href="/article-sacred-geometry-numbers" class="read-more">Read more →</a>
+                <h3><a href="/articles/Is-There-Any-Merit-in-Gematria.html">Is There Any Merit in Gematria?</a></h3>
+                <h4 class="article-date">Published: April 1, 2024</h4>
+                <p class="article-excerpt">Explore whether there's merit in Gematria. Learn how Gematria calculators reveal hidden meanings in words and scriptures using Hebrew ....</p>
+                <a href="/articles/Is-There-Any-Merit-in-Gematria.html" class="read-more">Read more →</a>
             </div>
         </main>
 
         <footer class="footer">
             <div class="footer-links">
-                <a href="blog.html">Blog</a>
+                <a href="/blog-collections.html">Blog</a>
                 <a href="#about">About Us</a>
                 <a href="#contact">Contact Us</a>
                 <a href="terms-conditions.html">Terms & Conditions</a>
@@ -240,6 +74,6 @@
         </footer>
     </div>
     
-    <script src="gemat-script.js"></script>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
