@@ -56,3 +56,73 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+#themeLogo {
+    max-width: 120px;  /* Maximum width */
+    height: auto;      /* Maintain aspect ratio */
+    width: auto;       /* Prevent distortion */
+    margin-bottom: 1rem;
+    display: block;    /* Ensure proper centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+/* Footer Styles */
+.footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
