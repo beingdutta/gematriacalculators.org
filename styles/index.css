@@ -87,7 +87,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ body {
 
 .header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: relative;
 }
 
@@ -247,7 +247,7 @@ button.secondary {
 }
 
 .ad-space {
-    margin: 2rem 0;
+    margin: 1rem 0;
     height: 100px;
     background: var(--card-bg);
     display: flex;
@@ -390,7 +390,7 @@ button.secondary {
     text-align: center;
     margin-top: 0.5rem;
     font-size: 1.0rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
