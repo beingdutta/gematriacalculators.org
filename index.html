@@ -16,10 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="#1 Advanced Gematria Calculator - Compute Hebrew, English and Simple Gematria values instantly. Best free Gematria calculation online for biblical numerology and text analysis.">
     <meta name="keywords" content="Gematria calculator, Gematria calculation online, hebrew gematria calculator, best gematria calculator, gematria calculator hebrew, simple gematria calculator, free gematria calculator, gematria calculator free, english gematria calculator, bible gematria calculator, best hebrew gematria calculator">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/site-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/site-icon.png">
     <title>Advanced Gematria Calculator - Hebrew/English/Simple Values</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="/styles/index.css">
     <link rel="canonical" href="https://gematriacalculators.org/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
 
 </head>
 <body>
@@ -41,7 +44,9 @@
             
             <div class="button-container">
                 <button onclick="calculate()" class="calculate-btn">Calculate Gematria</button>
+                <button onclick="calculateAndDownload()" class="calculate-btn">Download PDF Report</button>
             </div>
+
 
             <div class="loading-container" id="loading">
                 <div class="spinner"></div>
@@ -106,6 +111,8 @@
             <a href="#">peace over chaos always</a> | 
             <a href="#">biblical codes revealed today</a>
         </div>
+
+        <div class="global-feedback-message" id="globalFeedback"></div>
 
         <footer class="footer">
             <div class="faq-item">
