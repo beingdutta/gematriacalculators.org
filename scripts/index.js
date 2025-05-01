@@ -81,7 +81,7 @@ function calculate() {
             globalFeedback.style.display = 'block';
             setTimeout(() => {
                 globalFeedback.style.display = 'none';
-            }, 3000);
+            }, 5000);
 
         } catch (error) {
             console.error('Calculation error:', error);
