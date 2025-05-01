@@ -185,8 +185,8 @@ button:hover {
 
 /* Update button styles */
 button.calculate-btn {
-    width: 70%; /* Full width of container */
-    padding: 1rem 0.5rem; /* Adjust padding for better text fit */
+    width: 70%; 
+    padding: 1rem 0.1rem; /* Adjust padding for better text fit */
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -425,3 +425,23 @@ button.secondary {
     from { bottom: -50px }
     to { bottom: 20px }
 }
+
+/* hide the result area until decoding happens */
+.decode-result {
+    margin-top: 2rem;
+    display: none;
+}
+/* make our warning note stand out */
+.note {
+    color: var(--error);
+    font-style: italic;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  /* hide result until after decode */
+  .decode-result {
+    margin-top: 2rem;
+    display: none;
+  }
+  

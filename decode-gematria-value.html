@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decode Gematria Values</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="/assets/header-image.webp" alt="site logo" id="themeLogo">
+      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+      <h1>Decode Gematria Values</h1>
+      <p class="subtitle">
+        Paste your English-Gematria totals (e.g. <code>312</code> or <code>312, 678</code>)
+        to get back a best-effort letter sequence.
+      </p>
+      <p class="note">
+        100 % accuracy in decoding gematria values is not possible technically and mathematically.
+      </p>
+    </header>
+
+    <main class="calculator">
+      <div class="input-group">
+        <input
+          type="text"
+          id="decodeInput"
+          placeholder="Enter totals, e.g. 312 678 978"
+        >
+        <button onclick="clearDecodeInput()" class="secondary" title="Clear">
+          Clear
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button onclick="decode()" class="calculate-btn">
+          Decode Gematria Value
+        </button>
+      </div>
+
+      <div class="loading-container" id="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="decode-result" id="decodeResult">
+        <div class="result-card">
+          <button class="copy-btn"
+                  onclick="copyValue('decodedText','decodeCopyNotification')">
+            📋
+          </button>
+          <div class="copy-notification" id="decodeCopyNotification">
+            Copied!
+          </div>
+          <h3>Decoded Text: <span id="decodedText"></span></h3>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/scripts/decode.js"></script>
+</body>
+</html>

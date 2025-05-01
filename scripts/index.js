@@ -182,6 +182,10 @@ function generatePDFContent(input, results) {
     return doc;
 }
 
+function decode() {
+    window.location.href = "/decode-gematria-value.html";
+  }
+
 // Update calculateAndDownload function
 function calculateAndDownload() {
     const input = document.getElementById('inputText');
