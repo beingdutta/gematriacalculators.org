@@ -1,128 +1,65 @@
-/* Inherit all styles from homepage */
-:root {
-    --primary: #2c3e50;
-    --secondary: #3498db;
-    --bg: #ffffff;
-    --text: #2c3e50;
-    --card-bg: #f8f9fa;
-    --transition: all 0.3s ease;
+
+.policy-page {
+  padding: 2rem;
 }
 
-[data-theme="dark"] {
-    --primary: #3498db;
-    --bg: #2c3e50;
-    --text: #ecf0f1;
-    --card-bg: #34495e;
-}
-
-body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h1 {
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 2rem;
+.policy-page h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
 }
 
 .policy-section {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--card-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-h2 {
-    color: var(--secondary);
-    margin-bottom: 1rem;
+.policy-section h2 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.policy-section p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.policy-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.policy-section li {
+  margin-bottom: 0.5rem;
 }
 
 a {
-    color: var(--primary);
-    text-decoration: none;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
-.header {
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-}
-
-#themeLogo {
-    max-width: 120px;  /* Maximum width */
-    height: auto;      /* Maintain aspect ratio */
-    width: auto;       /* Prevent distortion */
-    margin-bottom: 1rem;
-    display: block;    /* Ensure proper centering */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-
-/* Footer Styles */
-.footer {
-    margin-top: auto;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary);
+  color: var(--secondary);
 }
 
 .back-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: none;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transition);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
+@media (max-width: 768px) {
+  .policy-page {
+    padding: 1.5rem;
+  }
+}
