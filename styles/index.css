@@ -83,7 +83,7 @@ body {
   padding: 0.75rem;
   margin-top: 1rem;
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* ——— Calculator ——— */
@@ -91,8 +91,8 @@ body {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem; /* ✅ Add gap below buttons */
 }
 
 .input-group {
@@ -156,19 +156,15 @@ button,
   color: #fff;
 }
 
-.calculate-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
 .download-btn {
   background: var(--secondary);
   color: #fff;
 }
 
+.calculate-btn:hover,
 .download-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .decode-btn {
@@ -186,7 +182,7 @@ button,
 .loading-container {
   display: none;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 5rem 0;
 }
 
 .spinner {
@@ -206,6 +202,7 @@ button,
 .result {
   display: none;
   animation: fadeIn 0.3s ease-out;
+  margin: 2rem 0; /* ✅ Adds visual space before and after */
 }
 
 @keyframes fadeIn {
@@ -214,40 +211,43 @@ button,
 
 .result-card {
   background: var(--bg);
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 1rem 0rem 1rem 1rem; /* extra right padding */
+  margin: 1.5rem 0;
   border-radius: var(--radius);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
 .copy-btn {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 0rem;
+  right: 0rem;
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   color: var(--primary);
+  z-index: 2;
 }
 
 .copy-notification {
   position: absolute;
-  top: 2.5rem;
-  right: 0.75rem;
+  top: 3rem;
+  right: 0.7rem;
   background: var(--primary);
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   font-size: 0.75rem;
   display: none;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 /* ——— Feedback ——— */
 .feedback {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .feedback p {
@@ -284,6 +284,7 @@ button,
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .footer-links a {
@@ -296,12 +297,19 @@ button,
   color: var(--primary);
 }
 
+footer .copyright {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* ——— FAQ Styling ——— */
 .faq-item {
   margin: 1rem 0;
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
@@ -339,7 +347,7 @@ button,
 }
 
 @keyframes shake {
-  0%,100% { transform: translateX(0); }
+  0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-4px); }
   75% { transform: translateX(4px); }
 }
@@ -354,25 +362,11 @@ button,
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius);
   display: none;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* add space after the last FAQ item, before the footer links */
 .faq-item:last-of-type {
   margin-bottom: 3rem;
-}
-
-/* add extra gap above the footer menu links */
-.footer-links {
-  margin-top: 3rem;
-}
-
-/* bump the copyright down a bit more */
-footer .copyright {
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 /* ——— Responsive ——— */
@@ -381,9 +375,7 @@ footer .copyright {
     flex-direction: column;
     align-items: stretch;
   }
-}
 
-@media (max-width: 768px) {
   .footer-links {
     flex-direction: column;
     align-items: center;
@@ -406,5 +398,85 @@ footer .copyright {
   .input-group input,
   .input-group .secondary {
     width: 100%;
+  }
+
+  .result-card {
+    margin: 1rem 0 !important;
+    padding: 1.25rem;
+  }
+
+  .result-card h3 {
+    font-size: 1rem;
+  }
+
+  .result-card p {
+    position: relative;
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    top: 0.3rem;
+    right: 0.3rem; /* ✅ small-screen alignment */
+    font-size: 1rem;
+  }
+
+  .copy-notification {
+    top: 1.75rem;
+    right: 0.3rem;
+  }
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback p {
+    text-align: center;
+  }
+
+  .feedback button {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    display: inline-block;
+  }
+
+  .feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-card {
+    /* keep the same top/left/bottom padding, but add extra on the right */
+    padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+  }
+}
+
+/* right after your [data-theme="dark"] block, or anywhere in your global CSS */
+[data-theme="dark"] .recent-phrases a {
+  color: var(--text);
+  text-decoration: none; /* optional, if you don’t want underlines */
+}
+
+[data-theme="dark"] .recent-phrases a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  /* hide the copy-to-clipboard icon */
+  .copy-btn {
+    display: none;
+  }
+  /* also hide the floating “Copied!” message */
+  .copy-notification {
+    display: none !important;
   }
 }

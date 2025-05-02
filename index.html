@@ -54,6 +54,7 @@
         <a href="/decode-gematria-value.html" class="decode-btn">Decode Gematria</a>
       </div>
 
+
       <div class="loading-container" id="loading">
         <div class="spinner"></div>
       </div>
@@ -80,9 +81,11 @@
 
         <div class="feedback">
           <p>How accurate are these results?</p>
-          <button onclick="sendFeedback('😞')">😞</button>
-          <button onclick="sendFeedback('😐')">😐</button>
-          <button onclick="sendFeedback('😊')">😊</button>
+          <div class="feedback-buttons">
+            <button onclick="sendFeedback('😞')">😞</button>
+            <button onclick="sendFeedback('😐')">😐</button>
+            <button onclick="sendFeedback('😊')">😊</button>
+          </div>
           <div class="feedback-message" id="feedbackMessage"></div>
         </div>
       </div>
