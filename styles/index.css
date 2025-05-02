@@ -1,398 +1,410 @@
 /* ——— Variables & Typography ——— */
 :root {
-    --primary: #4A90E2;
-    --secondary: #50E3C2;
-    --bg: #F5F7FA;
-    --text: #333333;
-    --card-bg: #FFFFFF;
-    --muted: #777777;
-    --error: #E74C3C;
-    --transition: all 0.2s ease;
-    --radius: 8px;
-    --font: 'Inter', sans-serif;
-  }
-  
-  [data-theme="dark"] {
-    --bg: #2B2D42;
-    --text: #EDF2F4;
-    --card-bg: #3F4159;
-    --muted: #A8AAB3;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font);
-  }
-  
-  body {
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    transition: var(--transition);
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* ——— Header ——— */
-  .header {
-    text-align: center;
-    position: relative;
-    padding: 1.5rem 0;
-  }
-  
-  #themeLogo {
-    width: 120px;
-    margin: 0 auto 1rem;
-    display: block;
-  }
-  
-  .theme-toggle {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--text);
-  }
-  
-  /* ——— Subtitle & Example ——— */
-  .subtitle {
-    color: var(--muted);
-    font-weight: 300;
-    margin-top: 0.5rem;
-  }
-  
-  .seo-section {
-    text-align: center;
-    margin: 2rem 0;
-  }
-  
-  .example {
-    background: var(--card-bg);
-    padding: 0.75rem;
-    margin-top: 1rem;
-    border-radius: var(--radius);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  /* ——— Calculator ——— */
-  .calculator {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-  }
-  
-  .input-group {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .input-group input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--muted);
-    border-radius: var(--radius);
-    font-size: 1rem;
-    transition: border-color var(--transition);
-  }
-  
-  .input-group input:focus {
-    outline: none;
-    border-color: var(--primary);
-  }
-  
-  .input-group .secondary {
-    background: var(--card-bg);
-    border: 1px solid var(--muted);
-    color: var(--muted);
-    font-size: 1.2rem;
-    border-radius: var(--radius);
-    transition: var(--transition);
-  }
-  
-  .input-group .secondary:hover {
-    background: var(--muted);
-    color: var(--card-bg);
-  }
-  
-  /* ——— Buttons ——— */
+  --primary: #4A90E2;
+  --secondary: #50E3C2;
+  --bg: #F5F7FA;
+  --text: #333333;
+  --card-bg: #FFFFFF;
+  --muted: #777777;
+  --error: #E74C3C;
+  --transition: all 0.2s ease;
+  --radius: 8px;
+  --font: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #2B2D42;
+  --text: #EDF2F4;
+  --card-bg: #3F4159;
+  --muted: #A8AAB3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ——— Header ——— */
+.header {
+  text-align: center;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+#themeLogo {
+  width: 120px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ——— Subtitle & Example ——— */
+.subtitle {
+  color: var(--muted);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.seo-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.example {
+  background: var(--card-bg);
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ——— Calculator ——— */
+.calculator {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color var(--transition);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.input-group .secondary {
+  background: var(--card-bg);
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  font-size: 1.2rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.input-group .secondary:hover {
+  background: var(--muted);
+  color: var(--card-bg);
+}
+
+/* ——— Buttons ——— */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+button,
+.decode-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition) transform 0.1s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculate-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.download-btn {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.decode-btn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.decode-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ——— Loading ——— */
+.loading-container {
+  display: none;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ——— Results ——— */
+.result {
+  display: none;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+.result-card {
+  background: var(--bg);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.copy-notification {
+  position: absolute;
+  top: 2.5rem;
+  right: 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  display: none;
+}
+
+/* ——— Feedback ——— */
+.feedback {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.feedback p {
+  margin-bottom: 0.5rem;
+}
+
+.feedback button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.feedback button:hover {
+  transform: scale(1.2);
+}
+
+.feedback-message {
+  color: var(--primary);
+  margin-top: 0.75rem;
+  display: none;
+}
+
+/* ——— Footer ——— */
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* ——— FAQ Styling ——— */
+.faq-item {
+  margin: 1rem 0;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .chevron {
+  transform: rotate(180deg);
+}
+
+/* ——— Utilities ——— */
+.error {
+  animation: shake 0.3s;
+  border-color: var(--error) !important;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.global-feedback-message {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  display: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* add space after the last FAQ item, before the footer links */
+.faq-item:last-of-type {
+  margin-bottom: 3rem;
+}
+
+/* add extra gap above the footer menu links */
+.footer-links {
+  margin-top: 3rem;
+}
+
+/* bump the copyright down a bit more */
+footer .copyright {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 768px) {
   .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  button,
-  .decode-btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: var(--radius);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: var(--transition) transform 0.1s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .calculate-btn {
-    background: var(--primary);
-    color: #fff;
-  }
-  
-  .calculate-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  .download-btn {
-    background: var(--secondary);
-    color: #fff;
-  }
-  
-  .download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  .decode-btn {
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-  }
-  
-  .decode-btn:hover {
-    background: var(--primary);
-    color: #fff;
-  }
-  
-  /* ——— Loading ——— */
-  .loading-container {
-    display: none;
-    justify-content: center;
-    margin: 1rem 0;
-  }
-  
-  .spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid var(--primary);
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  
-  /* ——— Results ——— */
-  .result {
-    display: none;
-    animation: fadeIn 0.3s ease-out;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; } to { opacity: 1; }
-  }
-  
-  .result-card {
-    background: var(--bg);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: var(--radius);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position: relative;
-  }
-  
-  .copy-btn {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: var(--primary);
-  }
-  
-  .copy-notification {
-    position: absolute;
-    top: 2.5rem;
-    right: 0.75rem;
-    background: var(--primary);
-    color: #fff;
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
-    font-size: 0.75rem;
-    display: none;
-  }
-  
-  /* ——— Feedback ——— */
-  .feedback {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  
-  .feedback p {
-    margin-bottom: 0.5rem;
-  }
-  
-  .feedback button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: transform 0.1s ease;
-  }
-  
-  .feedback button:hover {
-    transform: scale(1.2);
-  }
-  
-  .feedback-message {
-    color: var(--primary);
-    margin-top: 0.75rem;
-    display: none;
-  }
-  
-  /* ——— Footer ——— */
-  .footer {
-    text-align: center;
-    padding: 1.5rem 0;
-  }
-  
+}
+
+@media (max-width: 768px) {
   .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .footer-links a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color var(--transition);
-  }
-  
-  .footer-links a:hover {
-    color: var(--primary);
-  }
-  
-  /* ——— FAQ Styling ——— */
-  .faq-item {
-    margin: 1rem 0;
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-  
-  .faq-question {
-    padding: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .faq-answer {
-    padding: 0 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-  }
-  
-  .faq-item.active .faq-answer {
-    max-height: 500px;
-    padding-bottom: 1rem;
-  }
-  
-  .chevron {
-    transition: transform 0.3s ease;
-  }
-  
-  .faq-item.active .chevron {
-    transform: rotate(180deg);
-  }
-  
-  /* ——— Utilities ——— */
-  .error {
-    animation: shake 0.3s;
-    border-color: var(--error) !important;
-  }
-  
-  @keyframes shake {
-    0%,100% { transform: translateX(0); }
-    25% { transform: translateX(-4px); }
-    75% { transform: translateX(4px); }
-  }
-  
-  .global-feedback-message {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary);
-    color: #fff;
-    padding: 0.75rem 1.25rem;
-    border-radius: var(--radius);
-    display: none;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  }
-  
-  /* add space after the last FAQ item, before the footer links */
-  .faq-item:last-of-type {
-    margin-bottom: 3rem;
-  }
-  
-  /* add extra gap above the footer menu links */
-  .footer-links {
-    margin-top: 3rem;
-  }
-  
-  /* bump the copyright down a bit more */
-  footer .copyright {
-    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
     text-align: center;
-    color: var(--muted);
-    font-size: 0.9rem;
   }
-  
-  /* ——— Responsive ——— */
-  @media (max-width: 768px) {
-    .button-container {
-      flex-direction: column;
-      align-items: stretch;
-    }
+}
+
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  @media (max-width: 768px) {
-    .footer-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-links a {
-      display: block;
-      width: 100%;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
+
+  .input-group input,
+  .input-group .secondary {
+    width: 100%;
   }
+}
