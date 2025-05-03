@@ -44,60 +44,64 @@ function calculateGematria(word) {
     };
 }
 
+
 function calculate() {
     const inputEl = document.getElementById('inputText');
-    const query = inputEl.value.trim();
-
-    // Give a fake timeout of 500 ms(5s).
+    const query   = inputEl.value.trim();
     if (!query) {
       inputEl.classList.add('error');
-      setTimeout(() => inputEl.classList.remove('error'), 600);
+      setTimeout(() => inputEl.classList.remove('error'), 500);
       alert('Please enter some text to calculate!');
       return;
     }
   
-    const loading = document.getElementById('loading');
-    const resultDiv = document.querySelector('.result');
-    const globalFdbk = document.getElementById('globalFeedback');
+    const loading     = document.getElementById('loading');
+    const resultDiv   = document.querySelector('.result');
+    const globalFdbk  = document.getElementById('globalFeedback');
   
-    loading.style.display = 'flex';
+    // show spinner immediately
+    loading.style.display   = 'flex';
     resultDiv.style.display = 'none';
   
-    // Send POST to calculate.php
-    fetch('calculate.php', {
-      method: 'POST',
-      headers: {'Content-Type':'application/x-www-form-urlencoded'},
-      body: 'input=' + encodeURIComponent(query)
-    })
-    .then(res => res.json())
-    .then(data => {
-      // Update totals
-      document.getElementById('hebrewValue').textContent  = data.hebrew.total;
-      document.getElementById('simpleValue').textContent  = data.simple.total;
-      document.getElementById('englishValue').textContent = data.english.total;
+    // wait 3s, then fire your AJAX + UI update
+    setTimeout(() => {
+      fetch('calculate.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: 'input=' + encodeURIComponent(query)
+      })
+      .then(res => res.json())
+      .then(data => {
+        // totals
+        document.getElementById('hebrewValue').textContent  = data.hebrew.total;
+        document.getElementById('englishValue').textContent = data.english.total;
+        document.getElementById('simpleValue').textContent  = data.simple.total;
   
-      // Update breakdowns
-      document.getElementById('hebrewBreakdown').innerHTML  =
-        'Calculation: ' + data.hebrew.breakdown.join(' + ');
-      document.getElementById('simpleBreakdown').innerHTML  =
-        'Calculation: ' + data.simple.breakdown.join(' + ');
-      document.getElementById('englishBreakdown').innerHTML =
-        'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
+        // breakdowns
+        document.getElementById('hebrewBreakdown').innerHTML  =
+          'Calculation: ' + data.hebrew.breakdown.join(' + ');
+        document.getElementById('englishBreakdown').innerHTML =
+          'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
+        document.getElementById('simpleBreakdown').innerHTML  =
+          'Calculation: ' + data.simple.breakdown.join(' + ');
   
-      resultDiv.style.display = 'block';
-      globalFdbk.textContent = '✓ Results calculated successfully!';
-      globalFdbk.style.display = 'block';
-      setTimeout(() => globalFdbk.style.display = 'none', 7000);
-    })
-    .catch(err => {
-      console.error(err);
-      globalFdbk.textContent = '⚠️ Error calculating results';
-      globalFdbk.style.display = 'block';
-      setTimeout(() => globalFdbk.style.display = 'none', 3000);
-    })
-    .finally(() => {
-      loading.style.display = 'none';
-    });
+        resultDiv.style.display = 'block';
+        globalFdbk.textContent  = '✓ Results calculated successfully!';
+        globalFdbk.style.display = 'block';
+        setTimeout(() => globalFdbk.style.display = 'none', 7000);
+      })
+      .catch(err => {
+        console.error(err);
+        globalFdbk.textContent = '⚠️ Error calculating results';
+        globalFdbk.style.display = 'block';
+        setTimeout(() => globalFdbk.style.display = 'none', 3000);
+      })
+      .finally(() => {
+        loading.style.display = 'none';
+      });
+    }, 5000);
+    
+    // This 8000 ms (8 s) is the artificial timeout.
   }
 
 function clearInput() {

@@ -1,3 +1,12 @@
+<?php
+// index.php
+// 1) pull in your calculate.php (which defines gematria() and also handles AJAX POSTs)
+require __DIR__ . '/calculate.php';
+
+// 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
+$inputRaw = $_GET['input'] ?? '';
+$results  = $inputRaw !== '' ? gematria($inputRaw) : null;
+?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -44,7 +53,12 @@
 
     <main class="calculator">
       <div class="input-group">
-        <input id="inputText" type="text" placeholder="Enter text to calculate…" />
+        <input
+          id="inputText"
+          type="text"
+          placeholder="Enter text to calculate…"
+          value="<?= htmlspecialchars($inputRaw, ENT_QUOTES) ?>"
+        />
         <button class="secondary" onclick="clearInput()" title="Clear">✕</button>
       </div>
 
@@ -55,28 +69,52 @@
       </div>
 
 
-      <div class="loading-container" id="loading">
+      <div class="loading-container" id="loading" style="display:none">
         <div class="spinner"></div>
       </div>
 
-      <div class="result" id="result">
+      <div
+        class="result"
+        id="result"
+        style="<?= $results ? 'display:block;' : 'display:none;' ?>"
+      >
         <div class="result-card">
           <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">📋</button>
           <div class="copy-notification" id="hebrewCopyNotification">Copied!</div>
-          <h3>Hebrew Gematria: <span id="hebrewValue">0</span></h3>
-          <p id="hebrewBreakdown"></p>
+          <h3>Hebrew Gematria: <span id="hebrewValue">
+            <?= $results['hebrew']['total'] ?? 0 ?>
+          </span></h3>
+          <p id="hebrewBreakdown">
+            <?php if($results): ?>
+              Calculation: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
+            <?php endif ?>
+          </p>
         </div>
+
         <div class="result-card">
           <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">📋</button>
           <div class="copy-notification" id="englishCopyNotification">Copied!</div>
-          <h3>English Gematria: <span id="englishValue">0</span></h3>
-          <p id="englishBreakdown"></p>
+          <h3>English Gematria: <span id="englishValue">
+            <?= $results['english']['total'] ?? 0 ?>
+          </span></h3>
+          <p id="englishBreakdown">
+            <?php if($results): ?>
+              Calculation: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
+            <?php endif ?>
+          </p>
         </div>
+
         <div class="result-card">
           <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">📋</button>
           <div class="copy-notification" id="simpleCopyNotification">Copied!</div>
-          <h3>Simple Gematria: <span id="simpleValue">0</span></h3>
-          <p id="simpleBreakdown"></p>
+          <h3>Simple Gematria: <span id="simpleValue">
+            <?= $results['simple']['total'] ?? 0 ?>
+          </span></h3>
+          <p id="simpleBreakdown">
+            <?php if($results): ?>
+              Calculation: <?= implode(' + ', $results['simple']['breakdown']) ?>
+            <?php endif ?>
+          </p>
         </div>
 
         <div class="feedback">
