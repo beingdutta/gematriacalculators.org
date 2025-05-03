@@ -45,56 +45,60 @@ function calculateGematria(word) {
 }
 
 function calculate() {
-    const input = document.getElementById('inputText');
-    const value = input.value.trim();
-    const globalFeedback = document.getElementById('globalFeedback');
-    
-    if(!value) {
-        input.classList.add('error');
-        setTimeout(() => input.classList.remove('error'), 500);
-        alert('Please enter some text to calculate!');
-        return;
+    const inputEl = document.getElementById('inputText');
+    const query = inputEl.value.trim();
+
+    // Give a fake timeout of 500 ms(5s).
+    if (!query) {
+      inputEl.classList.add('error');
+      setTimeout(() => inputEl.classList.remove('error'), 600);
+      alert('Please enter some text to calculate!');
+      return;
     }
-
+  
     const loading = document.getElementById('loading');
+    const resultDiv = document.querySelector('.result');
+    const globalFdbk = document.getElementById('globalFeedback');
+  
     loading.style.display = 'flex';
-    
-    setTimeout(() => {
-        try {
-            const results = calculateGematria(value);
-            
-            document.getElementById('hebrewValue').textContent = results.hebrew.total;
-            document.getElementById('englishValue').textContent = results.english.total;
-            document.getElementById('simpleValue').textContent = results.simple.total;
-            
-            document.getElementById('hebrewBreakdown').innerHTML = 
-                `Calculation: ${results.hebrew.breakdown.join(' + ')}`;
-            document.getElementById('englishBreakdown').innerHTML = 
-                `Calculation: (${results.simple.breakdown.join(' + ')}) × 6`;
-            document.getElementById('simpleBreakdown').innerHTML = 
-                `Calculation: ${results.simple.breakdown.join(' + ')}`;
-
-            document.querySelector('.result').style.display = 'block';
-            
-            // Show calculation success feedback
-            globalFeedback.textContent = "✓ Results calculated successfully!";
-            globalFeedback.style.display = 'block';
-            setTimeout(() => {
-                globalFeedback.style.display = 'none';
-            }, 7000);
-
-        } catch (error) {
-            console.error('Calculation error:', error);
-            globalFeedback.textContent = "⚠️ Error calculating results";
-            globalFeedback.style.display = 'block';
-            setTimeout(() => {
-                globalFeedback.style.display = 'none';
-            }, 3000);
-        } finally {
-            loading.style.display = 'none';
-        }
-    }, 3000);
-}
+    resultDiv.style.display = 'none';
+  
+    // Send POST to calculate.php
+    fetch('calculate.php', {
+      method: 'POST',
+      headers: {'Content-Type':'application/x-www-form-urlencoded'},
+      body: 'input=' + encodeURIComponent(query)
+    })
+    .then(res => res.json())
+    .then(data => {
+      // Update totals
+      document.getElementById('hebrewValue').textContent  = data.hebrew.total;
+      document.getElementById('simpleValue').textContent  = data.simple.total;
+      document.getElementById('englishValue').textContent = data.english.total;
+  
+      // Update breakdowns
+      document.getElementById('hebrewBreakdown').innerHTML  =
+        'Calculation: ' + data.hebrew.breakdown.join(' + ');
+      document.getElementById('simpleBreakdown').innerHTML  =
+        'Calculation: ' + data.simple.breakdown.join(' + ');
+      document.getElementById('englishBreakdown').innerHTML =
+        'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
+  
+      resultDiv.style.display = 'block';
+      globalFdbk.textContent = '✓ Results calculated successfully!';
+      globalFdbk.style.display = 'block';
+      setTimeout(() => globalFdbk.style.display = 'none', 7000);
+    })
+    .catch(err => {
+      console.error(err);
+      globalFdbk.textContent = '⚠️ Error calculating results';
+      globalFdbk.style.display = 'block';
+      setTimeout(() => globalFdbk.style.display = 'none', 3000);
+    })
+    .finally(() => {
+      loading.style.display = 'none';
+    });
+  }
 
 function clearInput() {
     document.getElementById('inputText').value = '';
