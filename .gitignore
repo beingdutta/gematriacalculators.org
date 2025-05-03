@@ -1,0 +1,6 @@
+# Ignore Apache control scripts
+start_apache.bat
+stop_apache.bat
+
+# Ignore VS Code workspace settings
+.vscode/
