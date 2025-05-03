@@ -231,3 +231,36 @@ function calculateAndDownload() {
         }
     }, 3000);
 }
+
+// ——— Ticker population & click handler ———
+document.addEventListener('DOMContentLoaded', () => {
+    const recent = [
+      'the bible',
+      'elohim frequency 432',
+      'sacred light of yahweh',
+      'the saturn',
+      'truth hidden in plain sight',
+      'metatron speaks in numbers',
+      'peace over chaos always'
+    ];
+    const list = document.querySelector('.ticker__list');
+    if (!list) return;
+  
+    // clear any existing
+    list.innerHTML = '';
+  
+    // duplicate array for seamless loop
+    const items = recent.concat(recent);
+    items.forEach(text => {
+      const card = document.createElement('div');
+      card.className = 'ticker__item';
+      card.textContent = text;
+      // on click: fill input
+      card.addEventListener('click', () => {
+        const input = document.getElementById('inputText');
+        input.value = text;
+        input.focus();
+      });
+      list.append(card);
+    });
+  });

@@ -1,12 +1,30 @@
 <?php
-// index.php
-// 1) pull in your calculate.php (which defines gematria() and also handles AJAX POSTs)
-require __DIR__ . '/calculate.php';
+  // index.php
+  // 1) pull in your calculate.php (which defines gematria() and also handles AJAX POSTs)
+  require __DIR__ . '/calculate.php';
 
-// 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
-$inputRaw = $_GET['input'] ?? '';
-$results  = $inputRaw !== '' ? gematria($inputRaw) : null;
+  // 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
+  $inputRaw = $_GET['input'] ?? '';
+  $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
+
+
+  // Prepare SEO strings
+  if ($results) {
+    $seoTitle = ucfirst($inputRaw) . ' value in Gematria is ' 
+                . $results['english']['total'] 
+                . ' | Free Gematria Calculator';
+    $seoDesc  = 'Find the Hebrew, English & Simple gematria values of “'
+                . htmlspecialchars($inputRaw, ENT_QUOTES)
+                . '” instantly. Hebrew=' . $results['hebrew']['total']
+                . ', English=' . $results['english']['total']
+                . ', Simple=' . $results['simple']['total'] . '.'
+                . "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
+  } else {
+    $seoTitle = 'Free Gematria Calculator Online - Hebrew/English/Simple Values';
+    $seoDesc  = '#1 free gematria calculator online. Compute Hebrew, English & Simple gematria values of any word instantly.';
+  }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -30,19 +48,34 @@ $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="#1 Advanced Gematria Calculator - Compute Hebrew, English and Simple Gematria values instantly. Best Free Gematria Calculator Online for Biblical Numerology and Text Analysis.">
+
   <meta name="keywords" content="gematria calculator, gematria calculation online, hebrew gematria calculator, best gematria calculator, gematria calculator hebrew, simple gematria calculator, free gematria calculator, gematria calculator free, english gematria calculator, bible gematria calculator, best hebrew gematria calculator">
+  
+  <!-- Dynamic SEO tags for parameterized URL in SERP's-->
+  <title><?= $seoTitle ?></title>
+  <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
+  <link rel="canonical" href="https://gematriacalculators.org/index.php?input=<?= urlencode($inputRaw) ?>">
+
   <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
-  <title>Free Gematria Calculator Online - Hebrew/English/Simple Values</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/index.css">
-  <link rel="canonical" href="https://gematriacalculators.org">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
 </head>
 
 <body>
   <div class="container">
+
+      <!-- ——— Recent Searches Ticker ——— -->
+    <div class="recent-phrases">
+      <h4>Recent searches:</h4>
+      <div class="ticker">
+        <div class="ticker__list">
+          <!-- JS will inject .ticker__item cards here -->
+        </div>
+      </div>
+    </div>
 
     <header class="header">
       <img src="/assets/header-image.webp" id="themeLogo" alt="gematria calculator site logo">
