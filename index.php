@@ -28,6 +28,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
   <script>
@@ -161,6 +162,11 @@
         </div>
       </div>
     </main>
+
+    <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+      For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
+    </p>
+
 
     <!-- SEO SECTION #1 -->
     <div class="seo-section">
