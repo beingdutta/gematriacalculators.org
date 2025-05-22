@@ -55,9 +55,15 @@
   <!-- Dynamic SEO tags for parameterized URL in SERP's-->
   <title><?= $seoTitle ?></title>
   <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
-  <link rel="canonical" href="https://gematriacalculators.org/index.php?input=<?= urlencode($inputRaw) ?>">
 
-  <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
+  <!-- For handling empty URL parameters -->
+  <?php
+    $canonicalUrl = 'https://gematriacalculators.org/';
+    if (!empty($inputRaw)) {
+      $canonicalUrl .= 'index.php?input=' . urlencode($inputRaw);
+    }
+  ?>
+  <link rel="canonical" href="<?= $canonicalUrl ?>">  <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
