@@ -49,9 +49,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="gematria calculator, bible gematria calculator, english to hebrew gematria calculator, calculator gematria, best gematria calculator, calculate gematria, gematria calculator online, simple gematria, free gematria calculator, gematria name calculator, gematria calc, gematria.com calculator, gematria calculator us, gematria online calculator, hebrew gematria calculator, english gematria calculator">
 
-  <meta name="keywords" content="gematria calculator, gematria calculation online, hebrew gematria calculator, best gematria calculator, gematria calculator hebrew, simple gematria calculator, free gematria calculator, gematria calculator free, english gematria calculator, bible gematria calculator, best hebrew gematria calculator">
-  
   <!-- Dynamic SEO tags for parameterized URL in SERP's-->
   <title><?= $seoTitle ?></title>
   <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
@@ -177,8 +176,12 @@
     <!-- SEO SECTION #1 -->
     <div class="seo-section">
       <h4>Discover Hidden Numerical Meanings</h4>
-      <p>Welcome to the best free Gematria calculator online — your go-to tool for discovering the hidden numerical meanings behind words and phrases. Whether you’re exploring the ancient secrets of Hebrew gematria, seeking spiritual insights through Bible Gematria, or simply curious about English or simple gematria values, our powerful and free gematria calculator makes it easy. Just enter your text, and get instant results in Hebrew, English, and Simple Gematria formats.</p>
+      <p>This gematria calculator works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "gematria.com calculator", and "gematria calculator.us" — and this tool provides the functionality they seek.</p>
       <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
+    </div>
+
+    <div class="seo-section", style="color: green;">
+      <p>International users often search using terms like <em>гематрия калькулятор</em> (Russian), <em>gematria rechner</em> (German), and <em>gematria calculadora</em> (Spanish). <br><br>This tool is designed to be intuitive and accessible for everyone exploring gematria.</p>
     </div>
 
     <!-- SEO SECTION #2 -->
