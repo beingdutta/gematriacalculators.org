@@ -235,13 +235,21 @@ function calculateAndDownload() {
 // ——— Ticker population & click handler ———
 document.addEventListener('DOMContentLoaded', () => {
     const recent = [
-      'the bible',
-      'elohim frequency 432',
-      'sacred light of yahweh',
-      'the saturn',
-      'truth hidden in plain sight',
-      'metatron speaks in numbers',
-      'peace over chaos always'
+    'divine code of creation',
+    'light flows through numbers',
+    'yahweh speaks in patterns',
+    'sacred geometry of truth',
+    'heaven encoded in math',
+    'elohim within the sequence',
+    'metatron guards the gates',
+    'truth revealed in numbers',
+    'the language of the divine',
+    'mystery hidden in plain sight',
+    'vibration of sacred names',
+    'celestial harmony 432 hz',
+    'infinite light of wisdom',
+    'keys to the tree of life',
+    'order born from the chaos'
     ];
     const list = document.querySelector('.ticker__list');
     if (!list) return;
