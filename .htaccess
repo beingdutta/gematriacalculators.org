@@ -1,3 +1,12 @@
 RewriteEngine On
+
+# Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.gematriacalculators\.org [NC]
+RewriteRule ^(.*)$ https://gematriacalculators.org/$1 [L,R=301]
+
+# Redirect /index.html to homepage
+Redirect 301 /index.html https://gematriacalculators.org/
