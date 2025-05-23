@@ -65,7 +65,7 @@ function calculate() {
   
     // wait 3s, then fire your AJAX + UI update
     setTimeout(() => {
-      fetch('calculate.php', {
+      fetch('/calculate.php', {
         method: 'POST',
         headers: {'Content-Type':'application/x-www-form-urlencoded'},
         body: 'input=' + encodeURIComponent(query)

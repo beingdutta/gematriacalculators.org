@@ -76,6 +76,21 @@
       <!-- ——— Recent Searches Ticker ——— -->
     <div class="recent-phrases">
       <h4>Recent searches:</h4>
+
+        <?php                                     // language links
+          $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
+          $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
+          function lang($code,$label,$qs,$here){
+              $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs";
+              return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>"
+                                                              : "<a href=\"$path\">$label</a>";
+          }
+        ?>
+        <nav class="lang-switcher" aria-label="Language switcher">
+          <?= lang('en','EN',$qs,$here) ?> |
+          <?= lang('ru','RU',$qs,$here) ?> |
+          <?= lang('de','DE',$qs,$here) ?>
+        </nav>
       <div class="ticker">
         <div class="ticker__list">
           <!-- JS will inject .ticker__item cards here -->

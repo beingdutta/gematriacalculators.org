@@ -520,3 +520,40 @@ footer .copyright {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* ——— Recent-searches ticker (UPDATED) ——— */
+
+/* turn the bar into a flex-row: heading left, switcher right, ticker below */
+.recent-phrases{
+  margin:0.5rem 0 2rem 0;        /* keep your original spacing  */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;                /* lets it wrap on small screens */
+  gap:.5rem;
+}
+
+/* language switcher that sits in the same bar */
+.lang-switcher{
+  font-size:.9rem;
+  display:flex;
+  gap:.25rem;
+  white-space:nowrap;
+}
+.lang-switcher a{
+  color:var(--text);
+  text-decoration:none;
+}
+.lang-switcher a:hover{
+  text-decoration:underline;
+}
+
+/* mobile: push switcher below heading & right-align it */
+@media (max-width:600px){
+  .lang-switcher{
+    order:3;                     /* after heading + ticker */
+    width:100%;
+    justify-content:flex-end;
+  }
+}
+
