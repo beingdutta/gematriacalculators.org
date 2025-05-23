@@ -9,8 +9,18 @@
 
 <url>
   <loc>https://gematriacalculators.org/</loc>
-  <lastmod>2025-05-22T18:32:14+00:00</lastmod>
+  <lastmod>2025-05-23T06:43:57+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/ru/index.php</loc>
+  <lastmod>2025-05-23T06:43:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/de/index.php</loc>
+  <lastmod>2025-05-23T06:43:57+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://gematriacalculators.org/decode-gematria-value.html</loc>
@@ -43,8 +53,13 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://gematriacalculators.org/index.php</loc>
+  <lastmod>2025-05-23T06:43:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://gematriacalculators.org/articles/What-does-the-Bible-say-about-gematria.html</loc>
-  <lastmod>2025-05-22T18:32:04+00:00</lastmod>
+  <lastmod>2025-05-22T19:18:53+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -71,11 +86,6 @@
   <loc>https://gematriacalculators.org/articles/Is-There-Any-Merit-in-Gematria.html</loc>
   <lastmod>2025-05-01T20:55:07+00:00</lastmod>
   <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://gematriacalculators.org/index.php</loc>
-  <lastmod>2025-05-22T18:32:14+00:00</lastmod>
-  <priority>0.51</priority>
 </url>
 
 
