@@ -62,7 +62,9 @@
       $canonicalUrl .= 'index.php?input=' . urlencode($inputRaw);
     }
   ?>
-  <link rel="canonical" href="<?= $canonicalUrl ?>">  <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
+
+  <link rel="canonical" href="<?= $canonicalUrl ?>">  
+  <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -83,8 +85,7 @@
         $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
         function lang($code,$label,$qs,$here){
             $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs";
-            return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>"
-                                                            : "<a href=\"$path\">$label</a>";
+            return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>": "<a href=\"$path\">$label</a>";
         }
       ?>
       <nav class="lang-switcher" aria-label="Language switcher">
@@ -280,6 +281,7 @@
       <!-- FOOTER LINKS -->
       <div class="footer-links">
         <a href="/">Home</a>
+        <a href="/more-tools.php">More Tools</a>
         <a href="/blog-collections.html">Blog</a>
         <a href="/about-us.html">About Us</a>
         <a href="/contact-us.html">Contact Us</a>

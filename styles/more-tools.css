@@ -1,0 +1,141 @@
+:root {
+  --primary: #4A90E2;
+  --secondary: #50E3C2;
+  --bg: #F5F7FA;
+  --text: #333333;
+  --card-bg: #FFFFFF;
+  --muted: #777777;
+  --radius: 8px;
+  --transition: all 0.2s ease;
+  --font: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #2B2D42;
+  --text: #EDF2F4;
+  --card-bg: #3F4159;
+  --muted: #A8AAB3;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#themeLogo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tool-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.tool-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.calculate-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
