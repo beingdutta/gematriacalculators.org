@@ -1,125 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- ====== Home page (EN canonical) ====== -->
-  <url>
-    <loc>https://gematriacalculators.org/</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-                href="https://gematriacalculators.org/"/>
-    <xhtml:link rel="alternate" hreflang="ru"
-                href="https://gematriacalculators.org/ru/index.php"/>
-    <xhtml:link rel="alternate" hreflang="de"
-                href="https://gematriacalculators.org/de/index.php"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-                href="https://gematriacalculators.org/"/>
-    <lastmod>2025-05-23</lastmod>
-    <priority>1.00</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <!-- ====== Russian home page ====== -->
-  <url>
-    <loc>https://gematriacalculators.org/ru/index.php</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-                href="https://gematriacalculators.org/"/>
-    <xhtml:link rel="alternate" hreflang="ru"
-                href="https://gematriacalculators.org/ru/index.php"/>
-    <xhtml:link rel="alternate" hreflang="de"
-                href="https://gematriacalculators.org/de/index.php"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-                href="https://gematriacalculators.org/"/>
-    <lastmod>2025-05-23</lastmod>
-    <priority>0.80</priority>
-  </url>
 
-  <!-- ====== German home page ====== -->
-  <url>
-    <loc>https://gematriacalculators.org/de/index.php</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-                href="https://gematriacalculators.org/"/>
-    <xhtml:link rel="alternate" hreflang="ru"
-                href="https://gematriacalculators.org/ru/index.php"/>
-    <xhtml:link rel="alternate" hreflang="de"
-                href="https://gematriacalculators.org/de/index.php"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-                href="https://gematriacalculators.org/"/>
-    <lastmod>2025-05-23</lastmod>
-    <priority>0.80</priority>
-  </url>
+<url>
+  <loc>https://gematriacalculators.org/</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/ru/index.php</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/de/index.php</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/decode-gematria-value.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/more-tools.php</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/blog-collections.html</loc>
+  <lastmod>2025-05-22T18:32:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/about-us.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/contact-us.html</loc>
+  <lastmod>2025-05-03T16:25:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/terms-conditions.html</loc>
+  <lastmod>2025-05-22T12:28:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/privacy-policy.html</loc>
+  <lastmod>2025-05-02T19:05:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/index.php</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/more-tools/loshu-grid.php</loc>
+  <lastmod>2025-05-24T05:51:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/What-does-the-Bible-say-about-gematria.html</loc>
+  <lastmod>2025-05-22T19:18:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/How-does-gematria-work-in-detail-using-the-English-alphabet.html</loc>
+  <lastmod>2025-05-22T18:32:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/What-is-a-Gematria-Calculator.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/What-is-Gematria-in-your-own-words.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/What-is-the-truth-about-gematria.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gematriacalculators.org/articles/Is-There-Any-Merit-in-Gematria.html</loc>
+  <lastmod>2025-05-01T20:55:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
-  <!-- ====== English-only pages (no alternates yet) ====== -->
-  <url>
-    <loc>https://gematriacalculators.org/decode-gematria-value.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.80</priority>
-  </url>
 
-  <url>
-    <loc>https://gematriacalculators.org/blog-collections.html</loc>
-    <lastmod>2025-05-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/about-us.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/contact-us.html</loc>
-    <lastmod>2025-05-03</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/terms-conditions.html</loc>
-    <lastmod>2025-05-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/privacy-policy.html</loc>
-    <lastmod>2025-05-02</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- ====== Blog articles ====== -->
-  <url>
-    <loc>https://gematriacalculators.org/articles/What-does-the-Bible-say-about-gematria.html</loc>
-    <lastmod>2025-05-22</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/articles/How-does-gematria-work-in-detail-using-the-English-alphabet.html</loc>
-    <lastmod>2025-05-22</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/articles/What-is-a-Gematria-Calculator.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/articles/What-is-Gematria-in-your-own-words.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/articles/What-is-the-truth-about-gematria.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://gematriacalculators.org/articles/Is-There-Any-Merit-in-Gematria.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <priority>0.64</priority>
-  </url>
 </urlset>
