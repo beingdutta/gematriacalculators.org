@@ -76,7 +76,7 @@
   <div class="container">
 
     <!-- ——— Recent Searches Ticker ——— -->
-    <div class="recent-phrases">
+    <div class="recent-phrases ticker-bar">
       <h4>Recent searches:</h4>
 
       <!-- ——— Language Switcher ——— -->

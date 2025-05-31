@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gematria Ticker Demo</title>
+
+  <style>
+    :root {
+      --primary: #4A90E2;
+      --card-bg: #ffffff;
+      --text: #333;
+      --radius: 8px;
+      --font: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font);
+    }
+
+    /* ─── TICKERBAR WRAPPER (flex for heading + nav + ticker) ─── */
+    .recent-phrases.ticker-bar {
+      margin: 0.5rem 0 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .recent-phrases.ticker-bar h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .recent-phrases.ticker-bar .lang-switcher {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.25rem;
+      white-space: nowrap;
+    }
+    .recent-phrases.ticker-bar .lang-switcher a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .recent-phrases.ticker-bar .lang-switcher a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .recent-phrases.ticker-bar .lang-switcher {
+        order: 3;
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+
+    /* ─── TICKER CONTAINER ─── */
+    .ticker {
+      position: relative;
+      width: 100%;
+      overflow: hidden;       /* hide any overflowing items; no scrollbar */
+    }
+
+    /* ─── THE FLEX ROW ─── */
+    .ticker__list {
+      display: flex;
+      width: max-content;     /* flex row as wide as all items together */
+      animation: ticker‐scroll 15s linear infinite;
+    }
+
+    /* ─── INDIVIDUAL ITEM CARDS ─── */
+    .ticker__item {
+      flex: 0 0 auto;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+      background: var(--card-bg);
+      color: var(--text);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .ticker__item:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ─── SCROLL ANIMATION ─── */
+    @keyframes ticker‐scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    /* Pause on hover if desired: */
+    .ticker:hover .ticker__list {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ─── YOUR TICKER HTML ─── -->
+  <div class="recent-phrases ticker-bar">
+    <h4>Recent searches:</h4>
+    <nav class="lang-switcher" aria-label="Language switcher">
+      <a href="#">EN</a> |
+      <a href="#">RU</a> |
+      <a href="#">DE</a>
+    </nav>
+
+    <div class="ticker">
+      <div class="ticker__list">
+        <!-- JS will fill in 30 items here (15 original + 15 duplicates) -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Just for spacing demo -->
+  <div style="height:200px; text-align:center; color: #666; font-size:0.9rem;">
+    (The rest of your page goes here…)
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const recent = [
+        'divine code of creation',
+        'light flows through numbers',
+        'yahweh speaks in patterns',
+        'sacred geometry of truth',
+        'heaven encoded in math',
+        'elohim within the sequence',
+        'metatron guards the gates',
+        'truth revealed in numbers',
+        'the language of the divine',
+        'mystery hidden in plain sight',
+        'vibration of sacred names',
+        'celestial harmony 432 hz',
+        'infinite light of wisdom',
+        'keys to the tree of life',
+        'order born from the chaos'
+      ];
+
+      const list = document.querySelector('.ticker__list');
+      if (!list) return;
+
+      // Duplicate the array so we end up with 30 total cards (seamless loop)
+      const items = recent.concat(recent);
+
+      items.forEach(text => {
+        const card = document.createElement('div');
+        card.className = 'ticker__item';
+        card.textContent = text;
+        card.addEventListener('click', () => {
+          const input = document.getElementById('inputText');
+          if (input) {
+            input.value = text;
+            input.focus();
+          }
+        });
+        list.append(card);
+      });
+    });
+  </script>
+</body>
+</html>
