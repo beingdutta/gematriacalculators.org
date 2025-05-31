@@ -102,7 +102,7 @@
     </div>
 
     <header class="header">
-      <img src="/assets/header-image.webp" id="themeLogo" alt="gematria calculator site logo">
+      <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
       <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
       <h1>Free Gematria Calculator Online</h1>
       <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>
@@ -186,7 +186,7 @@
       </div>
     </main>
 
-    <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+    <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.1rem; text-align: center;">
       For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
     </p>
 

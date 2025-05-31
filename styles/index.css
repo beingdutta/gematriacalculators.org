@@ -58,13 +58,13 @@ body {
 .header {
   text-align: center;
   position: relative;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
 }
 
 #themeLogo {
   display: block;
-  width: 120px;
-  margin: 0 auto 1rem;
+  width: 160px;
+  margin: 10px auto 1rem auto;
 }
 
 .theme-toggle {
@@ -112,7 +112,7 @@ body {
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .input-group {

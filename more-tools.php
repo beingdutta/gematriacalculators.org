@@ -12,7 +12,7 @@
     <body>
         <div class="container">
             <header class="header">
-                <img src="/assets/header-image.webp" id="themeLogo" alt="gematria calculator logo" style="width: 90px;">
+                <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator logo" style="width: 90px;">
                 <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
                 <h1>Explore More Tools</h1>
                 <p class="subtitle">Enhance your spiritual and numerological journey</p>

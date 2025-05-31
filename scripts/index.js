@@ -111,23 +111,37 @@ function clearInput() {
 }
 
 function toggleTheme() {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+
+  // Swap header image immediately
+  const headerImage = document.getElementById('themeLogo');
+  if (headerImage) {
+    if (newTheme === 'dark') {
+      headerImage.src = '/assets/talisman-wh-header-icon.png';
+    } else {
+      headerImage.src = '/assets/talisman-header-icon.png';
+    }
+  }
 }
 
-// Initialize theme
+// Initialize theme and header image
 document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    // Set single header image
-    const headerImage = document.getElementById('themeLogo');
-    if (headerImage) {
-        headerImage.src = '/assets/header-image.webp';
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  const headerImage = document.getElementById('themeLogo');
+  if (headerImage) {
+    // If we've loaded in "dark" mode, use the white‐text header; otherwise use the normal PNG
+    if (savedTheme === 'dark') {
+      headerImage.src = '/assets/talisman-wh-header-icon.png';
+    } else {
+      headerImage.src = '/assets/talisman-header-icon.png';
     }
+  }
 });
 
 function sendFeedback(emoji) {
