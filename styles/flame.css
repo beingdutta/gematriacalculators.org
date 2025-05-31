@@ -1,0 +1,342 @@
+/* =====================================================================================
+   IMPORT GLOBAL STYLES
+   (Brings in your site‐wide colors, font, reset, header, button, FAQ, footer, etc.)
+   ===================================================================================== */
+@import url("/styles/index.css");
+
+
+/* =====================================================================================
+   FLAME CALCULATOR – PAGE‐SPECIFIC STYLES
+   ===================================================================================== */
+
+/* Override the primary color from index.css (blue) to a flame orange-red */
+:root {
+  --primary:   #FF5722; /* used for buttons, active states, etc. */
+  --secondary: #FFC107; /* a lighter orange if needed */
+}
+
+/* ----------------------------------
+   1) Calculator Layout & Inputs
+   ---------------------------------- */
+
+/* Re‐style .calculator to allow three‐column arrangement */
+.calculator {
+  background: var(--card-bg);
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* The row containing "Your Name" input | 🔥 icon | "Partner's Name" input */
+.flame-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Each column (label + input) */
+.flame-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+}
+
+.flame-col label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.flame-col input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color var(--transition);
+}
+
+.flame-col input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Center flame icon between inputs */
+.flame-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.flame-main-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Buttons container: center horizontally with spacing */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Calculate button (full‐width on desktop, responsive shrink) */
+.calculate-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition) transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset button uses the .secondary look from index.css */
+.secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition) transform 0.1s ease, background 0.1s ease;
+}
+
+.secondary:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Inline error text if user tries to calculate without names */
+.error-message {
+  color: var(--error);
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  display: none;
+}
+
+
+/* ----------------------------------
+   2) Greyed‐Out Horizontal Rules
+   ---------------------------------- */
+.grey-rule {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+}
+
+
+/* ----------------------------------
+   3) Modal Overlay & Window
+   ---------------------------------- */
+
+/* Overlay: cover full screen, darken background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none; /* shown via JS when needed */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* White modal box */
+.modal {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem 1.5rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Close button (×) in top‐right */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Modal header: “NameA 🔥 NameB” */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modal-header .flame-icon-large {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+/* Modal body placeholder */
+.modal-body {
+  min-height: 200px; /* space for spinner or result */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner (large, orange) */
+.spinner-large {
+  width: 60px;
+  height: 60px;
+  border: 6px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* After spinner finishes, show this result block */
+.modal-result-content p {
+  margin: 1rem 0 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.modal-result-content .result-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-result-content .result-text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--primary);
+}
+
+/* Modal footer: “Calculate Again” */
+.modal-footer {
+  margin-top: 1rem;
+}
+
+.calculate-again {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition) transform 0.1s ease, background 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculate-again:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Reuse the global keyframe for spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* ----------------------------------
+   4) SEO Section (text already centered in HTML)
+   ---------------------------------- */
+.seo-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.seo-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.seo-section p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+
+/* ----------------------------------
+   5) FAQ Section
+   ---------------------------------- */
+/* No heading here; each .faq-item is styled by index.css already */
+/* index.css provides: .faq-item, .faq-question, .faq-answer, .chevron, etc. */
+
+
+/* ----------------------------------
+   6) Footer Menu
+   ---------------------------------- */
+/* The footer markup and link styles come from index.css (no changes needed here) */
+
+
+/* ----------------------------------
+   7) Responsive Tweaks
+   ---------------------------------- */
+@media (max-width: 768px) {
+  .flame-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flame-col {
+    max-width: 100%;
+  }
+
+  .flame-main-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .calculate-btn,
+  .secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
