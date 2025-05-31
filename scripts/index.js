@@ -251,24 +251,23 @@ document.addEventListener('DOMContentLoaded', () => {
     'keys to the tree of life',
     'order born from the chaos'
     ];
+
     const list = document.querySelector('.ticker__list');
     if (!list) return;
-  
-    // clear any existing
-    list.innerHTML = '';
-  
-    // duplicate array for seamless loop
+
+    // Duplicate array so the loop is seamless:
     const items = recent.concat(recent);
+
+    // Build 30 total <div class="ticker__item">…</div>
     items.forEach(text => {
-      const card = document.createElement('div');
-      card.className = 'ticker__item';
-      card.textContent = text;
-      // on click: fill input
-      card.addEventListener('click', () => {
-        const input = document.getElementById('inputText');
-        input.value = text;
-        input.focus();
-      });
-      list.append(card);
+    const card = document.createElement('div');
+    card.className = 'ticker__item';
+    card.textContent = text;
+    card.addEventListener('click', () => {
+            const input = document.getElementById('inputText');
+            input.value = text;
+            input.focus();
+        });
+        list.append(card);
     });
-  });
+});
