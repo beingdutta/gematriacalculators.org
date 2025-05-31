@@ -6,13 +6,13 @@
 
   <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
   <meta name="description" content="Play the classic FLAME game: enter two names and find out if you are Friends, Love, Affection, Marriage, Enemies, or Siblings.">
-  <link rel="icon" href="/assets/hear-site-icon.png" sizes="32x32">
+  <link rel="icon" href="/assets/flame-calculator-site-icon.png" sizes="32x32">
 
   <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
   <link rel="stylesheet" href="/styles/index.css" />
 
   <!-- Page-specific CSS overrides -->
-  <link rel="stylesheet" href="/styles/flame.css" />
+  <link rel="stylesheet" href="/styles/flame-calculator.css" />
 </head>
 
 <body>
@@ -244,6 +244,6 @@
   <!-- ============================
        PAGE-SPECIFIC JavaScript
      ============================ -->
-  <script src="/scripts/flame.js"></script>
+  <script src="/scripts/flame-calculator.js"></script>
 </body>
 </html>

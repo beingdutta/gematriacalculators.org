@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+
   <meta charset="UTF-8">
   <title>Lo Shu Grid Calculator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/loshu-grid.css">
+  <link rel="icon" href="/assets/loshugrid-site-icon.png" sizes="32x32">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
 </head>
 
 <body>
@@ -13,7 +16,7 @@
 
     <!-- ── header ───────────────────────────────────────────────────────── -->
     <header>
-      <img src="/assets/header-image.webp" id="themeLogo" alt="Lo Shu Grid logo">
+      <img src="/assets/loshu-grid-header.png" id="themeLogo" alt="Lo Shu Grid logo">
       <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
       <h1>Lo Shu Grid Calculator</h1>
       <p class="subtitle">Decode your numerological matrix from your date of birth</p>

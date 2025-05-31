@@ -1,123 +1,547 @@
-/* ─────────── CSS custom properties ─────────────────────────────────── */
-:root{
-  --primary:#4a90e2; --secondary:#50e3c2;
-  --bg:#f5f7fa; --text:#333; --card-bg:#fff; --muted:#555;
-  --radius:8px; --error:#e74c3c;
-}
-[data-theme=dark]{--bg:#1f1f27;--text:#f0f0f0;--card-bg:#2f2f3a;--muted:#aaa}
+/* ─────────── CSS CUSTOM PROPERTIES ─────────────────────────────────── */
+/* We’ve switched to a purple / pink / yellow palette that matches your icon. */
+:root {
+  --primary:    #8E44AD;   /* Deep Purple (header icon border) */
+  --secondary:  #F1C40F;   /* Bright Yellow (numbers in icon)   */
+  --highlight:  #E84393;   /* Accent Pink (star in icon)         */
 
-/* ─────────── base & layout ─────────────────────────────────────────── */
-*{box-sizing:border-box}
-body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);
-color:var(--text);padding:1.5rem;line-height:1.55}
-.container{max-width:820px;margin:auto}
-
-/* header */
-header{text-align:center;position:relative;margin-bottom:2rem}
-#themeLogo{width:100px;margin-bottom:1rem}
-.theme-toggle{position:absolute;top:1rem;right:1rem;font-size:1.2rem;
-background:none;border:none;color:var(--text);cursor:pointer}
-.subtitle{color:var(--muted);margin-top:.4rem}
-
-/* ─────────── form ──────────────────────────────────────────────────── */
-.loshu-form{background:var(--card-bg);padding:1.5rem;border-radius:var(--radius);
-box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.form-row{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-select{padding:.6rem;font-size:1rem;border-radius:var(--radius);
-background:var(--card-bg);color:var(--text);border:1px solid var(--muted)}
-button{padding:.65rem 1.4rem;font-size:1rem;border:none;border-radius:var(--radius);
-cursor:pointer;transition:.2s}
-.calculate-btn{background:var(--primary);color:#fff}
-.download-btn {background:var(--secondary);color:#fff}
-.reset-btn    {background:#fff;color:var(--primary);border:2px solid var(--primary)}
-.button-container{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem}
-
-/* loader */
-.loading-container{display:none;justify-content:center;align-items:center;margin:2rem 0}
-.spinner{width:40px;height:40px;border:4px solid var(--primary);border-top-color:transparent;
-border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-
-/* ─────────── summary bar ───────────────────────────────────────────── */
-.summary-box{background:var(--card-bg);padding:1rem;margin:2rem 0 1.2rem;border-radius:var(--radius);
-box-shadow:0 2px 6px rgb(0 0 0 /.05);font-size:1.05rem}
-.present-label{color:#0b5345;font-weight:600}.missing-label{color:#c0392b;font-weight:600}
-
-/* ─────────── grid (smaller squares) ───────────────────────────────── */
-/*  ⬇︎ was: minmax(90px,1fr)  */
-.grid-wrapper{
-  display:grid;gap:1rem;margin:0 auto 2rem;max-width:520px;
-  grid-template-columns:repeat(3,minmax(130px,1fr));   /* ← 110 px square base */
+  --bg:         #F5F7FA;
+  --text:       #333333;
+  --card-bg:    #FFFFFF;
+  --muted:      #777777;
+  --error:      #E74C3C;
+  --radius:     8px;
+  --transition: all 0.2s ease;
 }
 
-.loshu-cell{position:relative;width:100%;background:var(--card-bg);border-radius:var(--radius);
-box-shadow:0 2px 6px rgb(0 0 0 /.05);border:1px solid transparent;overflow:hidden;transition:.2s}
-.loshu-cell::before{content:"";display:block;padding-top:100%}
-.loshu-cell:hover{transform:translateY(-3px)}
-/* colourful palette for present cells */
-.loshu-cell.present[data-num="1"]{background:#e9f8e5;border-color:#1abc9c}
-.loshu-cell.present[data-num="2"]{background:#eaf5ff;border-color:#3498db}
-.loshu-cell.present[data-num="3"]{background:#fff4e6;border-color:#e67e22}
-.loshu-cell.present[data-num="4"]{background:#f3ecff;border-color:#9b59b6}
-.loshu-cell.present[data-num="5"]{background:#fffbe6;border-color:#f1c40f}
-.loshu-cell.present[data-num="6"]{background:#e8fffb;border-color:#16a085}
-.loshu-cell.present[data-num="7"]{background:#f9e9ff;border-color:#8e44ad}
-.loshu-cell.present[data-num="8"]{background:#ffeef3;border-color:#e84393}
-.loshu-cell.present[data-num="9"]{background:#e6f9ff;border-color:#00a8ff}
-/* missing */
-.loshu-cell.missing{background:#ffe5e5;border-color:var(--error)}
-/* inner content */
-.cell-content{position:absolute;inset:0;display:flex;flex-direction:column;
-align-items:center;justify-content:center;padding:.6rem;text-align:center}
-.number{font-weight:700;font-size:1.2rem;margin-bottom:.35rem}
-.present .number{color:#0b5345}.missing .number{color:#c0392b}
-.trait{font-size:.88rem;color:var(--muted);line-height:1.4}
-.fade{opacity:.35;text-decoration:line-through}
-
-/* traits box */
-.traits-box{background:var(--card-bg);padding:1.3rem 1.4rem;border-radius:var(--radius);
-box-shadow:0 2px 6px rgb(0 0 0 /.05);margin-bottom:2.5rem}
-.traits-box h3{margin:.2rem 0 1rem;font-size:1.1rem;color:var(--primary)}
-.traits-box ul{margin:0;padding-left:1.1rem}
-.traits-box li{margin-bottom:.55rem}
-.traits-box strong{font-weight:600}
-
-/* SEO blocks – toned-down greyscale palette */
-.seo-blocks{
-  margin-top:2.5rem;
-  font-size:1.05rem;line-height:1.6;
-  text-align:center;                /* ← centre all text */
-}
-.seo-blocks h2   {font-size:1.25rem;margin:.3rem 0 .6rem;color:#444}
-.seo-blocks p    {color:#555}
-.keyword         {color:#333;font-weight:600}
-.seo-blocks hr   {border:none;border-top:1px solid #ccc;margin:1.6rem 0}
-
-/* FAQ */
-.faq{margin-top:3rem}
-.faq-item{border:1px solid rgb(0 0 0 /.08);border-radius:var(--radius);margin-bottom:1rem;
-background:var(--card-bg);overflow:hidden}
-.faq-question{width:100%;background:none;border:none;padding:1rem 1.3rem;display:flex;
-justify-content:space-between;align-items:center;font-weight:400;font-size:1rem;
-color:var(--text);cursor:pointer}.chevron{transition:transform .25s ease}
-.faq-answer{max-height:0;padding:0 1.3rem;color:var(--muted);font-size:.95rem;line-height:1.5;
-transition:max-height .25s ease,padding .25s ease}
-.faq-item.open .faq-answer{max-height:500px;padding:1rem 1.3rem 1.3rem}
-.faq-item.open .chevron{transform:rotate(180deg)}
-
-/* footer */
-footer{margin-top:4rem;text-align:center;padding-top:2rem;border-top:1px solid rgb(0 0 0 /.08)}
-.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;font-size:.95rem;margin-bottom:1rem}
-.footer-links a{color:var(--text);text-decoration:none;transition:color .15s}
-.footer-links a:hover{color:var(--primary)}
-copyright,.copyright{color:var(--muted);font-size:.8rem}
-
-/* utils */
-.hidden{display:none !important}
-
-/* mobile tweaks */
-@media(max-width:460px){
-  .button-container button{flex:1 1 100%}
-  .footer-links{flex-direction:column;gap:.6rem}
+/* Dark mode: matching the FLAME calculator’s dark palette, but with purple accents */
+[data-theme="dark"] {
+  --bg:         #2B2D42;
+  --text:       #EDF2F4;
+  --card-bg:    #3F4159;
+  --muted:      #A8AAB3;
+  /* In dark mode, keep the same --primary, --secondary, --highlight */
 }
 
+/* ─────────── BASE & LAYOUT ─────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 820px;
+  margin: auto;
+}
+
+/* ─────────── HEADER ───────────────────────────────────────────────── */
+header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Increased header image size from 100px → 120px */
+#themeLogo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Title now in deep purple (–primary) to match icon border */
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--primary);
+}
+[data-theme="dark"] header h1 {
+  color: var(--text);
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+[data-theme="dark"] .subtitle {
+  color: var(--muted); /* var(--muted) in dark is already #A8AAB3, which is visible */
+}
+
+/* Originally: .present-label { color: #0b5345; } .missing-label { color: #c0392b; } */
+/* In dark mode, these dark greens/reds are hard to read, so override them: */
+[data-theme="dark"] .present-label {
+  color: var(--secondary); /* bright yellow in dark mode */
+}
+
+[data-theme="dark"] .missing-label {
+  color: var(--highlight); /* pink accent in dark mode */
+}
+
+/* ─────────── FORM ──────────────────────────────────────────────────── */
+.loshu-form {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;             /* space between each label/select group */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;   /* space before the buttons */
+}
+
+.form-row div {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  max-width: 160px;
+}
+
+.form-row label {
+  margin-bottom: 0.6rem;   /* increased vertical gap between label & field */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-row select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  transition: var(--transition) border-color;
+}
+
+.form-row select:focus {
+  outline: none;
+  border-color: var(--primary); /* purple focus border */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Calculate button → deep purple background, white text */
+.calculate-btn {
+  background: var(--primary);
+  color: #fff;
+}
+.calculate-btn:hover {
+  background: var(--highlight);       /* pink on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Download PDF button → bright yellow background, dark text */
+.download-btn {
+  background: var(--secondary);
+  color: #333333;
+}
+.download-btn:hover {
+  background: #F9D32D;                /* slightly lighter yellow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset button → white bg, purple border/text */
+.reset-btn {
+  background: var(--card-bg);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.reset-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ─────────── LOADING SPINNER ─────────────────────────────────────── */
+.loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary);       /* purple spinner border */
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─────────── SUMMARY BOX ───────────────────────────────────────────── */
+.summary-box {
+  background: var(--card-bg);
+  padding: 1rem;
+  margin: 2rem 0 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.05rem;
+}
+
+.present-label {
+  color: #0b5345;
+  font-weight: 600;
+}
+
+.missing-label {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* ─────────── GRID WRAPPER ─────────────────────────────────────────── */
+.grid-wrapper {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 520px;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+}
+
+.loshu-cell {
+  position: relative;
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.loshu-cell::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.loshu-cell:hover {
+  transform: translateY(-3px);
+}
+
+.loshu-cell.present[data-num="1"] { background: #e9f8e5; border-color: #1abc9c; }
+.loshu-cell.present[data-num="2"] { background: #eaf5ff; border-color: #3498db; }
+.loshu-cell.present[data-num="3"] { background: #fff4e6; border-color: #e67e22; }
+.loshu-cell.present[data-num="4"] { background: #f3ecff; border-color: #9b59b6; }
+.loshu-cell.present[data-num="5"] { background: #fffbe6; border-color: #f1c40f; }
+.loshu-cell.present[data-num="6"] { background: #e8fffb; border-color: #16a085; }
+.loshu-cell.present[data-num="7"] { background: #f9e9ff; border-color: #8e44ad; }
+.loshu-cell.present[data-num="8"] { background: #ffeef3; border-color: #e84393; }
+.loshu-cell.present[data-num="9"] { background: #e6f9ff; border-color: #00a8ff; }
+
+.loshu-cell.missing { background: #ffe5e5; border-color: var(--error); }
+
+.cell-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.present .number {
+  color: #0b5345;
+}
+
+.missing .number {
+  color: #c0392b;
+}
+
+.trait {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.fade {
+  opacity: 0.35;
+  text-decoration: line-through;
+}
+
+/* ─────────── TRAITS BOX ───────────────────────────────────────────── */
+.traits-box {
+  background: var(--card-bg);
+  padding: 1.3rem 1.4rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+}
+
+.traits-box h3 {
+  margin: 0.2rem 0 1rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.traits-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.traits-box li {
+  margin-bottom: 0.55rem;
+}
+
+.traits-box strong {
+  font-weight: 600;
+}
+
+/* ─────────── SEO BLOCKS (ADJUSTED SPACING & COLORS) ───────────────── */
+.seo-blocks {
+  margin-top: 2rem;       /* slightly tighter than before */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.seo-blocks h2 {
+  font-size: 1.25rem;
+  margin: 0.3rem 0 0.6rem;
+  color: var(--primary); /* purple in light mode */
+}
+
+/* In dark mode, override to light text */
+[data-theme="dark"] .seo-blocks h2 {
+  color: var(--text);
+}
+
+.seo-blocks p {
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+
+.keyword {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.seo-blocks hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+/* SEO colors in dark mode */
+[data-theme="dark"] .seo-blocks h2 {
+  color: #EDF2F4;
+}
+
+[data-theme="dark"] .seo-blocks p,
+[data-theme="dark"] .seo-blocks .keyword {
+  color: #C0C0C0;
+}
+
+[data-theme="dark"] .seo-blocks hr {
+  border-top-color: #555;
+}
+
+/* ─────────── FAQ ──────────────────────────────────────────────────── */
+.faq {
+  margin-top: 3rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.chevron {
+  transition: transform 0.25s ease;
+  fill: var(--text);
+}
+
+.faq-answer {
+  max-height: 0;
+  padding: 0 1.3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding: 1rem 1.3rem 1.3rem;
+}
+
+.faq-item.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* FAQ colors in dark mode */
+[data-theme="dark"] .faq-question {
+  color: #EDF2F4;
+}
+
+[data-theme="dark"] .faq-answer {
+  color: #A8AAB3;
+}
+
+[data-theme="dark"] .faq-item {
+  border-color: #555;
+}
+
+/* ─────────── FOOTER ───────────────────────────────────────────────── */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+copyright,
+.copyright {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* Footer colors in dark mode */
+[data-theme="dark"] footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .footer-links a {
+  color: #EDF2F4;
+}
+
+[data-theme="dark"] .footer-links a:hover {
+  color: #E84393;  /* pink hover in dark mode */
+}
+
+[data-theme="dark"] .copyright {
+  color: #A8AAB3;
+}
+
+/* ─────────── UTILITIES ────────────────────────────────────────────── */
+.hidden {
+  display: none !important;
+}
+
+/* ─────────── MOBILE TWEAKS ────────────────────────────────────────── */
+@media (max-width: 460px) {
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ─────────── (Optional) BODY TEXT IN SUMMARY & TRAITS ───────────────── */
+/* If any other “dark” text (e.g. plain paragraphs in summary) also needs tweaking, you can add: */
+[data-theme="dark"] .summary-box,
+[data-theme="dark"] .traits-box,
+[data-theme="dark"] .summary-box * ,
+[data-theme="dark"] .traits-box * {
+  /* Ensure entire summary/traits text is readable—use var(--text) or var(--muted) as needed */
+  color: var(--text);
+}
+
+/* ─────────── FAQ & FOOTER (ensure existing dark‐mode rules are applied) ─ */
+[data-theme="dark"] .faq-question {
+  color: var(--text);
+}
+[data-theme="dark"] .faq-answer {
+  color: var(--muted);
+}
+[data-theme="dark"] footer,
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] .copyright {
+  /* already covered previously—but ensure footer links remain visible: */
+  color: var(--text);
+}
 
