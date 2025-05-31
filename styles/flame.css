@@ -28,13 +28,18 @@
   margin-bottom: 2rem;
 }
 
+/* Change the header text “FLAME Calculator” to the same orange-red */
+.header h1 {
+  color: var(--primary);
+}
+
 /* The row containing "Your Name" input | 🔥 icon | "Partner's Name" input */
 .flame-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 0.5rem;              /* reduced from 1.5rem to 1rem to bring columns closer */
+  margin-bottom: 2.5rem;  /* increased space above the buttons */
 }
 
 /* Each column (label + input) */
@@ -83,10 +88,10 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;  /* increased from 0.5rem to 1.5rem for more breathing room */
 }
 
-/* Calculate button (full‐width on desktop, responsive shrink) */
+/* Calculate button (uses orange-red) */
 .calculate-btn {
   background: var(--primary);
   color: #fff;
@@ -103,7 +108,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset button uses the .secondary look from index.css */
+/* Reset button (outlined orange) */
 .secondary {
   background: transparent;
   border: 2px solid var(--primary);
@@ -139,7 +144,7 @@
   border: none;
   height: 1px;
   background-color: #ddd;
-  margin: 2rem 0;
+  margin: 1rem 0;  /* reduced from 2rem to 1rem to tighten SEO spacing */
 }
 
 
@@ -173,7 +178,7 @@
   text-align: center;
 }
 
-/* Close button (×) in top‐right */
+/* Close button (×) in top-right */
 .modal-close {
   position: absolute;
   top: 1rem;
@@ -277,18 +282,18 @@
    4) SEO Section (text already centered in HTML)
    ---------------------------------- */
 .seo-section {
-  margin: 2rem 0;
+  margin: 1rem 0;  /* reduced from 2rem to 1rem */
   text-align: center;
 }
 
 .seo-section h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--text);
 }
 
 .seo-section p {
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;  /* reduced from 0.75rem to 0.5rem */
   line-height: 1.6;
   color: var(--text);
 }

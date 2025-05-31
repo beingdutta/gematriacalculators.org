@@ -6,6 +6,7 @@
 
   <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
   <meta name="description" content="Play the classic FLAME game: enter two names and find out if you are Friends, Love, Affection, Marriage, Enemies, or Siblings.">
+  <link rel="icon" href="/assets/hear-site-icon.png" sizes="32x32">
 
   <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
   <link rel="stylesheet" href="/styles/index.css" />
@@ -21,7 +22,7 @@
          HEADER (IDENTICAL TO index.php STYLE)
        ============================ -->
     <header class="header">
-      <img src="/assets/header-image.webp" id="themeLogo" alt="site logo" />
+      <img src="/assets/flame-icon-128.png" id="themeLogo" alt="site logo" />
       <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
       <h1>FLAME Calculator</h1>
       <p class="subtitle">(Enter two names to discover your relationship outcome)</p>
@@ -41,7 +42,7 @@
 
         <!-- Center flame icon -->
         <div class="flame-col flame-center">
-          <img src="/assets/flame-icon.png" alt="Flame Icon" class="flame-main-icon" />
+          <img src="/assets/heart.png" alt="Flame Icon" class="flame-main-icon" />
         </div>
 
         <!-- Right column -->
@@ -155,14 +156,25 @@
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>Why are there five FAQ items?</span>
+          <span>Can I use the FLAMES calculator for any names?</span>
           <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
             <path d="M6 9l6 6 6-6" />
           </svg>
         </div>
         <div class="faq-answer">
-          We’ve expanded the FAQ so you get a complete rundown of how the FLAME logic works, from stripping common letters to the 
-          final elimination. Scroll through all five tabs for the full explanation.
+          Yes! You can use the FLAMES calculator with any two names—your own and your friend’s, crush’s, or partner’s—to see your FLAMES relationship result.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>Is the FLAMES game suitable for all ages?</span>
+          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="faq-answer">
+          Absolutely. The FLAMES game is a light-hearted name compatibility test that’s suitable for kids, teens, and adults looking for a fun love or friendship predictor.
         </div>
       </div>
     </section>

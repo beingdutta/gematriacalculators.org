@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const headerImg = document.getElementById('themeLogo');
   if (headerImg) {
-    headerImg.src = '/assets/header-image.webp';
+    headerImg.src = '/assets/flame-icon-128.png';
   }
 });
 
