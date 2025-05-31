@@ -186,7 +186,7 @@
       </div>
     </main>
 
-    <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.1rem; text-align: center;">
+    <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
       For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
     </p>
 
