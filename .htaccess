@@ -1,16 +1,11 @@
 RewriteEngine On
 
-# Only apply HTTPS and domain redirects if not on localhost
-RewriteCond %{HTTP_HOST} !^localhost [NC]
-RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+# Skip redirect for localhost and 127.0.0.1
+RewriteCond %{HTTP_HOST} ^localhost$ [OR]
+RewriteCond %{HTTP_HOST} ^127\.0\.0\.1$
+RewriteRule ^ - [L]
 
-    # Redirect HTTP to HTTPS
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-    # Redirect www to non-www
-    RewriteCond %{HTTP_HOST} ^www\.gematriacalculators\.org [NC]
-    RewriteRule ^(.*)$ https://gematriacalculators.org/$1 [L,R=301]
-
-    # Redirect /index.html to homepage
-    Redirect 301 /index.html https://gematriacalculators.org/
+# Force HTTPS and remove www in one step for everything else
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://gematriacalculators.org/$1 [R=301,L]

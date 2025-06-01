@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
-  <meta name="description" content="Play the classic FLAME game: enter two names and find out if you are Friends, Love, Affection, Marriage, Enemies, or Siblings.">
-  <link rel="icon" href="/assets/flame-calculator-site-icon.png" sizes="32x32">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Play the classic FLAME game: enter two names and find out if you are Friends, Love, Affection, Marriage, Enemies, or Siblings.">
 
-  <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
-  <link rel="stylesheet" href="/styles/index.css" />
+    <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/flame-calculator.php" />
+    <link rel="icon" href="/assets/flame-calculator-site-icon.png" sizes="32x32">
 
-  <!-- Page-specific CSS overrides -->
-  <link rel="stylesheet" href="/styles/flame-calculator.css" />
-</head>
+    <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
+    <link rel="stylesheet" href="/styles/index.css" />
+
+    <!-- Page-specific CSS overrides -->
+    <link rel="stylesheet" href="/styles/flame-calculator.css" />
+  </head>
 
 <body>
   <div class="container">
