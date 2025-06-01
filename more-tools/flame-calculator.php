@@ -8,7 +8,7 @@
 
     <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
     <link rel="canonical" href="https://gematriacalculators.org/more-tools/flame-calculator.php" />
-    <link rel="icon" href="/assets/flame-calculator-site-icon.png" sizes="32x32">
+    <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
 
     <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
     <link rel="stylesheet" href="/styles/index.css" />

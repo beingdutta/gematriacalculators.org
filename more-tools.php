@@ -7,7 +7,7 @@
         <title>More Numerology & Mystical Tools</title>
         <link rel="canonical" href="https://gematriacalculators.org/more-tools.php">
         <link rel="stylesheet" href="/styles/more-tools.css">
-        <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
+        <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     </head>
 
     <body>
