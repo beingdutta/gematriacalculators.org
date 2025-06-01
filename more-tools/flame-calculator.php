@@ -4,25 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Play the classic FLAME game: enter two names and find out if you are Friends, Love, Affection, Marriage, Enemies, or Siblings.">
-
+    <meta name="description" content="Use our FLAMES calculator to find your relationship fate — Friends, Love, Affection, Marriage, Enemies, or Siblings — using a fun, fast online love compatibility game.">
+    <meta name="keywords" content="flames calculator, love calculator flames, flames calculator percentage, flames calculator love, flames calculator online, flames calculator by name, how to calculate flames, flames calculator app, flames calculator true, twin flame calculator">
     <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
     <link rel="canonical" href="https://gematriacalculators.org/more-tools/flame-calculator.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-
-    <!-- Import the site-wide CSS (colors, typography, reset, header/footer, FAQ styles, etc.) -->
     <link rel="stylesheet" href="/styles/index.css" />
-
-    <!-- Page-specific CSS overrides -->
     <link rel="stylesheet" href="/styles/flame-calculator.css" />
   </head>
 
 <body>
   <div class="container">
 
-    <!-- ============================
-         HEADER (IDENTICAL TO index.php STYLE)
-       ============================ -->
     <header class="header">
       <img src="/assets/flame-icon-128.png" id="themeLogo" alt="site logo" />
       <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
@@ -30,161 +23,116 @@
       <p class="subtitle">(Enter two names to discover your relationship outcome)</p>
     </header>
 
-    <!-- ============================
-         MAIN FLAME CALCULATOR AREA
-       ============================ -->
     <main class="calculator">
-      <!-- Three-column row: left label+input / flame icon / right label+input -->
       <div class="flame-row">
-        <!-- Left column -->
         <div class="flame-col">
           <label for="yourName">Your Name</label>
           <input id="yourName" type="text" placeholder="Enter your name…" />
         </div>
 
-        <!-- Center flame icon -->
         <div class="flame-col flame-center">
           <img src="/assets/heart.png" alt="Flame Icon" class="flame-main-icon" />
         </div>
 
-        <!-- Right column -->
         <div class="flame-col">
           <label for="partnerName">Your Partner’s Name</label>
           <input id="partnerName" type="text" placeholder="Enter partner’s name…" />
         </div>
       </div>
 
-      <!-- Buttons: Calculate + Reset -->
       <div class="button-container">
         <button class="calculate-btn" onclick="runFlameCalculation()">Calculate</button>
         <button class="secondary" onclick="resetFlameCalculator()">Reset</button>
       </div>
 
-      <!-- Inline error if fields are blank -->
       <div id="inputError" class="error-message">Please enter both names.</div>
     </main>
 
-
-    <!-- ============================
-         SEO TEXT (WITH GREYED <hr> SEPARATORS)
-       ============================ -->
     <hr class="grey-rule" />
     <section class="seo-section">
-      <h2>Discover Your FLAME Outcome in Seconds</h2>
+      <h2>Discover Your Relationship Fate with the FLAMES Calculator</h2>
       <p>
-        The classic <strong>FLAME</strong> game has entertained generations. Simply type in two names and find out if you end up as 
-        <em>Friends</em>, <em>Love</em>, <em>Affection</em>, <em>Marriage</em>, <em>Enemies</em>, or <em>Siblings</em>. 
-        No paper, no pencil—just a quick online tool that does the counting and elimination for you.
+        The <strong>FLAMES calculator</strong> is a timeless and entertaining way to explore name compatibility. Simply enter your name and your partner's name to find out whether your relationship is destined for <em>Friends</em>, <em>Love</em>, <em>Affection</em>, <em>Marriage</em>, <em>Enemies</em>, or <em>Siblings</em>. This free <strong>FLAMES calculator online</strong> instantly reveals your romantic fate in a fun and engaging way, suitable for all ages. Whether you're curious, playful, or seeking insight into your love life, the FLAMES game is a lighthearted way to enjoy the mystery of relationships. 
       </p>
     </section>
+
     <hr class="grey-rule" />
     <section class="seo-section">
+      <h2>How to Calculate FLAMES with Our Tool</h2>
       <p>
-        Enter your name on the left, your partner’s name on the right, and click “Calculate.” We’ll show a fun 3-second spinner 
-        (in a modal) and then reveal your final FLAME result, complete with an emoji and a brief explanation. 
-        If you want to play again, hit “Calculate Again” inside the popup.
+        Wondering <strong>how to calculate FLAMES</strong>? Our calculator simplifies the traditional method by automatically removing common letters from both names and applying the elimination formula to the F-L-A-M-E-S sequence. The outcome shows one of six results: Friends, Love, Affection, Marriage, Enemies, or Siblings. This digital <strong>FLAMES calculator by name</strong> ensures speed and accuracy, avoiding human error while preserving the nostalgic charm. It’s perfect for teens exploring crushes or adults reminiscing about old-school love games.
       </p>
     </section>
+
     <hr class="grey-rule" />
     <section class="seo-section">
+      <h2>Play the FLAMES Love Calculator Anytime</h2>
       <p>
-        This tool is 100% mobile-friendly. Whether you’re on a phone, tablet, or desktop, the FLAME calculation happens instantly, 
-        letting you share results with friends or just enjoy a blast from the past.
+        Looking for a <strong>love calculator FLAMES</strong> game that works on any device? Ours is a fully responsive <strong>FLAMES calculator app</strong> that functions smoothly across desktop and mobile. Want to see the <strong>FLAMES calculator percentage</strong> of compatibility or test your connection with a potential <strong>twin flame</strong>? Enter your names and discover your bond in seconds. This <strong>FLAMES calculator true</strong> result reflects the age-old fun of calculating love through letters, now in digital form.
       </p>
     </section>
+
     <hr class="grey-rule" />
+    <section class="seo-section">
+      <h2>Why Use Our FLAMES Calculator Online</h2>
+      <p>
+        Our <strong>FLAMES calculator online</strong> brings together tradition and technology. No need for pen and paper or counting on fingers. Just input names and click Calculate — our system will take care of the logic and output a result you can laugh about or share with friends. The interactive design, quick results, and engaging visuals make it the best modern take on the classic <strong>FLAMES love calculator</strong>. Try it now and bring back the fun.
+      </p>
+    </section>
 
-
-    <!-- ============================
-         FAQ SECTION (NO HEADING, FIVE COLLAPSIBLES)
-       ============================ -->
+    <hr class="grey-rule" />
     <section class="faq-section">
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>What is a FLAME calculator?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span>What is a FLAMES calculator?</span>
+          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          A FLAME calculator is a fun, nostalgic game that takes two names, removes matching letters one-by-one, counts the 
-          remaining letters, and then eliminates letters from F-L-A-M-E-S based on that count. 
-          The final letter left stands for:
-          <strong>F</strong> = Friends, <strong>L</strong> = Love, <strong>A</strong> = Affection, 
-          <strong>M</strong> = Marriage, <strong>E</strong> = Enemies, <strong>S</strong> = Siblings.
+          A <strong>FLAMES calculator</strong> is a fun, nostalgic game that takes two names, removes matching letters, and uses the total remaining count to eliminate options in the FLAMES acronym: Friends, Love, Affection, Marriage, Enemies, Siblings. Our tool is an accurate, online love calculator flames version you can trust for entertainment.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>How do you remove letters?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span>How does the FLAMES algorithm work?</span>
+          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          First, we strip out spaces and lowercase both names. Then, for each character in Name A, 
-          if it appears in Name B, we remove that character from both names (only once per match). 
-          After that, we count how many letters remain total. That number drives the elimination process in the FLAMES array.
+          The <strong>FLAMES calculator</strong> compares letters in both names, removes common ones, and totals the rest. This count drives elimination across the F-L-A-M-E-S letters in circular fashion until one remains. This simple algorithm is the heart of the <strong>flames calculator by name</strong> logic.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>How do you decide which letter to remove in FLAMES?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span>Can I use this flames calculator app more than once?</span>
+          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          After counting the leftover letters, you take that number (say 8) and count through the array 
-          <code>['F','L','A','M','E','S']</code> in a circular fashion. The 8th letter is removed first. 
-          Then you continue from the very next letter, counting again up to 8, and remove that one. 
-          Repeat until only one letter remains.
+          Yes, you can use the <strong>flames calculator app</strong> as many times as you want! Just click "Calculate Again" and enter a new pair of names. It's perfect for parties, friends, or curiosity.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>Can I calculate more than once?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span>Is this flames calculator true or just for fun?</span>
+          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          Of course! Once your result appears in the modal, click “Calculate Again” to clear both fields and run a brand-new calculation.
+          While our <strong>flames calculator true</strong> results follow the original rules of the FLAMES game, it’s meant for entertainment and fun, not scientific matchmaking. Use it to share laughs or break the ice with a crush!
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>Can I use the FLAMES calculator for any names?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span>Does this support twin flame name checks?</span>
+          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          Yes! You can use the FLAMES calculator with any two names—your own and your friend’s, crush’s, or partner’s—to see your FLAMES relationship result.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>Is the FLAMES game suitable for all ages?</span>
-          <svg class="chevron" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </div>
-        <div class="faq-answer">
-          Absolutely. The FLAMES game is a light-hearted name compatibility test that’s suitable for kids, teens, and adults looking for a fun love or friendship predictor.
+          Yes! You can use this <strong>twin flame calculator</strong> to test spiritual or soulmate-style name matches, just like with casual friendships or love interests. It's a lighthearted way to explore name compatibility with anyone.
         </div>
       </div>
     </section>
 
-
-    <!-- ============================
-         FOOTER MENU (IDENTICAL TO index.php)
-       ============================ -->
     <hr class="grey-rule" />
     <footer class="footer">
       <div class="footer-links">
@@ -202,50 +150,28 @@
     </footer>
   </div>
 
-
-  <!-- ============================
-       MODAL OVERLAY & CONTENT
-     ============================ -->
   <div id="flameModalOverlay" class="modal-overlay">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="flameModalHeader">
-      <!-- Close “×” button -->
       <button class="modal-close" onclick="closeFlameModal()">×</button>
-
-      <!-- Modal header: “NameA 🔥 NameB” -->
       <div class="modal-header" id="flameModalHeader">
         <span id="modalNameA">NameA</span>
         <span class="flame-icon-large">🔥</span>
         <span id="modalNameB">NameB</span>
       </div>
-
-      <!-- Modal body: Spinner first, then result -->
       <div class="modal-body">
-        <!-- Large spinner (orange) -->
         <div id="modalSpinner" class="spinner-large"></div>
-
-        <!-- Hidden until after 3s: result block -->
         <div id="modalResult" class="modal-result-content" style="display: none;">
-          <p>
-            The relationship between 
-            <strong><span id="displayNameA"></span></strong> and 
-            <strong><span id="displayNameB"></span></strong> 
-            will ultimately lead to:
-          </p>
+          <p>The relationship between <strong><span id="displayNameA"></span></strong> and <strong><span id="displayNameB"></span></strong> will ultimately lead to:</p>
           <span id="resultEmoji" class="result-emoji">❤️</span>
           <div id="resultText" class="result-text">Marriage</div>
         </div>
       </div>
-
-      <!-- Modal footer: “Calculate Again” -->
       <div class="modal-footer">
         <button class="calculate-again" onclick="resetFlameCalculator()">Calculate Again</button>
       </div>
     </div>
   </div>
 
-  <!-- ============================
-       PAGE-SPECIFIC JavaScript
-     ============================ -->
   <script src="/scripts/flame-calculator.js"></script>
 </body>
 </html>
