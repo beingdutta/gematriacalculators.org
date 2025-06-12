@@ -10,16 +10,10 @@
 
   // Prepare SEO strings
   if ($results) {
-    $seoTitle = ucfirst($inputRaw) . ' value in Gematria is ' 
-                . $results['english']['total'] 
-                . ' | Free Gematria Calculator';
-    $seoDesc  = 'Find the Hebrew, English & Simple gematria values of “'
-                . htmlspecialchars($inputRaw, ENT_QUOTES)
-                . '” instantly. Hebrew=' . $results['hebrew']['total']
-                . ', English=' . $results['english']['total']
-                . ', Simple=' . $results['simple']['total'] . '.'
-                . "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
-  } else {
+    $seoTitle = ucfirst($inputRaw) . ' value in Gematria is ' . $results['english']['total'] . ' | Free Gematria Calculator';
+    $seoDesc  = 'Find the Hebrew, English & Simple gematria values of “'. htmlspecialchars($inputRaw, ENT_QUOTES). '” instantly. Hebrew=' . $results['hebrew']['total']. ', English=' . $results['english']['total']. ', Simple=' . $results['simple']['total'] . '.'. "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
+  } 
+  else {
     $seoTitle = 'Free Gematria Calculator Online - Hebrew/English/Simple Values';
     $seoDesc  = '#1 free gematria calculator online. Compute Hebrew, English & Simple gematria values of any word instantly.';
   }
@@ -49,7 +43,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="keywords" content="gematria calculator, bible gematria calculator, english to hebrew gematria calculator, calculator gematria, best gematria calculator, calculate gematria, gematria calculator online, simple gematria, free gematria calculator, gematria name calculator, gematria calc, gematria.com calculator, gematria calculator us, gematria online calculator, hebrew gematria calculator, english gematria calculator">
+  <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder, simple gematria, free gematria calculator, gematria name calculator, jewish gematria calculator, gematria.com calculator, gematria calculator us, gematria online calculator, english gematria calculator, hebrew numerology calculator, gematria hebraica calcule online, gematriacalculator.us">
 
   <!-- Dynamic SEO tags for parameterized URL in SERP's-->
   <title><?= $seoTitle ?></title>
@@ -64,7 +58,7 @@
   ?>
 
   <link rel="canonical" href="<?= $canonicalUrl ?>">  
-  <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
+  <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -194,17 +188,17 @@
     <!-- SEO SECTION #1 -->
     <div class="seo-section">
       <h4>Discover Hidden Numerical Meanings</h4>
-      <p>This gematria calculator works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "gematria.com calculator", and "gematria calculator.us" — and this tool provides the functionality they seek.</p>
+      <p>This free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "simple gematria calculator" — and this tool provides the functionality they seek.</p>
       <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
     </div>
 
     <div class="seo-section", style="color: green;">
-      <p>International users often search using terms like <em>гематрия калькулятор</em> (Russian), <em>gematria rechner</em> (German), and <em>gematria calculadora</em> (Spanish). <br><br>This tool is designed to be intuitive and accessible for everyone exploring gematria.</p>
+      <p>International users often search using terms like <em>гематрия калькулятор</em> (Russian), <em>gematria rechner</em> (German), and <em>gematria calculadora</em> (Spanish). <br><br>This gematrix calculator tool aka gematria finder is designed to be intuitive and accessible for everyone exploring gematria.</p>
     </div>
 
     <!-- SEO SECTION #2 -->
     <div class="seo-section">
-      <p>Our best gematria calculator online tool is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence.</p>
+      <p>Our best gematria calculator us online tool or (aka gematrix calculator) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence.</p>
     </div>
 
     <hr class="divider">
@@ -274,7 +268,7 @@
           <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="faq-answer">
-          Yes! This calculator automatically ignores spaces and special characters, focusing only on alphabetical letters.
+          Yes! This gematria name calculator automatically ignores spaces and special characters, focusing only on alphabetical letters. We support gematria calculator name and meaning for all users anytime 24*7 for free.
         </div>
       </div>
 

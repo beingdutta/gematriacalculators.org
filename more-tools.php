@@ -8,6 +8,10 @@
         <link rel="canonical" href="https://gematriacalculators.org/more-tools.php">
         <link rel="stylesheet" href="/styles/more-tools.css">
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder, hebrew numerical value calculator, biblical gematria letter to number, gematria name calculator, jewish gematria calculator, guematria hebraica calcule online, gematria calculator us, gematria online calculator, gematra name calculator">
     </head>
 
     <body>
