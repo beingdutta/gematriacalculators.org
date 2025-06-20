@@ -1,3 +1,7 @@
+#themeLogo {
+    width: 95px;
+}
+
 .article-block {
     background: var(--card-bg);
     padding: 2rem;

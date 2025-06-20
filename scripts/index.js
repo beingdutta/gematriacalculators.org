@@ -285,3 +285,38 @@ document.addEventListener('DOMContentLoaded', () => {
         list.append(card);
     });
 });
+
+
+// ─── Exit-Intent / Timed Modal Logic ────────
+
+let exitModalShown = false;
+const modal       = document.getElementById('exitModal');
+const closeBtn    = document.getElementById('exitModalClose');
+
+function showExitModal() {
+  if (exitModalShown) return;
+  exitModalShown = true;
+  modal.style.display = 'flex';
+}
+
+function hideExitModal() {
+  modal.style.display = 'none';
+}
+
+// 1) Show after 10 seconds on page
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(showExitModal, 10000);
+
+  // 2) Exit-intent: when mouse leaves at the top
+  document.addEventListener('mouseout', e => {
+    if (!e.toElement && !e.relatedTarget && e.clientY <= 0) {
+      showExitModal();
+    }
+  });
+});
+
+// Close handlers
+closeBtn.addEventListener('click', hideExitModal);
+modal.addEventListener('click', e => {
+  if (e.target === modal) hideExitModal();
+});
