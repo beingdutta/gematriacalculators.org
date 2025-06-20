@@ -305,9 +305,9 @@ function hideExitModal() {
   modal.style.display = 'none';
 }
 
-// 1) Show after 10 seconds on page
+// 1) Show after 13 seconds on page
 window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(showExitModal, 10000);
+  setTimeout(showExitModal, 13000);
 
   // 2) Exit-intent: when mouse leaves at the top
   document.addEventListener('mouseout', e => {
