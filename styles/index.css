@@ -674,6 +674,31 @@ footer .copyright {
   flex-direction: column;
   gap: 0.75rem;
 }
+
+/* For Dark Mode*/
+[data-theme="dark"] .outline-button {
+  border-color: #fff;
+  color: #fff;
+}
+
+[data-theme="dark"] .outline-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: #222;
+  color: #fff;
+}
+
+[data-theme="dark"] .modal-close {
+  color: #ccc;
+}
+
+[data-theme="dark"] .modal-close:hover {
+  color: #fff;
+}
+
 /* ─── End of Exit-Intent Modal ─────── */
 
 

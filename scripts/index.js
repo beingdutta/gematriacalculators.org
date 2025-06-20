@@ -161,6 +161,8 @@ function toggleFAQ(element) {
     faqItem.classList.toggle('active');
 }
 
+
+// For PDF Generation.
 function generatePDFContent(input, results) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
