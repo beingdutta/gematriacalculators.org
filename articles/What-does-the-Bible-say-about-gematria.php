@@ -70,6 +70,16 @@
 
             <h3>📜 Final Thought</h3>
             <p>Though not explicitly taught in the Bible, Gematria reflects the biblical tradition of meaningful numbers. Whether as a study aid, a spiritual exploration, or a historical curiosity, it adds another layer to how we engage with sacred texts. If approached respectfully, it can deepen — not replace — your understanding of the Word.</p>
+
+            <h3>📚 Resources & Next Steps</h3>
+            <p>Ready to go further? We recommend:</p>
+
+            <div>
+                <p><a href="/articles/What-is-a-Gematria-Calculator.php">Basics of Gematria Calculator</a> — Calculation of Gematria.</p>
+                <p><a href="/articles/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
+                <p><a href="/articles/What-is-a-good-starting-point-for-learning-Gematria.php">How to start with Gematria</a>: Find the logic of Gematria only here.</p>
+            </div>
+
           </div>
 
           <div class="feedback">

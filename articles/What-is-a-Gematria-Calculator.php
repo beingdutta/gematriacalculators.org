@@ -76,7 +76,17 @@
             <h3>Final Thoughts</h3>
             <p>Whether you're using a Gematria calculator Hebrew, exploring Biblical codes, or just curious about the Gematria value calculator of your name, this ancient practice continues to intrigue minds in the modern world. With accessible tools like Gematria calculator apps, websites, and community platforms, unlocking the mystery of numbers has never been easier.</p>
 
-            <p>So the next time you see a number recurring in your life, don’t dismiss it. Try a <a href="/index.html">Gematria calculator online</a> and see what the universe might be trying to tell you.</p>
+            <p>So the next time you see a number recurring in your life, don’t dismiss it. Try a <a href="/index.php">Gematria calculator online</a> and see what the universe might be trying to tell you.</p>
+
+
+            <h3>📚 Resources & Next Steps</h3>
+            <p>Ready to go further? We recommend:</p>
+
+            <div>
+                <p><a href="/articles/What-is-Gematria-in-your-own-words.php">See what your views about Gematria</a> — Views of Gematria.</p>
+                <p><a href="/articles/Is-There-Any-Merit-in-Gematria.php">Merit of Gematria</a> — Benefits of Gematia Values.</p>
+                <p><a href="/articles/What-is-the-truth-about-gematria.php">Actual truth of Gematia</a>: Find the logic of Gematria only here.</p>
+            </div>
           </div>
 
           <div class="feedback">

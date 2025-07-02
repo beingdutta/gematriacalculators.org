@@ -11,7 +11,7 @@
   // Prepare SEO strings
   if ($results) {
     $seoTitle = ucfirst($inputRaw) . ' value in Gematria is ' . $results['english']['total'] . ' | Free Gematria Calculator';
-    $seoDesc  = 'Find the Hebrew, English & Simple gematria values of “'. htmlspecialchars($inputRaw, ENT_QUOTES). '” instantly. Hebrew=' . $results['hebrew']['total']. ', English=' . $results['english']['total']. ', Simple=' . $results['simple']['total'] . '.'. "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
+    $seoDesc  = 'Find the English, Hebrew & Simple gematria values of “'. htmlspecialchars($inputRaw, ENT_QUOTES). '” instantly. Hebrew=' . $results['hebrew']['total']. ', English=' . $results['english']['total']. ', Simple=' . $results['simple']['total'] . '.'. "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
   } 
   else {
     $seoTitle = 'Free Gematria Calculator Online - Hebrew/English/Simple Values';
