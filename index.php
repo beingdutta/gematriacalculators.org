@@ -42,6 +42,7 @@
     </script>
 
     <meta charset="UTF-8">
+    <meta name="p:domain_verify" content="9a2f772bde6a1162d2e6c441caf23a2a"/>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder, simple gematria, free gematria calculator, gematria name calculator, jewish gematria calculator, gematria.com calculator, gematria calculator us, gematria online calculator, english gematria calculator, hebrew numerology calculator, gematria hebraica calcule online, gematriacalculator.us">
 
