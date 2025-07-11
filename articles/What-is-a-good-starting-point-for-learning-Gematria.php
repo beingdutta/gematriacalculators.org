@@ -41,7 +41,7 @@
                         <h3>🔍 Why Learn Gematria?</h3>
                         <p>Whether you’re drawn to ancient mysticism or linguistic puzzles, Gematria offers a fascinating bridge between letters and numbers. In this guide, you’ll learn how to calculate gematria step by step, choose the best gematria calculator, and explore powerful tools like gematrix and gematria finder. Let’s dive in!</p>
 
-                        <h3>🔰 Master the Hebrew Alphabet</h3>
+                        <h3>🔰 Hebrew Alphabet</h3>
                         <p>Gematria’s origins lie in Hebrew, where each letter has a numeric value. Start by memorizing Alef (1), Bet (2), Gimel (3)… all the way to Tav (400). You can print a simple chart, or use an english to hebrew gematria calculator to cross-reference as you go. Familiarity with these basics ensures accuracy when you later tackle words and phrases.</p>
 
                         <h3>🛠 Choosing Your First Gematria Tool</h3>
