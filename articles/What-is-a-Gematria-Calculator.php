@@ -101,6 +101,7 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-links">
+          <a href="/">Home</a>
           <a href="/blog-collections.html">Blog</a>
           <a href="/about-us.html">About Us</a>
           <a href="/contact-us.html">Contact Us</a>

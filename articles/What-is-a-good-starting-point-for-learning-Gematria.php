@@ -17,7 +17,7 @@
         <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder">
         <title>What Is a Good Starting Point for Learning Gematria?</title>
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-        <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-Good-Starting-Point-for-Learning-Gematria.html" />
+        <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-good-starting-point-for-learning-Gematria.php" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/article-general-style.css">
@@ -84,7 +84,7 @@
 
                         <h3>🏁 Conclusion</h3>
                         <p>Learning Gematria is a journey of letters, numbers, and discovery. By mastering the Hebrew alphabet, choosing the right gematria calculator online, and building a daily practice, you’ll unlock patterns and meanings you never knew existed. Try your first calculation today—and see where the numbers lead you.</p>
-                        <p><a href="/tools/gematria-calculator.html" class="cta-button">Start Calculating Gematria Now</a></p>
+                        <p><a href="/" class="cta-button">Start Calculating Gematria Now</a></p>
 
                         <h3>📚 Resources & Next Steps</h3>
                         <p>Ready to go further? We recommend:</p>
@@ -116,7 +116,7 @@
                     <a href="/privacy-policy.html">Privacy Policy</a>
                 </div>
                 <div class="copyright">
-                    © 2025 gematriacalculators.org
+                    © <?= date('Y') ?> gematriacalculators.org
                 </div>
             </footer>
         </div>

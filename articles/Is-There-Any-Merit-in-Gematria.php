@@ -18,7 +18,7 @@
     <title>Is There Any Merit in Gematria?</title>
 
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-    <link rel="canonical" href="https://gematriacalculators.org/articles/Is-There-Any-Merit-in-Gematria.html" />
+    <link rel="canonical" href="https://gematriacalculators.org/articles/Is-There-Any-Merit-in-Gematria.php" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/article-general-style.css">
@@ -58,7 +58,7 @@
                 <h3>✨ So, What Is the Gematria Calculator Really For?</h3>
                 <p>Whether you're asking what is a Gematria calculator, what is the Gematria calculator, or what is Gematria calculator, the answer remains: it’s a tool that helps bridge the symbolic world of language and the logical world of numbers. It's up to the user to decide if that bridge leads to mysticism, fun, or something in between.</p>
 
-                <p>If you're curious, try one yourself. Use a Gematria calculator English or Gematria calculator Hebrew and start <a href="/index.html">discovering</a> the hidden numerical layers of your favorite words and names.</p>
+                <p>If you're curious, try one yourself. Use a Gematria calculator English or Gematria calculator Hebrew and start <a href="/">discovering</a> the hidden numerical layers of your favorite words and names.</p>
 
                 <h3>📚 Resources & Next Steps</h3>
                 <p>Ready to go further? We recommend:</p>
@@ -91,7 +91,7 @@
                 <a href="/privacy-policy.html">Privacy Policy</a>
             </div>
             <div class="copyright">
-                © 2022 gematriacalculators.org
+                © <?= date('Y') ?> gematriacalculators.org
             </div>
         </footer>
     </div>

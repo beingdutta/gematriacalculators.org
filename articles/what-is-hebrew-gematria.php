@@ -16,7 +16,7 @@
     <meta name="keywords" content="hebrew gematria, gematria calculator, jewish numerology, mispar hechrechi, kabbalah, Hebrew numerology">
     <title>What Is Hebrew Gematria?</title>
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-Is-Hebrew-Gematria.html" />
+    <link rel="canonical" href="https://gematriacalculators.org/articles/what-is-hebrew-gematria.php" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/article-general-style.css">

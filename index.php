@@ -102,8 +102,8 @@
 
     <!-- Hreflang links -->
     <?php
-      $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
-      $en_path = !empty($qs) ? 'index.php' . $qs : '';
+      $qs = !empty($inputRaw) ? '?input=' . rawurlencode($inputRaw) : '';
+      $en_path = !empty($inputRaw) ? 'index.php' . $qs : '';
     ?>
     <link rel="alternate" hreflang="en" href="<?= $BASE_URL . $en_path ?>">
     <link rel="alternate" hreflang="ru" href="<?= $BASE_URL . 'ru/index.php' . $qs ?>">
