@@ -15,7 +15,7 @@
     <meta name="description" content="What is a gematria in your own words? An ancient system of assigning numerical values to letters, words, or phrases. Often associated with Hebrew, but it also appears in Greek.">
     <meta name="keywords" content="gematria calculator, hebrew gematria calculator, jewish gematria calculator, simple gematria calculator, bible gematria calculator, biblical gematria calculator, english gematria calculator, gematria calculator hebrew, gematria calculator app, gematria calculator names">
     <title>What is Gematria in your own words?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-Gematria-in-your-own-words.html" />
+    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-Gematria-in-your-own-words.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <!-- Fonts + Global Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@
           <a href="/privacy-policy.html">Privacy Policy</a>
         </div>
         <div class="copyright">
-          © 2022 gematriacalculators.org
+          © <?= date('Y') ?> gematriacalculators.org
         </div>
       </footer>
     </div>

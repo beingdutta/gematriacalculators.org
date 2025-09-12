@@ -28,15 +28,16 @@
     <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
 
     <?php
-      $base = 'https://gematriacalculators.org';
-      $path = ltrim($_SERVER['REQUEST_URI'], '/');
+      $base_url = 'https://gematriacalculators.org';
+      $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
+      $en_path = 'index.php' . $qs;
     ?>
-    <link rel="alternate" hreflang="en" href="<?= $base ?>/<?= $path ?>">
-    <link rel="alternate" hreflang="ru" href="<?= $base ?>/ru/<?= $path ?>">
-    <link rel="alternate" hreflang="de" href="<?= $base ?>/de/<?= $path ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= $base ?>/<?= $path ?>">
+    <link rel="alternate" hreflang="en" href="<?= $base_url ?>/<?= $en_path ?>">
+    <link rel="alternate" hreflang="ru" href="<?= $base_url ?>/ru/index.php<?= $qs ?>">
+    <link rel="alternate" hreflang="de" href="<?= $base_url ?>/de/index.php<?= $qs ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= $base_url ?>/<?= $en_path ?>">
 
-    <link rel="canonical" href="<?= $base ?>/de/<?= $path ?>">
+    <link rel="canonical" href="<?= $base_url ?>/de/index.php<?= $qs ?>">
 
     <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -229,7 +230,7 @@
         </div>
 
         <div class="copyright">
-          © 2022 gematriacalculators.org
+          © <?= date('Y') ?> gematriacalculators.org
         </div>
       </footer>
 

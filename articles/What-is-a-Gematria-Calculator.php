@@ -15,7 +15,7 @@
     <meta name="description" content="What is a Gematria Calculator? It is a tool that converts words and phrases into numerical values using ancient alphanumeric codes.">
     <meta name="keywords" content="biblical gematria calculator, english gematria calculator, gematria calculator hebrew, gematria calculator app, gematria calculator names, gematria calculator english, gematria calculator online, gematria effect calculator, gematria name calculator, gematria value calculator, gematria numerology calculator">
     <title>What is a Gematria Calculator?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-Gematria-Calculator.html" />
+    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-Gematria-Calculator.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <!-- Fonts + Global Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -75,7 +75,7 @@
             <h3>Final Thoughts</h3>
             <p>Whether you're using a Gematria calculator Hebrew, exploring Biblical codes, or just curious about the Gematria value calculator of your name, this ancient practice continues to intrigue minds in the modern world. With accessible tools like Gematria calculator apps, websites, and community platforms, unlocking the mystery of numbers has never been easier.</p>
 
-            <p>So the next time you see a number recurring in your life, don’t dismiss it. Try a <a href="/index.php">Gematria calculator online</a> and see what the universe might be trying to tell you.</p>
+            <p>So the next time you see a number recurring in your life, don’t dismiss it. Try a <a href="/">Gematria calculator online</a> and see what the universe might be trying to tell you.</p>
 
 
             <h3>📚 Resources & Next Steps</h3>
@@ -108,7 +108,7 @@
           <a href="/privacy-policy.html">Privacy Policy</a>
         </div>
         <div class="copyright">
-          © 2022 gematriacalculators.org
+          © <?= date('Y') ?> gematriacalculators.org
         </div>
       </footer>
     </div>

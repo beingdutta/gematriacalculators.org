@@ -29,7 +29,8 @@
 
     <?php
       $base = 'https://gematriacalculators.org';
-      $path = ltrim($_SERVER['REQUEST_URI'], '/');           // index.php?input=...
+      $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
+      $path = 'index.php' . $qs;
     ?>
     <link rel="alternate" hreflang="en" href="<?= $base ?>/<?= $path ?>">
     <link rel="alternate" hreflang="ru" href="<?= $base ?>/ru/<?= $path ?>">
@@ -232,7 +233,7 @@
         </div>
 
         <div class="copyright">
-          © 2022 gematriacalculators.org
+          © <?= date('Y') ?> gematriacalculators.org
         </div>
       </footer>
 

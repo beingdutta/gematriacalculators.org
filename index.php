@@ -38,8 +38,8 @@
   // Canonical: point root when empty; deep-link when there’s an input
   $canonicalUrl = $BASE_URL;
   if (!empty($inputRaw)) {
-    // use rawurlencode for cleaner canonical with query
-    $canonicalUrl .= '?input=' . rawurlencode($inputRaw);
+    // use rawurlencode for cleaner canonical with query. Point to index.php for queries.
+    $canonicalUrl .= 'index.php?input=' . rawurlencode($inputRaw);
   }
 
   // Open Graph / Twitter: keep short and dependable; use static description
@@ -99,6 +99,17 @@
     <meta name="twitter:title" content="<?= htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
+
+    <!-- Hreflang links -->
+    <?php
+      $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
+      $en_path = !empty($qs) ? 'index.php' . $qs : '';
+    ?>
+    <link rel="alternate" hreflang="en" href="<?= $BASE_URL . $en_path ?>">
+    <link rel="alternate" hreflang="ru" href="<?= $BASE_URL . 'ru/index.php' . $qs ?>">
+    <link rel="alternate" hreflang="de" href="<?= $BASE_URL . 'de/index.php' . $qs ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . $en_path ?>">
+
 
     <!-- JSON-LD: WebApplication schema for a calculator -->
     <script type="application/ld+json">
@@ -346,7 +357,7 @@
 
             <!-- COPYRIGHT NOTICE -->
             <div class="copyright">
-                © 2022 gematriacalculators.org
+                © <?= date('Y') ?> gematriacalculators.org
             </div>
         </footer>
     </div>

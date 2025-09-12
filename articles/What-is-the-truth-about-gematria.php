@@ -19,7 +19,7 @@
 
         <title>The Truth About Gematria - Free Gematria Calculator Online</title>
 
-        <link rel="canonical" href="https://gematriacalculators.org/articles/What-does-the-Bible-say-about-gematria.html" />
+        <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-the-truth-about-gematria.php" />
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/index.css">
@@ -68,7 +68,7 @@
                         <h3>🧩 Final Thoughts</h3>
                         <p>Whether you're using a <strong>calculator Gematria</strong> tool to decode your name or analyze religious texts, Gematria remains a fascinating bridge between language and numbers. The use of <strong>Gematria calculators</strong> continues to evolve, but its core purpose — to inspire meaning, reflection, and connection — remains as powerful as ever.</p>
 
-                        <p>So, what's your Gematria truth? Try a <a href="/index.html">Gematria</a> calculator names tool or explore the numbers behind your life story and see what patterns emerge.</p>
+                        <p>So, what's your Gematria truth? Try a <a href="/">Gematria</a> calculator names tool or explore the numbers behind your life story and see what patterns emerge.</p>
 
                         <h3>📚 Resources & Next Steps</h3>
                         <p>Ready to go further? We recommend:</p>
@@ -102,7 +102,7 @@
                 <a href="/privacy-policy.html">Privacy Policy</a>
             </div>
             <div class="copyright">
-                © 2022 gematriacalculators.org
+                © <?= date('Y') ?> gematriacalculators.org
             </div>
             </footer>
         </div>
