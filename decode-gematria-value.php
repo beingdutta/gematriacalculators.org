@@ -11,6 +11,8 @@
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931"
+     crossorigin="anonymous"></script>
   </head>
 
   <body>

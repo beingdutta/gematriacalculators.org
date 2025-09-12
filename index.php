@@ -15,7 +15,7 @@
   } 
   else {
     $seoTitle = 'Free Gematria Calculator Online - Hebrew/English/Simple Values';
-    $seoDesc  = '#1 free gematria calculator online. Compute Hebrew, English & Simple gematria values of any word instantly.';
+    $seoDesc  = '#2 free gematria calculator online. Compute Hebrew, English & Simple gematria values of any word instantly.';
   }
 ?>
 
@@ -40,6 +40,9 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "rcxnkrgboo");
     </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931"
+     crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
     <meta name="p:domain_verify" content="9a2f772bde6a1162d2e6c441caf23a2a"/>

@@ -297,23 +297,22 @@ function calculateAndDownload() {
 // ——— Ticker population & click handler ———
 document.addEventListener('DOMContentLoaded', () => {
     const recent = [
-    'divine code of creation',
-    'light flows through numbers',
-    'yahweh speaks in patterns',
-    'sacred geometry of truth',
-    'heaven encoded in math',
-    'elohim within the sequence',
-    'metatron guards the gates',
-    'truth revealed in numbers',
-    'the language of the divine',
-    'mystery hidden in plain sight',
-    'vibration of sacred names',
-    'celestial harmony 432 hz',
-    'infinite light of wisdom',
-    'keys to the tree of life',
-    'order born from the chaos'
+      'patterns whisper from the void',
+      'geometry sings the unseen',
+      'numbers weave the hidden hymn',
+      'cosmos etched in ratios',
+      'prime sparks of living light',
+      'orbits as sacred script',
+      'alpha and omega in code',
+      'fractal breath of creation',
+      'truth spirals through measure',
+      'harmony nested in intervals',
+      'the matrix hums with meaning',
+      'light counts the steps of time',
+      'veils lift at golden angles',
+      'sigils carved in symmetry',
+      'order awakening from silence'
     ];
-
     const list = document.querySelector('.ticker__list');
     if (!list) return;
 
