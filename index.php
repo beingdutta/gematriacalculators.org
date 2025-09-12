@@ -7,22 +7,53 @@
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
+  // ─────────────────────────────────────────────────────────────────────────────
+  // SEO: make description STATIC, keep title concise (optionally dynamic)
+  // ─────────────────────────────────────────────────────────────────────────────
+  $SITE_NAME        = 'Gematria Calculator';
+  $BASE_URL         = 'https://gematriacalculators.org/';
 
-  // Prepare SEO strings
-  if ($results) {
-    $seoTitle = ucfirst($inputRaw) . ' value in Gematria is ' . $results['english']['total'] . ' | Free Gematria Calculator';
-    $seoDesc  = 'Find the English, Hebrew & Simple gematria values of “'. htmlspecialchars($inputRaw, ENT_QUOTES). '” instantly. Hebrew=' . $results['hebrew']['total']. ', English=' . $results['english']['total']. ', Simple=' . $results['simple']['total'] . '.'. "Free gematria calculator | Hebrew gematria calculator | English gematria calculator.";
-  } 
-  else {
-    $seoTitle = 'Free Gematria Calculator Online - Hebrew/English/Simple Values';
-    $seoDesc  = '#2 free gematria calculator online. Compute Hebrew, English & Simple gematria values of any word instantly.';
+  // Clean a display version of the query for title/OG only
+  $displayInput = trim($inputRaw);
+  if ($displayInput !== '') {
+    // limit to ~60 chars to avoid super-long titles
+    $displayInput = mb_strimwidth($displayInput, 0, 60, '…', 'UTF-8');
   }
+
+  // Title: short, human-readable. If there are results, include the English total once.
+  if ($results && isset($results['english']['total'])) {
+    $pageTitle = sprintf(
+      '%s — Gematria Value: %s | %s',
+      ucfirst($displayInput),
+      (string)$results['english']['total'],
+      $SITE_NAME
+    );
+  } else {
+    $pageTitle = 'Free Gematria Calculator — Hebrew, English & Simple | ' . $SITE_NAME;
+  }
+
+  // DESCRIPTION: STATIC (don’t vary per query — stabilizes snippets/CTR)
+  $metaDescription = 'Free online Gematria Calculator for Hebrew, English & Simple systems. Instantly calculate gematria values and meanings for any word or phrase.';
+
+  // Canonical: point root when empty; deep-link when there’s an input
+  $canonicalUrl = $BASE_URL;
+  if (!empty($inputRaw)) {
+    // use rawurlencode for cleaner canonical with query
+    $canonicalUrl .= '?input=' . rawurlencode($inputRaw);
+  }
+
+  // Open Graph / Twitter: keep short and dependable; use static description
+  $ogTitle = ($results && !empty($displayInput))
+    ? sprintf('%s — Gematria Value: %s', $displayInput, (string)$results['english']['total'])
+    : 'Free Gematria Calculator';
+
+  // Optional: a share image you host (1200×630 recommended)
+  $ogImage = $BASE_URL . 'assets/preview.jpg';
 ?>
 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
     <script>
@@ -41,36 +72,57 @@
         })(window, document, "clarity", "script", "rcxnkrgboo");
     </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931"
-     crossorigin="anonymous"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
     <meta name="p:domain_verify" content="9a2f772bde6a1162d2e6c441caf23a2a"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder, simple gematria, free gematria calculator, gematria name calculator, jewish gematria calculator, gematria.com calculator, gematria calculator us, gematria online calculator, english gematria calculator, hebrew numerology calculator, gematria hebraica calcule online, gematriacalculator.us">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Dynamic SEO tags for parameterized URL in SERP's-->
-    <title><?= $seoTitle ?></title>
-    <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
+    <!-- Keep keywords minimal or remove (search engines largely ignore this) -->
+    <meta name="keywords" content="gematria calculator, hebrew gematria, english gematria, simple gematria">
 
-    <!-- For handling empty URL parameters -->
-    <?php
-        $canonicalUrl = 'https://gematriacalculators.org/';
-        if (!empty($inputRaw)) {
-            $canonicalUrl .= 'index.php?input=' . urlencode($inputRaw);
-        }
-    ?>
+    <!-- Static/clean SEO -->
+    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
 
-    <link rel="canonical" href="<?= $canonicalUrl ?>">  
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?= htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
+
+    <!-- JSON-LD: WebApplication schema for a calculator -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Gematria Calculator",
+      "url": "<?= htmlspecialchars($BASE_URL, ENT_QUOTES, 'UTF-8'); ?>",
+      "description": "Free online calculator for Hebrew, English & Simple gematria values.",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "Any",
+      "inLanguage": "en"
+    }
+    </script>
+
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="/styles/index.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-
 </head>
+
 
 <body>
 
