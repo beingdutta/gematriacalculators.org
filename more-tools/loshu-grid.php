@@ -9,13 +9,23 @@
     <meta name="keywords" content="lo shu grid calculator, lo shu calculator, lo shu grid calculator online, lo shu grid online calculator, lo shu grid calculate, lo shu grid calculation">
 
     <link rel="canonical" href="https://gematriacalculators.org/more-tools/loshu-grid.php" />
+    <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/loshu-grid.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
 
   <body>
-    <div class="container">
+    <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/more-tools.php">More Tools</a>
+        <a href="/blog-collections.html">Blog</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/contact-us.html">Contact Us</a>
+        <a href="/terms-conditions.html">Terms & Conditions</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <div class="container" style="padding-top: 2rem;">
 
       <!-- ── header ───────────────────────────────────────────────────────── -->
       <header>
@@ -131,11 +141,7 @@
 
       <!-- ── footer ───────────────────────────────────────────────────────── -->
       <footer>
-        <nav class="footer-links">
-          <a href="/">Home</a><a href="/more-tools.php">More&nbsp;Tools</a><a href="/blog">Blog</a>
-          <a href="/about-us.html">About&nbsp;Us</a><a href="/contact-us.html">Contact&nbsp;Us</a>
-          <a href="/terms.html">Terms&nbsp;&amp;&nbsp;Conditions</a><a href="/privacy.html">Privacy&nbsp;Policy</a>
-        </nav>
+        <!-- Footer links are now in the header nav -->
         <small class="copyright">© <?= date('Y') ?> gematriacalculators.org</small>
       </footer>
 

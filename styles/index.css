@@ -37,6 +37,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  padding-top: 60px; /* Add padding to prevent content from being hidden by the fixed header */
   transition: var(--transition);
 }
 
@@ -58,7 +59,7 @@ body {
 .header {
   text-align: center;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 1.5rem 1rem 0 1rem;
 }
 
 #themeLogo {
@@ -78,15 +79,42 @@ body {
   color: var(--text);
 }
 
+/* Header Navigation */
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem;
+}
+
+.header-nav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.header-nav a:hover {
+  color: var(--primary);
+}
+
 
 /* ===================================================================
    Typography Helpers & SEO Sections
    =================================================================== */
 
 .subtitle {
-  color: var(--muted);
+  color: #000000;
   font-weight: 300;
-  margin-top: 0.5rem;
+  margin: 0.7rem;
+  font-size: 0.90rem; /* Adjusted font size */
 }
 
 .seo-section {
@@ -342,7 +370,8 @@ button,
 
 .footer {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  margin-top: 0rem;
 }
 
 .footer-links {
@@ -350,7 +379,6 @@ button,
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 .footer-links a {
@@ -373,6 +401,12 @@ footer .copyright {
 /* ===================================================================
    FAQ Section
    =================================================================== */
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
 
 .faq-item {
   margin: 1rem 0;
@@ -422,6 +456,14 @@ footer .copyright {
   .button-container {
     flex-direction: column;
     align-items: stretch;
+  }
+  
+  body {
+    padding-top: 80px; /* Adjust padding for smaller screens where header might be taller */
+  }
+  
+  .header-nav {
+    gap: 0.5rem 1rem;
   }
 
   .footer-links {
@@ -518,7 +560,7 @@ footer .copyright {
 
 /* Wrapper for the top “Recent searches” bar */
 .ticker-bar {
-  margin: 0.5rem 0 2rem 0;
+  margin: 0.2rem 0 0.8rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

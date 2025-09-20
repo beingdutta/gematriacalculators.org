@@ -24,7 +24,16 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/more-tools.php">More Tools</a>
+        <a href="/blog-collections.html">Blog</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/contact-us.html">Contact Us</a>
+        <a href="/terms-conditions.html">Terms & Conditions</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <div class="container" style="padding-top: 2rem;">
         <header class="header">
             <button class="back-button" onclick="window.location.href='/blog-collections.html'">← Back</button>
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
@@ -87,14 +96,7 @@
         </main>
 
         <footer class="footer">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/blog-collections.html">Blog</a>
-                <a href="/about-us.html">About Us</a>
-                <a href="/contact-us.html">Contact Us</a>
-                <a href="/terms-conditions.html">Terms & Conditions</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-            </div>
+            <!-- Footer links are now in the header nav -->
             <div class="copyright">
                 © 2025 gematriacalculators.org
             </div>

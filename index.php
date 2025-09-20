@@ -135,6 +135,16 @@
 
 <body>
 
+    <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/more-tools.php">More Tools</a>
+        <a href="/blog-collections.html">Blog</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/contact-us.html">Contact Us</a>
+        <a href="/terms-conditions.html">Terms & Conditions</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+    </nav>
+    
     <div class="container">
 
         <!-- ——— Recent Searches Ticker ——— -->
@@ -169,6 +179,7 @@
             <h1>Free Gematria Calculator Online</h1>
             <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>
         </header>
+
 
         <main class="calculator">
             <div class="input-group">
@@ -280,6 +291,7 @@
         <!-- FAQ & FOOTER -->
         <footer class="footer">
             <!-- FAQ ITEMS -->
+            <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
                     <span>What is Gematria?</span>
@@ -328,17 +340,6 @@
                 <div class="faq-answer">
                     Yes! This gematria name calculator automatically ignores spaces and special characters, focusing only on alphabetical letters. We support gematria calculator name and meaning for all users anytime 24*7 for free.
                 </div>
-            </div>
-
-            <!-- FOOTER LINKS -->
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/more-tools.php">More Tools</a>
-                <a href="/blog-collections.html">Blog</a>
-                <a href="/about-us.html">About Us</a>
-                <a href="/contact-us.html">Contact Us</a>
-                <a href="/terms-conditions.html">Terms & Conditions</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
             </div>
 
             <!-- COPYRIGHT NOTICE -->
