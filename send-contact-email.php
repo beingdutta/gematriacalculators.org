@@ -1,4 +1,5 @@
 <?php
+// Mail is not available on the local XAMPP server, so log errors to a file instead.
 // Prevent PHP from outputting HTML errors, which would break the JSON response.
 ini_set('display_errors', 0);
 

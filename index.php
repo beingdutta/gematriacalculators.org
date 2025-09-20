@@ -7,9 +7,7 @@
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
-  // ─────────────────────────────────────────────────────────────────────────────
   // SEO: make description STATIC, keep title concise (optionally dynamic)
-  // ─────────────────────────────────────────────────────────────────────────────
   $SITE_NAME        = 'Gematria Calculator';
   $BASE_URL         = 'https://gematriacalculators.org/';
 
