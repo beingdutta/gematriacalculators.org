@@ -1,6 +1,7 @@
 # Ignore Apache control scripts
 start_apache.bat
 stop_apache.bat
+php-mail-error.log
 
 # Ignore VS Code workspace settings
 .vscode/
