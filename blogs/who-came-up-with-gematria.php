@@ -55,7 +55,7 @@
           <h3>🌅 The Fertile Crescent: Where Counting Met Writing</h3>
           <p>
             The roots of gematria reach into the very cradle of civilization. In ancient
-            Mesopotamia—think Sumer and Babylon—merchants and temple accountants used
+            Mesopotamia think Sumer and Babylon merchants and temple accountants used
             symbols to represent both sounds and quantities. Over time, Phoenician traders,
             whose alphabet influenced nearly every script of the Mediterranean, adopted
             a similar approach: the same characters that formed words could also stand
@@ -122,7 +122,7 @@
           <p>
             Asking who came up with gematria isn’t only about names and dates.
             It invites us to see how ideas migrate and evolve. It highlights the
-            shared human impulse to search for meaning—whether through art,
+            shared human impulse to search for meaning whether through art,
             science, or numbers. And it reminds us that the tools of interpretation
             we inherit are rarely the work of a single genius; they are
             collaborative, layered, and enriched by centuries of conversation.
@@ -135,7 +135,7 @@
             “peace” using the English ordinal method (A=1 … Z=26) and you’ll see a
             numerical value. Try “love” or “truth” and notice whether the totals spark
             any thematic connections for you. The exercise shows how easy it is to
-            translate letters into numbers—a practice with roots thousands of years old.
+            translate letters into numbers a practice with roots thousands of years old.
           </p>
 
           <h3>🌉 The Takeaway</h3>
