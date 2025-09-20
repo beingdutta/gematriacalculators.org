@@ -20,6 +20,7 @@
     <link rel="canonical" href="https://gematriacalculators.org/contact-us.html">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/contact-us.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931"
      crossorigin="anonymous"></script>
@@ -60,6 +61,17 @@
             <button onclick="submitContactForm()">Send Message</button>
           </div>
 
+          <div class="social-media-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61573578305569" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://in.pinterest.com/GematriaCalculatorsOnline/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="https://x.com/AnnaBosle26323" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+
+
           <h4>Common Contact Reasons:</h4>
           <div class="recent-phrases">
             <a href="#">PDF download issues</a> |
@@ -90,11 +102,12 @@
 
     <script src="/scripts/index.js"></script>
     <script>
-      function submitContactForm() {
+      async function submitContactForm() {
         const name = document.getElementById('contactName').value.trim();
         const email = document.getElementById('contactEmail').value.trim();
         const message = document.getElementById('contactMessage').value.trim();
         const feedback = document.getElementById('globalFeedback');
+        const button = document.querySelector('.contact-form button');
 
         if (!name || !email || !message) {
           feedback.textContent = "⚠️ Please fill all fields";
@@ -102,15 +115,38 @@
           setTimeout(() => feedback.style.display = 'none', 3000);
           return;
         }
+        
+        button.disabled = true;
+        button.textContent = 'Sending...';
 
-        feedback.textContent = "✓ Message sent successfully!";
-        feedback.style.display = 'block';
-        setTimeout(() => feedback.style.display = 'none', 3000);
+        try {
+            const response = await fetch('/send-contact-email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
+            });
 
-        // Clear form
-        document.getElementById('contactName').value = '';
-        document.getElementById('contactEmail').value = '';
-        document.getElementById('contactMessage').value = '';
+            const result = await response.json();
+
+            if (response.ok) {
+                feedback.textContent = "✓ Message sent successfully!";
+                // Clear form
+                document.getElementById('contactName').value = '';
+                document.getElementById('contactEmail').value = '';
+                document.getElementById('contactMessage').value = '';
+            } else {
+                throw new Error(result.message || 'Something went wrong.');
+            }
+        } catch (error) {
+            feedback.textContent = `❌ Error: ${error.message}`;
+        } finally {
+            feedback.style.display = 'block';
+            setTimeout(() => feedback.style.display = 'none', 4000);
+            button.disabled = false;
+            button.textContent = 'Send Message';
+        }
       }
     </script>
   </body>

@@ -73,6 +73,47 @@
   transition: var(--transition);
 }
 
+ .social-media-section {
+   text-align: center;
+   margin-top: 2rem;
+   padding-top: 1.5rem;
+   border-top: 1px solid var(--muted);
+ }
+ 
+ .social-media-section h4 {
+   margin-bottom: 1rem;
+   font-size: 1.2rem;
+   color: var(--text);
+ }
+ 
+ .social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+   flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+ }
+ 
+ .social-icons a {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   border: 2px solid var(--muted); /* Add a border */
+   border-radius: 50%; /* This makes the icons circular */
+   background-color: transparent; /* Make the background hollow */
+   color: var(--text);
+   font-size: 1.2rem;
+   transition: all var(--transition);
+ }
+ 
+ .social-icons a:hover {
+   background-color: var(--primary); /* Fill on hover */
+   border-color: var(--primary); /* Match border color on hover */
+   color: #fff;
+   transform: translateY(-3px);
+ }
+ 
 @media (max-width: 768px) {
   .contact-page {
     padding: 1.5rem;
