@@ -19,7 +19,8 @@
     <div class="container">
 
       <header class="header">
-        <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="Gematria Decoder Logo">
+        <button class="back-button" onclick="window.history.back()">← Back</button>
+        <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Gematria Decoder Logo"></a>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         <h1>Decode Gematria Values</h1>
         <p class="subtitle">
@@ -102,6 +103,7 @@
     </div>
 
     <script src="/scripts/decode.js"></script>
+    <script src="/scripts/index.js"></script>
     <script>
       function toggleFAQ(element) {
         const faqItem = element.parentElement;

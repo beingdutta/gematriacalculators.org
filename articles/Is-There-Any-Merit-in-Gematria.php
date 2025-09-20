@@ -28,14 +28,15 @@
   <body>
     <div class="container">
         <header class="header">
+            <button class="back-button" onclick="window.location.href='/blog-collections.html'">← Back</button>
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-            <img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo">
+            <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo"></a>
             <h1>Gematria Insights</h1>
             <p class="subtitle">(Decoding Numerical Mysteries)</p>
         </header>
 
         <main>
-            <div class="article-block">
+            <div class="result-card article-page">
             <h1 class="article-title">Is There Any Merit in Gematria?</h1>
             <div class="article-date">Published: April 08, 2025</div>
 
@@ -77,7 +78,6 @@
                 <button onclick="sendFeedback('😊')">😊</button>
                 <div class="feedback-message" id="feedbackMessage">Thanks for your feedback!</div>
                 </div>
-            </div>
 
         </main>
 

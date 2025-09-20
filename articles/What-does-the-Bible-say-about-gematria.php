@@ -26,8 +26,9 @@
   <body>
     <div class="container">
       <header class="header">
+        <button class="back-button" onclick="window.location.href='/blog-collections.html'">← Back</button>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo">
+        <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo"></a>
         <h1>Gematria Insights</h1>
         <p class="subtitle">(Decoding Numerical Mysteries)</p>
       </header>
