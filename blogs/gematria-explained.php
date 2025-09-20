@@ -45,7 +45,7 @@
 
           <p>
             Gematria can feel mysterious the first time you encounter it. Someone writes
-            a Hebrew word on a board, adds the letters together, and announces a number—
+            a Hebrew word on a board, adds the letters together, and announces a number 
             and somehow that number carries meaning. To the uninitiated it might look
             like code-breaking or secret math. In reality, gematria is a blend of
             language, history, and culture that stretches back thousands of years.
@@ -103,7 +103,7 @@
             the <strong>Ordinal</strong> method (A=1 … Z=26) or the
             <strong>Pythagorean/Reduced</strong> system (cycling 1–9).
             Different ciphers highlight different patterns, which is part
-            of the fun—and also why it’s important to note which method
+            of the fun and also why it’s important to note which method
             you’re using.
           </p>
 
@@ -205,7 +205,7 @@ Total = 54
           <ul>
             <li><strong>Pick one cipher</strong> and stick with it for a session.</li>
             <li><strong>Write down your process</strong> so others can replicate it.</li>
-            <li><strong>Read context first</strong>—the story, law, or poem you’re studying.</li>
+            <li><strong>Read context first</strong> the story, law, or poem you’re studying.</li>
             <li><strong>Share findings</strong> with a study group or forum for perspective.</li>
           </ul>
           <p>
@@ -214,7 +214,7 @@ Total = 54
 
           <h3>📐 11) Trying It Yourself</h3>
           <p>
-            The easiest entry point is an online calculator—like the one on
+            The easiest entry point is an online calculator like the one on
             this site’s <a href="/index.php">Gematria Calculator</a> page.
             Start with a simple word or your own name. Notice the total,
             then look for other words with the same value. Ask yourself
@@ -227,7 +227,7 @@ Total = 54
             Ultimately, gematria is a testament to the human love of
             patterns. It shows how ancient writers and readers delighted
             in the dance between number and word. Understanding it doesn’t
-            require special powers—just patience, curiosity, and respect
+            require special powers just patience, curiosity, and respect
             for context.
           </p>
           <p>

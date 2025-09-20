@@ -274,18 +274,6 @@
         <hr class="divider">
         <br>
 
-        <!-- RECENT PHRASES -->
-        <div class="recent-phrases">
-            <h4>Recent words and phrases calculated include:</h4>
-            <a href="#">divine harmony</a> |
-            <a href="#">ancient number codes</a> |
-            <a href="#">light of the creator</a> |
-            <a href="#">secrets of eden</a> |
-            <a href="#">wisdom beyond the veil</a> |
-            <a href="#">numerical truth revealed</a> |
-            <a href="#">order within the cosmos</a>
-        </div>
-
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
 
