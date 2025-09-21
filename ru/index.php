@@ -49,10 +49,19 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="header-nav">
+        <a href="/ru/index.php">Главная</a>
+        <a href="/more-tools.php">Инструменты</a>
+        <a href="/blog-collections.html">Блог</a>
+        <a href="/about-us.html">О нас</a>
+        <a href="/contact-us.html">Контакты</a>
+        <a href="/terms-conditions.html">Условия</a>
+        <a href="/privacy-policy.html">Политика конфиденциальности</a>
+    </nav>
+    <div class="container" style="padding-top: 2rem;">
 
       <!--–––– Recent Searches ticker ––––-->
-      <div class="recent-phrases">
+      <div class="recent-phrases ticker-bar">
         <h4>Недавние запросы:</h4>
 
         <!-- ——— Language Switcher ——— -->
@@ -224,12 +233,13 @@
         </div>
 
         <div class="footer-links">
-          <a href="/ru/index.php">Главная</a>
+          <!-- Footer links are now in the header nav -->
+          <!-- <a href="/ru/index.php">Главная</a>
           <a href="/blog-collections.html">Блог</a>
           <a href="/about-us.html">О&nbsp;нас</a>
           <a href="/contact-us.html">Контакты</a>
           <a href="/terms-conditions.html">Условия</a>
-          <a href="/privacy-policy.html">Политика&nbsp;конфиденциальности</a>
+          <a href="/privacy-policy.html">Политика&nbsp;конфиденциальности</a> -->
         </div>
 
         <div class="copyright">

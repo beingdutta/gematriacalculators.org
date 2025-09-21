@@ -49,10 +49,19 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="header-nav">
+        <a href="/de/index.php">Startseite</a>
+        <a href="/more-tools.php">Mehr Tools</a>
+        <a href="/blog-collections.html">Blog</a>
+        <a href="/about-us.html">Über uns</a>
+        <a href="/contact-us.html">Kontakt</a>
+        <a href="/terms-conditions.html">AGB</a>
+        <a href="/privacy-policy.html">Datenschutz</a>
+    </nav>
+    <div class="container" style="padding-top: 2rem;">
 
       <!--–––– Recent Searches ticker ––––-->
-      <div class="recent-phrases">
+      <div class="recent-phrases ticker-bar">
         <h4>Letzte Suchanfragen:</h4>
 
         <!-- ——— Language Switcher ——— -->
@@ -221,12 +230,13 @@
         </div>
 
         <div class="footer-links">
-          <a href="/de/index.php">Startseite</a>
+          <!-- Footer links are now in the header nav -->
+          <!-- <a href="/de/index.php">Startseite</a>
           <a href="/blog-collections.html">Blog</a>
           <a href="/about-us.html">Über&nbsp;uns</a>
           <a href="/contact-us.html">Kontakt</a>
           <a href="/terms-conditions.html">AGB</a>
-          <a href="/privacy-policy.html">Datenschutz</a>
+          <a href="/privacy-policy.html">Datenschutz</a> -->
         </div>
 
         <div class="copyright">
