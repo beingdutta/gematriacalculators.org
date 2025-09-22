@@ -101,12 +101,12 @@
     <!-- Hreflang links -->
     <?php
       $qs = !empty($inputRaw) ? '?input=' . rawurlencode($inputRaw) : '';
-      $en_path = !empty($inputRaw) ? 'index.php' . $qs : '';
+      $en_path = !empty($inputRaw) ? 'index.php' . $qs : ''; // Empty for root, 'index.php?...' for queries
     ?>
     <link rel="alternate" hreflang="en" href="<?= $BASE_URL . $en_path ?>">
     <link rel="alternate" hreflang="ru" href="<?= $BASE_URL . 'ru/index.php' . $qs ?>">
     <link rel="alternate" hreflang="de" href="<?= $BASE_URL . 'de/index.php' . $qs ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . $en_path ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . $en_path ?>"> <!-- x-default should point to the primary version -->
 
 
     <!-- JSON-LD: WebApplication schema for a calculator -->

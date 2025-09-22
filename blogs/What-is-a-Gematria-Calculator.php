@@ -15,7 +15,7 @@
     <meta name="description" content="What is a Gematria Calculator? It is a tool that converts words and phrases into numerical values using ancient alphanumeric codes.">
     <meta name="keywords" content="biblical gematria calculator, english gematria calculator, gematria calculator hebrew, gematria calculator app, gematria calculator names, gematria calculator english, gematria calculator online, gematria effect calculator, gematria name calculator, gematria value calculator, gematria numerology calculator">
     <title>What is a Gematria Calculator?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-Gematria-Calculator.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-a-Gematria-Calculator.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <!-- Fonts + Global Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">

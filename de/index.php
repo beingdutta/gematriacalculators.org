@@ -5,18 +5,37 @@
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
-  /* ─── Dynamic SEO ─── */
-  if ($results) {
-      $seoTitle = ucfirst($inputRaw).' Gematrie-Wert '
-                .$results['english']['total'].' | Kostenloser Gematrie-Rechner';
-      $seoDesc  = 'Berechnen Sie hebräische, englische und einfache Gematrie für „'
-                .htmlspecialchars($inputRaw, ENT_QUOTES).'“ in Sekunden. '
-                .'Hebräisch='.$results['hebrew']['total']
-                .', Englisch='.$results['english']['total']
-                .', Einfach='.$results['simple']['total'].'.';
+  // SEO: make description STATIC, keep title concise (optionally dynamic)
+  $SITE_NAME        = 'Gematrie-Rechner';
+  $BASE_URL         = 'https://gematriacalculators.org/';
+
+  // Clean a display version of the query for title/OG only
+  $displayInput = trim($inputRaw);
+  if ($displayInput !== '') {
+    // limit to ~60 chars to avoid super-long titles
+    $displayInput = mb_strimwidth($displayInput, 0, 60, '…', 'UTF-8');
+  }
+
+  // Title: short, human-readable. If there are results, include the English total once.
+  if ($results && isset($results['english']['total'])) {
+    $pageTitle = sprintf(
+      '%s — Gematrie-Wert: %s | %s',
+      ucfirst($displayInput),
+      (string)$results['english']['total'],
+      $SITE_NAME
+    );
   } else {
-      $seoTitle = 'Kostenloser Gematrie-Rechner online';
-      $seoDesc  = '#1 kostenloser Online-Gematrie-Rechner. Hebräische, englische und einfache Werte sofort berechnen.';
+      $pageTitle = 'Kostenloser Gematrie-Rechner — Hebräisch, Englisch & Einfach | ' . $SITE_NAME;
+  }
+
+  // DESCRIPTION: STATIC (don’t vary per query — stabilizes snippets/CTR)
+  $metaDescription = 'Kostenloser Online-Gematrie-Rechner für hebräische, englische und einfache Systeme. Berechnen Sie sofort Gematrie-Werte und Bedeutungen für jedes Wort oder jede Phrase.';
+
+  // Canonical: point root when empty; deep-link when there’s an input
+  $canonicalUrl = $BASE_URL . 'de/';
+  if (!empty($inputRaw)) {
+    // use rawurlencode for cleaner canonical with query. Point to index.php for queries.
+    $canonicalUrl = $BASE_URL . 'de/index.php?input=' . rawurlencode($inputRaw);
   }
 ?>
 <!DOCTYPE html>
@@ -24,11 +43,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><?= $seoTitle ?></title>
-    <meta name="description" content="<?= htmlspecialchars($seoDesc, ENT_QUOTES) ?>">
+    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
 
     <?php
-      $base_url = 'https://gematriacalculators.org';
       $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
       $en_path = 'index.php' . $qs;
     ?>
@@ -37,7 +55,7 @@
     <link rel="alternate" hreflang="de" href="<?= $base_url ?>/de/index.php<?= $qs ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $base_url ?>/<?= $en_path ?>">
 
-    <link rel="canonical" href="<?= $base_url ?>/de/index.php<?= $qs ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
 
     <link rel="icon" href="/assets/site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
