@@ -16,7 +16,7 @@
     <meta name="keywords" content="what does the bible say about gematria, gematria in the bible, bible gematria calculator, biblical numerology, hebrew gematria, gematria and scripture, number meanings in the bible">
     <title>What Does the Bible Say About Gematria?</title>
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-does-the-Bible-say-about-gematria.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-does-the-Bible-say-about-gematria.php" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/article-general-style.css">
@@ -86,9 +86,9 @@
             <p>Ready to go further? We recommend:</p>
 
             <div>
-                <p><a href="/articles/What-is-a-Gematria-Calculator.php">Basics of Gematria Calculator</a> — Calculation of Gematria.</p>
-                <p><a href="/articles/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
-                <p><a href="/articles/What-is-a-good-starting-point-for-learning-Gematria.php">How to start with Gematria</a>: Find the logic of Gematria only here.</p>
+                <p><a href="/blogs/What-is-a-Gematria-Calculator.php">Basics of Gematria Calculator</a> — Calculation of Gematria.</p>
+                <p><a href="/blogs/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
+                <p><a href="/blogs/What-is-a-good-starting-point-for-learning-Gematria.php">How to start with Gematria</a>: Find the logic of Gematria only here.</p>
             </div>
 
           </div>

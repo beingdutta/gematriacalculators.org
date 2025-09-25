@@ -65,7 +65,7 @@
             <p>Some believe that biblical prophecies or divine patterns are encoded using Gematria. These calculators help you calculate Gematria values of verses and words directly from the Bible.</p>
 
             <h3>🔤 English & Simple Gematria Calculator Options</h3>
-            <p>Gematria isn’t limited to <a href="/articles/What-is-Gematria-in-your-own-words.html">ancient</a> languages anymore. The English Gematria calculator and Simple Gematria calculator are popular modern adaptations. These tools convert English words into numbers, usually following A=1, B=2, … Z=26 or more complex numerological mappings.</p>
+            <p>Gematria isn’t limited to <a href="/blogs/What-is-Gematria-in-your-own-words.php">ancient</a> languages anymore. The English Gematria calculator and Simple Gematria calculator are popular modern adaptations. These tools convert English words into numbers, usually following A=1, B=2, … Z=26 or more complex numerological mappings.</p>
 
             <p>There’s even the Gematria Effect calculator, which connects current events, public figures, and trending topics to mystical number codes — popularized by communities interested in decoding hidden messages in media.</p>
 
@@ -92,9 +92,9 @@
             <p>Ready to go further? We recommend:</p>
 
             <div>
-                <p><a href="/articles/What-is-Gematria-in-your-own-words.php">See what your views about Gematria</a> — Views of Gematria.</p>
-                <p><a href="/articles/Is-There-Any-Merit-in-Gematria.php">Merit of Gematria</a> — Benefits of Gematia Values.</p>
-                <p><a href="/articles/What-is-the-truth-about-gematria.php">Actual truth of Gematia</a>: Find the logic of Gematria only here.</p>
+                <p><a href="/blogs/What-is-Gematria-in-your-own-words.php">See what your views about Gematria</a> — Views of Gematria.</p>
+                <p><a href="/blogs/Is-There-Any-Merit-in-Gematria.php">Merit of Gematria</a> — Benefits of Gematia Values.</p>
+                <p><a href="/blogs/What-is-the-truth-about-gematria.php">Actual truth of Gematia</a>: Find the logic of Gematria only here.</p>
             </div>
           </div>
 

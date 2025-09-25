@@ -15,7 +15,7 @@
     <meta name="description" content="What is a gematria in your own words? An ancient system of assigning numerical values to letters, words, or phrases. Often associated with Hebrew, but it also appears in Greek.">
     <meta name="keywords" content="gematria calculator, hebrew gematria calculator, jewish gematria calculator, simple gematria calculator, bible gematria calculator, biblical gematria calculator, english gematria calculator, gematria calculator hebrew, gematria calculator app, gematria calculator names">
     <title>What is Gematria in your own words?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-Gematria-in-your-own-words.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-Gematria-in-your-own-words.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <!-- Fonts + Global Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -87,10 +87,10 @@
 
             <h3>🔤 English & Simple Gematria Explained</h3>
             <p>For those working in English, the <strong>Simple Gematria calculator</strong> (A=1 to Z=26) and the <strong>English Gematria calculator</strong> (which can use alternate mappings) offer quick and insightful results. These tools can help reveal symbolic patterns in your name, birthday, or everyday phrases.</p>
-            <p>Tools like the <a href="/articles/What-is-the-truth-about-gematria.html">Gematria Effect</a> calculator are used to find relationships between current events, news, and numbers — a practice growing in popularity in certain online communities.</p>
+            <p>Tools like the <a href="/blogs/What-is-the-truth-about-gematria.php">Gematria Effect</a> calculator are used to find relationships between current events, news, and numbers — a practice growing in popularity in certain online communities.</p>
 
             <h3>📱 Gematria on the Go: Apps and Websites</h3>
-            <p>Today, you can use a <strong>Gematria calculator app</strong> or access a <a href="/articles/What-is-a-Gematria-Calculator.html">Gematria</a> calculator online from any device. These platforms are user-friendly and usually offer several calculation methods.</p>
+            <p>Today, you can use a <strong>Gematria calculator app</strong> or access a <a href="/blogs/What-is-a-Gematria-Calculator.php">Gematria</a> calculator online from any device. These platforms are user-friendly and usually offer several calculation methods.</p>
             <p>Popular tools include the gematriacalculators.org calculator and many browser-based options that support various systems. Whether you're curious about your full name’s value or want to decode a Bible verse, there’s a <strong>Gematria calculator for English</strong> and <strong>Gematria calculator Hebrew</strong> version just for that.</p>
 
             <h3>⚙️ How to Use a Gematria Calculator</h3>
@@ -110,9 +110,9 @@
             <p>Ready to go further? We recommend:</p>
 
             <div>
-                <p><a href="/articles/What-is-a-good-starting-point-for-learning-Gematria.php">Start the basics of Gematria</a> — Gematria calculation logic.</p>
-                <p><a href="/articles/How-does-gematria-work-in-detail-using-the-English-alphabet.php">Detailed English Calculation of Gematria</a> — Learn Inner Workings.</p>
-                <p><a href="/articles/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
+                <p><a href="/blogs/What-is-a-good-starting-point-for-learning-Gematria.php">Start the basics of Gematria</a> — Gematria calculation logic.</p>
+                <p><a href="/blogs/How-does-gematria-work-in-detail-using-the-English-alphabet.php">Detailed English Calculation of Gematria</a> — Learn Inner Workings.</p>
+                <p><a href="/blogs/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
             </div>
           </div>
 

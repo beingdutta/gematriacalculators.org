@@ -16,7 +16,7 @@
     <meta name="description" content="Understand how Gematria works using the English alphabet. Explore how English Gematria calculators assign numeric values to letters and uncover hidden meanings in words and names.">
     <meta name="keywords" content="how does gematria work, english gematria calculator, gematria using English alphabet, simple gematria, gematria explained, gematria numerology, gematria calculator english">
     <title>How Does Gematria Work Using the English Alphabet?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/articles/How-does-gematria-work-in-detail-using-the-English-alphabet.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/How-does-gematria-work-in-detail-using-the-English-alphabet.php" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">

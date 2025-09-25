@@ -17,7 +17,7 @@
         <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder">
         <title>What Is a Good Starting Point for Learning Gematria?</title>
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-        <link rel="canonical" href="https://gematriacalculators.org/articles/What-is-a-good-starting-point-for-learning-Gematria.php" />
+        <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-a-good-starting-point-for-learning-Gematria.php" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/article-general-style.css">
@@ -100,9 +100,9 @@
                         <p>Ready to go further? We recommend:</p>
 
                         <div>
-                            <p><a href="/articles/What-is-a-Gematria-Calculator.php">Introduction to Gematria</a> — history, methodology, and philosophy.</p>
-                            <p><a href="/articles/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
-                            <p><a href="/articles/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
+                            <p><a href="/blogs/What-is-a-Gematria-Calculator.php">Introduction to Gematria</a> — history, methodology, and philosophy.</p>
+                            <p><a href="/blogs/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
+                            <p><a href="/blogs/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
                         </div>
                     </div>
 
