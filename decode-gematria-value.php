@@ -16,11 +16,18 @@
   </head>
 
   <body>
+    <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/more-tools.php">More Tools</a>
+        <a href="/blog-collections.html">Blog</a>
+        <a href="/about-us.html">About Us</a>
+        <a href="/contact-us.html">Contact Us</a>
+    </nav>
     <div class="container">
 
       <header class="header">
         <button class="back-button" onclick="window.history.back()">← Back</button>
-        <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Gematria Decoder Logo"></a>
+        <a href="/"><img src="/assets/talisman-header-icon.png" id="themeLogo" alt="Gematria Decoder Logo"></a>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         <h1>Decode Gematria Values</h1>
         <p class="subtitle">

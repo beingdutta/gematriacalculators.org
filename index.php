@@ -156,7 +156,7 @@
             $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
             $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
             function lang($code,$label,$qs,$here){
-                $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs";
+                $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs"; // Use absolute paths
                 return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>": "<a href=\"$path\">$label</a>";
             }
             ?>
@@ -176,7 +176,7 @@
         <header class="header">
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-            <h1>Free Gematria Calculator Online</h1>
+            <h1>Gematria Calculator</h1>
             <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>
         </header>
 
@@ -250,7 +250,7 @@
                 </div>
 
                 <div class="feedback">
-                    <p>How accurate are these results?</p>
+                    <p>Was this calculator helpful?</p>
                     <div class="feedback-buttons">
                     <button onclick="sendFeedback('😞')">😞</button>
                     <button onclick="sendFeedback('😐')">😐</button>
@@ -271,10 +271,6 @@
             <h4>Discover Hidden Numerical Meanings</h4>
             <p>This free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "simple gematria calculator" — and this tool provides the functionality they seek.</p>
             <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
-        </div>
-
-        <div class="seo-section", style="color: green;">
-            <p>International users often search using terms like <em>гематрия калькулятор</em> (Russian), <em>gematria rechner</em> (German), and <em>gematria calculadora</em> (Spanish). <br><br>This gematrix calculator tool aka gematria finder is designed to be intuitive and accessible for everyone exploring gematria.</p>
         </div>
 
         <!-- SEO SECTION #2 -->

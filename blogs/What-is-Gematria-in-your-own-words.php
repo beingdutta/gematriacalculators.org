@@ -87,7 +87,7 @@
 
             <h3>🔤 English & Simple Gematria Explained</h3>
             <p>For those working in English, the <strong>Simple Gematria calculator</strong> (A=1 to Z=26) and the <strong>English Gematria calculator</strong> (which can use alternate mappings) offer quick and insightful results. These tools can help reveal symbolic patterns in your name, birthday, or everyday phrases.</p>
-            <p>Tools like the <a href="/blogs/What-is-the-truth-about-gematria.php">Gematria Effect</a> calculator are used to find relationships between current events, news, and numbers — a practice growing in popularity in certain online communities.</p>
+            <p>Tools like the Gematria Effect calculator are used to find relationships between current events, news, and numbers — a practice growing in popularity in certain online communities.</p>
 
             <h3>📱 Gematria on the Go: Apps and Websites</h3>
             <p>Today, you can use a <strong>Gematria calculator app</strong> or access a <a href="/blogs/What-is-a-Gematria-Calculator.php">Gematria</a> calculator online from any device. These platforms are user-friendly and usually offer several calculation methods.</p>

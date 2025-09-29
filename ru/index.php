@@ -69,7 +69,7 @@
           $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
           $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
           function lang($code,$label,$qs,$here){
-              $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs";
+              $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs"; // Use absolute paths
               return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>"
                                                               : "<a href=\"$path\">$label</a>";
           }

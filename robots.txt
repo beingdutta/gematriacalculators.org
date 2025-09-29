@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /send-contact-email.php
+Disallow: /calculate.php
+
+Sitemap: https://gematriacalculators.org/sitemap.xml

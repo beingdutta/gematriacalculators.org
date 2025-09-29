@@ -1,11 +1,42 @@
-RewriteEngine On
-
-# Skip redirect for localhost and 127.0.0.1
-RewriteCond %{HTTP_HOST} ^localhost$ [OR]
-RewriteCond %{HTTP_HOST} ^127\.0\.0\.1$
-RewriteRule ^ - [L]
-
-# Force HTTPS and remove www in one step for everything else
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://gematriacalculators.org/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # --- CANONICAL REDIRECTS ---
+    
+    # 1. Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+    
+    # 2. Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    
+    # --- CLEAN URLS ---
+    
+    # 3. Remove index.php from the URL
+    RewriteCond %{THE_REQUEST} /index\.php [NC]
+    RewriteRule ^(.*?)index\.php$ /$1 [R=301,L,QSA]
+    
+    # 4. Remove .php extension from filename
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+    
+    # 5. Remove .html extension from filename
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+    
+    # 6. Add a trailing slash to directories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !(.*)/$
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+    
+    # --- INTERNAL REWRITES (silent) ---
+    
+    # 7. Internally rewrite clean URL to its .php or .html file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L,QSA]
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L,QSA]
+</IfModule>
