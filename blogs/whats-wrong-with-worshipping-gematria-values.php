@@ -26,31 +26,30 @@
 </head>
 
 <body>
+  <nav class="header-nav">
+      <a href="/">Home</a>
+      <a href="/more-tools/">More Tools</a>
+      <a href="/blog-collections/">Blog</a>
+      <a href="/about-us/">About Us</a>
+      <a href="/contact-us/">Contact Us</a>
+      <a href="/terms-conditions/">Terms & Conditions</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+  </nav>
   <div class="container">
 
-    <header class="header">
-      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-      <button class="back-button" onclick="window.history.back()">← Back</button>
-      <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="gematria calculator site logo"></a>
-      <h1>Gematria Insights Blog</h1>
-      <p class="subtitle">(Exploring the numerical mysteries of sacred texts)</p>
-    </header>
-
-    <main class="calculator">
-      <div class="result-card article-page">
+    <main>
+      <div class="article-header">
+        <button class="back-button" onclick="window.location.href='/blog-collections/'">← Back to Articles</button>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         <h1 class="article-title">What’s Wrong With Worshipping Gematria Values?</h1>
         <div class="article-date">Published: Sept 20, 2025</div>
-
+      </div>
+      <div class="article-content">
         <div class="article-body">
           <p>
             Gematria is a fascinating lens on language and scripture. It can spark curiosity,
             reveal patterns, and encourage deeper study of sacred texts. Yet for some
-            enthusiasts, the excitement of number-hunting turns into something much heavier:
-            a near-religious devotion to the numbers themselves. When people start to
-            <strong>worship gematria values</strong> treating them as the final word on
-            truth or destiny they step onto shaky ground. Below is a detailed exploration
-            of why that approach is problematic, drawing on history, common sense,
-            and lessons from many faith traditions.
+            enthusiasts, the excitement of number-hunting turns into something much heavier: a near-religious devotion to the numbers themselves. When people start to <strong>worship gematria values</strong> treating them as the final word on truth or destiny they step onto shaky ground. Below is a detailed exploration of why that approach is problematic, drawing on history, common sense, and lessons from many faith traditions.
           </p>
 
           <h3>🔍 Gematria as a Tool, Not a Deity</h3>
@@ -84,10 +83,7 @@
           <p>
             Other cultures echo this warning. Greek philosophers played with isopsephy,
             yet Socratic dialogue emphasized reason over hidden codes. Early Christian
-            thinkers occasionally used number symbolism, but they, too, placed
-            character and love above arithmetic. Across time and tradition,
-            the consistent message is: <strong>numbers can enrich faith,
-            but they cannot replace it</strong>.
+            thinkers occasionally used number symbolism, but they, too, placed character and love above arithmetic. Across time and tradition, the consistent message is: <strong>numbers can enrich faith, but they cannot replace it</strong>.
           </p>
 
           <h3>🤯 Psychological Pitfalls</h3>
@@ -197,11 +193,7 @@
           </p>
 
           <p>
-            By remembering that gematria is a <strong>tool, not a truth-giver</strong>,
-            we can keep its sparkle without letting it rule our lives.
-            Study it, enjoy it, even marvel at its coincidences but
-            reserve worship for what is truly worthy: the living reality
-            that numbers can only point toward.
+            By remembering that gematria is a <strong>tool, not a truth-giver</strong>, we can keep its sparkle without letting it rule our lives. Study it, enjoy it, even marvel at its coincidences but reserve worship for what is truly worthy: the living reality that numbers can only point toward.
           </p>
 
           <hr>
@@ -212,17 +204,17 @@
           </p>
         </div>
       </div>
+
+      <div class="feedback">
+        <p>Was this article helpful?</p>
+        <button onclick="sendFeedback('😞')">😞</button>
+        <button onclick="sendFeedback('😐')">😐</button>
+        <button onclick="sendFeedback('😊')">😊</button>
+        <div class="feedback-message" id="feedbackMessage">Thanks for your feedback!</div>
+      </div>
     </main>
 
     <footer class="footer">
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/blog-collections.html">Blog</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/contact-us.html">Contact Us</a>
-        <a href="/terms-conditions.html">Terms & Conditions</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-      </div>
       <div class="copyright">
         © 2025 gematriacalculators.org
       </div>

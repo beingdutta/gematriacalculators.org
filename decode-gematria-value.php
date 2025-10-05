@@ -97,11 +97,11 @@
       <footer class="footer">
         <div class="footer-links">
           <a href="/">Home</a>
-          <a href="/blog-collections.html">Blog</a>
-          <a href="/about-us.html">About Us</a>
-          <a href="/contact-us.html">Contact Us</a>
-          <a href="/terms-conditions.html">Terms & Conditions</a>
-          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/blog-collections/">Blog</a>
+          <a href="/about-us/">About Us</a>
+          <a href="/contact-us/">Contact Us</a>
+          <a href="/terms-conditions/">Terms & Conditions</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
         </div>
         <div class="copyright">
           © <?= date('Y') ?> gematriacalculators.org
