@@ -17,7 +17,7 @@
         <meta name="keywords" content="gematria calculator, bible gematria calculator, gematrix, english to hebrew gematria calculator, hebrew gematria calculator, best gematria calculator, calculate gematria, gematria calculator online, gematria finder">
         <title>What Is a Good Starting Point for Learning Gematria?</title>
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-        <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-a-good-starting-point-for-learning-Gematria.php" />
+        <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-a-good-starting-point-for-learning-Gematria/" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/article-general-style.css">
@@ -27,16 +27,16 @@
     <body>
         <nav class="header-nav">
             <a href="/">Home</a>
-            <a href="/more-tools.php">More Tools</a>
-            <a href="/blog-collections.html">Blog</a>
-            <a href="/about-us.html">About Us</a>
-            <a href="/contact-us.html">Contact Us</a>
-            <a href="/terms-conditions.html">Terms & Conditions</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/more-tools/">More Tools</a>
+            <a href="/blog-collections/">Blog</a>
+            <a href="/about-us/">About Us</a>
+            <a href="/contact-us/">Contact Us</a>
+            <a href="/terms-conditions/">Terms & Conditions</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
         </nav>
         <div class="container" style="padding-top: 2rem;">
             <header class="header">
-                <button class="back-button" onclick="window.location.href='/blog-collections.html'">← Back</button>
+                <button class="back-button" onclick="window.location.href='/blog-collections/'">← Back</button>
                 <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
                 <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo"></a>
                 <h1>Gematria Insights</h1>
@@ -100,9 +100,9 @@
                         <p>Ready to go further? We recommend:</p>
 
                         <div>
-                            <p><a href="/blogs/What-is-a-Gematria-Calculator.php">Introduction to Gematria</a> — history, methodology, and philosophy.</p>
-                            <p><a href="/blogs/what-is-hebrew-gematria.php">Gematria is an ancient system</a> — Questions and share discoveries.</p>
-                            <p><a href="/blogs/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
+                            <p><a href="/blogs/What-is-a-Gematria-Calculator/">Introduction to Gematria</a> — history, methodology, and philosophy.</p>
+                            <p><a href="/blogs/what-is-hebrew-gematria/">Gematria is an ancient system</a> — Questions and share discoveries.</p>
+                            <p><a href="/blogs/Is-There-Any-Merit-in-Gematria/">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
                         </div>
                     </div>
 

@@ -14,29 +14,42 @@
     # --- CLEAN URLS ---
     
     # 3. Remove index.php from the URL
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+    RewriteRule ^index\.php$ / [R=301,L]
     RewriteCond %{THE_REQUEST} /index\.php [NC]
     RewriteRule ^(.*?)index\.php$ /$1 [R=301,L,QSA]
     
-    # 4. Remove .php extension from filename
+    # 4. Remove .php extension from filename (if not index.php)
     RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
     RewriteRule ^ /%1 [R=301,L]
     
-    # 5. Remove .html extension from filename
+    # 5. Remove .html extension from filename (and redirect index.html to root)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+    RewriteRule ^index\.html$ / [R=301,L]
     RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
     RewriteRule ^ /%1 [R=301,L]
     
-    # 6. Add a trailing slash to directories
+    # 6. Add a trailing slash to directories (but not to files that will be rewritten)
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_URI} !(.*)/$
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php !-f
+    RewriteCond %{REQUEST_FILENAME}.html !-f
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.*)$ /$1/ [R=301,L]
     
     # --- INTERNAL REWRITES (silent) ---
     
-    # 7. Internally rewrite clean URL to its .php or .html file
+    # Explicitly serve more-tools.php for the /more-tools/ URL to resolve directory conflict
+    RewriteRule ^more-tools/?$ /more-tools.php [L]
+    
+    # Rewrite old tool URLs to the new directory
+    RewriteRule ^more-tools/(.+)$ /tool-pages/$1 [L]
+    
+    # 7. Internally rewrite clean URL (with or without trailing slash) to its .php or .html file
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.php -f
-    RewriteRule ^(.*)$ $1.php [L,QSA]
+    RewriteRule ^(.*?)/?$ $1.php [L]
     RewriteCond %{REQUEST_FILENAME}.html -f
-    RewriteRule ^(.*)$ $1.html [L,QSA]
+    RewriteRule ^(.*?)/?$ $1.html [L]
 </IfModule>

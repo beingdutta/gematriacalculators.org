@@ -1,7 +1,8 @@
 <?php
   // index.php
   // 1) pull in your calculate.php (which defines gematria() and also handles AJAX POSTs)
-  require __DIR__ . '/calculate.php';
+  require_once __DIR__ . '/calculate.php';
+  require_once __DIR__ . '/helpers.php';
 
   // 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
   $inputRaw = $_GET['input'] ?? '';
@@ -36,8 +37,8 @@
   // Canonical: point root when empty; deep-link when there’s an input
   $canonicalUrl = $BASE_URL;
   if (!empty($inputRaw)) {
-    // use rawurlencode for cleaner canonical with query. Point to index.php for queries.
-    $canonicalUrl .= 'index.php?input=' . rawurlencode($inputRaw);
+    // use rawurlencode for cleaner canonical with query. Point to the root URL for queries.
+    $canonicalUrl .= '?input=' . rawurlencode($inputRaw);
   }
 
   // Open Graph / Twitter: keep short and dependable; use static description
@@ -101,12 +102,11 @@
     <!-- Hreflang links -->
     <?php
       $qs = !empty($inputRaw) ? '?input=' . rawurlencode($inputRaw) : '';
-      $en_path = !empty($inputRaw) ? 'index.php' . $qs : ''; // Empty for root, 'index.php?...' for queries
     ?>
-    <link rel="alternate" hreflang="en" href="<?= $BASE_URL . $en_path ?>">
-    <link rel="alternate" hreflang="ru" href="<?= $BASE_URL . 'ru/index.php' . $qs ?>">
-    <link rel="alternate" hreflang="de" href="<?= $BASE_URL . 'de/index.php' . $qs ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . $en_path ?>"> <!-- x-default should point to the primary version -->
+    <link rel="alternate" hreflang="en" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="ru" href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="de" href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>"> <!-- x-default should point to the primary version -->
 
 
     <!-- JSON-LD: WebApplication schema for a calculator -->
@@ -137,12 +137,12 @@
 
     <nav class="header-nav">
         <a href="/">Home</a>
-        <a href="/more-tools.php">More Tools</a>
-        <a href="/blog-collections.html">Blog</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/contact-us.html">Contact Us</a>
-        <a href="/terms-conditions.html">Terms & Conditions</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/more-tools/">More Tools</a>
+        <a href="/blog-collections/">Blog</a>
+        <a href="/about-us/">About Us</a>
+        <a href="/contact-us/">Contact Us</a>
+        <a href="/terms-conditions/">Terms & Conditions</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
     </nav>
     
     <div class="container">
@@ -154,16 +154,12 @@
             <!-- ——— Language Switcher ——— -->
             <?php                                    
             $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-            $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
-            function lang($code,$label,$qs,$here){
-                $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs"; // Use absolute paths
-                return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>": "<a href=\"$path\">$label</a>";
-            }
+            $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/'); // '' or 'ru' or 'de'
             ?>
             <nav class="lang-switcher" aria-label="Language switcher">
-            <?= lang('en','EN',$qs,$here) ?> |
-            <?= lang('ru','RU',$qs,$here) ?> |
-            <?= lang('de','DE',$qs,$here) ?>
+            <?= lang_switcher_link('en','EN',$qs,$here) ?> |
+            <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
+            <?= lang_switcher_link('de','DE',$qs,$here) ?>
             </nav>
 
             <div class="ticker">
@@ -187,7 +183,7 @@
                     id="inputText"
                     type="text"
                     placeholder="Enter text to calculate…"
-                    value="<?= htmlspecialchars($inputRaw, ENT_QUOTES) ?>"
+                    value="<?= htmlspecialchars($inputRaw, ENT_QUOTES, 'UTF-8') ?>"
                 />
                 <button class="secondary" onclick="clearInput()" title="Clear">✕</button>
             </div>
@@ -195,7 +191,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">Calculate</button>
                 <button class="download-btn" onclick="calculateAndDownload()">Download PDF</button>
-                <a href="/decode-gematria-value.php" class="decode-btn">Decode Gematria</a>
+                <a href="/decode-gematria-value/" class="decode-btn">Decode Gematria</a>
             </div>
 
 

@@ -8,7 +8,7 @@
     <meta name="description" content="Use our Lo Shu Grid Calculator to instantly reveal your numerological matrix. Get a complete Lo Shu grid calculation online from your date of birth in seconds.">
     <meta name="keywords" content="lo shu grid calculator, lo shu calculator, lo shu grid calculator online, lo shu grid online calculator, lo shu grid calculate, lo shu grid calculation">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/loshu-grid.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/tool-pages/loshu-grid" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/loshu-grid.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
@@ -18,12 +18,12 @@
   <body>
     <nav class="header-nav">
         <a href="/">Home</a>
-        <a href="/more-tools.php">More Tools</a>
-        <a href="/blog-collections.html">Blog</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/contact-us.html">Contact Us</a>
-        <a href="/terms-conditions.html">Terms & Conditions</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/more-tools/">More Tools</a>
+        <a href="/blog-collections/">Blog</a>
+        <a href="/about-us/">About Us</a>
+        <a href="/contact-us/">Contact Us</a>
+        <a href="/terms-conditions/">Terms & Conditions</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
     </nav>
     <div class="container" style="padding-top: 2rem;">
 

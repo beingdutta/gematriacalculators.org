@@ -15,7 +15,7 @@
     <meta name="description" content="What is a gematria in your own words? An ancient system of assigning numerical values to letters, words, or phrases. Often associated with Hebrew, but it also appears in Greek.">
     <meta name="keywords" content="gematria calculator, hebrew gematria calculator, jewish gematria calculator, simple gematria calculator, bible gematria calculator, biblical gematria calculator, english gematria calculator, gematria calculator hebrew, gematria calculator app, gematria calculator names">
     <title>What is Gematria in your own words?</title>
-    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-Gematria-in-your-own-words.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-Gematria-in-your-own-words/" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <!-- Fonts + Global Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -28,17 +28,17 @@
   <body>
     <nav class="header-nav">
         <a href="/">Home</a>
-        <a href="/more-tools.php">More Tools</a>
-        <a href="/blog-collections.html">Blog</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/contact-us.html">Contact Us</a>
-        <a href="/terms-conditions.html">Terms & Conditions</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/more-tools/">More Tools</a>
+        <a href="/blog-collections/">Blog</a>
+        <a href="/about-us/">About Us</a>
+        <a href="/contact-us/">Contact Us</a>
+        <a href="/terms-conditions/">Terms & Conditions</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
     </nav>
     <div class="container" style="padding-top: 2rem;">
       <!-- Header -->
       <header class="header">
-        <button class="back-button" onclick="window.location.href='/blog-collections.html'">← Back</button>
+        <button class="back-button" onclick="window.location.href='/blog-collections/'">← Back</button>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         <a href="/"><img src="/assets/header-image.webp" id="themeLogo" alt="Site Logo"></a>
         <h1>Gematria Insights</h1>
@@ -110,9 +110,9 @@
             <p>Ready to go further? We recommend:</p>
 
             <div>
-                <p><a href="/blogs/What-is-a-good-starting-point-for-learning-Gematria.php">Start the basics of Gematria</a> — Gematria calculation logic.</p>
-                <p><a href="/blogs/How-does-gematria-work-in-detail-using-the-English-alphabet.php">Detailed English Calculation of Gematria</a> — Learn Inner Workings.</p>
-                <p><a href="/blogs/Is-There-Any-Merit-in-Gematria.php">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
+                <p><a href="/blogs/What-is-a-good-starting-point-for-learning-Gematria/">Start the basics of Gematria</a> — Gematria calculation logic.</p>
+                <p><a href="/blogs/How-does-gematria-work-in-detail-using-the-English-alphabet/">Detailed English Calculation of Gematria</a> — Learn Inner Workings.</p>
+                <p><a href="/blogs/Is-There-Any-Merit-in-Gematria/">Understanding Gematria and Its Purpose</a>: Gematria Basics for Beginners.</p>
             </div>
           </div>
 

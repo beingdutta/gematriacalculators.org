@@ -7,7 +7,7 @@
     <meta name="description" content="Decode English Gematria totals to get the best-effort letter mappings. Reverse gematria decoding based on numerical values.">
     <meta name="keywords" content="decode gematria, reverse gematria calculator, gematria value decode, gematria letter sequence, gematria english decoder">
     <title>Decode Gematria Values - Free Gematria Calculator</title>
-    <link rel="canonical" href="https://gematriacalculators.org/decode-gematria-value.php">
+    <link rel="canonical" href="https://gematriacalculators.org/decode-gematria-value/">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
@@ -18,10 +18,10 @@
   <body>
     <nav class="header-nav">
         <a href="/">Home</a>
-        <a href="/more-tools.php">More Tools</a>
-        <a href="/blog-collections.html">Blog</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/contact-us.html">Contact Us</a>
+        <a href="/more-tools/">More Tools</a>
+        <a href="/blog-collections/">Blog</a>
+        <a href="/about-us/">About Us</a>
+        <a href="/contact-us/">Contact Us</a>
     </nav>
     <div class="container">
 
