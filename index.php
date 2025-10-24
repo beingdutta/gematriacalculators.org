@@ -352,6 +352,9 @@
             <h2><i class="fa-solid fa-star text-primary"></i> Don’t Leave Yet!</h2>
             <p>Have you tried our exciting new tools?</p>
             <div class="modal-links">
+                <a href="https://vpnleaderboard.com/" class="outline-button">
+                    <i class="fa-solid fa-shield-halved"></i> VPN Leaderboard
+                </a>
                 <a href="http://tarotcardgenerator.online/" class="outline-button">
                     <i class="fa-solid fa-wand-magic-sparkles"></i> Daily Tarot Reader
                 </a>
