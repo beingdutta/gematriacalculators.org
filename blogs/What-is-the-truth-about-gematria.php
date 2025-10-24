@@ -98,11 +98,11 @@
                     <div class="article-body">
                         <h3>💡 The Question That Echoes Through Time</h3>
                         <p>What is the *truth* about Gematria? The question itself seems to carry a mystical weight. For centuries, this ancient practice of assigning numerical values to letters has captivated mystics, scholars, skeptics, and seekers alike. Is it a divine code embedded in the fabric of language by a cosmic intelligence? A sophisticated literary tool used by ancient authors? Or is it merely a playground for coincidence, a form of numerical pareidolia where we see patterns that aren't really there?</p>
-                        <p>The simple answer—that its truth "lies in the eye of the beholder"—feels unsatisfying. It's an intellectual shrug that dismisses the profound experiences of its practitioners and the sharp critiques of its detractors. The real truth is far more complex, layered, and fascinating. To find it, we can't look for a single, simple answer. Instead, we must explore three different kinds of truth: the Historical Truth, the Mathematical Truth, and the Personal Truth. By understanding each, we can begin to assemble a complete and honest picture of what Gematria is and what it offers.</p>
+                        <p>The simple answer that its truth "lies in the eye of the beholder" feels unsatisfying. It's an intellectual shrug that dismisses the profound experiences of its practitioners and the sharp critiques of its detractors. The real truth is far more complex, layered, and fascinating. To find it, we can't look for a single, simple answer. Instead, we must explore three different kinds of truth: the Historical Truth, the Mathematical Truth, and the Personal Truth. By understanding each, we can begin to assemble a complete and honest picture of what Gematria is and what it offers.</p>
 
                         <hr class="section-break">
 
-                        <h2>Part 1: The Historical Truth — An Undeniable Literary Legacy</h2>
+                        <h2>Part 1: The Historical Truth   An Undeniable Literary Legacy</h2>
                         <p>Before we can debate Gematria's spiritual validity, we must acknowledge its undeniable historical reality. This isn't a modern invention; it's an ancient intellectual practice with a well-documented history. The "truth" here is a matter of historical and literary record.</p>
                         
                         <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="An ancient, open book in a library, representing historical knowledge." class="article-image">
@@ -120,11 +120,11 @@
                         <p>For the sages, this wasn't a random coincidence. It was a subtle literary hint embedded in the text, suggesting that Eliezer's loyalty and strength were equivalent to that of a small army. It enriches the story, adding a layer of depth and characterization. This is a historical fact of how the text was interpreted.</p>
                         <p>Later, during the medieval period, Gematria became a cornerstone of Kabbalah, Jewish mysticism. Kabbalists, who believed the universe was created through the very letters of the Hebrew language, saw Gematria as a way to understand the underlying mechanics of creation. The Zohar, the foundational work of Kabbalah, is replete with Gematria, using it to weave together disparate concepts and verses into a unified mystical tapestry.</p>
 
-                        <p><strong>The verdict on the Historical Truth:</strong> It is an indisputable fact that Gematria has been used for over two millennia as a legitimate method of literary and theological interpretation within specific traditions. To deny this is to ignore a significant chapter in intellectual history. The historical truth is that Gematria is *real*—as a practice, a tool, and a genre of commentary.</p>
+                        <p><strong>The verdict on the Historical Truth:</strong> It is an indisputable fact that Gematria has been used for over two millennia as a legitimate method of literary and theological interpretation within specific traditions. To deny this is to ignore a significant chapter in intellectual history. The historical truth is that Gematria is *real* as a practice, a tool, and a genre of commentary.</p>
 
                         <hr class="section-break">
 
-                        <h2>Part 2: The Mathematical Truth — Coincidence, Probability, and Psychology</h2>
+                        <h2>Part 2: The Mathematical Truth   Coincidence, Probability, and Psychology</h2>
                         <p>This is where the skeptic enters the room, and for good reason. Acknowledging Gematria's history is one thing; accepting its claims of revealing divine truth is another. The mathematical and psychological truth about Gematria is one of patterns, probability, and the incredible power of the human brain to find meaning, even in randomness.</p>
 
                         <img src="https://images.unsplash.com/photo-1593435713509-a1b7da13342b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" alt="An abstract image of a complex web or network of lines, symbolizing patterns and probability." class="article-image">
@@ -135,7 +135,7 @@
                         <p>Similarly, if you have thousands of words but only a few hundred common numerical totals, many words *must* share the same value. The vast majority of these will be meaningless. For example, in English Ordinal Gematria (A=1, B=2...), the words "Example" and "Random" both equal 74. Does this reveal a profound truth? Almost certainly not. It's a random collision.</p>
                         
                         <h3>The Danger of "Cipher-Surfing" and Confirmation Bias</h3>
-                        <p>The problem is amplified when you introduce multiple ciphers. With Hebrew, you have Standard, Reduced, Ordinal, and more. With English, you have dozens of systems (Simple, Reverse, Pythagorean, etc.). This flexibility becomes a powerful tool for confirmation bias—the natural human tendency to look for, interpret, and favor information that confirms our pre-existing beliefs.</p>
+                        <p>The problem is amplified when you introduce multiple ciphers. With Hebrew, you have Standard, Reduced, Ordinal, and more. With English, you have dozens of systems (Simple, Reverse, Pythagorean, etc.). This flexibility becomes a powerful tool for confirmation bias the natural human tendency to look for, interpret, and favor information that confirms our pre-existing beliefs.</p>
                         <p>If you are determined to prove that "Moon" is connected to "Water," you can surf through ciphers until you find a match. This isn't discovery; it's a form of self-deception. An honest approach requires consistency and a willingness to accept when there is no connection.</p>
                         
                         <h3>The Skeptic's Toolkit vs. The Proponent's Perspective</h3>
@@ -179,7 +179,7 @@
 
                         <hr class="section-break">
 
-                        <h2>Part 3: The Personal Truth — A Compass for Meaning-Making</h2>
+                        <h2>Part 3: The Personal Truth   A Compass for Meaning-Making</h2>
                         <p>After navigating the facts of history and the probabilities of mathematics, we arrive at the most intimate and, for many, the most important aspect of Gematria: its personal truth. This is the truth of experience. Here, Gematria is not a tool for proving objective facts about the world, but for building subjective meaning within it.</p>
                         
                         <img src="https://images.unsplash.com/photo-1508921340878-ba53e1f416ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="A hand holding a compass, symbolizing Gematria as a tool for personal direction and meaning." class="article-image">

@@ -126,6 +126,21 @@ function toggleTheme() {
       headerImage.src = '/assets/talisman-header-icon.png';
     }
   }
+
+  // Swap theme toggle icon
+  document.querySelectorAll('.theme-toggle').forEach(button => {
+    const sunIcon = button.querySelector('.icon-sun');
+    const moonIcon = button.querySelector('.icon-moon');
+    if (sunIcon && moonIcon) {
+      if (newTheme === 'dark') {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      } else {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+    }
+  });
 }
 
 // Initialize theme and header image
@@ -142,6 +157,21 @@ document.addEventListener('DOMContentLoaded', () => {
       headerImage.src = '/assets/talisman-header-icon.png';
     }
   }
+
+  // Set initial theme toggle icon
+  document.querySelectorAll('.theme-toggle').forEach(button => {
+    const sunIcon = button.querySelector('.icon-sun');
+    const moonIcon = button.querySelector('.icon-moon');
+    if (sunIcon && moonIcon) {
+      if (savedTheme === 'dark') {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      } else {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+    }
+  });
 });
 
 function sendFeedback(emoji) {

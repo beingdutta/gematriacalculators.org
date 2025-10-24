@@ -42,8 +42,14 @@
     # Explicitly serve more-tools.php for the /more-tools/ URL to resolve directory conflict
     RewriteRule ^more-tools/?$ /more-tools.php [L]
     
-    # Rewrite old tool URLs to the new directory
-    RewriteRule ^more-tools/(.+)$ /tool-pages/$1 [L]
+    # NOTE: previously the site rewrote /more-tools/<tool> to /tool-pages/<tool>.
+    # That caused requests like /more-tools/loshu-grid to be routed to
+    # /tool-pages/loshu-grid which does not have a corresponding PHP file
+    # on disk, producing a 500 error in some local setups. The rule below
+    # was removed (commented out) so clean URLs under /more-tools/ will
+    # fall through to the general "clean URL -> .php" rewrite which will
+    # correctly map /more-tools/loshu-grid -> /more-tools/loshu-grid.php
+    #RewriteRule ^more-tools/(.+)$ /tool-pages/$1 [L]
     
     # 7. Internally rewrite clean URL (with or without trailing slash) to its .php or .html file
     RewriteCond %{REQUEST_FILENAME} !-f

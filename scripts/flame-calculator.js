@@ -151,6 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerImg) {
     headerImg.src = '/assets/flame-icon-128.png';
   }
+
+  // Set initial theme toggle icon
+  const button = document.querySelector('.theme-toggle');
+  if (button) {
+    const sunIcon = button.querySelector('.icon-sun');
+    const moonIcon = button.querySelector('.icon-moon');
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = (savedTheme === 'light') ? 'block' : 'none';
+      moonIcon.style.display = (savedTheme === 'dark') ? 'block' : 'none';
+    }
+  }
 });
 
 /** FAQ toggle (same as index.php) */
