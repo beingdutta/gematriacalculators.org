@@ -250,6 +250,40 @@
           </div>
         </div>
 
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Was ist der englische Gematrie-Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Ein <strong>englischer Gematrie-Rechner</strong> ist ein Werkzeug, das den Buchstaben des englischen Alphabets numerische Werte zuweist. Im Gegensatz zum Hebräischen hat das Englische kein einheitliches altes System, daher verwenden Rechner verschiedene Chiffren wie die Einfache Gematrie (A=1, B=2), die umgekehrte ordinale Gematrie (A=26, B=25) und die Reduktion. Dies ermöglicht es Ihnen, die numerischen Muster und symbolischen Verbindungen zwischen englischen Wörtern, Namen und Phrasen zu erforschen und verborgene Bedeutungsebenen aufzudecken.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Wer sollte den Gematrie-Rechner verwenden?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Ein <strong>Gematrie-Rechner</strong> ist für jeden gedacht, der neugierig auf die verborgene numerische Struktur der Sprache ist. Er ist perfekt für:
+            <ul>
+                <li><strong>Spirituell Suchende</strong>, die heilige Texte wie die Bibel erforschen.</li>
+                <li><strong>Schriftsteller und Künstler</strong>, die nach kreativer Inspiration und symbolischer Tiefe suchen.</li>
+                <li><strong>Geschichtsinteressierte</strong>, die sich für alte Interpretationsmethoden interessieren.</li>
+                <li><strong>Numerologie-Enthusiasten</strong>, die Namen, Daten und Konzepte analysieren.</li>
+                <li><strong>Jeden, der Rätsel liebt</strong> und gerne verborgene Muster in der Welt um sich herum findet.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Was ist der jüdische Gematrie-Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Ein <strong>jüdischer Gematrie-Rechner</strong> (oder hebräischer Gematrie-Rechner) ist ein Werkzeug, das auf der alten jüdischen Tradition basiert, den 22 Buchstaben des hebräischen Alphabets numerische Werte zuzuweisen. Er verwendet hauptsächlich das <em>Mispar Hechrechi</em> (Standard)-System, das für die Kabbala und die Interpretation der Tora von grundlegender Bedeutung ist. Diese Art von Rechner ist unerlässlich für das Studium der numerischen Werte biblischer Namen, Konzepte und Verse, um tiefere theologische und mystische Verbindungen aufzudecken.
+          </div>
+        </div>
+
         <div class="footer-links">
           <!-- Footer links are now in the header nav -->
           <!-- <a href="/de/index.php">Startseite</a>

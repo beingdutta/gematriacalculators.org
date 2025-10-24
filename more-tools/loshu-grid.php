@@ -145,6 +145,45 @@
         </div>
       </section>
 
+      <h2 class="faq-heading" style="margin-top: 2rem;">Related Gematria FAQs</h2>
+
+      <div class="faq-item">
+          <button class="faq-question" type="button">
+              What is the English gematria calculator?
+              <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+              An <strong>English Gematria Calculator</strong> is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so calculators use various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
+          </div>
+      </div>
+
+      <div class="faq-item">
+          <button class="faq-question" type="button">
+              Who should use the gematria calculator?
+              <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+              A <strong>gematria calculator</strong> is for anyone curious about the hidden numerical structure of language. It's perfect for:
+              <ul>
+                  <li><strong>Spiritual Seekers</strong> exploring sacred texts like the Bible.</li>
+                  <li><strong>Writers and Artists</strong> looking for creative inspiration and symbolic depth.</li>
+                  <li><strong>History Buffs</strong> interested in ancient interpretive methods.</li>
+                  <li><strong>Numerology Enthusiasts</strong> analyzing names, dates, and concepts.</li>
+                  <li><strong>Anyone who loves puzzles</strong> and finding hidden patterns in the world around them.</li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="faq-item">
+          <button class="faq-question" type="button">
+              What is the Jewish gematria calculator?
+              <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+              A <strong>Jewish Gematria Calculator</strong> (or Hebrew Gematria Calculator) is a tool based on the ancient Jewish tradition of assigning numerical values to the 22 letters of the Hebrew alphabet. It primarily uses the <em>Mispar Hechrechi</em> (Standard) system, which is fundamental to Kabbalah and the interpretation of the Torah. This type of calculator is essential for studying the numerical values of biblical names, concepts, and verses to uncover deeper theological and mystical connections.
+          </div>
+      </div>
+
       <!-- ── footer ───────────────────────────────────────────────────────── -->
       <footer>
         <!-- Footer links are now in the header nav -->
