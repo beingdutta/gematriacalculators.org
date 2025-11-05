@@ -94,15 +94,15 @@
           $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
           $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');
         ?>
-        <nav class="lang-switcher" aria-label="Переключатель языка">
-          <?= lang_switcher_link('en','EN',$qs,$here) ?>
-          <?= lang_switcher_link('de','DE',$qs,$here) ?>
-          <?= lang_switcher_link('es','ES',$qs,$here) ?>
-          <?= lang_switcher_link('it','IT',$qs,$here) ?>
-          <?= lang_switcher_link('iw','HE',$qs,$here) ?>
-          <?= lang_switcher_link('pl','PL',$qs,$here) ?>
-          <?= lang_switcher_link('pt','PT',$qs,$here) ?>
-          <?= lang_switcher_link('ru','RU',$qs,$here) ?>
+        <nav class="lang-switcher" aria-label="Language switcher">
+          <?= lang_switcher_link('en','EN',$qs,$here) ?> |
+          <?= lang_switcher_link('de','DE',$qs,$here) ?> |
+          <?= lang_switcher_link('es','ES',$qs,$here) ?> |
+          <?= lang_switcher_link('it','IT',$qs,$here) ?> |
+          <?= lang_switcher_link('iw','HE',$qs,$here) ?> |
+          <?= lang_switcher_link('pl','PL',$qs,$here) ?> |
+          <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
+          <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
           <?= lang_switcher_link('zh','CN',$qs,$here) ?>
         </nav>
 

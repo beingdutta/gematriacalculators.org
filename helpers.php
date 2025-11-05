@@ -11,7 +11,5 @@
  */
 function lang_switcher_link(string $code, string $label, string $qs, string $here): string {
     $path = ($code === 'en') ? '/' . $qs : "/$code/" . $qs;
-    $isActive = ($code === $here || ($code === 'en' && $here === ''));
-    $class = $isActive ? ' class="active"' : '';
-    return $isActive ? "<a href=\"$path\"$class>$label</a>" : "<a href=\"$path\">$label</a>";
+    return ($code === $here || ($code === 'en' && $here === '')) ? "<strong>$label</strong>" : "<a href=\"$path\">$label</a>";
 }
