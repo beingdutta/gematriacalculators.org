@@ -501,3 +501,25 @@ closeBtn.addEventListener('click', hideExitModal);
 modal.addEventListener('click', e => {
   if (e.target === modal) hideExitModal();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle functionality
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Language change button functionality
+    const langChangeBtn = document.querySelector('.lang-change-btn');
+    const langPopup = document.querySelector('.lang-popup');
+
+    if (langChangeBtn && langPopup) {
+        langChangeBtn.addEventListener('click', () => {
+            langPopup.classList.toggle('active');
+        });
+    }
+});
