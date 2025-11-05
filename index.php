@@ -220,6 +220,14 @@
         </div>
 
         <header class="header">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <button class="lang-change-btn">Change Language</button>
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
             <h1>Gematria Calculator</h1>
             <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>

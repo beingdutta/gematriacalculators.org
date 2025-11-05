@@ -145,6 +145,39 @@ function toggleTheme() {
 
 // Initialize theme and header image
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });
+  }
+
+  // Language popup functionality
+  const langChangeBtn = document.querySelector('.lang-change-btn');
+  const langPopup = document.querySelector('.lang-popup');
+  const langPopupClose = document.querySelector('.lang-popup-close');
+
+  if (langChangeBtn && langPopup) {
+      langChangeBtn.addEventListener('click', () => {
+          langPopup.classList.add('active');
+      });
+  }
+
+  if (langPopupClose && langPopup) {
+      langPopupClose.addEventListener('click', () => {
+          langPopup.classList.remove('active');
+      });
+
+      // Close popup when clicking outside
+      langPopup.addEventListener('click', (e) => {
+          if (e.target === langPopup) {
+              langPopup.classList.remove('active');
+          }
+      });
+  }
+
   const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
 
@@ -190,6 +223,50 @@ function toggleFAQ(element) {
     const faqItem = element.parentElement;
     faqItem.classList.toggle('active');
 }
+
+// Mobile Navigation
+function initMobileNavigation() {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+}
+
+// Language Popup
+function initLanguagePopup() {
+  const langChangeBtn = document.querySelector('.lang-change-btn');
+  const langPopup = document.querySelector('.lang-popup');
+  const langPopupClose = document.querySelector('.lang-popup-close');
+
+  if (langChangeBtn && langPopup) {
+    langChangeBtn.addEventListener('click', () => {
+      langPopup.classList.add('active');
+    });
+  }
+
+  if (langPopupClose && langPopup) {
+    langPopupClose.addEventListener('click', () => {
+      langPopup.classList.remove('active');
+    });
+
+    // Close popup when clicking outside
+    langPopup.addEventListener('click', (e) => {
+      if (e.target === langPopup) {
+        langPopup.classList.remove('active');
+      }
+    });
+  }
+}
+
+// Initialize mobile features
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNavigation();
+  initLanguagePopup();
+});
 
 // For PDF Generation.
 function generatePDFContent(input, results) {
