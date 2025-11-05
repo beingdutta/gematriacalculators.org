@@ -164,6 +164,22 @@
     </nav>
     
     <div class="container">
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+            <p style="margin: 0; color: #004085; font-size: 13px;">
+                🌍 Grazie per la fiducia! Ora supportiamo diverse lingue: 
+                <span title="English">inglese</span>, 
+                <span title="Русский">russo</span>, 
+                <span title="Deutsch">tedesco</span>, 
+                <span title="Español">spagnolo</span>, 
+                <span title="Português">portoghese</span>, 
+                <strong>italiano</strong>, 
+                <span title="עברית">ebraico</span>, 
+                <span title="Polski">polacco</span> e 
+                <span title="中文">cinese</span>!
+            </p>
+        </div>
+
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
             <h4>Ricerche recenti:</h4>

@@ -140,6 +140,22 @@
         </button>
     </nav>
     <div class="container">
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+            <p style="margin: 0; color: #004085; font-size: 13px;">
+                🌍 תודה על האמון! אנחנו כעת תומכים במספר שפות:
+                <span title="English">אנגלית</span>,
+                <span title="Русский">רוסית</span>,
+                <span title="Deutsch">גרמנית</span>,
+                <span title="Español">ספרדית</span>,
+                <span title="Português">פורטוגזית</span>,
+                <span title="Italiano">איטלקית</span>,
+                <strong>עברית</strong>,
+                <span title="Polski">פולנית</span> ו
+                <span title="中文">סינית</span>!
+            </p>
+        </div>
+
         <div class="recent-phrases ticker-bar">
             <h4>חיפושים אחרונים:</h4>
             <?php $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : ''; $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/'); ?>

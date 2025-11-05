@@ -119,6 +119,22 @@
         </button>
     </nav>
     <div class="container">
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+            <p style="margin: 0; color: #004085; font-size: 13px;">
+                🌍 感谢您的信任！我们现在支持多种语言：
+                <span title="English">英语</span>、
+                <span title="Русский">俄语</span>、
+                <span title="Deutsch">德语</span>、
+                <span title="Español">西班牙语</span>、
+                <span title="Português">葡萄牙语</span>、
+                <span title="Italiano">意大利语</span>、
+                <span title="עברית">希伯来语</span>、
+                <span title="Polski">波兰语</span>和
+                <strong>中文</strong>！
+            </p>
+        </div>
+
         <div class="recent-phrases ticker-bar">
             <h4>最近搜索：</h4>
             <?php $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : ''; $here = 'zh'; ?>

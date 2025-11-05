@@ -85,6 +85,22 @@
 
     <div class="container">
 
+      <!-- Language Support Info -->
+      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085; font-size: 13px;">
+              🌍 Спасибо за доверие! Теперь мы поддерживаем несколько языков: 
+              <span title="English">английский</span>, 
+              <strong>русский</strong>, 
+              <span title="Deutsch">немецкий</span>, 
+              <span title="Español">испанский</span>, 
+              <span title="Português">португальский</span>, 
+              <span title="Italiano">итальянский</span>, 
+              <span title="עברית">иврит</span>, 
+              <span title="Polski">польский</span> и 
+              <span title="中文">китайский</span>!
+          </p>
+      </div>
+
       <!--–––– Recent Searches ticker ––––-->
       <div class="recent-phrases ticker-bar">
         <h4>Недавние запросы:</h4>
@@ -109,22 +125,6 @@
         <div class="ticker">
           <div class="ticker__list"><!-- JS вставит элементы --></div>
         </div>
-      </div>
-
-      <!-- Language Support Info -->
-      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085;">
-              🌍 Спасибо за доверие! Теперь мы поддерживаем несколько языков: 
-              <span title="English">английский</span>, 
-              <strong>русский</strong>, 
-              <span title="Deutsch">немецкий</span>, 
-              <span title="Español">испанский</span>, 
-              <span title="Português">португальский</span>, 
-              <span title="Italiano">итальянский</span>, 
-              <span title="עברית">иврит</span>, 
-              <span title="Polski">польский</span> и 
-              <span title="中文">китайский</span>!
-          </p>
       </div>
 
       <header class="header">

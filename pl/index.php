@@ -152,6 +152,22 @@
     </nav>
     
     <div class="container">
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+            <p style="margin: 0; color: #004085; font-size: 13px;">
+                🌍 Dziękujemy za zaufanie! Teraz wspieramy wiele języków: 
+                <span title="English">angielski</span>, 
+                <span title="Русский">rosyjski</span>, 
+                <span title="Deutsch">niemiecki</span>, 
+                <span title="Español">hiszpański</span>, 
+                <span title="Português">portugalski</span>, 
+                <span title="Italiano">włoski</span>, 
+                <span title="עברית">hebrajski</span>, 
+                <strong>polski</strong> i 
+                <span title="中文">chiński</span>!
+            </p>
+        </div>
+
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
             <h4>Ostatnie wyszukiwania:</h4>
