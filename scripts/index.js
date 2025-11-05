@@ -99,7 +99,7 @@ function calculate() {
       .finally(() => {
         loading.style.display = 'none';
       });
-    }, 5000);
+    }, 6000);
     
     // This 8000 ms (8 s) is the artificial timeout.
   }
@@ -343,24 +343,51 @@ document.addEventListener('DOMContentLoaded', () => {
       'sigils carved in symmetry',
       'order awakening from silence'
     ];
-    const list = document.querySelector('.ticker__list');
-    if (!list) return;
-
-    // Duplicate array so the loop is seamless:
-    const items = recent.concat(recent);
-
-    // Build 30 total <div class="ticker__item">…</div>
-    items.forEach(text => {
-    const card = document.createElement('div');
-    card.className = 'ticker__item';
-    card.textContent = text;
-    card.addEventListener('click', () => {
-            const input = document.getElementById('inputText');
-            input.value = text;
-            input.focus();
+    
+    function initializeTicker() {
+        const list = document.querySelector('.ticker__list');
+        if (!list) return;
+        
+        // Clear existing content
+        list.innerHTML = '';
+        
+        // Create three sets of items for seamless infinite scroll
+        const items = [...recent, ...recent, ...recent];
+        
+        items.forEach(text => {
+            const card = document.createElement('div');
+            card.className = 'ticker__item';
+            card.textContent = text;
+            card.addEventListener('click', () => {
+                const input = document.getElementById('inputText');
+                input.value = text;
+                input.focus();
+            });
+            list.appendChild(card);
         });
-        list.append(card);
+        
+        // Reset animation when it completes
+        const handleAnimationEnd = () => {
+            list.style.animation = 'none';
+            list.offsetHeight; // Trigger reflow
+            list.style.animation = null;
+        };
+        
+        list.addEventListener('animationend', handleAnimationEnd);
+    }
+    
+    // Initialize ticker
+    initializeTicker();
+    
+    // Reinitialize ticker if it becomes hidden (e.g., tab switch)
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            initializeTicker();
+        }
     });
+    
+    // Reinitialize every 5 minutes as a fallback
+    setInterval(initializeTicker, 300000);
 });
 
 

@@ -1,15 +1,15 @@
 <?php
   // index.php
   // 1) pull in your calculate.php (which defines gematria() and also handles AJAX POSTs)
-  require_once __DIR__ . '/calculate.php';
-  require_once __DIR__ . '/helpers.php';
+  require_once __DIR__ . '/../calculate.php';
+  require_once __DIR__ . '/../helpers.php';
 
   // 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
   // SEO: make description STATIC, keep title concise (optionally dynamic)
-  $SITE_NAME        = 'Best Gematria Calculator';
+  $SITE_NAME        = 'Calculadora de Gematría';
   $BASE_URL         = 'https://gematriacalculators.org/';
 
   // Clean a display version of the query for title/OG only
@@ -22,20 +22,20 @@
   // Title: short, human-readable. If there are results, include the English total once.
   if ($results && isset($results['english']['total'])) {
     $pageTitle = sprintf(
-      '%s — Gematria Value: %s | %s',
+      '%s — Valor de Gematría: %s | %s',
       ucfirst($displayInput),
       (string)$results['english']['total'],
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Free Gematria Calculator — Hebrew, English & Simple | ' . $SITE_NAME;
+    $pageTitle = 'Calculadora de Gematría Gratuita — Hebrea, Inglesa y Simple | ' . $SITE_NAME;
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
-  $metaDescription = 'Free online Hebrew Gematria Calculator - The best gematria calculator for Hebrew, English & Simple systems. Bible gematria calculator with instant results. Try our gematria search engine now!';
+  $metaDescription = 'Calculadora de Gematría gratuita en línea para sistemas Hebreo, Inglés y Simple. Calcula instantáneamente valores y significados de gematría para cualquier palabra o frase.';
 
   // Canonical: point root when empty; deep-link when there's an input
-  $canonicalUrl = $BASE_URL;
+  $canonicalUrl = $BASE_URL . 'es/';
   if (!empty($inputRaw)) {
     // use rawurlencode for cleaner canonical with query. Point to the root URL for queries.
     $canonicalUrl .= '?input=' . rawurlencode($inputRaw);
@@ -43,15 +43,15 @@
 
   // Open Graph / Twitter: keep short and dependable; use static description
   $ogTitle = ($results && !empty($displayInput))
-    ? sprintf('%s — Gematria Value: %s', $displayInput, (string)$results['english']['total'])
-    : 'Free Gematria Calculator';
+    ? sprintf('%s — Valor de Gematría: %s', $displayInput, (string)$results['english']['total'])
+    : 'Calculadora de Gematría Gratuita';
 
   // Optional: a share image you host (1200×630 recommended)
   $ogImage = $BASE_URL . 'assets/preview.jpg';
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="es" data-theme="light">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
@@ -79,7 +79,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Keep keywords minimal or remove (search engines largely ignore this) -->
-    <meta name="keywords" content="gematria calculator, hebrew gematria, english gematria, simple gematria">
+    <meta name="keywords" content="calculadora de gematría, gematría hebrea, gematría inglesa, gematría simple">
 
     <!-- Static/clean SEO -->
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
@@ -99,6 +99,17 @@
     <meta name="twitter:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
 
+    <!-- Additional SEO meta tags for multilingual -->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:locale:alternate" content="iw_IL" />
+    <meta property="og:locale:alternate" content="pl_PL" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
     <!-- Hreflang links -->
     <?php
       $qs = !empty($inputRaw) ? '?input=' . rawurlencode($inputRaw) : '';
@@ -112,38 +123,19 @@
     <link rel="alternate" hreflang="iw" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="pl" href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="zh" href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>"> <!-- x-default should point to the primary version -->
+    <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
 
-
-    <!-- Enhanced JSON-LD: WebApplication schema for a calculator -->
+    <!-- JSON-LD: WebApplication schema for a calculator -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Best Gematria Calculator",
-      "url": "<?= htmlspecialchars($BASE_URL, ENT_QUOTES, 'UTF-8'); ?>",
-      "description": "Free online Hebrew Gematria Calculator with Bible gematria and English gematria support. Instant calculations and deep meaning analysis.",
+      "name": "Calculadora de Gematría",
+      "url": "<?= htmlspecialchars($BASE_URL . 'es/', ENT_QUOTES, 'UTF-8'); ?>",
+      "description": "Calculadora gratuita en línea para valores de gematría Hebrea, Inglesa y Simple.",
       "applicationCategory": "Calculator",
       "operatingSystem": "Any",
-      "inLanguage": "en",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "Hebrew Gematria Calculations",
-        "English Gematria System",
-        "Simple Gematria Values",
-        "Bible Gematria Analysis",
-        "PDF Export Feature",
-        "Multi-language Support"
-      ],
-      "keywords": "gematria calculator, hebrew gematria, english gematria, bible gematria calculator, simple gematria calculator, gematria search engine",
-      "potentialAction": {
-        "@type": "UseAction",
-        "target": "<?= htmlspecialchars($BASE_URL, ENT_QUOTES, 'UTF-8'); ?>"
-      }
+      "inLanguage": "es"
     }
     </script>
 
@@ -151,41 +143,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </head>
 
-
 <body>
-
     <nav class="header-nav">
-        <a href="/" title="Best Gematria Calculator">Home</a>
-        <a href="/more-tools/" title="More Gematria Tools">Gematria Tools</a>
-        <a href="/blog-collections/" title="Learn About Gematria">Gematria Guide</a>
-        <a href="/decode-gematria-value/" title="Gematria Decoder">Decode Gematria</a>
-        <a href="/about-us/" title="About Our Gematria Calculator">About</a>
-        <a href="/contact-us/" title="Contact Gematria Experts">Contact</a>
-        <a href="/terms-conditions/">Terms</a>
-        <a href="/privacy-policy/">Privacy</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <a href="/es/">Inicio</a>
+        <a href="/more-tools/">Más Herramientas</a>
+        <a href="/blog-collections/">Blog</a>
+        <a href="/about-us/">Sobre Nosotros</a>
+        <a href="/contact-us/">Contáctenos</a>
+        <a href="/terms-conditions/">Términos y Condiciones</a>
+        <a href="/privacy-policy/">Política de Privacidad</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
     </nav>
     
     <div class="container">
-
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
-            <h4>Recent searches:</h4>
+            <h4>Búsquedas recientes:</h4>
 
             <!-- ——— Language Switcher ——— -->
             <?php                                    
             $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-            $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/'); // '' or 'ru' or 'de'
+            $here = 'es'; // Force correct language code for Spanish page
             ?>
-            <nav class="lang-switcher" aria-label="Language switcher">
+            <nav class="lang-switcher" aria-label="Selector de idioma">
             <?= lang_switcher_link('en','EN',$qs,$here) ?> |
             <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
             <?= lang_switcher_link('de','DE',$qs,$here) ?> |
@@ -204,30 +193,44 @@
             </div>
         </div>
 
-        <header class="header">
-            <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
-            <h1>Gematria Calculator</h1>
-            <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>
-        </header>
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+            <p style="margin: 0; color: #004085;">
+                🌍 ¡Gracias por su confianza! Ahora admitimos varios idiomas: 
+                <span title="English">Inglés</span>, 
+                <span title="Русский">Ruso</span>, 
+                <span title="Deutsch">Alemán</span>, 
+                <strong>Español</strong>, 
+                <span title="Português">Portugués</span>, 
+                <span title="Italiano">Italiano</span>, 
+                <span title="עברית">Hebreo</span>, 
+                <span title="Polski">Polaco</span> y 
+                <span title="中文">Chino</span>!
+            </p>
+        </div>
 
+        <header class="header">
+            <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="logo del sitio calculadora de gematría">
+            <h1>Calculadora de Gematría</h1>
+            <p class="subtitle">(Escriba una palabra o número, por ejemplo: Dios, Biblia, Hebreo, Santo – para calcular valores de gematría)</p>
+        </header>
 
         <main class="calculator">
             <div class="input-group">
                 <input
                     id="inputText"
                     type="text"
-                    placeholder="Enter text to calculate…"
+                    placeholder="Ingrese texto para calcular..."
                     value="<?= htmlspecialchars($inputRaw, ENT_QUOTES, 'UTF-8') ?>"
                 />
-                <button class="secondary" onclick="clearInput()" title="Clear">✕</button>
+                <button class="secondary" onclick="clearInput()" title="Limpiar">✕</button>
             </div>
 
             <div class="button-container">
-                <button class="calculate-btn" onclick="calculate()">Calculate</button>
-                <button class="download-btn" onclick="calculateAndDownload()">Download PDF</button>
-                <a href="/decode-gematria-value/" class="decode-btn">Decode Gematria</a>
+                <button class="calculate-btn" onclick="calculate()">Calcular</button>
+                <button class="download-btn" onclick="calculateAndDownload()">Descargar PDF</button>
+                <a href="/es/decode-gematria-value/" class="decode-btn">Decodificar Gematría</a>
             </div>
-
 
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
@@ -238,13 +241,13 @@
                     <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
                         <i class="fa-regular fa-copy"></i>
                     </button>
-                    <div class="copy-notification" id="hebrewCopyNotification">Copied!</div>
-                    <h3>Hebrew Gematria: <span id="hebrewValue">
+                    <div class="copy-notification" id="hebrewCopyNotification">¡Copiado!</div>
+                    <h3>Gematría Hebrea: <span id="hebrewValue">
                     <?= $results['hebrew']['total'] ?? 0 ?>
                     </span></h3>
                     <p id="hebrewBreakdown">
                     <?php if($results): ?>
-                        Calculation: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
+                        Cálculo: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
                     <?php endif ?>
                     </p>
                 </div>
@@ -253,13 +256,13 @@
                     <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
                         <i class="fa-regular fa-copy"></i>
                     </button>
-                    <div class="copy-notification" id="englishCopyNotification">Copied!</div>
-                    <h3>English Gematria: <span id="englishValue">
+                    <div class="copy-notification" id="englishCopyNotification">¡Copiado!</div>
+                    <h3>Gematría Inglesa: <span id="englishValue">
                     <?= $results['english']['total'] ?? 0 ?>
                     </span></h3>
                     <p id="englishBreakdown">
                     <?php if($results): ?>
-                        Calculation: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
+                        Cálculo: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
                     <?php endif ?>
                     </p>
                 </div>
@@ -268,19 +271,19 @@
                     <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
                         <i class="fa-regular fa-copy"></i>
                     </button>
-                    <div class="copy-notification" id="simpleCopyNotification">Copied!</div>
-                    <h3>Simple Gematria: <span id="simpleValue">
+                    <div class="copy-notification" id="simpleCopyNotification">¡Copiado!</div>
+                    <h3>Gematría Simple: <span id="simpleValue">
                     <?= $results['simple']['total'] ?? 0 ?>
                     </span></h3>
                     <p id="simpleBreakdown">
                     <?php if($results): ?>
-                        Calculation: <?= implode(' + ', $results['simple']['breakdown']) ?>
+                        Cálculo: <?= implode(' + ', $results['simple']['breakdown']) ?>
                     <?php endif ?>
                     </p>
                 </div>
 
                 <div class="feedback">
-                    <p>Was this calculator helpful?</p>
+                    <p>¿Te resultó útil esta calculadora?</p>
                     <div class="feedback-buttons">
                     <button onclick="sendFeedback('😞')">😞</button>
                     <button onclick="sendFeedback('😐')">😐</button>
@@ -292,20 +295,19 @@
         </main>
 
         <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
-            For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
+            Para comentarios, sugerencias o mejoras de esta herramienta, envíenos un correo electrónico a <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
         </p>
-
 
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
-            <h4>Discover Hidden Numerical Meanings</h4>
-            <p>This free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "simple gematria calculator" — and this tool provides the functionality they seek.</p>
-            <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
+            <h4>Descubre Significados Numéricos Ocultos</h4>
+            <p>Esta calculadora de gematría gratuita en línea funciona como una potente calculadora de nombres y admite conversiones de inglés a gematría hebrea. Ya sea que busques una calculadora de gematría en línea para análisis bíblico o simplemente una calculadora de gematría simple para explorar significados numéricos, esta herramienta está diseñada para ti.</p>
+            <div class="example">Ejemplo: <strong>Biblia</strong> = 38 (Hebreo), 180 (Inglés), 30 (Simple)</div>
         </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Our best gematria calculator us online tool or (aka gematrix calculator) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence.</p>
+            <p>Nuestra mejor calculadora de gematría en línea está diseñada para brindar precisión, velocidad y simplicidad. Es perfecta para estudiosos, buscadores espirituales o cualquier persona interesada en las tradiciones místicas detrás de los textos sagrados. Con nuestra calculadora de gematría hebrea, puedes decodificar pasajes bíblicos, analizar nombres espirituales o explorar conexiones esotéricas, todo en un solo lugar.</p>
         </div>
 
         <hr class="divider">
@@ -317,111 +319,54 @@
         <!-- FAQ & FOOTER -->
         <footer class="footer">
             <!-- FAQ ITEMS -->
-            <h2 class="faq-heading">Frequently Asked Questions</h2>
+            <h2 class="faq-heading">Preguntas Frecuentes</h2>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What is Gematria?</span>
+                    <span>¿Qué es la Gematría?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Gematria is an alphanumeric code of assigning a numerical value to a name, word or phrase based on its letters. It is commonly used in Jewish mysticism and biblical interpretation.
+                    La gematría es un código alfanumérico que asigna un valor numérico a un nombre, palabra o frase basándose en sus letras. Se utiliza comúnmente en el misticismo judío y la interpretación bíblica.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What is a gematria calculator?</span>
+                    <span>¿Qué es una calculadora de gematría?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    A free gematria calculator online tool or software that automatically computes the numerical value of a word, phrase, or name by assigning numeric values to each letter, based on specific gematria systems.
+                    Una calculadora de gematría gratuita en línea es una herramienta o software que calcula automáticamente el valor numérico de una palabra, frase o nombre asignando valores numéricos a cada letra, basándose en sistemas específicos de gematría.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How To Use Gematria Calculator Online?</span>
+                    <span>¿Cómo usar la calculadora de gematría en línea?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    To use our best free gematria calculator online, simply type a word, phrase, or name into the input box, then click “Calculate” to generate its numerical values across Hebrew, English, and Simple systems. For a record, you can also download a PDF report.
+                    Para usar nuestra calculadora de gematría gratuita en línea, simplemente escribe una palabra, frase o nombre en el cuadro de entrada, luego haz clic en "Calcular" para generar sus valores numéricos en los sistemas Hebreo, Inglés y Simple. Para tener un registro, también puedes descargar un informe PDF.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How To Understand Simple Gematria Calculator?</span>
+                    <span>¿Cómo entender la calculadora de gematría simple?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Our simple gematria calculator assigns A=1, B=2, C=3, … Z=26, then sums those values. Enter a word like “Truth” and it outputs the total, which you can compare against other words sharing the same value.
+                    Nuestra calculadora de gematría simple asigna A=1, B=2, C=3, … Z=26, luego suma esos valores. Ingresa una palabra como "Verdad" y mostrará el total, que puedes comparar con otras palabras que comparten el mismo valor.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How do I use the Bible gematria calculator?</span>
+                    <span>¿Puedo calcular frases con espacios?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Our Bible gematria calculator is designed for analyzing biblical texts and names. Simply enter any word or phrase from the Bible, and you'll get instant Hebrew, English, and Simple gematria values. Our calculator supports both modern and biblical Hebrew characters, making it the best gematria calculator for biblical research.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How does the gematria search engine work?</span>
-                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    Our gematria search engine allows you to find words and phrases with specific numerical values. You can search using Hebrew, English, or Simple gematria systems. This feature is particularly useful for biblical research and finding connections between different words and concepts.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Can I calculate phrases with spaces?</span>
-                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    Yes! This gematria name calculator automatically ignores spaces and special characters, focusing only on alphabetical letters. We support gematria calculator name and meaning for all users anytime 24*7 for free. Our calculator is especially useful for analyzing multi-word phrases from religious texts.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What is the English gematria calculator?</span>
-                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    An <strong>English Gematria Calculator</strong> is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so calculators use various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Who should use the gematria calculator?</span>
-                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    A <strong>gematria calculator</strong> is for anyone curious about the hidden numerical structure of language. It's perfect for:
-                    <ul>
-                        <li><strong>Spiritual Seekers</strong> exploring sacred texts like the Bible.</li>
-                        <li><strong>Writers and Artists</strong> looking for creative inspiration and symbolic depth.</li>
-                        <li><strong>History Buffs</strong> interested in ancient interpretive methods.</li>
-                        <li><strong>Numerology Enthusiasts</strong> analyzing names, dates, and concepts.</li>
-                        <li><strong>Anyone who loves puzzles</strong> and finding hidden patterns in the world around them.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What is the Jewish gematria calculator?</span>
-                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    A <strong>Jewish Gematria Calculator</strong> (or Hebrew Gematria Calculator) is a tool based on the ancient Jewish tradition of assigning numerical values to the 22 letters of the Hebrew alphabet. It primarily uses the <em>Mispar Hechrechi</em> (Standard) system, which is fundamental to Kabbalah and the interpretation of the Torah. This type of calculator is essential for studying the numerical values of biblical names, concepts, and verses to uncover deeper theological and mystical connections.
+                    ¡Sí! Esta calculadora de nombres de gematría ignora automáticamente los espacios y caracteres especiales, centrándose solo en las letras alfabéticas. Brindamos soporte para calcular nombres y significados de gematría para todos los usuarios las 24 horas, los 7 días de la semana, de forma gratuita.
                 </div>
             </div>
 
@@ -434,25 +379,25 @@
 
     <div id="exitModal" class="modal">
         <div class="modal-content animate-scale">
-            <button class="modal-close" id="exitModalClose" aria-label="Close Modal">
+            <button class="modal-close" id="exitModalClose" aria-label="Cerrar Modal">
                 <i class="fa-solid fa-circle-xmark"></i>
             </button>
-            <h2><i class="fa-solid fa-star text-primary"></i> Don’t Leave Yet!</h2>
-            <p>Have you tried our exciting new tools?</p>
+            <h2><i class="fa-solid fa-star text-primary"></i> ¡No te vayas todavía!</h2>
+            <p>¿Has probado nuestras nuevas herramientas emocionantes?</p>
             <div class="modal-links">
                 <a href="https://vpnleaderboard.com/" class="outline-button">
                     <i class="fa-solid fa-shield-halved"></i> VPN Leaderboard
                 </a>
                 <a href="http://tarotcardgenerator.online/" class="outline-button">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Daily Tarot Reader
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Lector de Tarot Diario
                 </a>
                 <a href="https://www.snowdayscalculatorai.com/" class="outline-button">
-                    <i class="fa-solid fa-snowflake"></i> US Snowday Calculator
+                    <i class="fa-solid fa-snowflake"></i> Calculadora de Días de Nieve EE.UU.
                 </a>
             </div>
             <p style="margin-top: 1rem;">
                 <i class="fa-solid fa-face-smile-wink fa-lg text-primary"></i>
-                Enjoy and come back soon!
+                ¡Disfruta y vuelve pronto!
             </p>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <?php
   /* ------------  ru/index.php ------------- */
   require __DIR__ . '/../calculate.php';
+  require_once __DIR__ . '/../helpers.php';
 
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
@@ -15,8 +16,8 @@
                 .', English='.$results['english']['total']
                 .', Simple='.$results['simple']['total'].'.';
   } else {
-      $seoTitle = 'Бесплатный онлайн-калькулятор гематрии';
-      $seoDesc  = '#1 бесплатный калькулятор гематрии. Вычисляйте еврейские, английские и простые значения любых слов мгновенно.';
+      $seoTitle = 'Калькулятор гематрии онлайн | Бесплатный инструмент для расчета гематрии';
+      $seoDesc  = 'Лучший калькулятор гематрии онлайн ✓ Мгновенный расчет еврейской гематрии ✓ Греческая и английская нумерология ✓ Бесплатно и без регистрации.';
   }
 ?>
 <!DOCTYPE html>
@@ -32,9 +33,28 @@
       $qs = !empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '';
       $path = 'index.php' . $qs;
     ?>
+    <!-- Language alternates -->
     <link rel="alternate" hreflang="en" href="<?= $base ?>/<?= $path ?>">
-    <link rel="alternate" hreflang="ru" href="<?= $base ?>/ru/<?= $path ?>">
     <link rel="alternate" hreflang="de" href="<?= $base ?>/de/<?= $path ?>">
+    <link rel="alternate" hreflang="es" href="<?= $base ?>/es/<?= $path ?>">
+    <link rel="alternate" hreflang="it" href="<?= $base ?>/it/<?= $path ?>">
+    <link rel="alternate" hreflang="iw" href="<?= $base ?>/iw/<?= $path ?>">
+    <link rel="alternate" hreflang="pl" href="<?= $base ?>/pl/<?= $path ?>">
+    <link rel="alternate" hreflang="pt" href="<?= $base ?>/pt/<?= $path ?>">
+    <link rel="alternate" hreflang="ru" href="<?= $base ?>/ru/<?= $path ?>">
+    <link rel="alternate" hreflang="zh" href="<?= $base ?>/zh/<?= $path ?>">
+    <link rel="alternate" hreflang="x-default" href="<?= $base ?>/<?= $path ?>">
+    
+    <!-- Additional SEO meta tags for multilingual -->
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:locale:alternate" content="he_IL" />
+    <meta property="og:locale:alternate" content="pl_PL" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="zh_CN" />
     <link rel="alternate" hreflang="x-default" href="<?= $base ?>/<?= $path ?>">
 
     <link rel="canonical" href="<?= $base ?>/ru/<?= $path ?>">
@@ -52,32 +72,38 @@
     <nav class="header-nav">
         <a href="/ru/index.php">Главная</a>
         <a href="/more-tools.php">Инструменты</a>
-        <a href="/blog-collections.html">Блог</a>
-        <a href="/about-us.html">О нас</a>
-        <a href="/contact-us.html">Контакты</a>
-        <a href="/terms-conditions.html">Условия</a>
-        <a href="/privacy-policy.html">Политика конфиденциальности</a>
-    </nav>
-    <div class="container" style="padding-top: 2rem;">
+        <a href="/blog-collections.php">Блог</a>
+        <a href="/about-us.php">О нас</a>
+        <a href="/contact-us.php">Контакты</a>
+        <a href="/terms-conditions.php">Условия</a>
+        <a href="/privacy-policy.php">Политика конфиденциальности</a>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+      </nav>
+
+    <div class="container">
 
       <!--–––– Recent Searches ticker ––––-->
       <div class="recent-phrases ticker-bar">
         <h4>Недавние запросы:</h4>
 
         <!-- ——— Language Switcher ——— -->
-        <?php                                    
+        <?php
           $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-          $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');   // '' | ru | de
-          function lang($code,$label,$qs,$here){
-              $path = $code==='en' ? '/index.php'.$qs : "/$code/index.php$qs"; // Use absolute paths
-              return $code===$here||($code==='en'&&$here==='') ? "<strong>$label</strong>"
-                                                              : "<a href=\"$path\">$label</a>";
-          }
+          $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');
         ?>
-        <nav class="lang-switcher" aria-label="Language switcher">
-          <?= lang('en','EN',$qs,$here) ?> |
-          <?= lang('ru','RU',$qs,$here) ?> |
-          <?= lang('de','DE',$qs,$here) ?>
+        <nav class="lang-switcher" aria-label="Переключатель языка">
+          <?= lang_switcher_link('en','EN',$qs,$here) ?>
+          <?= lang_switcher_link('de','DE',$qs,$here) ?>
+          <?= lang_switcher_link('es','ES',$qs,$here) ?>
+          <?= lang_switcher_link('it','IT',$qs,$here) ?>
+          <?= lang_switcher_link('iw','HE',$qs,$here) ?>
+          <?= lang_switcher_link('pl','PL',$qs,$here) ?>
+          <?= lang_switcher_link('pt','PT',$qs,$here) ?>
+          <?= lang_switcher_link('ru','RU',$qs,$here) ?>
+          <?= lang_switcher_link('zh','CN',$qs,$here) ?>
         </nav>
 
         <div class="ticker">
@@ -85,9 +111,24 @@
         </div>
       </div>
 
+      <!-- Language Support Info -->
+      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085;">
+              🌍 Спасибо за доверие! Теперь мы поддерживаем несколько языков: 
+              <span title="English">английский</span>, 
+              <strong>русский</strong>, 
+              <span title="Deutsch">немецкий</span>, 
+              <span title="Español">испанский</span>, 
+              <span title="Português">португальский</span>, 
+              <span title="Italiano">итальянский</span>, 
+              <span title="עברית">иврит</span>, 
+              <span title="Polski">польский</span> и 
+              <span title="中文">китайский</span>!
+          </p>
+      </div>
+
       <header class="header">
-        <img src="/assets/header-image.webp" id="themeLogo" alt="логотип калькулятора гематрии">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="логотип калькулятора гематрии">
         <h1>Бесплатный онлайн-калькулятор гематрии</h1>
         <p class="subtitle">(Введите слово или число, например Бог, Библия, Иврит, Святость — чтобы вычислить значения)</p>
       </header>
