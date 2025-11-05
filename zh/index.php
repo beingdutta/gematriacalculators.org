@@ -120,8 +120,8 @@
     </nav>
     <div class="container">
         <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-            <p style="margin: 0; color: #004085; font-size: 13px;">
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085; font-size: 13px;">
                 🌍 感谢您的信任！我们现在支持多种语言：
                 <span title="English">英语</span>、
                 <span title="Русский">俄语</span>、

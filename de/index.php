@@ -131,6 +131,23 @@
     </nav>
 
     <div class="container">
+
+      <!-- Language Support Info -->
+      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085; font-size: 13px;">
+              🌍 Danke für Ihr Vertrauen! Wir unterstützen jetzt mehrere Sprachen: 
+              <span title="English">Englisch</span>, 
+              <span title="Русский">Russisch</span>, 
+              <strong>Deutsch</strong>, 
+              <span title="Español">Spanisch</span>, 
+              <span title="Português">Portugiesisch</span>, 
+              <span title="Italiano">Italienisch</span>, 
+              <span title="עברית">Hebräisch</span>, 
+              <span title="Polski">Polnisch</span> und 
+              <span title="中文">Chinesisch</span>!
+          </p>
+      </div>
+
       <!--–––– Recent Searches ticker ––––-->
       <div class="recent-phrases ticker-bar">
         <h4>Letzte Suchanfragen:</h4>
@@ -155,22 +172,6 @@
         <div class="ticker">
           <div class="ticker__list"><!-- JS füllt Einträge --></div>
         </div>
-      </div>
-
-      <!-- Language Support Info -->
-      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085;">
-              🌍 Danke für Ihr Vertrauen! Wir unterstützen jetzt mehrere Sprachen: 
-              <span title="English">Englisch</span>, 
-              <span title="Русский">Russisch</span>, 
-              <strong>Deutsch</strong>, 
-              <span title="Español">Spanisch</span>, 
-              <span title="Português">Portugiesisch</span>, 
-              <span title="Italiano">Italienisch</span>, 
-              <span title="עברית">Hebräisch</span>, 
-              <span title="Polski">Polnisch</span> und 
-              <span title="中文">Chinesisch</span>!
-          </p>
       </div>
 
       <header class="header">

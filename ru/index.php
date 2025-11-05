@@ -86,7 +86,7 @@
     <div class="container">
 
       <!-- Language Support Info -->
-      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+      <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
           <p style="margin: 0; color: #004085; font-size: 13px;">
               🌍 Спасибо за доверие! Теперь мы поддерживаем несколько языков: 
               <span title="English">английский</span>, 
@@ -112,13 +112,13 @@
         ?>
         <nav class="lang-switcher" aria-label="Language switcher">
           <?= lang_switcher_link('en','EN',$qs,$here) ?> |
+          <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
           <?= lang_switcher_link('de','DE',$qs,$here) ?> |
           <?= lang_switcher_link('es','ES',$qs,$here) ?> |
+          <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
           <?= lang_switcher_link('it','IT',$qs,$here) ?> |
           <?= lang_switcher_link('iw','HE',$qs,$here) ?> |
           <?= lang_switcher_link('pl','PL',$qs,$here) ?> |
-          <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
-          <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
           <?= lang_switcher_link('zh','CN',$qs,$here) ?>
         </nav>
 

@@ -165,6 +165,23 @@
     </nav>
     
     <div class="container">
+
+        <!-- Language Support Info -->
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085; font-size: 13px;">
+                🌍 ¡Gracias por su confianza! Ahora admitimos varios idiomas: 
+                <span title="English">Inglés</span>, 
+                <span title="Русский">Ruso</span>, 
+                <span title="Deutsch">Alemán</span>, 
+                <strong>Español</strong>, 
+                <span title="Português">Portugués</span>, 
+                <span title="Italiano">Italiano</span>, 
+                <span title="עברית">Hebreo</span>, 
+                <span title="Polski">Polaco</span> y 
+                <span title="中文">Chino</span>!
+            </p>
+        </div>
+
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
             <h4>Búsquedas recientes:</h4>
@@ -191,22 +208,6 @@
                 <!-- JS will inject .ticker__item cards here -->
                 </div>
             </div>
-        </div>
-
-        <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-            <p style="margin: 0; color: #004085;">
-                🌍 ¡Gracias por su confianza! Ahora admitimos varios idiomas: 
-                <span title="English">Inglés</span>, 
-                <span title="Русский">Ruso</span>, 
-                <span title="Deutsch">Alemán</span>, 
-                <strong>Español</strong>, 
-                <span title="Português">Portugués</span>, 
-                <span title="Italiano">Italiano</span>, 
-                <span title="עברית">Hebreo</span>, 
-                <span title="Polski">Polaco</span> y 
-                <span title="中文">Chino</span>!
-            </p>
         </div>
 
         <header class="header">

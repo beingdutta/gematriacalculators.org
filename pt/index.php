@@ -109,7 +109,9 @@
     <link rel="alternate" hreflang="es" href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="pt" href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="it" href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">
-    <link rel="alternate" hreflang="he" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="iw" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="pl" href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="zh" href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
 
     <!-- JSON-LD: WebApplication schema for a calculator -->
@@ -152,8 +154,8 @@
     
     <div class="container">
         <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-            <p style="margin: 0; color: #004085; font-size: 13px;">
+        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
+          <p style="margin: 0; color: #004085; font-size: 13px;">
                 🌍 Obrigado pela confiança! Agora suportamos vários idiomas: 
                 <span title="English">inglês</span>, 
                 <span title="Русский">russo</span>, 
@@ -176,7 +178,7 @@
             $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
             $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/'); // '' or 'ru' or 'de' or 'es' or 'pt'
             ?>
-            <nav class="lang-switcher" aria-label="Language switcher">
+            <nav class="lang-switcher" aria-label="Seletor de idioma">
             <?= lang_switcher_link('en','EN',$qs,$here) ?> |
             <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
             <?= lang_switcher_link('de','DE',$qs,$here) ?> |
@@ -184,7 +186,8 @@
             <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
             <?= lang_switcher_link('it','IT',$qs,$here) ?> |
             <?= lang_switcher_link('iw','HE',$qs,$here) ?> |
-            <?= lang_switcher_link('pl','PL',$qs,$here) ?>
+            <?= lang_switcher_link('pl','PL',$qs,$here) ?> |
+            <?= lang_switcher_link('zh','CN',$qs,$here) ?>
             </nav>
 
             <div class="ticker">
