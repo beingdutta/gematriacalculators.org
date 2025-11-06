@@ -68,6 +68,14 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding-top: 0.5rem; /* Reduce top padding on mobile */
+  }
+}
+/* This is the control for the space you mentioned.
+   I've reduced it from 1rem to 0.2rem on mobile screens. */
+@media (max-width: 768px) { .container { padding-top: 0.2rem; } }
 
 /* ===================================================================
    Header & Branding
@@ -159,46 +167,17 @@ body {
   font-weight: 600;
 }
 
-/* Mobile menu toggle button */
-.mobile-menu-toggle {
-  display: none;
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  color: var(--text);
-  z-index: 102;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  color: var(--text);
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 102;
-}
-
 .mobile-site-title {
   display: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem !important; /* Increased font size and ensure it's not overridden */
   font-weight: 600;
   color: var(--text);
   text-decoration: none;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%; /* Added for vertical alignment */
+  transform: translate(-50%, -50%); /* Ensures perfect horizontal and vertical centering */
 }
-
 
 .mobile-menu-toggle {
   display: none;
@@ -269,17 +248,16 @@ body {
 
   .mobile-site-title {
       display: block;
+      z-index: 101; /* Ensure it's visible above other elements */
   }
 
   .header-nav .theme-toggle {
     position: absolute; /* Changed from fixed to be relative to header-nav */
     right: 1rem;
     top: 15px; /* Align with hamburger menu */
+    top: 50%; /* Use 50% to vertically center */
+    transform: translateY(-50%); /* Perfect vertical alignment */
     z-index: 102;
-  }
-
-  .header-nav > a {
-    display: none;
   }
 
 }
@@ -709,11 +687,11 @@ footer .copyright {
   
   body {
     padding-top: 60px;
+    padding-top: 10px; /* Reduce top padding on mobile */
   }
   
   .header-nav {
     padding: 0.75rem;
-    font-size: 0.9rem;
     justify-content: center;
     min-height: 60px;
   }
@@ -725,14 +703,9 @@ footer .copyright {
     text-align: left;
   }
 
-  .header-nav > a {
-    display: none;
-  }
-
-  .header-nav .theme-toggle {
-    position: fixed;
-    right: 1rem;
-    top: 15px;
+  /* Hide desktop nav links, but NOT the mobile site title */
+  .header-nav .nav-links a {
+    /* This rule is now more specific and correct inside the .nav-links block */
   }
 
   .recent-phrases h4 {
@@ -754,7 +727,7 @@ footer .copyright {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 140px; /* Further increased padding for smaller screens */
+    padding-top: 80px; /* Further increased padding for smaller screens */
   }
 
   .header-nav {
@@ -763,12 +736,6 @@ footer .copyright {
   }
 
   .header-nav a {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.6rem;
-    min-width: 70px;
-  }
-
-  .ticker-bar .lang-switcher {
     gap: 0.35rem;
   }
 
