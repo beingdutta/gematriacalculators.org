@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+  require_once __DIR__ . '/helpers.php';
+  $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
+  $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');
+?>
 <html lang="en" data-theme="light">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
@@ -23,19 +28,7 @@
   </head>
 
   <body>
-    <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/more-tools/">More Tools</a>
-        <a href="/blog-collections/">Blog</a>
-        <a href="/about-us/">About Us</a>
-        <a href="/contact-us/">Contact Us</a>
-        <a href="/terms-conditions/">Terms & Conditions</a>
-        <a href="/privacy-policy/">Privacy Policy</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-    </nav>
+    <?php require_once __DIR__ . '/navigation/header.php'; ?>
     <div class="container" style="padding-top: 2rem;">
       <header class="header">
         <h1>Terms & Conditions</h1>
@@ -117,6 +110,24 @@
         <!-- Footer links are now in the header nav -->
         <div class="copyright">
           © 2025 gematriacalculators.org
+        </div>
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
+                <h4>Select Language</h4>
+                <div class="lang-grid">
+                    <a href="<?= BASE_URL . ltrim($qs, '?') ?>">English</a>
+                    <a href="<?= BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
+                    <a href="<?= BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="<?= BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
+                    <a href="<?= BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
+                    <a href="<?= BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="<?= BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
+                    <a href="<?= BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
+                    <a href="<?= BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
         </div>
       </footer>
     </div>

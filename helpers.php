@@ -1,5 +1,7 @@
 <?php
 
+const BASE_URL = 'https://gematriacalculators.org/';
+
 /**
  * Generates a language switcher link.
  *

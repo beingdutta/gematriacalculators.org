@@ -1,17 +1,3 @@
-function copyValue(valueId, notificationId) {
-    const value = document.getElementById(valueId).textContent;
-    const notification = document.getElementById(notificationId);
-    
-    navigator.clipboard.writeText(value).then(() => {
-        notification.style.display = 'block';
-        setTimeout(() => {
-            notification.style.display = 'none';
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-    });
-}
-
 const hebrewMap = {
     'A':1, 'B':2, 'C':3, 'D':4, 'E':5, 'F':6, 'G':7, 'H':8, 'I':9, 'J':10,
     'K':10, 'L':20, 'M':30, 'N':40, 'O':50, 'P':60, 'Q':70, 'R':80, 'S':90,
@@ -100,6 +86,37 @@ function clearInput() {
     document.getElementById('loading').style.display = 'none';
 }
 
+function openLangPopup() {
+    const langPopup = document.querySelector('.lang-popup');
+    langPopup.style.display = 'flex'; // Use flex to activate it
+    setTimeout(() => langPopup.classList.add('active'), 10); // Add active class for transition
+    document.body.classList.add('menu-open');
+
+    // Close the main mobile menu if it's open
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+    }
+}
+
+function closeLangPopup() {
+    const langPopup = document.querySelector('.lang-popup');
+    langPopup.classList.remove('active');
+    setTimeout(() => langPopup.style.display = 'none', 300); // Hide after transition
+    document.body.classList.remove('menu-open');
+}
+
+function initLanguagePopup() {
+    const langPopup = document.querySelector('.lang-popup');
+    if (langPopup) {
+        langPopup.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeLangPopup();
+            }
+        });
+    }
+}
+
 function toggleTheme() {
   const html = document.documentElement;
   const currentTheme = html.getAttribute('data-theme');
@@ -133,70 +150,6 @@ function toggleTheme() {
   });
 }
 
-// Initialize theme and header image
-document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu toggle
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-      });
-  }
-
-  // Language popup functionality
-  const langChangeBtn = document.querySelector('.lang-change-btn');
-  const langPopup = document.querySelector('.lang-popup');
-  const langPopupClose = document.querySelector('.lang-popup-close');
-
-  if (langChangeBtn && langPopup) {
-      langChangeBtn.addEventListener('click', () => {
-          langPopup.classList.add('active');
-      });
-  }
-
-  if (langPopupClose && langPopup) {
-      langPopupClose.addEventListener('click', () => {
-          langPopup.classList.remove('active');
-      });
-
-      // Close popup when clicking outside
-      langPopup.addEventListener('click', (e) => {
-          if (e.target === langPopup) {
-              langPopup.classList.remove('active');
-          }
-      });
-  }
-
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-
-  const headerImage = document.getElementById('themeLogo');
-  if (headerImage) {
-    // If we've loaded in "dark" mode, use the white‐text header; otherwise use the normal PNG
-    if (savedTheme === 'dark') {
-      headerImage.src = '/assets/talisman-wh-header-icon.png';
-    } else {
-      headerImage.src = '/assets/talisman-header-icon.png';
-    }
-  }
-
-  // Set initial theme toggle icon
-  document.querySelectorAll('.theme-toggle').forEach(button => {
-    const sunIcon = button.querySelector('.icon-sun');
-    const moonIcon = button.querySelector('.icon-moon');
-    if (sunIcon && moonIcon) {
-      if (savedTheme === 'dark') {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-      } else {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-      }
-    }
-  });
-});
-
 function sendFeedback(emoji) {
     const feedbackMessage = document.getElementById('feedbackMessage');
     feedbackMessage.textContent = "Thanks for your feedback!";
@@ -209,51 +162,33 @@ function sendFeedback(emoji) {
     console.log('User feedback:', emoji);
 }
 
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    faqItem.classList.toggle('active');
-}
-
-// Mobile Navigation
-function initMobileNavigation() {
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  }
-}
-
-// Language Popup
-function initLanguagePopup() {
-  const langChangeBtn = document.querySelector('.lang-change-btn');
-  const langPopup = document.querySelector('.lang-popup');
-  const langPopupClose = document.querySelector('.lang-popup-close');
-
-  if (langChangeBtn && langPopup) {
-    langChangeBtn.addEventListener('click', () => {
-      langPopup.classList.add('active');
-    });
-  }
-
-  if (langPopupClose && langPopup) {
-    langPopupClose.addEventListener('click', () => {
-      langPopup.classList.remove('active');
-    });
-
-    // Close popup when clicking outside
-    langPopup.addEventListener('click', (e) => {
-      if (e.target === langPopup) {
-        langPopup.classList.remove('active');
-      }
-    });
-  }
-}
 
 // Initialize mobile features
 document.addEventListener('DOMContentLoaded', () => {
+  // Apply saved theme on page load
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  // Update theme toggle icon to reflect the current theme
+  document.querySelectorAll('.theme-toggle').forEach(button => {
+    const sunIcon = button.querySelector('.icon-sun');
+    const moonIcon = button.querySelector('.icon-moon');
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = (savedTheme === 'light') ? 'block' : 'none';
+      moonIcon.style.display = (savedTheme === 'dark') ? 'block' : 'none';
+    }
+  });
+
+  // Update logo based on theme
+  const headerImage = document.getElementById('themeLogo');
+  if (headerImage) {
+    if (savedTheme === 'dark') {
+      headerImage.src = '/assets/talisman-wh-header-icon.png';
+    } else {
+      headerImage.src = '/assets/talisman-header-icon.png';
+    }
+  }
+
   initMobileNavigation();
   initLanguagePopup();
 });
@@ -495,26 +430,4 @@ window.addEventListener('DOMContentLoaded', () => {
 closeBtn.addEventListener('click', hideExitModal);
 modal.addEventListener('click', e => {
   if (e.target === modal) hideExitModal();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle functionality
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Language change button functionality
-    const langChangeBtn = document.querySelector('.lang-change-btn');
-    const langPopup = document.querySelector('.lang-popup');
-
-    if (langChangeBtn && langPopup) {
-        langChangeBtn.addEventListener('click', () => {
-            langPopup.classList.toggle('active');
-        });
-    }
 });

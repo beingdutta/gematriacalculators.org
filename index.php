@@ -159,20 +159,7 @@
 
 <body>
 
-    <nav class="header-nav">
-        <a href="/" title="Best Gematria Calculator">Home</a>
-        <a href="/more-tools/" title="More Gematria Tools">Gematria Tools</a>
-        <a href="/blog-collections/" title="Learn About Gematria">Gematria Guide</a>
-        <a href="/decode-gematria-value/" title="Gematria Decoder">Decode Gematria</a>
-        <a href="/about-us/" title="About Our Gematria Calculator">About</a>
-        <a href="/contact-us/" title="Contact Gematria Experts">Contact</a>
-        <a href="/terms-conditions/">Terms</a>
-        <a href="/privacy-policy/">Privacy</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-    </nav>
+    <?php require_once __DIR__ . '/navigation/header.php'; ?>
     
     <div class="container">
         <!-- Language Support Info -->
@@ -220,14 +207,6 @@
         </div>
 
         <header class="header">
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-            <button class="lang-change-btn">Change Language</button>
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
             <h1>Gematria Calculator</h1>
             <p class="subtitle">(Type in a word or a number e.g. God, Bible, Hebrew, Holy – to calculate gematria values)</p>
@@ -336,6 +315,25 @@
 
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
+
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
+                <h4>Select Language</h4>
+                <div class="lang-grid">
+                    <a href="<?= $BASE_URL . ltrim($qs, '?') ?>">English</a>
+                    <a href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
+                    <a href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
+                    <a href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
+                    <a href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
+                    <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
+                    <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
+        </div>
 
         <!-- FAQ & FOOTER -->
         <footer class="footer">

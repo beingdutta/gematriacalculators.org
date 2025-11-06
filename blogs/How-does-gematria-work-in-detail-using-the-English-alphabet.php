@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+  require_once __DIR__ . '/../helpers.php';
+  $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
+  $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/');
+?>
 <html lang="en" data-theme="light">
 
   <head>
@@ -68,20 +73,10 @@
   </head>
 
   <body>
-    <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/more-tools/">More Tools</a>
-        <a href="/blog-collections/">Blog</a>
-        <a href="/about-us/">About Us</a>
-        <a href="/contact-us/">Contact Us</a>
-        <a href="/terms-conditions/">Terms & Conditions</a>
-        <a href="/privacy-policy/">Privacy Policy</a>
-    </nav>
+    <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
       <main>
         <div class="article-header">
-          <button class="back-button" onclick="window.location.href='/blog-collections/'">← Back to Articles</button>
-          <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
           <h1 class="article-title">How Does Gematria Work Using the English Alphabet? A Detailed Guide</h1>
           <div class="article-date">Published: May 22, 2025</div>
         </div>
@@ -276,6 +271,24 @@
       <footer class="footer">
         <div class="copyright">
           © <?= date('Y') ?> gematriacalculators.org
+        </div>
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
+                <h4>Select Language</h4>
+                <div class="lang-grid">
+                    <a href="<?= BASE_URL . ltrim($qs, '?') ?>">English</a>
+                    <a href="<?= BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
+                    <a href="<?= BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="<?= BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
+                    <a href="<?= BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
+                    <a href="<?= BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="<?= BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
+                    <a href="<?= BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
+                    <a href="<?= BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
         </div>
       </footer>
     </div>

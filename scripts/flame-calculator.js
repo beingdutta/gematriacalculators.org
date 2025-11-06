@@ -133,37 +133,6 @@ function resetFlameCalculator() {
   document.getElementById('yourName').focus();
 }
 
-/** Toggle light/dark theme (same as index.php) */
-function toggleTheme() {
-  const html = document.documentElement;
-  const curr = html.getAttribute('data-theme');
-  const next = (curr === 'light') ? 'dark' : 'light';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-}
-
-/** On page load, restore saved theme and set logo */
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-
-  const headerImg = document.getElementById('themeLogo');
-  if (headerImg) {
-    headerImg.src = '/assets/flame-icon-128.png';
-  }
-
-  // Set initial theme toggle icon
-  const button = document.querySelector('.theme-toggle');
-  if (button) {
-    const sunIcon = button.querySelector('.icon-sun');
-    const moonIcon = button.querySelector('.icon-moon');
-    if (sunIcon && moonIcon) {
-      sunIcon.style.display = (savedTheme === 'light') ? 'block' : 'none';
-      moonIcon.style.display = (savedTheme === 'dark') ? 'block' : 'none';
-    }
-  }
-});
-
 /** FAQ toggle (same as index.php) */
 function toggleFAQ(element) {
   const faqItem = element.parentElement;
