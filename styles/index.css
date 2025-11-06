@@ -138,6 +138,10 @@ body {
 
 .header-nav .theme-toggle {
   position: static; /* Let it flow naturally on desktop */
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;

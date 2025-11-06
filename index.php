@@ -322,15 +322,15 @@
                 <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
                 <h4>Select Language</h4>
                 <div class="lang-grid">
-                    <a href="<?= $BASE_URL . ltrim($qs, '?') ?>">English</a>
-                    <a href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
-                    <a href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
-                    <a href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
-                    <a href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
-                    <a href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
-                    <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
-                    <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
-                    <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                    <a href="/<?= ltrim($qs, '?') ?>">English</a>
+                    <a href="/ru/<?= ltrim($qs, '?') ?>">Русский</a>
+                    <a href="/de/<?= ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="/es/<?= ltrim($qs, '?') ?>">Español</a>
+                    <a href="/pt/<?= ltrim($qs, '?') ?>">Português</a>
+                    <a href="/it/<?= ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="/iw/<?= ltrim($qs, '?') ?>">עברית</a>
+                    <a href="/pl/<?= ltrim($qs, '?') ?>">Polski</a>
+                    <a href="/zh/<?= ltrim($qs, '?') ?>">中文</a>
                 </div>
             </div>
         </div>

@@ -150,13 +150,19 @@
 
 <body>
     <nav class="header-nav">
-        <a href="/it/">Home</a>
-        <a href="/more-tools/">Altri Strumenti</a>
-        <a href="/blog-collections/">Blog</a>
-        <a href="/about-us/">Chi Siamo</a>
-        <a href="/contact-us/">Contattaci</a>
-        <a href="/terms-conditions/">Termini e Condizioni</a>
-        <a href="/privacy-policy/">Privacy Policy</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div class="nav-links">
+            <a href="/it/">Home</a>
+            <a href="/more-tools/">Altri Strumenti</a>
+            <a href="/blog-collections/">Blog</a>
+            <a href="/about-us/">Chi Siamo</a>
+            <a href="/contact-us/">Contattaci</a>
+            <a href="/terms-conditions/">Termini e Condizioni</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <button class="lang-change-btn mobile-only" onclick="openLangPopup()">Cambia Lingua</button>
+        </div>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambia tema">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -316,6 +322,24 @@
         <div class="global-feedback-message" id="globalFeedback"></div>
 
         <!-- FAQ & FOOTER -->
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
+                <h4>Seleziona Lingua</h4>
+                <div class="lang-grid">
+                    <a href="/<?= ltrim($qs, '?') ?>">English</a>
+                    <a href="/ru/<?= ltrim($qs, '?') ?>">Русский</a>
+                    <a href="/de/<?= ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="/es/<?= ltrim($qs, '?') ?>">Español</a>
+                    <a href="/pt/<?= ltrim($qs, '?') ?>">Português</a>
+                    <a href="/it/<?= ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="/iw/<?= ltrim($qs, '?') ?>">עברית</a>
+                    <a href="/pl/<?= ltrim($qs, '?') ?>">Polski</a>
+                    <a href="/zh/<?= ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <!-- FAQ ITEMS -->
             <h2 class="faq-heading">Domande Frequenti</h2>

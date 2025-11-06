@@ -162,6 +162,7 @@
             <a href="/contact-us/">Contáctenos</a>
             <a href="/terms-conditions/">Términos y Condiciones</a>
             <a href="/privacy-policy/">Política de Privacidad</a>
+            <button class="lang-change-btn mobile-only" onclick="openLangPopup()">Cambiar Idioma</button>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -428,6 +429,24 @@
             <div class="copyright">
                 © <?= date('Y') ?> gematriacalculators.org
             </div>
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
+                <h4>Seleccionar Idioma</h4>
+                <div class="lang-grid">
+                    <a href="/<?= ltrim($qs, '?') ?>">English</a>
+                    <a href="/ru/<?= ltrim($qs, '?') ?>">Русский</a>
+                    <a href="/de/<?= ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="/es/<?= ltrim($qs, '?') ?>">Español</a>
+                    <a href="/pt/<?= ltrim($qs, '?') ?>">Português</a>
+                    <a href="/it/<?= ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="/iw/<?= ltrim($qs, '?') ?>">עברית</a>
+                    <a href="/pl/<?= ltrim($qs, '?') ?>">Polski</a>
+                    <a href="/zh/<?= ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
+        </div>
         </footer>
     </div>
 

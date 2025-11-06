@@ -25,21 +25,12 @@
 </head>
 
 <body>
-  <nav class="header-nav">
-      <a href="/">Home</a>
-      <a href="/more-tools/">More Tools</a>
-      <a href="/blog-collections/">Blog</a>
-      <a href="/about-us/">About Us</a>
-      <a href="/contact-us/">Contact Us</a>
-      <a href="/terms-conditions/">Terms & Conditions</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-  </nav>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
   <div class="container">
 
     <main>
       <div class="article-header">
-        <button class="back-button" onclick="window.location.href='/blog-collections/'">← Back to Articles</button>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="back-button" onclick="window.location.href='/blog-collections.php'">← Back to Articles</button>
         <h1 class="article-title">Gematria Explained: A Clear and Comprehensive Guide</h1>
         <div class="article-date">Published: Sept 20, 2025</div>
       </div>
