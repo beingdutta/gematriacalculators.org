@@ -994,10 +994,11 @@ footer .copyright {
 }
 
 /* Flex row of all ticker items (duplicated for looping) */
+/* Ticker scrolling speed*/
 .ticker__list {
   display: flex;
   width: max-content;
-  animation: ticker-scroll 100s linear infinite;
+  animation: ticker-scroll 200s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
   transform-style: preserve-3d;

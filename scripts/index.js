@@ -391,24 +391,29 @@ function calculateAndDownload() {
     }, 3000);
 }
 
-// ——— Ticker population & click handler ———
+// Ticker population & click handler
 document.addEventListener('DOMContentLoaded', () => {
     const recent = [
-      'patterns whisper from the void',
-      'geometry sings the unseen',
-      'numbers weave the hidden hymn',
-      'cosmos etched in ratios',
-      'prime sparks of living light',
-      'orbits as sacred script',
-      'alpha and omega in code',
-      'fractal breath of creation',
-      'truth spirals through measure',
-      'harmony nested in intervals',
-      'the matrix hums with meaning',
-      'light counts the steps of time',
-      'veils lift at golden angles',
-      'sigils carved in symmetry',
-      'order awakening from silence'
+      "letters alight with secret numbers",
+      "each word a cipher of cosmic design",
+      "where value meets vibration of language",
+      "words transformed into the geometry of meaning",
+      "in every phrase the hidden sum of truth",
+      "from syllable to number, mystery unfolds",
+      "discover the numeric heartbeat of each name",
+      "your words mapped in the lattice of ratios",
+      "the ciphered code behind everyday speech",
+      "echoes of creation in each calculated value",
+      "numbers whisper the language of meaning",
+      "every name holds a hidden sum of light",
+      "beneath letters the cipher of creation pulses",
+      "in each symbol the architecture of truth",
+      "words dancing upon the grid of cosmic code",
+      "the secret measure woven into speech",
+      "letters become keys to ancient numerals",
+      "the silent symphony of numbers reveals itself",
+      "in the calculus of names the universe listens",
+      "echoes of meaning inscribed in numeric form"
     ];
     
     function initializeTicker() {
@@ -458,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ─── Exit-Intent / Timed Modal Logic ────────
+//  Exit-Intent / Timed Modal Logic 
 
 let exitModalShown = false;
 const modal       = document.getElementById('exitModal');
