@@ -50,7 +50,7 @@ function calculate() {
     const query   = inputEl.value.trim();
     if (!query) {
       inputEl.classList.add('error');
-      setTimeout(() => inputEl.classList.remove('error'), 500);
+      setTimeout(() => inputEl.classList.remove('error'), 6000);
       alert('Please enter some text to calculate!');
       return;
     }
@@ -60,48 +60,38 @@ function calculate() {
     const globalFdbk  = document.getElementById('globalFeedback');
   
     // show spinner immediately
-    loading.style.display   = 'flex';
+    loading.style.display = 'flex';
     resultDiv.style.display = 'none';
   
-    // wait 3s, then fire your AJAX + UI update
+    // Simulate a short delay for UX, then perform client-side calculation
     setTimeout(() => {
-      fetch('/calculate.php', {
-        method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: 'input=' + encodeURIComponent(query)
-      })
-      .then(res => res.json())
-      .then(data => {
-        // totals
-        document.getElementById('hebrewValue').textContent  = data.hebrew.total;
-        document.getElementById('englishValue').textContent = data.english.total;
-        document.getElementById('simpleValue').textContent  = data.simple.total;
-  
-        // breakdowns
-        document.getElementById('hebrewBreakdown').innerHTML  =
-          'Calculation: ' + data.hebrew.breakdown.join(' + ');
-        document.getElementById('englishBreakdown').innerHTML =
-          'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
-        document.getElementById('simpleBreakdown').innerHTML  =
-          'Calculation: ' + data.simple.breakdown.join(' + ');
-  
-        resultDiv.style.display = 'block';
-        globalFdbk.textContent  = '✓ Results calculated successfully!';
-        globalFdbk.style.display = 'block';
-        setTimeout(() => globalFdbk.style.display = 'none', 7000);
-      })
-      .catch(err => {
-        console.error(err);
-        globalFdbk.textContent = '⚠️ Error calculating results';
-        globalFdbk.style.display = 'block';
-        setTimeout(() => globalFdbk.style.display = 'none', 3000);
-      })
-      .finally(() => {
-        loading.style.display = 'none';
-      });
-    }, 6000);
-    
-    // This 8000 ms (8 s) is the artificial timeout.
+        try {
+          const data = calculateGematria(query);
+
+          // totals
+          document.getElementById('hebrewValue').textContent  = data.hebrew.total;
+          document.getElementById('englishValue').textContent = data.english.total;
+          document.getElementById('simpleValue').textContent  = data.simple.total;
+
+          // breakdowns
+          document.getElementById('hebrewBreakdown').innerHTML  = 'Calculation: ' + data.hebrew.breakdown.join(' + ');
+          document.getElementById('englishBreakdown').innerHTML = 'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
+          document.getElementById('simpleBreakdown').innerHTML  = 'Calculation: ' + data.simple.breakdown.join(' + ');
+
+          resultDiv.style.display = 'block';
+          globalFdbk.textContent  = '✓ Results calculated successfully!';
+          globalFdbk.style.display = 'block';
+          setTimeout(() => globalFdbk.style.display = 'none', 3000); // Shorter display for success
+        } catch (err) {
+          console.error('Client-side calculation error:', err);
+          globalFdbk.textContent = '⚠️ Error calculating results';
+          globalFdbk.style.display = 'block';
+          setTimeout(() => globalFdbk.style.display = 'none', 3000);
+        } finally {
+          loading.style.display = 'none';
+        }
+    }, 6000); // artificial delay set back to 6 seconds for better responsiveness
+
   }
 
 function clearInput() {

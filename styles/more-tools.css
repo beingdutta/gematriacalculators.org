@@ -1,22 +1,3 @@
-:root {
-  --primary: #4A90E2;
-  --secondary: #50E3C2;
-  --bg: #F5F7FA;
-  --text: #333333;
-  --card-bg: #FFFFFF;
-  --muted: #777777;
-  --radius: 8px;
-  --transition: all 0.2s ease;
-  --font: 'Inter', sans-serif;
-}
-
-[data-theme="dark"] {
-  --bg: #2B2D42;
-  --text: #EDF2F4;
-  --card-bg: #3F4159;
-  --muted: #A8AAB3;
-}
-
 body {
   background: var(--bg);
   color: var(--text);

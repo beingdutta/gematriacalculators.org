@@ -9,6 +9,7 @@
   --bg:         #F5F7FA;
   --text:       #333333;
   --card-bg:    #FFFFFF;
+  --border:     #EAEAEA;
   --muted:      #777777;
   --error:      #E74C3C;
 
@@ -19,10 +20,18 @@
 
 /* Dark theme overrides */
 [data-theme="dark"] {
-  --bg:      #2B2D42;
-  --text:    #EDF2F4;
-  --card-bg: #3F4159;
+  --bg:      #1A1B26; /* Darker background */
+  --text:    #C9D1D9; /* Softer text */
+  --card-bg: #242936; /* Slightly lighter card background */
+  --border:  #30363D; /* Defined border color */
   --muted:   #A8AAB3;
+}
+
+/* Dark theme overrides for tool cards */
+[data-theme="dark"] .tool-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
 /* Dark theme text color overrides for hardcoded black elements */
@@ -352,7 +361,7 @@ body {
 .input-group input {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--muted);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 1rem;
   transition: border-color var(--transition);
@@ -365,7 +374,7 @@ body {
 
 .input-group .secondary {
   background: var(--card-bg);
-  border: 1px solid var(--muted);
+  border: 1px solid var(--border);
   color: var(--muted);
   font-size: 1.2rem;
   border-radius: var(--radius);
@@ -612,6 +621,7 @@ footer .copyright {
   margin: 1rem 0;
   background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 

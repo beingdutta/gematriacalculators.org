@@ -16,9 +16,9 @@
 
 /* Dark mode: matching the FLAME calculator’s dark palette, but with purple accents */
 [data-theme="dark"] {
-  --bg:         #2B2D42;
-  --text:       #EDF2F4;
-  --card-bg:    #3F4159;
+  --bg:         #1A1B26; /* Darker background */
+  --text:       #C9D1D9; /* Softer text */
+  --card-bg:    #242936; /* Slightly lighter card background */
   --muted:      #A8AAB3;
   /* In dark mode, keep the same --primary, --secondary, --highlight */
 }
@@ -544,4 +544,3 @@ copyright,
   /* already covered previously—but ensure footer links remain visible: */
   color: var(--text);
 }
-
