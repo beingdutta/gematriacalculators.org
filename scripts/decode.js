@@ -1,15 +1,3 @@
-// COPY-TO-CLIPBOARD (reuse)
-function copyValue(valueId, notificationId) {
-    const text = document.getElementById(valueId).textContent;
-    const notif = document.getElementById(notificationId);
-    navigator.clipboard.writeText(text)
-      .then(() => {
-        notif.style.display = 'block';
-        setTimeout(() => notif.style.display = 'none', 2000);
-      })
-      .catch(err => console.error('Copy failed:', err));
-  }
-  
 function clearDecodeInput() {
   document.getElementById('decodeInput').value = '';
   document.getElementById('decodeResult').style.display = 'none';

@@ -61,7 +61,7 @@
 
       <!-- FAQ SECTION -->
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>What does decoding a gematria value mean?</span>
           <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -71,7 +71,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>Can gematria values be reversed with 100% accuracy?</span>
           <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -81,7 +81,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>What is the logic behind your decoder?</span>
           <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -126,11 +126,5 @@
 
     <script src="/scripts/decode.js"></script>
     <script src="/scripts/index.js"></script>
-    <script>
-      function toggleFAQ(element) {
-        const faqItem = element.parentElement;
-        faqItem.classList.toggle('active');
-      }
-    </script>
   </body>
 </html>

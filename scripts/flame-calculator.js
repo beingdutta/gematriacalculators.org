@@ -132,9 +132,3 @@ function resetFlameCalculator() {
   closeFlameModal();
   document.getElementById('yourName').focus();
 }
-
-/** FAQ toggle (same as index.php) */
-function toggleFAQ(element) {
-  const faqItem = element.parentElement;
-  faqItem.classList.toggle('active');
-}

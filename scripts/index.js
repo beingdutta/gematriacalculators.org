@@ -1,3 +1,16 @@
+function copyValue(valueId, notificationId) {
+    const text = document.getElementById(valueId).textContent;
+    const notif = document.getElementById(notificationId);
+    if (!text || !notif) return;
+
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        notif.style.display = 'block';
+        setTimeout(() => notif.style.display = 'none', 2000);
+      })
+      .catch(err => console.error('Copy failed:', err));
+}
+
 const hebrewMap = {
     'A':1, 'B':2, 'C':3, 'D':4, 'E':5, 'F':6, 'G':7, 'H':8, 'I':9, 'J':10,
     'K':10, 'L':20, 'M':30, 'N':40, 'O':50, 'P':60, 'Q':70, 'R':80, 'S':90,
@@ -86,6 +99,34 @@ function clearInput() {
     document.getElementById('loading').style.display = 'none';
 }
 
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    navLinks.classList.toggle('active');
+    body.classList.toggle('menu-open');
+}
+
+function initMobileNavigation() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        // Handle clicking the hamburger button
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent this click from immediately closing the menu
+            toggleMobileMenu();
+        });
+
+        // Add listener to close menu when clicking outside of it
+        document.addEventListener('click', (event) => {
+            const isClickInside = navLinks.contains(event.target) || menuToggle.contains(event.target);
+            if (navLinks.classList.contains('active') && !isClickInside) {
+                toggleMobileMenu();
+            }
+        });
+    }
+}
+
 function openLangPopup() {
     const langPopup = document.querySelector('.lang-popup');
     langPopup.style.display = 'flex'; // Use flex to activate it
@@ -162,6 +203,12 @@ function sendFeedback(emoji) {
     console.log('User feedback:', emoji);
 }
 
+function toggleFAQ(element) {
+    const faqItem = element.closest('.faq-item');
+    if (faqItem) {
+        faqItem.classList.toggle('active');
+    }
+}
 
 // Initialize mobile features
 document.addEventListener('DOMContentLoaded', () => {
@@ -191,6 +238,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initMobileNavigation();
   initLanguagePopup();
+
+  // Add event listeners for all FAQ questions
+  document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+          toggleFAQ(question);
+      });
+  });
 });
 
 // For PDF Generation.

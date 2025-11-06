@@ -91,7 +91,7 @@
     <hr class="grey-rule" />
     <section class="faq-section">
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>What is a FLAMES calculator?</span>
           <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -101,7 +101,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>How does the FLAMES algorithm work?</span>
           <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -111,7 +111,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>Can I use this flames calculator app more than once?</span>
           <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -121,7 +121,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>Is this flames calculator true or just for fun?</span>
           <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -131,7 +131,7 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
           <span>Does this support twin flame name checks?</span>
           <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -144,7 +144,7 @@
     <h2 class="faq-heading" style="margin-top: 2rem;">Related Gematria FAQs</h2>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
             <span>What is the English gematria calculator?</span>
             <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -154,7 +154,7 @@
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
             <span>Who should use the gematria calculator?</span>
             <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -171,7 +171,7 @@
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
+        <div class="faq-question">
             <span>What is the Jewish gematria calculator?</span>
             <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
         </div>

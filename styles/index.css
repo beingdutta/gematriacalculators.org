@@ -137,10 +137,7 @@ body {
 }
 
 .header-nav .theme-toggle {
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static; /* Let it flow naturally on desktop */
   background: none;
   border: none;
   cursor: pointer;
@@ -271,7 +268,7 @@ body {
   }
 
   .header-nav .theme-toggle {
-    position: fixed;
+    position: absolute; /* Changed from fixed to be relative to header-nav */
     right: 1rem;
     top: 15px; /* Align with hamburger menu */
     z-index: 102;
