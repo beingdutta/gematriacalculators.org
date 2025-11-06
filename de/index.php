@@ -272,12 +272,13 @@
 
       <!--–––– FAQ ––––-->
       <footer class="footer">
+        <h2 class="faq-heading">Häufig gestellte Fragen</h2>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             <span>Was ist Gematrie?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Gematrie ist ein alphanumerischer Code, bei dem Buchstaben eines Wortes in Zahlen umgewandelt werden. Häufig genutzt in jüdischer Mystik und Bibelauslegung.
+            Gematrie ist ein alphanumerischer Code, der einem Namen, Wort oder einer Phrase basierend auf seinen Buchstaben einen numerischen Wert zuweist. Sie wird häufig in der jüdischen Mystik und der Bibelauslegung verwendet.
           </div>
         </div>
 
@@ -286,25 +287,43 @@
             <span>Was ist ein Gematrie-Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Ein Online-Tool, das den Zahlenwert eines Wortes oder einer Phrase automatisch nach einer gewählten Gematrie-Methode berechnet.
+            Ein kostenloses Online-Tool oder eine Software für Gematrie-Rechner, das den numerischen Wert eines Wortes, einer Phrase oder eines Namens automatisch berechnet, indem es jedem Buchstaben basierend auf spezifischen Gematrie-Systemen numerische Werte zuweist.
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
-            <span>Wie nutze ich den Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            <span>Wie benutzt man den Gematrie-Rechner online?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Geben Sie ein Wort, eine Phrase oder einen Namen ein und klicken Sie „Berechnen“. Die hebräischen, englischen und einfachen Werte erscheinen sofort.
+            Um unseren besten kostenlosen Gematrie-Rechner online zu nutzen, geben Sie einfach ein Wort, eine Phrase oder einen Namen in das Eingabefeld ein und klicken Sie dann auf „Berechnen“, um die numerischen Werte in den hebräischen, englischen und einfachen Systemen zu generieren. Zur Aufzeichnung können Sie auch einen PDF-Bericht herunterladen.
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
-            <span>Wie funktioniert die einfache Gematrie?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            <span>Wie versteht man den einfachen Gematrie-Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Die einfache Methode ordnet A=1, B=2 … Z=26 zu. Der Rechner summiert alle Buchstabenwerte zu einem Gesamtergebnis.
+            Unser einfacher Gematrie-Rechner weist A=1, B=2, C=3, … Z=26 zu und summiert dann diese Werte. Geben Sie ein Wort wie „Wahrheit“ ein und es gibt die Gesamtsumme aus, die Sie mit anderen Wörtern mit demselben Wert vergleichen können.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Wie benutze ich den Bibel-Gematrie-Rechner?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Unser Bibel-Gematrie-Rechner ist für die Analyse biblischer Texte und Namen konzipiert. Geben Sie einfach ein beliebiges Wort oder eine Phrase aus der Bibel ein, und Sie erhalten sofort hebräische, englische und einfache Gematrie-Werte. Unser Rechner unterstützt sowohl moderne als auch biblische hebräische Zeichen und ist somit der beste Gematrie-Rechner für die Bibelforschung.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Wie funktioniert die Gematrie-Suchmaschine?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Unsere Gematrie-Suchmaschine ermöglicht es Ihnen, Wörter und Phrasen mit bestimmten numerischen Werten zu finden. Sie können mit hebräischen, englischen oder einfachen Gematrie-Systemen suchen. Diese Funktion ist besonders nützlich für die Bibelforschung und das Finden von Verbindungen zwischen verschiedenen Wörtern und Konzepten.
           </div>
         </div>
 
@@ -313,7 +332,7 @@
             <span>Kann ich Phrasen mit Leerzeichen berechnen?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Ja. Leerzeichen und Sonderzeichen werden ignoriert – es zählen nur die Buchstaben.
+            Ja! Dieser Gematrie-Namensrechner ignoriert automatisch Leerzeichen und Sonderzeichen und konzentriert sich nur auf alphabetische Buchstaben. Wir unterstützen den Gematrie-Rechner für Namen und Bedeutungen für alle Benutzer jederzeit 24*7 kostenlos. Unser Rechner ist besonders nützlich für die Analyse von Mehrwortphrasen aus religiösen Texten.
           </div>
         </div>
 

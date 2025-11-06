@@ -223,37 +223,109 @@
         <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
             להצעות, משוב או שיפורים, כתבו לנו לכתובת <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
         </p>
+
+        <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>גלו משמעויות מספריות נסתרות</h4>
-            <p>מחשבון גימטריה זה מאפשר לחשב ערכים לשמות, מילים וביטויים בעברית ובאנגלית. מתאים למחקר תנ"ך, נומרולוגיה וסודות המספרים.</p>
+            <p>מחשבון גימטריה מקוון חינם זה פועל כמחשבון גימטריה עוצמתי לשמות ותומך בהמרות גימטריה מאנגלית לעברית. בין אם אתם מחפשים מחשבון גימטריה מקוון לניתוח מקראי או סתם מחשבון גימטריה פשוט לחקר משמעויות מספרים, כלי זה מיועד עבורכם. משתמשים מחפשים לעיתים קרובות מונחים כמו "מחשבון גימטריה", "מחשבון נומרולוגיה עברית" ו"מחשבון גימטריה פשוט" – וכלי זה מספק את הפונקציונליות שהם מחפשים.</p>
             <div class="example">דוגמה: <strong>תנ"ך</strong> = 38 (עברית), 180 (אנגלית), 30 (פשוטה)</div>
+        </div>
+
+        <!-- SEO SECTION #2 -->
+        <div class="seo-section">
+            <p>כלי הגימטריה המקוון הטוב ביותר שלנו (הידוע גם כמחשבון גימטריקס) מיועד לדיוק, מהירות ופשטות. הוא מושלם עבור חוקרים, מחפשים רוחניים, או כל מי שמתעניין במסורות המיסטיות שמאחורי טקסטים קדושים. עם מחשבון הגימטריה העברי הטוב ביותר שלנו, תוכלו לפענח קטעים מקראיים, לנתח שמות רוחניים, או לחקור קשרים אזוטריים – הכל במקום אחד. נסו את מחשבון הגימטריה הפשוט ביותר בחינם היום וצללו לעולם של משמעויות מספרים סמליות בביטחון.</p>
+        </div>
+
+        <hr class="divider"><br>
+
+        <!-- GLOBAL FEEDBACK BANNER -->
+        <div class="global-feedback-message" id="globalFeedback"></div>
+
+        <!-- Recent Searches -->
+        <div class="recent-phrases">
+            <h4>חיפושים אחרונים:</h4>
+            <a href="#">התנ"ך</a> |
+            <a href="#">תדר אלוהים 432</a> |
+            <a href="#">אור יהוה הקדוש</a> |
+            <a href="#">שבתאי</a> |
+            <a href="#">אמת נסתרת לעין</a> |
+            <a href="#">מטטרון מדבר במספרים</a> |
+            <a href="#">שלום על פני כאוס תמיד</a>
         </div>
         <div class="seo-section">
             <p>המחשבון שלנו מדויק, מהיר וקל לשימוש. מושלם לחוקרים, מחפשים רוחניים וכל מי שמתעניין במספרים וסודותיהם.</p>
         </div>
         <hr class="divider"><br>
         <div class="global-feedback-message" id="globalFeedback"></div>
+
+        <!-- Language Popup -->
+        <div class="lang-popup">
+            <div class="lang-popup-content">
+                <button class="lang-popup-close">&times;</button>
+                <h4>בחירת שפה</h4>
+                <div class="lang-grid">
+                    <a href="<?= $BASE_URL . ltrim($qs, '?') ?>">English</a>
+                    <a href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
+                    <a href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
+                    <a href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
+                    <a href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
+                    <a href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
+                    <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
+                    <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
+                    <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <h2 class="faq-heading">שאלות נפוצות</h2>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)"><span>מהי גימטריה?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
-                <div class="faq-answer">גימטריה היא שיטה המייחסת ערך מספרי לכל אות. נפוצה במיסטיקה יהודית ופרשנות תנ"ך.</div>
+                <div class="faq-answer">גימטריה היא קוד אלפאנומרי של הקצאת ערך מספרי לשם, מילה או ביטוי על בסיס אותיותיו. היא נפוצה בשימוש במיסטיקה היהודית ובפרשנות המקרא.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)"><span>מהו מחשבון גימטריה?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
-                <div class="faq-answer">מחשבון גימטריה הוא כלי שמחשב אוטומטית ערך מספרי למילה או ביטוי לפי שיטה נבחרת.</div>
+                <div class="faq-answer">כלי או תוכנה מקוונים חינמיים של מחשבון גימטריה המחשבים באופן אוטומטי את הערך המספרי של מילה, ביטוי או שם על ידי הקצאת ערכים מספריים לכל אות, בהתבסס על מערכות גימטריה ספציפיות.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>איך משתמשים במחשבון?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
-                <div class="faq-answer">הקלידו מילה, ביטוי או שם ולחצו "חשב". התוצאה תוצג עבור עברית, אנגלית ופשוטה.</div>
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>כיצד להשתמש במחשבון גימטריה מקוון?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">כדי להשתמש במחשבון הגימטריה המקוון החינמי הטוב ביותר שלנו, פשוט הקלד מילה, ביטוי או שם בתיבת הקלט, ואז לחץ על "חשב" כדי ליצור את ערכיו המספריים במערכות העברית, האנגלית והפשוטה. לתיעוד, תוכל גם להוריד דוח PDF.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>איך עובדת גימטריה פשוטה?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
-                <div class="faq-answer">בגימטריה פשוטה A=1, B=2, ... Z=26. המחשבון מסכם את הערכים ומציג את הסך הכולל.</div>
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>כיצד להבין מחשבון גימטריה פשוט?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">מחשבון הגימטריה הפשוט שלנו מקצה A=1, B=2, C=3, ... Z=26, ואז מסכם את הערכים הללו. הזן מילה כמו "אמת" והוא יוציא את הסכום הכולל, אותו תוכל להשוות למילים אחרות החולקות את אותו הערך.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>האם אפשר לחשב ביטויים עם רווחים?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
-                <div class="faq-answer">כן, רווחים ותווים מיוחדים מתעלמים — רק אותיות נחשבות.</div>
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>כיצד אוכל להשתמש במחשבון הגימטריה של התנ"ך?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">מחשבון הגימטריה של התנ"ך שלנו מיועד לניתוח טקסטים ושמות מקראיים. פשוט הזן כל מילה או ביטוי מהתנ"ך, ותקבל ערכי גימטריה מיידיים בעברית, אנגלית ופשוטה. המחשבון שלנו תומך בתווים עבריים מודרניים ומקראיים, מה שהופך אותו למחשבון הגימטריה הטוב ביותר למחקר מקראי.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>כיצד פועל מנוע החיפוש של הגימטריה?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">מנוע החיפוש של הגימטריה שלנו מאפשר לך למצוא מילים וביטויים עם ערכים מספריים ספציפיים. אתה יכול לחפש באמצעות מערכות גימטריה בעברית, אנגלית או פשוטה. תכונה זו שימושית במיוחד למחקר מקראי ולמציאת קשרים בין מילים ומושגים שונים.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>האם אני יכול לחשב ביטויים עם רווחים?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">כן! מחשבון שמות גימטריה זה מתעלם אוטומטית מרווחים ותווים מיוחדים, ומתמקד רק באותיות אלפביתיות. אנו תומכים במחשבון שמות ומשמעויות גימטריה לכל המשתמשים בכל עת 24*7 בחינם. המחשבון שלנו שימושי במיוחד לניתוח ביטויים מרובי מילים מטקסטים דתיים.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>מהו מחשבון הגימטריה האנגלי?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">מחשבון גימטריה אנגלי הוא כלי המקצה ערכים מספריים לאותיות האלפבית האנגלי. בניגוד לעברית, לאנגלית אין מערכת עתיקה אחת, ולכן מחשבונים משתמשים בצפנים שונים כמו גימטריה פשוטה (A=1, B=2), סדר הפוך (A=26, B=25) וצמצום. זה מאפשר לך לחקור את הדפוסים המספריים והקשרים הסמליים בין מילים, שמות וביטויים באנגלית, ולחשוף רבדים נסתרים של משמעות.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>מי צריך להשתמש במחשבון הגימטריה?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">
+                    מחשבון גימטריה מיועד לכל מי שסקרן לגבי המבנה המספרי הנסתר של השפה. הוא מושלם עבור:
+                    <ul>
+                        <li>מחפשים רוחניים החוקרים טקסטים קדושים כמו התנ"ך.</li>
+                        <li>סופרים ואמנים המחפשים השראה יצירתית ועומק סמלי.</li>
+                        <li>חובבי היסטוריה המתעניינים בשיטות פרשנות עתיקות.</li>
+                        <li>חובבי נומרולוגיה המנתחים שמות, תאריכים ומושגים.</li>
+                        <li>כל מי שאוהב פאזלים ומציאת דפוסים נסתרים בעולם סביבם.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)"><span>מהו מחשבון הגימטריה היהודי?</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-answer">מחשבון גימטריה יהודי (או מחשבון גימטריה עברי) הוא כלי המבוסס על המסורת היהודית העתיקה של הקצאת ערכים מספריים ל-22 אותיות האלפבית העברי. הוא משתמש בעיקר במערכת המספר ההכרחי (התקנית), שהיא יסודית לקבלה ולפרשנות התורה. סוג זה של מחשבון חיוני לחקר הערכים המספריים של שמות, מושגים ופסוקים מקראיים כדי לחשוף קשרים תיאולוגיים ומיסטיים עמוקים יותר.</div>
             </div>
             <div class="copyright">© <?= date('Y') ?> gematriacalculators.org</div>
         </footer>
