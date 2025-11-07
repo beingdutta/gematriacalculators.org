@@ -44,18 +44,26 @@ $base_path = ($lang_code !== 'en') ? '/' . $lang_code : '';
 // Define menu items
 $menu_items = [
     ['key' => 'home', 'path' => $base_path ?: '/'],
-    ['key' => 'more_tools', 'path' => '/more-tools.php'],
-    ['key' => 'blog', 'path' => '/blog-collections.php'],
-    ['key' => 'about_us', 'path' => '/about-us.php'],
-    ['key' => 'contact_us', 'path' => '/contact-us.php'],
-    ['key' => 'terms', 'path' => '/terms-conditions.php'],
-    ['key' => 'privacy', 'path' => '/privacy-policy.php'],
+    ['key' => 'more_tools', 'path' => $base_path . '/more-tools'], // Base path for more-tools section
+    ['key' => 'blog', 'path' => $base_path . '/blog-collections'], // Base path for blog section
+    ['key' => 'about_us', 'path' => $base_path . '/about-us'],
+    ['key' => 'contact_us', 'path' => $base_path . '/contact-us'],
+    ['key' => 'terms', 'path' => $base_path . '/terms-conditions'],
+    ['key' => 'privacy', 'path' => $base_path . '/privacy-policy'],
 ];
 
 // For RTL languages, reverse the order of menu items to maintain visual LTR flow
 $rtl_languages = ['iw']; // Add other RTL language codes if necessary
 if (in_array($lang_code, $rtl_languages)) {
     $menu_items = array_reverse($menu_items);
+}
+
+// Normalize current URI for comparison: remove query string, then remove .php, then remove trailing slash
+$current_path_normalized = strtok($current_uri, '?'); // Remove query string
+$current_path_normalized = str_replace('.php', '', $current_path_normalized); // Remove .php extension
+$current_path_normalized = rtrim($current_path_normalized, '/'); // Remove trailing slash
+if ($current_path_normalized === '') { // Handle root path
+    $current_path_normalized = '/';
 }
 
 ?>
@@ -67,10 +75,28 @@ if (in_array($lang_code, $rtl_languages)) {
     <div class="nav-links">
         <?php foreach ($menu_items as $item):
             $is_active = false;
+
+            // Normalize item path for comparison
+            $item_path_normalized = strtok($item['path'], '?'); // Remove query string
+            $item_path_normalized = str_replace('.php', '', $item_path_normalized); // Remove .php extension
+            $item_path_normalized = rtrim($item_path_normalized, '/'); // Remove trailing slash
+            if ($item_path_normalized === '') { // Handle root path
+                $item_path_normalized = '/';
+            }
+
             if ($item['key'] === 'home') {
-                $is_active = ($current_uri === ($base_path ?: '/')) || (strpos($current_uri, 'index.php') !== false && (strpos($current_uri, $base_path) !== false || $base_path === ''));
+                // Home is active if current path is exactly '/' or '/lang_code'
+                $is_active = ($current_path_normalized === ($base_path ?: '/'));
+            } elseif ($item['key'] === 'more_tools') {
+                // 'More Tools' is active if the current path starts with '/more-tools' (or '/lang_code/more-tools')
+                // This covers /more-tools.php, /more-tools/, /more-tools/tool.php, etc.
+                $is_active = strpos($current_path_normalized, $item_path_normalized) === 0;
+            } elseif ($item['key'] === 'blog') {
+                // 'Blog' is active if the current path starts with '/blog-collections' or '/blogs'
+                $is_active = (strpos($current_path_normalized, $item_path_normalized) === 0) || (strpos($current_path_normalized, $base_path . '/blogs') === 0);
             } else {
-                $is_active = strpos($current_uri, trim($item['path'], '/')) !== false;
+                // For other pages, check for exact match or if it's a sub-page
+                $is_active = ($current_path_normalized === $item_path_normalized) || (strpos($current_path_normalized, $item_path_normalized . '/') === 0);
             }
         ?>
             <a href="<?= $item['path'] ?>" class="<?= $is_active ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts[$item['key']]) ?></a>
