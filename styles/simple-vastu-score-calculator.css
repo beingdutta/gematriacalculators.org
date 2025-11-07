@@ -1,0 +1,129 @@
+.vastu-form {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #FFFFFF; /* Force white background */
+    color: #333333; /* Force dark text for readability */
+    transition: border-color var(--transition);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.6H18.6c-5%200-9.3%201.8-13.2%205.6-3.9%203.9-5.6%208.2-5.6%2013.2%200%205%201.8%209.3%205.6%2013.2l128%20128c3.9%203.9%208.2%205.6%2013.2%205.6s9.3-1.8%2013.2-5.6l128-128c3.8-3.9%205.6-8.2%205.6-13.2%200-5-1.8-9.3-5.6-13.2z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.result-area .result-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.result-area h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.result-area h3 span {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+.result-area ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-area ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.result-area ul li:last-child {
+    border-bottom: none;
+}
+
+.score-bar-container {
+    width: 100%;
+    background-color: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.score-bar {
+    height: 20px;
+    width: 0;
+    border-radius: var(--radius);
+    transition: width 1s ease-out, background-color 1s ease-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.loading-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-phrase {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* Spacing for SEO blocks */
+.seo-blocks {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.seo-blocks h2 {
+    margin-bottom: 1rem;
+}
+
+.seo-blocks p {
+    margin-bottom: 1.5rem;
+}

@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1DQQSD51V4');
+    </script>
+
+    <!-- Clarity tracking code -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rcxnkrgboo");
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Path Number Calculator - What Is My Life Path Number?</title>
 
     <meta name="description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
     <meta name="keywords" content="life path number calculator, what is my life path number, how to calculate life path number, life path number meanings, numerology birth date calculator, life path number compatibility, numerology, master number 11, master number 22, master number 33">
+    <meta property="og:title" content="Life Path Number Calculator - What Is My Life Path Number?">
+    <meta property="og:description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gematriacalculators.org/more-tools/life-path-number-calculator.php">
+    <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Life Path Number Calculator - What Is My Life Path Number?">
+    <meta name="twitter:description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
+    <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
     <link rel="canonical" href="https://gematriacalculators.org/more-tools/life-path-number-calculator.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/life-path-number.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -48,7 +77,10 @@
                 </div>
             </form>
 
-            <div class="loading-container" id="loading"><div class="spinner"></div></div>
+            <div class="loading-container" id="loading">
+                <div class="spinner"></div>
+                <span id="loadingPhrase" class="loading-phrase"></span>
+            </div>
 
             <div id="resultArea" class="result-area hidden">
                 <div class="result-card">

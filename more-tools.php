@@ -32,13 +32,17 @@
             <main>
                 <div class="tool-grid">
                     <?php
+                        // Define tools array
                         $tools = [
+                            ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home based on room placements.', 'icon' => '🏠', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                            ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions based on your birth year and gender.', 'icon' => '🧭', 'url' => '/more-tools/kua-number-calculator.php'],
+                            ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in repeating numbers.', 'icon' => '✨', 'url' => '/more-tools/angel-number-decoder.php'],
                             ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny number from your birth date.', 'icon' => '✨', 'url' => '/more-tools/life-path-number-calculator.php'],
                             ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '🔢', 'url' => '/more-tools/loshu-grid.php'],
                             ['title' => 'FLAME Calculator', 'desc' => 'Find love compatibility with the classic FLAME game.', 'icon' => '❤️', 'url' => '/more-tools/flame-calculator.php'],
                             //['title' => 'Kundli Finder', 'desc' => 'Generate a basic Kundli using birth details.', 'icon' => '🪐', 'url' => '#'],
                             //['title' => 'Angel Number Decoder', 'desc' => 'Uncover meanings of recurring numbers.', 'icon' => '👼', 'url' => '#'],
-                            //['title' => 'Chaldean Numerology', 'desc' => 'Calculate name numbers using the Chaldean system.', 'icon' => '🔮', 'url' => '#'],
+                            ['title' => 'Name Numerology Calculator', 'desc' => 'Calculate your Destiny, Soul Urge, and Personality numbers.', 'icon' => '📝', 'url' => '/more-tools/name-numerology-calculator.php'],
                             //['title' => 'Name Meaning Analyzer', 'desc' => 'Decode spiritual and mystical significance of names.', 'icon' => '📝', 'url' => '#']
                         ];
 

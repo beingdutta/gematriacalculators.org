@@ -440,7 +440,8 @@ body.menu-open {
   border: 1px solid var(--border);
   border-radius: 12px; /* Slightly larger border-radius */
   font-size: 1rem;
-  background: var(--card-bg); /* Changed to card background for visibility */
+  background: #FFFFFF; /* Force white background */
+  color: #333333; /* Force dark text for readability */
   transition: border-color var(--transition);
 }
 
@@ -448,13 +449,6 @@ body.menu-open {
   outline: none;
   border-color: var(--primary);
 }
-
-/* Dark theme override for input fields to ensure readability */
-[data-theme="dark"] .input-group input {
-  background: #FFFFFF; /* Force white background */
-  color: #333333;      /* Force dark text for contrast */
-}
-
 
 .input-group .secondary {
   background: var(--primary); /* Use primary color for clear button */
@@ -585,7 +579,7 @@ button,
 }
 
 .result-card {
-  background: var(--card-bg); /* Use card background for result cards */
+  background: transparent; /* Make result cards transparent */
   padding: 1.5rem; /* More padding */
   margin: 1.25rem 0; /* Adjusted margin */
   border-radius: 12px; /* Consistent border-radius */

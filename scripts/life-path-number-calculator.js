@@ -15,6 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const loadingPhrases = [
+    "Calculating your destiny...",
+    "Aligning with cosmic energies...",
+    "Reading your birth chart...",
+    "Unveiling your soul's purpose...",
+    "Connecting with numerological vibrations..."
+];
+
+let phraseInterval;
+let currentPhraseIndex = 0;
+
+function startLoadingPhrases() {
+    const loadingPhraseEl = document.getElementById('loadingPhrase');
+    if (!loadingPhraseEl) return;
+    phraseInterval = setInterval(() => {
+        loadingPhraseEl.textContent = loadingPhrases[currentPhraseIndex];
+        currentPhraseIndex = (currentPhraseIndex + 1) % loadingPhrases.length;
+    }, 700);
+}
+
+function stopLoadingPhrases() {
+    clearInterval(phraseInterval);
+}
+
 function populateDateDropdowns() {
     const dayEl = document.getElementById('day');
     const monthEl = document.getElementById('month');
@@ -45,6 +69,8 @@ function calculateWithDelay() {
     loading.style.display = 'flex';
     resultArea.classList.add('hidden');
 
+    startLoadingPhrases();
+
     setTimeout(() => {
         try {
             const lifePathNumber = calculateLifePath(day, month, year);
@@ -54,8 +80,9 @@ function calculateWithDelay() {
             alert("An error occurred during calculation. Please check the console.");
         } finally {
             loading.style.display = 'none';
+            stopLoadingPhrases();
         }
-    }, 700);
+    }, 3000); // Increased loading time to 3 seconds
 }
 
 function reduceNumber(num, masterSafe = false) {

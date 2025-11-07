@@ -461,15 +461,17 @@ const closeBtn    = document.getElementById('exitModalClose');
 function showExitModal() {
   if (exitModalShown) return;
   exitModalShown = true;
-  modal.style.display = 'flex';
+  if (modal) {
+    modal.style.display = 'flex';
+  }
 }
 
 function hideExitModal() {
-  modal.style.display = 'none';
+  if (modal) modal.style.display = 'none';
 }
 
 // 1) Show after 25 seconds on page
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   setTimeout(showExitModal, 30000);
 
   // 2) Exit-intent: when mouse leaves at the top
@@ -481,7 +483,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Close handlers
-closeBtn.addEventListener('click', hideExitModal);
-modal.addEventListener('click', e => {
-  if (e.target === modal) hideExitModal();
-});
+if (closeBtn) {
+  closeBtn.addEventListener('click', hideExitModal);
+}
+if (modal) {
+  modal.addEventListener('click', e => {
+    if (e.target === modal) hideExitModal();
+  });
+}

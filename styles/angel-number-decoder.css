@@ -1,0 +1,85 @@
+.angel-number-form {
+    background: transparent;
+    padding: 0; /* Remove padding if background is transparent */
+    box-shadow: none;
+    border: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.angel-number-form .form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.angel-number-form label {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.angel-number-form input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #FFFFFF;
+    color: #333333; /* Force dark text for readability */
+    text-align: center;
+    transition: border-color var(--transition);
+}
+
+.angel-number-form input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.result-area .result-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Override for loading container to stack spinner and phrase */
+.loading-container {
+    flex-direction: column; /* Stack spinner and phrase vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.loading-phrase {
+    margin-top: 1rem; /* Space between spinner and text */
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Spacing for SEO blocks */
+.seo-blocks {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.seo-blocks h2 {
+    margin-bottom: 1rem;
+}
+
+.seo-blocks p {
+    margin-bottom: 1.5rem;
+}
