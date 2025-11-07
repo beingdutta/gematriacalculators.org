@@ -112,6 +112,7 @@
     <link rel="alternate" hreflang="iw" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="pl" href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="zh" href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="vi" href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
 
     <!-- JSON-LD: WebApplication schema for a calculator -->
@@ -153,7 +154,8 @@
                 <span title="Italiano">italiano</span>, 
                 <span title="עברית">hebraico</span>, 
                 <span title="Polski">polonês</span> e 
-                <span title="中文">chinês</span>!
+                <span title="中文">chinês</span> e
+                <span title="Tiếng Việt">vietnamita</span>!
             </p>
         </div>
 
@@ -291,6 +293,7 @@
                     <a href="/iw/<?= ltrim($qs, '?') ?>">עברית</a>
                     <a href="/pl/<?= ltrim($qs, '?') ?>">Polski</a>
                     <a href="/zh/<?= ltrim($qs, '?') ?>">中文</a>
+                    <a href="/vi/<?= ltrim($qs, '?') ?>">Tiếng Việt</a>
                 </div>
             </div>
         </div>

@@ -43,6 +43,7 @@
     <link rel="alternate" hreflang="pt" href="<?= $base ?>/pt/<?= $path ?>">
     <link rel="alternate" hreflang="ru" href="<?= $base ?>/ru/<?= $path ?>">
     <link rel="alternate" hreflang="zh" href="<?= $base ?>/zh/<?= $path ?>">
+    <link rel="alternate" hreflang="vi" href="<?= $base ?>/vi/<?= $path ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $base ?>/<?= $path ?>">
     
     <!-- Additional SEO meta tags for multilingual -->
@@ -85,7 +86,8 @@
               <span title="Italiano">итальянский</span>, 
               <span title="עברית">иврит</span>, 
               <span title="Polski">польский</span> и 
-              <span title="中文">китайский</span>!
+              <span title="中文">китайский</span> и
+              <span title="Tiếng Việt">вьетнамский</span>!
           </p>
       </div>
 
@@ -212,6 +214,7 @@
                   <a href="/iw/<?= ltrim($qs, '?') ?>">עברית</a>
                   <a href="/pl/<?= ltrim($qs, '?') ?>">Polski</a>
                   <a href="/zh/<?= ltrim($qs, '?') ?>">中文</a>
+                  <a href="/vi/<?= ltrim($qs, '?') ?>">Tiếng Việt</a>
               </div>
           </div>
       </div>

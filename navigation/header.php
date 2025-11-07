@@ -18,8 +18,9 @@ elseif (strpos($current_uri, '/it/') !== false) $lang_code = 'it';
 elseif (strpos($current_uri, '/pl/') !== false) $lang_code = 'pl';
 elseif (strpos($current_uri, '/zh/') !== false) $lang_code = 'zh';
 elseif (strpos($current_uri, '/iw/') !== false) $lang_code = 'iw';
+elseif (strpos($current_uri, '/vi/') !== false) $lang_code = 'vi';
 
-$lang_names = ['en' => 'English', 'de' => 'Deutsch', 'es' => 'Español', 'ru' => 'Русский', 'pt' => 'Português', 'it' => 'Italiano', 'pl' => 'Polski', 'zh' => '中文', 'iw' => 'עברית'];
+$lang_names = ['en' => 'English', 'de' => 'Deutsch', 'es' => 'Español', 'ru' => 'Русский', 'pt' => 'Português', 'it' => 'Italiano', 'pl' => 'Polski', 'zh' => '中文', 'iw' => 'עברית', 'vi' => 'Tiếng Việt'];
 $current_lang_name = $lang_names[$lang_code] ?? 'Language';
 
 $translations = [
@@ -31,7 +32,8 @@ $translations = [
     'it' => ['home' => 'Home', 'more_tools' => 'Altri Strumenti', 'blog' => 'Blog', 'about_us' => 'Chi Siamo', 'contact_us' => 'Contattaci', 'terms' => 'Termini e Condizioni', 'privacy' => 'Privacy Policy', 'change_language' => 'Cambia Lingua', 'gematria' => 'GEMATRIA'],
     'pl' => ['home' => 'Strona główna', 'more_tools' => 'Więcej Narzędzi', 'blog' => 'Blog', 'about_us' => 'O Nas', 'contact_us' => 'Kontakt', 'terms' => 'Regulamin', 'privacy' => 'Polityka Prywatności', 'change_language' => 'Zmień język', 'gematria' => 'GEMATRIA'],
     'zh' => ['home' => '首页', 'more_tools' => '更多工具', 'blog' => '博客', 'about_us' => '关于我们', 'contact_us' => '联系我们', 'terms' => '使用条款', 'privacy' => '隐私政策', 'change_language' => '切换语言', 'gematria' => '算术'], // Note: '算术' is a general term for arithmetic, '数字占卜' is more specific for Gematria
-    'iw' => ['home' => 'דף הבית', 'more_tools' => 'עוד כלים', 'blog' => 'בלוג', 'about_us' => 'אודות', 'contact_us' => 'צור קשר', 'terms' => 'תנאים', 'privacy' => 'מדיניות פרטיות', 'change_language' => 'שנה שפה', 'gematria' => 'גימטריה']
+    'iw' => ['home' => 'דף הבית', 'more_tools' => 'עוד כלים', 'blog' => 'בלוג', 'about_us' => 'אודות', 'contact_us' => 'צור קשר', 'terms' => 'תנאים', 'privacy' => 'מדיניות פרטיות', 'change_language' => 'שנה שפה', 'gematria' => 'גימטריה'],
+    'vi' => ['home' => 'Trang chủ', 'more_tools' => 'Công cụ khác', 'blog' => 'Blog', 'about_us' => 'Về chúng tôi', 'contact_us' => 'Liên hệ', 'terms' => 'Điều khoản', 'privacy' => 'Bảo mật', 'change_language' => 'Đổi ngôn ngữ', 'gematria' => 'GEMATRIA']
 ];
 
 $menu_texts = $translations[$lang_code] ?? $translations['en'];

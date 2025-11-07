@@ -59,6 +59,7 @@
     <link rel="alternate" hreflang="iw" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="pl" href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="zh" href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="vi" href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
 
     <meta name="keywords" content="数字占卜计算器, 希伯来文数字占卜, 英文数字占卜, 简单数字占卜">
@@ -119,7 +120,8 @@
                 <span title="Italiano">意大利语</span>、
                 <span title="עברית">希伯来语</span>、
                 <span title="Polski">波兰语</span>和
-                <strong>中文</strong>！
+                <strong>中文</strong>和
+                <span title="Tiếng Việt">越南语</span>！
             </p>
         </div>
 
@@ -228,6 +230,7 @@
                     <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
                     <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
                     <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                    <a href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">Tiếng Việt</a>
                 </div>
             </div>
         </div>

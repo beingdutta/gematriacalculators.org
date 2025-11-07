@@ -80,6 +80,7 @@
     <link rel="alternate" hreflang="iw" href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="pl" href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="zh" href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">
+    <link rel="alternate" hreflang="vi" href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">
     <link rel="alternate" hreflang="x-default" href="<?= $BASE_URL . ltrim($qs, '?') ?>">
 
     <meta name="keywords" content="מחשבון גימטריה, גימטריה עברית, גימטריה אנגלית, גימטריה פשוטה">
@@ -141,7 +142,8 @@
                 <span title="Italiano">איטלקית</span>,
                 <strong>עברית</strong>,
                 <span title="Polski">פולנית</span> ו
-                <span title="中文">סינית</span>!
+                <span title="中文">סינית</span> ו
+                <span title="Tiếng Việt">וייטנאמית</span>!
             </p>
         </div>
 
@@ -248,6 +250,7 @@
                     <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
                     <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
                     <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
+                    <a href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">Tiếng Việt</a>
                 </div>
             </div>
         </div>
