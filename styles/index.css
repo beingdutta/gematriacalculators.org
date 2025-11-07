@@ -84,13 +84,20 @@ body {
 .header {
   text-align: center;
   position: relative;
-  padding: 1.5rem 1rem 0 1rem;
+  padding: 2.5rem 1rem 2rem 1rem; /* Increased vertical padding */
+  margin-bottom: 2rem; /* Add space below the header */
+  border-bottom: 1px solid var(--border); /* Subtle separator */
 }
 
 #themeLogo {
   display: block;
-  width: 160px;
-  margin: 10px auto 1rem auto;
+  width: 120px; /* Reduced size for better initial content visibility */
+  margin: 0 auto 1rem auto; /* Adjusted margin for new size */
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Larger main title */
+  margin-bottom: 0.75rem; /* Space below title */
 }
 
 .theme-toggle .icon-sun,
@@ -259,7 +266,17 @@ body {
     transform: translateY(-50%); /* Perfect vertical alignment */
     z-index: 102;
   }
+
+  .header h1 {
+    font-size: 2rem; /* Adjust title size for mobile */
+    margin-bottom: 0.5rem;
+  }
   
+  .subtitle {
+    font-size: 0.9rem; /* Adjust subtitle size for mobile */
+    /* white-space, overflow, text-overflow already apply */
+  }
+
   .lang-switcher-btn {
       display: none; /* Hide desktop language switcher on mobile */
   }
@@ -378,6 +395,10 @@ body.menu-open {
    Typography Helpers & SEO Sections
    =================================================================== */
 
+.language-support-info p {
+  font-size: 11px; /* Set font size to 11px */
+}
+
 .subtitle {
 }
 
@@ -400,10 +421,10 @@ body.menu-open {
    =================================================================== */
 
 .calculator {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: transparent; /* Changed to transparent */
+  padding: 0rem;
+  border-radius: 0; /* Removed border-radius */
+  box-shadow: none; /* Removed box-shadow */
   margin-bottom: 2rem;
 }
 
@@ -415,10 +436,11 @@ body.menu-open {
 
 .input-group input {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.25rem; /* More padding for a taller input */
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px; /* Slightly larger border-radius */
   font-size: 1rem;
+  background: var(--card-bg); /* Changed to card background for visibility */
   transition: border-color var(--transition);
 }
 
@@ -427,20 +449,30 @@ body.menu-open {
   border-color: var(--primary);
 }
 
+/* Dark theme override for input fields to ensure readability */
+[data-theme="dark"] .input-group input {
+  background: #FFFFFF; /* Force white background */
+  color: #333333;      /* Force dark text for contrast */
+}
+
+
 .input-group .secondary {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 1.2rem;
-  border-radius: var(--radius);
+  background: var(--primary); /* Use primary color for clear button */
+  border: none;
+  color: white; /* White text for contrast */
+  font-size: 1.5rem; /* Larger icon */
+  border-radius: 12px; /* Match input border-radius */
+  width: 50px; /* Fixed width for a square button */
+  height: 50px; /* Fixed height for a square button */
   transition: var(--transition);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .input-group .secondary:hover {
-  background: var(--muted);
-  color: var(--card-bg);
+  background: var(--secondary); /* Change color on hover */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 /* Error state for inputs */
 .error {
   animation: shake 0.3s;
@@ -466,10 +498,10 @@ body.menu-open {
 }
 
 button,
-.decode-btn {
-  padding: 0.75rem 1.5rem;
+.decode-btn,
+.calculate-btn, .download-btn { /* Apply consistent padding to all buttons */
+  padding: 1rem 1.75rem; /* More generous padding */
   border: none;
-  border-radius: var(--radius);
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition) transform 0.1s ease;
@@ -477,20 +509,24 @@ button,
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  border-radius: 12px; /* Consistent border-radius */
+  font-weight: 600; /* Bolder text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Default shadow */
 }
 
 .calculate-btn {
   background: var(--primary);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2); /* Primary specific shadow */
 }
 
 .download-btn {
   background: var(--secondary);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(80, 227, 194, 0.2); /* Secondary specific shadow */
 }
 
-.calculate-btn:hover,
-.download-btn:hover {
+.button-container button:hover, .button-container .decode-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -502,6 +538,8 @@ button,
 }
 
 .decode-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
   background: var(--primary);
   color: #fff;
 }
@@ -547,21 +585,39 @@ button,
 }
 
 .result-card {
-  background: var(--bg);
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 1.5rem 0;
-  border-radius: var(--radius);
+  background: var(--card-bg); /* Use card background for result cards */
+  padding: 1.5rem; /* More padding */
+  margin: 1.25rem 0; /* Adjusted margin */
+  border-radius: 12px; /* Consistent border-radius */
+  border: 1px solid var(--border); /* Add a subtle border */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
+}
+
+.result-card h3 {
+  font-size: 1.3rem; /* Larger heading for results */
+  margin-bottom: 0.5rem;
+  color: var(--primary); /* Highlight with primary color */
+}
+
+.result-card h3 span {
+  font-weight: 700; /* Make the total stand out */
+}
+
+.result-card p {
+  font-size: 0.95rem; /* Slightly larger breakdown text */
+  color: var(--muted);
 }
 
 .copy-btn {
   position: absolute;
   top: 0.3rem;
   right: 0.3rem;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
+  background: var(--bg); /* Subtle background for copy button */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--primary);
   z-index: 2;
@@ -569,16 +625,24 @@ button,
 
 .copy-notification {
   position: absolute;
-  top: 1.75rem;
-  right: 0.3rem;
+  top: 0.5rem; /* Adjust position relative to button */
+  right: 3.5rem; /* Position next to the button */
   background: var(--primary);
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   font-size: 0.75rem;
   display: none;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   white-space: nowrap;
   z-index: 1;
+}
+
+.copy-notification.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
