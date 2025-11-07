@@ -26,11 +26,11 @@ $translations = [
     'en' => ['home' => 'Home', 'more_tools' => 'More Tools', 'blog' => 'Blog', 'about_us' => 'About Us', 'contact_us' => 'Contact Us', 'terms' => 'Terms & Conditions', 'privacy' => 'Privacy Policy', 'change_language' => 'Change Language', 'gematria' => 'GEMATRIA'],
     'de' => ['home' => 'Startseite', 'more_tools' => 'Mehr Tools', 'blog' => 'Blog', 'about_us' => 'Über uns', 'contact_us' => 'Kontakt', 'terms' => 'AGB', 'privacy' => 'Datenschutz', 'change_language' => 'Sprache ändern', 'gematria' => 'GEMATRIE'],
     'es' => ['home' => 'Inicio', 'more_tools' => 'Más Herramientas', 'blog' => 'Blog', 'about_us' => 'Sobre Nosotros', 'contact_us' => 'Contáctenos', 'terms' => 'Términos y Condiciones', 'privacy' => 'Política de Privacidad', 'change_language' => 'Cambiar Idioma', 'gematria' => 'GEMATRIA'],
-    'ru' => ['home' => 'Главная', 'more_tools' => 'Инструменты', 'blog' => 'Блог', 'about_us' => 'О нас', 'contact_us' => 'Контакты', 'terms' => 'Условия', 'privacy' => 'Политика конфиденциальности', 'change_language' => 'Сменить язык', 'gematria' => 'ГЕМАТРИЯ'],
+    'ru' => ['home' => 'Главная', 'more_tools' => 'Инструменты', 'blog' => 'Блог', 'about_us' => 'О нас', 'contact_us' => 'Контакты', 'terms' => 'Условия', 'privacy' => 'Политика конфиденциальности', 'change_language' => 'Сменить язык', 'gematria' => 'ГЕМАТРИЯ'], // Note: 'ГЕМАТРИЯ' is the Russian translation for Gematria
     'pt' => ['home' => 'Início', 'more_tools' => 'Mais Ferramentas', 'blog' => 'Blog', 'about_us' => 'Sobre Nós', 'contact_us' => 'Contato', 'terms' => 'Termos e Condições', 'privacy' => 'Política de Privacidade', 'change_language' => 'Mudar Idioma', 'gematria' => 'GEMATRIA'],
     'it' => ['home' => 'Home', 'more_tools' => 'Altri Strumenti', 'blog' => 'Blog', 'about_us' => 'Chi Siamo', 'contact_us' => 'Contattaci', 'terms' => 'Termini e Condizioni', 'privacy' => 'Privacy Policy', 'change_language' => 'Cambia Lingua', 'gematria' => 'GEMATRIA'],
     'pl' => ['home' => 'Strona główna', 'more_tools' => 'Więcej Narzędzi', 'blog' => 'Blog', 'about_us' => 'O Nas', 'contact_us' => 'Kontakt', 'terms' => 'Regulamin', 'privacy' => 'Polityka Prywatności', 'change_language' => 'Zmień język', 'gematria' => 'GEMATRIA'],
-    'zh' => ['home' => '首页', 'more_tools' => '更多工具', 'blog' => '博客', 'about_us' => '关于我们', 'contact_us' => '联系我们', 'terms' => '使用条款', 'privacy' => '隐私政策', 'change_language' => '切换语言', 'gematria' => '算术'],
+    'zh' => ['home' => '首页', 'more_tools' => '更多工具', 'blog' => '博客', 'about_us' => '关于我们', 'contact_us' => '联系我们', 'terms' => '使用条款', 'privacy' => '隐私政策', 'change_language' => '切换语言', 'gematria' => '算术'], // Note: '算术' is a general term for arithmetic, '数字占卜' is more specific for Gematria
     'iw' => ['home' => 'דף הבית', 'more_tools' => 'עוד כלים', 'blog' => 'בלוג', 'about_us' => 'אודות', 'contact_us' => 'צור קשר', 'terms' => 'תנאים', 'privacy' => 'מדיניות פרטיות', 'change_language' => 'שנה שפה', 'gematria' => 'גימטריה']
 ];
 
@@ -39,6 +39,23 @@ $menu_texts = $translations[$lang_code] ?? $translations['en'];
 // Define base paths for links
 $base_path = ($lang_code !== 'en') ? '/' . $lang_code : '';
 
+// Define menu items
+$menu_items = [
+    ['key' => 'home', 'path' => $base_path ?: '/'],
+    ['key' => 'more_tools', 'path' => '/more-tools.php'],
+    ['key' => 'blog', 'path' => '/blog-collections.php'],
+    ['key' => 'about_us', 'path' => '/about-us.php'],
+    ['key' => 'contact_us', 'path' => '/contact-us.php'],
+    ['key' => 'terms', 'path' => '/terms-conditions.php'],
+    ['key' => 'privacy', 'path' => '/privacy-policy.php'],
+];
+
+// For RTL languages, reverse the order of menu items to maintain visual LTR flow
+$rtl_languages = ['iw']; // Add other RTL language codes if necessary
+if (in_array($lang_code, $rtl_languages)) {
+    $menu_items = array_reverse($menu_items);
+}
+
 ?>
 <nav class="header-nav">
     <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -46,14 +63,16 @@ $base_path = ($lang_code !== 'en') ? '/' . $lang_code : '';
     </button>
     <a href="<?= $base_path ?: '/' ?>" class="mobile-site-title" title="Home"><?= htmlspecialchars($menu_texts['gematria']) ?></a>
     <div class="nav-links">
-        <?php // Add 'active' class based on the current URI ?>
-        <a href="<?= $base_path ?: '/' ?>" class="<?= ($current_uri == ($base_path ?: '/') || strpos($current_uri, 'index.php') !== false && (strpos($current_uri, $base_path) !== false || $base_path == '')) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['home']) ?></a>
-        <a href="/more-tools.php" class="<?= (strpos($current_uri, 'more-tools') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['more_tools']) ?></a>
-        <a href="/blog-collections.php" class="<?= (strpos($current_uri, 'blog-collections') !== false || strpos($current_uri, '/blogs/') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['blog']) ?></a>
-        <a href="/about-us.php" class="<?= (strpos($current_uri, 'about-us') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['about_us']) ?></a>
-        <a href="/contact-us.php" class="<?= (strpos($current_uri, 'contact-us') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['contact_us']) ?></a>
-        <a href="/terms-conditions.php" class="<?= (strpos($current_uri, 'terms-conditions') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['terms']) ?></a>
-        <a href="/privacy-policy.php" class="<?= (strpos($current_uri, 'privacy-policy') !== false) ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts['privacy']) ?></a>
+        <?php foreach ($menu_items as $item):
+            $is_active = false;
+            if ($item['key'] === 'home') {
+                $is_active = ($current_uri === ($base_path ?: '/')) || (strpos($current_uri, 'index.php') !== false && (strpos($current_uri, $base_path) !== false || $base_path === ''));
+            } else {
+                $is_active = strpos($current_uri, trim($item['path'], '/')) !== false;
+            }
+        ?>
+            <a href="<?= $item['path'] ?>" class="<?= $is_active ? 'active' : '' ?>"><?= htmlspecialchars($menu_texts[$item['key']]) ?></a>
+        <?php endforeach; ?>
         <button class="lang-change-btn mobile-only" onclick="openLangPopup()"><?= htmlspecialchars($menu_texts['change_language']) ?></button>
     </div>
     <button class="lang-switcher-btn" onclick="openLangPopup()" aria-label="Change language"><?= htmlspecialchars($current_lang_name) ?></button>
