@@ -6,10 +6,10 @@
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
-  $SITE_NAME        = '数字占卜计算器';
-  $BASE_URL         = 'https://gematriacalculators.org/';
+  $SITE_NAME = '数字占卜计算器';
+  $BASE_URL = BASE_URL; // Define variable from constant
 
-  $displayInput = trim($inputRaw);
+  $displayInput = trim($inputRaw); // BASE_URL is defined in helpers.php
   if ($displayInput !== '') {
     $displayInput = mb_strimwidth($displayInput, 0, 60, '…', 'UTF-8');
   }
@@ -105,26 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
-    <nav class="header-nav">
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-        <a href="/zh/" class="mobile-site-title">GEMATRIA</a>
-        <div class="nav-links">
-          <a href="/zh/">首页</a>
-          <a href="/more-tools/">更多工具</a>
-          <a href="/blog-collections/">博客</a>
-          <a href="/about-us/">关于我们</a>
-          <a href="/contact-us/">联系我们</a>
-          <a href="/terms-conditions/">使用条款</a>
-          <a href="/privacy-policy/">隐私政策</a>
-          <button class="lang-change-btn mobile-only" onclick="openLangPopup()">切换语言</button>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-    </nav>
+    <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
         <!-- Language Support Info -->
         <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
@@ -145,37 +126,6 @@
         <div class="recent-phrases ticker-bar">
             <h4>最近搜索：</h4>
             <button class="lang-change-btn">切换语言</button>
-            <?php $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : ''; $here = 'zh'; ?>
-            <nav class="lang-switcher" aria-label="语言选择">
-            <?= lang_switcher_link('en','EN',$qs,$here) ?> |
-            <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
-            <?= lang_switcher_link('de','DE',$qs,$here) ?> |
-            <?= lang_switcher_link('es','ES',$qs,$here) ?> |
-            <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
-            <?= lang_switcher_link('it','IT',$qs,$here) ?> |
-            <?= lang_switcher_link('iw','HE',$qs,$here) ?> |
-            <?= lang_switcher_link('pl','PL',$qs,$here) ?> |
-            <?= lang_switcher_link('zh','CN',$qs,$here) ?>
-            </nav>
-            
-            <!-- Language Popup -->
-            <div class="lang-popup">
-                <div class="lang-popup-content">
-                    <button class="lang-popup-close">&times;</button>
-                    <h4>选择语言</h4>
-                    <div class="lang-grid">
-                        <a href="<?= $BASE_URL . ltrim($qs, '?') ?>">English</a>
-                        <a href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
-                        <a href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
-                        <a href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
-                        <a href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
-                        <a href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
-                        <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
-                        <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
-                        <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
-                    </div>
-                </div>
-            </div>
             <div class="ticker"><div class="ticker__list"></div></div>
         </div>
         <header class="header">
@@ -184,13 +134,6 @@
             <p class="subtitle">（输入一个单词或数字，如：神、圣经、希伯来文、圣洁 - 计算数字占卜值）</p>
         </header>
         <main class="calculator">
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
             <div class="input-group">
                 <input id="inputText" type="text" placeholder="输入文字计算..." value="<?= htmlspecialchars($inputRaw, ENT_QUOTES, 'UTF-8') ?>" />
                 <button class="secondary" onclick="clearInput()" title="清除">✕</button>

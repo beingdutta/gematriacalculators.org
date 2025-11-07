@@ -6,10 +6,10 @@
   $inputRaw = $_GET['input'] ?? '';
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
-  $SITE_NAME        = 'מחשבון גימטריה';
-  $BASE_URL         = 'https://gematriacalculators.org/';
+  $SITE_NAME = 'מחשבון גימטריה';
+  $BASE_URL = BASE_URL; // Define variable from constant
 
-  $displayInput = trim($inputRaw);
+  $displayInput = trim($inputRaw); // BASE_URL is defined in helpers.php
   if ($displayInput !== '') {
     $displayInput = mb_strimwidth($displayInput, 0, 60, '…', 'UTF-8');
   }
@@ -126,26 +126,7 @@
     <script src="/scripts/index.js"></script>
 </head>
 <body>
-    <nav class="header-nav">
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-        <a href="/iw/" class="mobile-site-title">GEMATRIA</a>
-        <div class="nav-links">
-            <a href="/iw/">דף הבית</a>
-            <a href="/more-tools/">עוד כלים</a>
-            <a href="/blog-collections/">בלוג</a>
-            <a href="/about-us/">אודות</a>
-            <a href="/contact-us/">צור קשר</a>
-            <a href="/terms-conditions/">תנאים</a>
-            <a href="/privacy-policy/">מדיניות פרטיות</a>
-            <button class="lang-change-btn mobile-only" onclick="openLangPopup()">שנה שפה</button>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="החלף ערכת נושא">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-    </nav>
+    <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
         
         <!-- Language Support Info -->
@@ -166,19 +147,6 @@
 
         <div class="recent-phrases ticker-bar">
             <h4>חיפושים אחרונים:</h4>
-            <?php $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : ''; $here = trim(dirname($_SERVER['SCRIPT_NAME']), '/'); ?>
-            <nav class="lang-switcher" aria-label="בחירת שפה">
-            <?php $here = 'iw'; // Force correct language code ?>
-            <?= lang_switcher_link('en','EN',$qs,$here) ?> |
-            <?= lang_switcher_link('de','DE',$qs,$here) ?> |
-            <?= lang_switcher_link('es','ES',$qs,$here) ?> |
-            <?= lang_switcher_link('it','IT',$qs,$here) ?> |
-            <?= lang_switcher_link('iw','HE',$qs,$here) ?> |
-            <?= lang_switcher_link('pl','PL',$qs,$here) ?> |
-            <?= lang_switcher_link('pt','PT',$qs,$here) ?> |
-            <?= lang_switcher_link('ru','RU',$qs,$here) ?> |
-            <?= lang_switcher_link('zh','CN',$qs,$here) ?>
-            </nav>
             <div class="ticker"><div class="ticker__list"></div></div>
         </div>
         <header class="header">
