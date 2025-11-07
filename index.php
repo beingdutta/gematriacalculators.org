@@ -9,7 +9,7 @@
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
   // SEO: make description STATIC, keep title concise (optionally dynamic)
-  $SITE_NAME        = 'Best Gematria Calculator';
+  $SITE_NAME        = 'Gematria Calculator';
   $BASE_URL         = 'https://gematriacalculators.org/';
 
   // Clean a display version of the query for title/OG only
@@ -28,11 +28,11 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Free Gematria Calculator — Hebrew, English & Simple | ' . $SITE_NAME;
+    $pageTitle = 'Gematria Calculator — The Best Gematrix & Numerology Tool';
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
-  $metaDescription = 'Free online Hebrew Gematria Calculator - The best gematria calculator for Hebrew, English & Simple systems. Bible gematria calculator with instant results. Try our gematria search engine now!';
+  $metaDescription = 'The web\'s best Gematria Calculator. Free, instant, and accurate results for English, Hebrew, and Simple Gematria. An essential tool for gematrix, numerology, and biblical analysis.';
 
   // Canonical: point root when empty; deep-link when there's an input
   $canonicalUrl = $BASE_URL;
@@ -44,7 +44,7 @@
   // Open Graph / Twitter: keep short and dependable; use static description
   $ogTitle = ($results && !empty($displayInput))
     ? sprintf('%s — Gematria Value: %s', $displayInput, (string)$results['english']['total'])
-    : 'Free Gematria Calculator';
+    : 'Gematria Calculator — The Best Gematrix & Numerology Tool';
 
   // Optional: a share image you host (1200×630 recommended)
   $ogImage = $BASE_URL . 'assets/preview.jpg';
@@ -79,7 +79,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Keep keywords minimal or remove (search engines largely ignore this) -->
-    <meta name="keywords" content="gematria calculator, hebrew gematria, english gematria, simple gematria">
+    <meta name="keywords" content="gematria calculator, gematrix, gematria, hebrew gematria, english gematria, simple gematria, gematria decoder, numerology calculator">
 
     <!-- Static/clean SEO -->
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
@@ -121,9 +121,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Best Gematria Calculator",
+      "name": "Gematria Calculator",
       "url": "<?= htmlspecialchars($BASE_URL, ENT_QUOTES, 'UTF-8'); ?>",
-      "description": "Free online Hebrew Gematria Calculator with Bible gematria and English gematria support. Instant calculations and deep meaning analysis.",
+      "description": "The web's best Gematria Calculator for English, Hebrew, and Simple Gematria. An essential tool for gematrix, numerology, and biblical analysis.",
       "applicationCategory": "Calculator",
       "operatingSystem": "Any",
       "inLanguage": "en",
@@ -138,7 +138,8 @@
         "Simple Gematria Values",
         "Bible Gematria Analysis",
         "PDF Export Feature",
-        "Multi-language Support"
+        "Multi-language Support",
+        "Gematria Decoder"
       ],
       "keywords": "gematria calculator, hebrew gematria, english gematria, bible gematria calculator, simple gematria calculator, gematria search engine",
       "potentialAction": {
@@ -193,7 +194,7 @@
 
         <header class="header">
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
-            <h1>Gematria Calculator</h1>
+            <h1>The Best Gematria Calculator</h1>
             <p class="subtitle">(Type in a word or number, e.g., God, Bible, to calculate gematria values)</p>
         </header>
 
@@ -286,13 +287,13 @@
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Discover Hidden Numerical Meanings</h4>
-            <p>This free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "simple gematria calculator" — and this tool provides the functionality they seek.</p>
+            <p>Our free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for a gematria calculator online for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "simple gematria calculator" — and this tool provides the functionality they seek. Even if you misspell it as 'gematria calculater' or 'gemetria', our engine understands you.</p>
             <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
         </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Our best gematria calculator us online tool or (aka gematrix calculator) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence.</p>
+            <p>Our best gematria calculator (often referred to as a gematrix calculator) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can decode biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence. This tool is a great alternative to Gematrix.org or the Gematrinator.</p>
         </div>
 
         <hr class="divider">
