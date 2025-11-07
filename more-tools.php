@@ -7,7 +7,7 @@
 <html lang="en" data-theme="light">
 
     <head>
-        <meta charset="UTF-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>More Numerology & Mystical Tools - Gematria Calculators</title>
         <link rel="canonical" href="https://gematriacalculators.org/more-tools.php">
@@ -33,8 +33,9 @@
                 <div class="tool-grid">
                     <?php
                         $tools = [
+                            ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny number from your birth date.', 'icon' => '✨', 'url' => '/more-tools/life-path-number-calculator.php'],
                             ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '🔢', 'url' => '/more-tools/loshu-grid.php'],
-                            ['title' => 'FLAME Calculator', 'desc' => 'Find the love compatibility using the FLAME game.', 'icon' => '❤️', 'url' => '/more-tools/flame-calculator.php'],
+                            ['title' => 'FLAME Calculator', 'desc' => 'Find love compatibility with the classic FLAME game.', 'icon' => '❤️', 'url' => '/more-tools/flame-calculator.php'],
                             //['title' => 'Kundli Finder', 'desc' => 'Generate a basic Kundli using birth details.', 'icon' => '🪐', 'url' => '#'],
                             //['title' => 'Angel Number Decoder', 'desc' => 'Uncover meanings of recurring numbers.', 'icon' => '👼', 'url' => '#'],
                             //['title' => 'Chaldean Numerology', 'desc' => 'Calculate name numbers using the Chaldean system.', 'icon' => '🔮', 'url' => '#'],
