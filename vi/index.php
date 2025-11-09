@@ -22,10 +22,10 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Máy tính Gematria Miễn phí — Tiếng Do Thái, Tiếng Anh & Đơn giản | ' . $SITE_NAME;
+    $pageTitle = 'Máy tính Gematria Miễn phí — Gematrix & Numerology | ' . $SITE_NAME;
   }
 
-  $metaDescription = 'Máy tính Gematria trực tuyến miễn phí cho các hệ thống tiếng Do Thái, tiếng Anh và đơn giản. Tính toán ngay lập tức các giá trị và ý nghĩa gematria cho bất kỳ từ hoặc cụm từ nào.';
+  $metaDescription = 'Máy tính Gematria miễn phí tốt nhất. Nhận kết quả tức thì và chính xác với công cụ gematrix và số học của chúng tôi, hỗ trợ Gematria tiếng Anh, tiếng Do Thái và Đơn giản. Hoàn hảo cho phân tích kinh thánh và giải mã giá trị.';
 
   $canonicalUrl = $BASE_URL . 'vi/';
   if (!empty($inputRaw)) {
@@ -34,7 +34,7 @@
 
   $ogTitle = ($results && !empty($displayInput))
     ? sprintf('%s — Giá trị Gematria: %s', $displayInput, (string)$results['english']['total'])
-    : 'Máy tính Gematria Miễn phí';
+    : 'Máy tính Gematria Miễn phí — Gematrix & Numerology';
 
   $ogImage = $BASE_URL . 'assets/preview.jpg';
 ?>
@@ -159,8 +159,8 @@
 
         <header class="header">
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="logo trang web máy tính gematria">
-            <h1>Máy tính Gematria</h1>
-            <p class="subtitle">(Nhập một từ hoặc một số, ví dụ: Chúa, Kinh Thánh, Tiếng Do Thái, Thánh – để tính giá trị gematria)</p>
+            <h1>Máy tính Gematria (Gematrix)</h1>
+            <p class="subtitle">(Nhập một từ, tên hoặc số, ví dụ: Chúa, Kinh Thánh, Tiếng Do Thái – để tính giá trị gematria trực tuyến)</p>
         </header>
 
         <main class="calculator">
@@ -168,14 +168,14 @@
                 <input
                     id="inputText"
                     type="text"
-                    placeholder="Nhập văn bản để tính toán..."
+                    placeholder="Tính gematria của tên tôi..."
                     value="<?= htmlspecialchars($inputRaw, ENT_QUOTES, 'UTF-8') ?>"
                 />
                 <button class="secondary" onclick="clearInput()" title="Xóa">✕</button>
             </div>
 
             <div class="button-container">
-                <button class="calculate-btn" onclick="calculate()">Tính toán</button>
+                <button class="calculate-btn" onclick="calculate()">Tính Gematria</button>
                 <button class="download-btn" onclick="calculateAndDownload()">Tải xuống PDF</button>
                 <a href="/vi/decode-gematria-value/" class="decode-btn">Giải mã Gematria</a>
             </div>
@@ -249,13 +249,13 @@
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Khám phá ý nghĩa số bị ẩn</h4>
-            <p>Máy tính gematria trực tuyến miễn phí này hoạt động như một máy tính tên gematria mạnh mẽ và hỗ trợ chuyển đổi gematria từ tiếng Anh sang tiếng Do Thái. Cho dù bạn đang tìm kiếm một máy tính gematria trực tuyến để phân tích kinh thánh hay chỉ là một phép tính gematria đơn giản để khám phá ý nghĩa của các con số, công cụ này được thiết kế dành cho bạn.</p>
+            <p><strong>Máy tính gematria trực tuyến miễn phí</strong> này hoạt động như một <strong>máy tính tên gematria</strong> mạnh mẽ và hỗ trợ chuyển đổi <strong>gematria từ tiếng Anh sang tiếng Do Thái</strong>. Cho dù bạn đang tìm kiếm một <strong>máy tính gematria trực tuyến</strong> để phân tích kinh thánh hay chỉ là một <strong>phép tính gematria đơn giản</strong> để khám phá ý nghĩa của các con số, công cụ này được thiết kế dành cho bạn. Người dùng thường tìm kiếm "<strong>máy tính gematria</strong>" hoặc "<strong>gematria calculater</strong>", và công cụ của chúng tôi đáp ứng nhu cầu đó.</p>
             <div class="example">Ví dụ: <strong>Kinh Thánh</strong> = 38 (Tiếng Do Thái), 180 (Tiếng Anh), 30 (Đơn giản)</div>
         </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Máy tính gematria tốt nhất của chúng tôi trực tuyến được thiết kế cho độ chính xác, tốc độ và sự đơn giản. Nó hoàn hảo cho các học giả, những người tìm kiếm tâm linh, hoặc bất kỳ ai quan tâm đến các truyền thống thần bí đằng sau các văn bản thiêng liêng. Với máy tính gematria tiếng Do Thái của chúng tôi, bạn có thể giải mã các đoạn kinh thánh, phân tích các tên tâm linh, hoặc khám phá các kết nối bí truyền — tất cả ở một nơi.</p>
+            <p><strong>Máy tính gematria</strong> tốt nhất của chúng tôi (thường được gọi là <strong>gematrix</strong>) được thiết kế cho độ chính xác và sự đơn giản. Nó hoàn hảo cho các học giả, những người tìm kiếm tâm linh, hoặc bất kỳ ai quan tâm đến các văn bản thiêng liêng. Với <strong>máy tính gematria tiếng Do Thái</strong> của chúng tôi, bạn có thể sử dụng <strong>bộ giải mã gematria</strong> của chúng tôi để phân tích các tên tâm linh hoặc khám phá các kết nối bí truyền. Hãy thử <strong>máy tính gematria đơn giản miễn phí</strong> ngay hôm nay và đắm mình vào thế giới của những con số một cách tự tin. Đây là một sự thay thế tuyệt vời cho Gematrix.org.</p>
         </div>
 
         <hr class="divider">
@@ -304,7 +304,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Một công cụ hoặc phần mềm máy tính gematria trực tuyến miễn phí tự động tính toán giá trị số của một từ, cụm từ hoặc tên bằng cách gán giá trị số cho mỗi chữ cái, dựa trên các hệ thống gematria cụ thể.
+                    Một <strong>máy tính gematria miễn phí</strong> là một công cụ trực tuyến tự động tính toán giá trị số của một từ hoặc cụm từ. Nó hoạt động như một <strong>bộ tạo gematria</strong> hiện đại dựa trên các hệ thống số học cổ đại.
                 </div>
             </div>
 
@@ -314,7 +314,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Để sử dụng máy tính gematria trực tuyến miễn phí tốt nhất của chúng tôi, chỉ cần nhập một từ, cụm từ hoặc tên vào hộp nhập liệu, sau đó nhấp vào “Tính toán” để tạo ra các giá trị số của nó trên các hệ thống tiếng Do Thái, tiếng Anh và đơn giản. Để lưu lại, bạn cũng có thể tải xuống báo cáo PDF.
+                    Để sử dụng <strong>máy tính gematria trực tuyến miễn phí</strong> tốt nhất của chúng tôi, chỉ cần nhập một từ hoặc cụm từ vào hộp nhập liệu, sau đó nhấp vào “Tính Gematria” để tạo ra các giá trị số của nó trên các hệ thống tiếng Do Thái, tiếng Anh và đơn giản.
                 </div>
             </div>
 
@@ -324,7 +324,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Máy tính gematria đơn giản của chúng tôi gán A=1, B=2, C=3, … Z=26, sau đó cộng các giá trị đó lại. Nhập một từ như “Sự thật” và nó sẽ xuất ra tổng, bạn có thể so sánh với các từ khác có cùng giá trị.
+                    <strong>Máy tính gematria đơn giản</strong> của chúng tôi gán A=1, B=2, C=3, … Z=26, sau đó cộng các giá trị đó lại. Nhập một từ như “Sự thật” và nó sẽ xuất ra tổng, bạn có thể so sánh với các từ khác có cùng giá trị.
                 </div>
             </div>
 
@@ -334,7 +334,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Máy tính gematria Kinh Thánh của chúng tôi được thiết kế để phân tích các văn bản và tên trong Kinh Thánh. Chỉ cần nhập bất kỳ từ hoặc cụm từ nào từ Kinh Thánh, và bạn sẽ nhận được ngay các giá trị gematria tiếng Do Thái, tiếng Anh và đơn giản. Máy tính của chúng tôi hỗ trợ cả ký tự tiếng Do Thái hiện đại và Kinh Thánh, làm cho nó trở thành máy tính gematria tốt nhất cho nghiên cứu Kinh Thánh.
+                    <strong>Máy tính gematria Kinh Thánh</strong> của chúng tôi được thiết kế để phân tích các văn bản và tên trong Kinh Thánh. Bạn sẽ nhận được ngay các giá trị <strong>gematria tiếng Do Thái, tiếng Anh và đơn giản</strong>. Máy tính của chúng tôi hỗ trợ ký tự tiếng Do Thái, làm cho nó trở thành <strong>máy tính gematria tốt nhất cho nghiên cứu Kinh Thánh</strong>. Chúng tôi cũng hỗ trợ các nguyên tắc của <strong>máy tính gematria Hy Lạp</strong>.
                 </div>
             </div>
             
@@ -344,7 +344,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Công cụ tìm kiếm gematria của chúng tôi cho phép bạn tìm các từ và cụm từ có giá trị số cụ thể. Bạn có thể tìm kiếm bằng các hệ thống gematria tiếng Do Thái, tiếng Anh hoặc đơn giản. Tính năng này đặc biệt hữu ích cho nghiên cứu Kinh Thánh và tìm kiếm mối liên hệ giữa các từ và khái niệm khác nhau.
+                    <strong>Công cụ tìm kiếm gematria</strong> và <strong>bộ giải mã gematria</strong> của chúng tôi cho phép bạn tìm các từ có giá trị số cụ thể. Bạn có thể tìm kiếm bằng các hệ thống <strong>gematria tiếng Do Thái, tiếng Anh hoặc đơn giản</strong>.
                 </div>
             </div>
 
@@ -354,7 +354,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Có! Máy tính tên gematria này tự động bỏ qua dấu cách và các ký tự đặc biệt, chỉ tập trung vào các chữ cái. Chúng tôi hỗ trợ máy tính tên và ý nghĩa gematria cho tất cả người dùng mọi lúc 24*7 miễn phí. Máy tính của chúng tôi đặc biệt hữu ích để phân tích các cụm từ nhiều từ từ các văn bản tôn giáo.
+                    Có! <strong>Máy tính tên gematria</strong> này tự động bỏ qua dấu cách và các ký tự đặc biệt. Chúng tôi hỗ trợ <strong>máy tính tên và ý nghĩa gematria</strong> cho tất cả người dùng miễn phí.
                 </div>
             </div>
 
@@ -364,7 +364,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Một <strong>Máy tính Gematria tiếng Anh</strong> là một công cụ gán giá trị số cho các chữ cái trong bảng chữ cái tiếng Anh. Không giống như tiếng Do Thái, tiếng Anh không có một hệ thống cổ xưa duy nhất, vì vậy các máy tính sử dụng nhiều mật mã khác nhau như Gematria đơn giản (A=1, B=2), Thứ tự đảo ngược (A=26, B=25), và Rút gọn. Điều này cho phép bạn khám phá các mẫu số và các kết nối biểu tượng giữa các từ, tên và cụm từ tiếng Anh, tiết lộ các lớp ý nghĩa ẩn giấu.
+                    Một <strong>Máy tính Gematria tiếng Anh</strong> gán giá trị số cho các chữ cái trong bảng chữ cái tiếng Anh. <strong>Máy tính gematria tiếng Anh</strong> của chúng tôi sử dụng nhiều mật mã khác nhau như Gematria đơn giản (A=1, B=2) để tiết lộ các lớp ý nghĩa ẩn giấu.
                 </div>
             </div>
 
@@ -374,7 +374,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Một <strong>máy tính gematria</strong> dành cho bất kỳ ai tò mò về cấu trúc số ẩn của ngôn ngữ. Nó hoàn hảo cho:
+                    Một <strong>máy tính số học gematria</strong> dành cho bất kỳ ai tò mò về cấu trúc số ẩn của ngôn ngữ. Nó hoàn hảo cho:
                     <ul>
                         <li><strong>Những người tìm kiếm tâm linh</strong> khám phá các văn bản thiêng liêng như Kinh Thánh.</li>
                         <li><strong>Nhà văn và nghệ sĩ</strong> tìm kiếm nguồn cảm hứng sáng tạo và chiều sâu biểu tượng.</li>
@@ -391,7 +391,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Một <strong>Máy tính Gematria Do Thái</strong> (hoặc Máy tính Gematria tiếng Do Thái) là một công cụ dựa trên truyền thống Do Thái cổ xưa về việc gán giá trị số cho 22 chữ cái của bảng chữ cái tiếng Do Thái. Nó chủ yếu sử dụng hệ thống <em>Mispar Hechrechi</em> (Tiêu chuẩn), là nền tảng cho Kabbalah và việc giải thích Torah. Loại máy tính này rất cần thiết để nghiên cứu các giá trị số của tên, khái niệm và câu Kinh Thánh để khám phá các mối liên hệ thần học và thần bí sâu sắc hơn.
+                    Một <strong>Máy tính Gematria Do Thái</strong> (hoặc <strong>Máy tính Gematria tiếng Do Thái</strong>) dựa trên truyền thống Do Thái về việc gán giá trị số cho các chữ cái tiếng Do Thái. Loại <strong>máy tính gematria tiếng Do Thái</strong> này rất cần thiết để nghiên cứu các giá trị số của tên và khái niệm trong Kinh Thánh.
                 </div>
             </div>
 

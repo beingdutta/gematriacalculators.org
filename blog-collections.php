@@ -41,6 +41,19 @@
             <h2 class="blog-heading">Latest Reads</h2>
 
             <article class="blog-card">
+                <a href="/blogs/biblical-meaning-of-888/" class="card-image-link">
+                    <img src="<?= $images[array_rand($images)] ?>" alt="Glowing 888 number with biblical symbols." loading="lazy">
+                </a>
+                <div class="card-content">
+                    <span class="card-category">Biblical Numerology</span>
+                    <h3><a href="/blogs/biblical-meaning-of-888/">The Biblical Meaning of 888</a></h3>
+                    <h4 class="article-date">Published: Nov 07, 2025</h4>
+                    <p class="article-excerpt">Explore the profound biblical meaning of the number 888 and its connection to Jesus, resurrection, and new beginnings in Christian numerology and Bible Gematria....</p>
+                    <a href="/blogs/biblical-meaning-of-888/" class="read-more">Read More <span class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
                 <a href="/blogs/gematria-explained/" class="card-image-link">
                     <img src="<?= $images[array_rand($images)] ?>" alt="Abstract representation of Gematria numbers and letters." loading="lazy">
                 </a>
