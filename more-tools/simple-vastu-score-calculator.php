@@ -26,19 +26,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Vastu Score Calculator - Check Your House Vastu Online</title>
 
-    <meta name="description" content="Use our free Vastu Calculator to check your house's Vastu compliance score. Get an instant analysis of your kitchen, bedroom, and main entrance placements, along with simple remedies for Vastu defects.">
+    <meta name="description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get instant analysis of room placements and simple remedies for Vastu defects.">
     <meta name="keywords" content="vastu calculator, vastu check for house, vastu score calculator, vastu for house facing, kitchen vastu check, vastu shastra calculator, vastu defects calculator, master bedroom vastu, vastu for home, Vastu Shastra, Indian architecture, house energy, vastu compliance, vastu remedies, home placement, Vedic">
     <meta property="og:title" content="Simple Vastu Score Calculator - Check Your House Vastu Online">
-    <meta property="og:description" content="Use our free Vastu Calculator to check your house's Vastu compliance score. Get an instant analysis of your kitchen, bedroom, and main entrance placements, along with simple remedies for Vastu defects.">
+    <meta property="og:description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get an instant analysis of room placements and simple remedies for Vastu defects.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematriacalculators.org/more-tools/simple-vastu-score-calculator.php">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simple Vastu Score Calculator - Check Your House Vastu Online">
-    <meta name="twitter:description" content="Use our free Vastu Calculator to check your house's Vastu compliance score. Get an instant analysis of your kitchen, bedroom, and main entrance placements, along with simple remedies for Vastu defects.">
+    <meta name="twitter:description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get an instant analysis of room placements and simple remedies for Vastu defects.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/simple-vastu-score-calculator.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/simple-vastu-score-calculator.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">

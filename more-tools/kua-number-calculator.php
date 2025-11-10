@@ -26,19 +26,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kua Number Calculator - Find Your Feng Shui Lucky Directions</title>
 
-    <meta name="description" content="Calculate your Kua number instantly with our free Feng Shui Kua Number Calculator. Discover your personal energy, lucky directions, and best placements for harmony and success.">
+    <meta name="description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta name="keywords" content="kua number calculator, calculate my kua number, feng shui lucky directions, feng shui calculator, feng shui birth date, eight mansions calculator, ming gua calculator, kua number compatibility, kua number 2025, feng shui, lucky directions, personal energy, east group, west group, Chinese astrology, Loshu Grid">
     <meta property="og:title" content="Kua Number Calculator - Find Your Feng Shui Lucky Directions">
-    <meta property="og:description" content="Calculate your Kua number instantly with our free Feng Shui Kua Number Calculator. Discover your personal energy, lucky directions, and best placements for harmony and success.">
+    <meta property="og:description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematriacalculators.org/more-tools/kua-number-calculator.php">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kua Number Calculator - Find Your Feng Shui Lucky Directions">
-    <meta name="twitter:description" content="Calculate your Kua number instantly with our free Feng Shui Kua Number Calculator. Discover your personal energy, lucky directions, and best placements for harmony and success.">
+    <meta name="twitter:description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/kua-number-calculator.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/kua-number-calculator.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">

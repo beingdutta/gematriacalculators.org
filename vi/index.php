@@ -25,7 +25,7 @@
     $pageTitle = 'Máy tính Gematria Miễn phí — Gematrix & Numerology | ' . $SITE_NAME;
   }
 
-  $metaDescription = 'Máy tính Gematria miễn phí tốt nhất. Nhận kết quả tức thì và chính xác với công cụ gematrix và số học của chúng tôi, hỗ trợ Gematria tiếng Anh, tiếng Do Thái và Đơn giản. Hoàn hảo cho phân tích kinh thánh và giải mã giá trị.';
+  $metaDescription = 'Máy tính Gematria miễn phí cho kết quả tức thì. Công cụ gematrix của chúng tôi hỗ trợ Gematria tiếng Anh, Do Thái & Đơn giản. Giải mã ý nghĩa tên và từ ngay hôm nay!';
 
   $canonicalUrl = $BASE_URL . 'vi/';
   if (!empty($inputRaw)) {

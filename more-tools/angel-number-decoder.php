@@ -38,7 +38,6 @@
     <meta name="twitter:description" content="Use our free Angel Number Decoder to find the spiritual meaning of repeating numbers you're seeing (e.g., 111, 444, 1111). Discover messages from the universe and divine guidance.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/angel-number-decoder.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/angel-number-decoder.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">

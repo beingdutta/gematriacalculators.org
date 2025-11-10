@@ -26,19 +26,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Path Number Calculator - What Is My Life Path Number?</title>
 
-    <meta name="description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
+    <meta name="description" content="Calculate your Life Path Number from your birth date with our free numerology tool. Discover your core number's meaning and unlock your destiny today.">
     <meta name="keywords" content="life path number calculator, what is my life path number, how to calculate life path number, life path number meanings, numerology birth date calculator, life path number compatibility, numerology, master number 11, master number 22, master number 33">
     <meta property="og:title" content="Life Path Number Calculator - What Is My Life Path Number?">
-    <meta property="og:description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
+    <meta property="og:description" content="Calculate your Life Path Number from your birth date with our free numerology tool. Discover your core number's meaning and unlock your destiny today.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematriacalculators.org/more-tools/life-path-number-calculator.php">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Life Path Number Calculator - What Is My Life Path Number?">
-    <meta name="twitter:description" content="Use our free Life Path Number Calculator to find your unique number from your birth date. Discover the meaning of your Life Path Number and unlock insights into your destiny.">
+    <meta name="twitter:description" content="Calculate your Life Path Number from your birth date with our free numerology tool. Discover your core number's meaning and unlock your destiny today.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/life-path-number-calculator.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/life-path-number.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">

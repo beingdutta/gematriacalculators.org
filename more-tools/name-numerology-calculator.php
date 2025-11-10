@@ -26,19 +26,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Numerology Calculator - Destiny, Soul Urge, Personality Numbers</title>
 
-    <meta name="description" content="Calculate your core numerology numbers (Destiny, Soul Urge, Personality) from your full birth name using our free Name Numerology Calculator. Discover your spiritual path and hidden talents.">
+    <meta name="description" content="Find your Destiny, Soul Urge & Personality numbers with our free Name Numerology Calculator. Decode your full birth name to reveal your spiritual path.">
     <meta name="keywords" content="name numerology calculator, destiny number calculator, soul urge calculator, personality number calculator, expression number calculator, how to calculate destiny number, vowel numerology calculator, consonant numerology calculator, full name numerology, gematria calculator, Pythagorean numerology, numerology chart, full birth name, name meaning, vowels, consonants, spiritual path">
     <meta property="og:title" content="Name Numerology Calculator - Destiny, Soul Urge, Personality Numbers">
-    <meta property="og:description" content="Calculate your core numerology numbers (Destiny, Soul Urge, Personality) from your full birth name using our free Name Numerology Calculator. Discover your spiritual path and hidden talents.">
+    <meta property="og:description" content="Find your Destiny, Soul Urge & Personality numbers with our free Name Numerology Calculator. Decode your full birth name to reveal your spiritual path.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematriacalculators.org/more-tools/name-numerology-calculator.php">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Name Numerology Calculator - Destiny, Soul Urge, Personality Numbers">
-    <meta name="twitter:description" content="Calculate your core numerology numbers (Destiny, Soul Urge, Personality) from your full birth name using our free Name Numerology Calculator. Discover your spiritual path and hidden talents.">
+    <meta name="twitter:description" content="Find your Destiny, Soul Urge & Personality numbers with our free Name Numerology Calculator. Decode your full birth name to reveal your spiritual path.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/name-numerology-calculator.php" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/name-numerology-calculator.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
