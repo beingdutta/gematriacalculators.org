@@ -24,19 +24,76 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Vastu Score Calculator - Check Your House Vastu Online</title>
+    <title>Vastu Calculator Online - Free Vastu Shastra Score for House & Flat</title>
 
-    <meta name="description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get instant analysis of room placements and simple remedies for Vastu defects.">
-    <meta name="keywords" content="vastu calculator, vastu check for house, vastu score calculator, vastu for house facing, kitchen vastu check, vastu shastra calculator, vastu defects calculator, master bedroom vastu, vastu for home, Vastu Shastra, Indian architecture, house energy, vastu compliance, vastu remedies, home placement, Vedic">
-    <meta property="og:title" content="Simple Vastu Score Calculator - Check Your House Vastu Online">
-    <meta property="og:description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get an instant analysis of room placements and simple remedies for Vastu defects.">
+    <meta name="description" content="Use our free online Vastu Calculator to get a Vastu score for your house or flat. This Vastu Shastra calculator checks room placements and provides a Vastu calculation.">
+    <meta name="keywords" content="vastu calculator, vastu shastra calculator, vastu score calculator, online vastu calculator free, vastu calculator for house, house vastu calculator, flat vastu calculator, how to calculate vastu for home, vastu calculation, vastu online calculator, vastu numerology calculator">
+    <meta property="og:title" content="Vastu Calculator Online - Free Vastu Shastra Score for House & Flat">
+    <meta property="og:description" content="Use our free online Vastu Calculator to get a Vastu score for your house or flat. This Vastu Shastra calculator checks room placements and provides a Vastu calculation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gematriacalculators.org/more-tools/simple-vastu-score-calculator.php">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Simple Vastu Score Calculator - Check Your House Vastu Online">
-    <meta name="twitter:description" content="Use our free Vastu Score Calculator to check your house's energy balance. Get an instant analysis of room placements and simple remedies for Vastu defects.">
+    <meta name="twitter:title" content="Vastu Calculator Online - Free Vastu Shastra Score for House & Flat">
+    <meta name="twitter:description" content="Use our free online Vastu Calculator to get a Vastu score for your house or flat. This Vastu Shastra calculator checks room placements and provides a Vastu calculation.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "url": "https://gematriacalculators.org/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://gematriacalculators.org/decode-gematria-value/?phrase={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Simple Vastu Score Calculator",
+                "url": "https://gematriacalculators.org/more-tools/simple-vastu-score-calculator.php",
+                "description": "A free online Vastu calculator to check the Vastu compliance score of a house or flat based on room placements.",
+                "applicationCategory": "Utilities",
+                "operatingSystem": "Any"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gematriacalculators.org/"},
+                    {"@type": "ListItem", "position": 2, "name": "More Tools", "item": "https://gematriacalculators.org/more-tools/"},
+                    {"@type": "ListItem", "position": 3, "name": "Simple Vastu Score Calculator"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {"@type": "Question", "name": "What is Vastu Shastra?", "acceptedAnswer": { "@type": "Answer", "text": "Vastu Shastra is a traditional Indian system of architecture that aims to create harmony between people and their environments by aligning buildings with natural forces and cosmic energies." } },
+                    {"@type": "Question", "name": "Is a 100% Vastu score necessary?", "acceptedAnswer": { "@type": "Answer", "text": "While a higher score is better, achieving a 100% Vastu-compliant home is often difficult. Our Vastu score calculator highlights major defects that can be addressed with simple remedies to improve your home's energy." } },
+                    {"@type": "Question", "name": "Does this vastu calculator work for a flat?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this tool can be used as a flat vastu calculator. The principles of directional placements for rooms like the kitchen, bedroom, and entrance apply to apartments and flats just as they do to houses." } },
+                    {"@type": "Question", "name": "How does this relate to a Gematria Calculator?", "acceptedAnswer": { "@type": "Answer", "text": "While Vastu and Gematria are different systems, both are rooted in the ancient belief that our universe is governed by underlying patterns and energies. Gematria finds these patterns in language and numbers, while Vastu finds them in space and direction." } },
+                    {"@type": "Question", "name": "What are Vastu remedies?", "acceptedAnswer": { "@type": "Answer", "text": "Vastu remedies are simple, corrective measures used to counteract the negative effects of Vastu defects without requiring structural changes. These can include using specific colors, placing mirrors, using plants, or employing symbolic items like Vastu pyramids or sea salt." } }
+                ]
+            },
+            {
+                "@type": "HowTo",
+                "name": "How to Calculate Vastu for a Home",
+                "description": "A simple guide to calculating a basic Vastu score for your home using our online tool.",
+                "step": [
+                    { "@type": "HowToStep", "position": 1, "name": "Identify Directions", "text": "Determine the directions (North, South, East, West, and the sub-directions) in your home." },
+                    { "@type": "HowToStep", "position": 2, "name": "Select Room Placements", "text": "For each room listed in the calculator (Kitchen, Master Bedroom, etc.), select its corresponding direction from the dropdown menu." },
+                    { "@type": "HowToStep", "position": 3, "name": "Calculate Score", "text": "Click the 'Calculate Vastu Score' button to get an instant analysis of your home's Vastu compliance." },
+                    { "@type": "HowToStep", "position": 4, "name": "Review Defects and Remedies", "text": "The tool will show you which placements are good, which are defects, and suggest simple remedies to improve the energy balance." }
+                ]
+            }
+        ]
+    }
+    </script>
 
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/simple-vastu-score-calculator.css">
@@ -49,7 +106,7 @@
 
         <header class="header">
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="Vastu Score Calculator Icon">
-            <h1>Simple Vastu Score Calculator</h1>
+            <h1>Vastu Calculator Online</h1>
             <p class="subtitle">Get a quick Vastu compliance score for your home</p>
         </header>
 
@@ -124,19 +181,29 @@
 
         <section class="seo-blocks">
             <hr>
-            <h2>What is a Vastu Score Calculator?</h2>
+            <h2>What is a Vastu Calculator?</h2>
             <p>
-                A <strong>Vastu Score Calculator</strong> is a modern tool based on the ancient principles of <strong>Vastu Shastra</strong>. It helps you perform a quick <strong>Vastu check for your house</strong> by evaluating the placement of key rooms. By assigning scores to each placement, our calculator provides a percentage of Vastu compliance, giving you a clear idea of your home's energetic balance.
+                A <strong>Vastu Calculator</strong> is a modern tool based on the ancient principles of <strong>Vastu Shastra</strong>. It helps you perform a quick <strong>Vastu check for your house</strong> or flat by evaluating the placement of key rooms. By assigning scores to each placement, our <strong>vastu score calculator</strong> provides a percentage of Vastu compliance, giving you a clear idea of your home's energetic balance. This is a free, <strong>online vastu calculator</strong> designed for ease of use.
             </p>
             <hr>
-            <h2>How to Use This Vastu Shastra Calculator</h2>
+            <h2>How is Vastu Calculated?</h2>
             <p>
-                Using our <strong>Vastu Shastra calculator</strong> is simple. For each important area of your home—like the kitchen, master bedroom, and main entrance—select its direction from the dropdown menu. Once you've filled in all the fields, click "Calculate Vastu Score." The tool will instantly analyze your inputs, identify any <strong>Vastu defects</strong>, and provide a comprehensive score and list of good placements.
+                People often ask, "<strong>how is vastu calculated?</strong>" The core of <strong>Vastu calculation</strong> involves mapping the layout of a space against the cardinal and ordinal directions. Each direction is associated with a specific element and energy. This <strong>vastu shastra calculator</strong> simplifies the process by focusing on the directional placement of key rooms. A correct placement earns points, while an incorrect one is flagged as a defect, contributing to the final Vastu score.
             </p>
             <hr>
-            <h2>Understanding Vastu for Home</h2>
+            <h2>Advanced Vastu Shastra with Calculations</h2>
             <p>
-                <strong>Vastu for home</strong> is about creating a harmonious living space by aligning it with the five elements and cosmic energies. Proper placement of rooms is crucial. For example, a <strong>kitchen Vastu check</strong> often recommends the Southeast direction, as it's governed by the fire element. Similarly, the ideal <strong>master bedroom Vastu</strong> is in the Southwest to promote stability. Our calculator helps you assess these key placements and improve your home's energy flow.
+                While this tool provides a basic score, advanced <strong>Vastu Shastra with calculations</strong> involves more complex concepts like 'Pada Vinyasa' (dividing the plot into a grid), 'Brahmasthan' (the central, sacred area of a plot), and 'Aaya' calculation. For instance, a <strong>Vastu Aaya calculator</strong> determines the energetic income and expenditure of a house. While our tool doesn't compute these, understanding them is key to a deeper Vastu analysis.
+            </p>
+            <hr>
+            <h2>Vastu Calculator for Flat and Plot</h2>
+            <p>
+                The principles of Vastu apply to all types of dwellings. You can use this tool as a <strong>vastu calculator for a flat</strong> by determining the directions within your apartment. For a new property, a <strong>vastu calculator for a plot</strong> would analyze the plot's shape, slope, and orientation before construction even begins to ensure a compliant foundation.
+            </p>
+            <hr>
+            <h2>Vastu Numerology Calculator</h2>
+            <p>
+                Vastu and Numerology are often used together. A <strong>vastu numerology calculator</strong> might consider your Life Path Number to recommend personalized directions. For example, a <strong>house number vastu calculator</strong> analyzes the vibration of your home's address number. While this tool focuses on directions, you can find your Life Path number with our <a href="/more-tools/life-path-number-calculator.php">Life Path Number Calculator</a> to add another layer to your analysis.
             </p>
         </section>
 
@@ -159,6 +226,16 @@
                 </div>
                 <div class="faq-answer">
                     While a higher score is better, achieving a 100% Vastu-compliant home is often difficult in modern construction. Our <strong>Vastu score calculator</strong> is designed to highlight major defects that should be addressed. Even small changes and remedies can significantly improve your home's energy.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Does this vastu calculator work for a flat?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, this tool can be used as a <strong>flat vastu calculator</strong>. The principles of directional placements for rooms like the kitchen, bedroom, and entrance apply to apartments and flats just as they do to houses. Simply determine the directions from the center of your flat.
                 </div>
             </div>
 

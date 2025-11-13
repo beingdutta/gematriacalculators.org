@@ -38,6 +38,94 @@
     <meta name="twitter:description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "url": "https://gematriacalculators.org/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://gematriacalculators.org/decode-gematria-value/?phrase={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Kua Number Calculator",
+                "url": "https://gematriacalculators.org/more-tools/kua-number-calculator.php",
+                "description": "Use our free Kua Number Calculator to find your Feng Shui lucky directions based on your birth year and gender.",
+                "applicationCategory": "Utilities",
+                "operatingSystem": "Any",
+                "inLanguage": "en"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://gematriacalculators.org/"
+                },{
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "More Tools",
+                    "item": "https://gematriacalculators.org/more-tools/"
+                },{
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Kua Number Calculator"
+                }]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "What is the purpose of a Kua Number?", "acceptedAnswer": { "@type": "Answer", "text": "The Kua number is used in Feng Shui to determine your most and least favorable directions. These directions influence various aspects of your life, including health, wealth, relationships, and personal growth." } },
+                    { "@type": "Question", "name": "What are East and West Group Kua Numbers?", "acceptedAnswer": { "@type": "Answer", "text": "Kua numbers 1, 3, 4, and 9 belong to the East Group, while Kua numbers 2, 6, 7, and 8 belong to the West Group. Each group has its own set of auspicious and inauspicious directions." } },
+                    { "@type": "Question", "name": "What is the '5' rule in Kua Number calculation?", "acceptedAnswer": { "@type": "Answer", "text": "In Feng Shui, the Kua number 5 does not exist. If a male's calculation results in 5, their Kua number becomes 2. If a female's calculation results in 5, their Kua number becomes 8." } },
+                    { "@type": "Question", "name": "Can my Kua number change?", "acceptedAnswer": { "@type": "Answer", "text": "No, your Kua number is fixed for life, as it's based on your birth year and gender. It's a constant aspect of your personal energy in Feng Shui." } },
+                    { "@type": "Question", "name": "Is Kua Number the same as Driver or Conductor Number?", "acceptedAnswer": { "@type": "Answer", "text": "No, they are from different numerology systems. The Kua number is from Feng Shui and is based on your birth year and gender. The Driver and Conductor numbers are from Lo Shu Grid numerology and are calculated from your full date of birth." } }
+                ]
+            },
+            {
+                "@type": "HowTo",
+                "name": "How to Calculate Your Kua Number",
+                "description": "A step-by-step guide to calculating your personal Feng Shui Kua number based on your birth year and gender.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "name": "Sum Birth Year Digits",
+                        "text": "Add the last two digits of your birth year. For example, for 1984, add 8 + 4 = 12.",
+                        "position": 1
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "name": "Reduce to a Single Digit",
+                        "text": "If the sum is a two-digit number, add those digits together until you get a single digit. For example, 12 becomes 1 + 2 = 3.",
+                        "position": 2
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "name": "Apply Gender-Specific Formula",
+                        "text": "For males (born before 2000), subtract the single digit from 10. For females (born before 2000), add 5 to the single digit (and reduce again if necessary). The formulas are different for those born after 1999, which our calculator handles automatically.",
+                        "position": 3
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "name": "Handle the '5' Rule",
+                        "text": "If the final result is 5, it is converted. For males, it becomes Kua number 2. For females, it becomes Kua number 8.",
+                        "position": 4
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/kua-number-calculator.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
@@ -63,9 +151,9 @@
                     <div>
                         <label>Gender:</label>
                         <div class="gender-options">
-                            <input type="radio" id="genderMale" name="gender" value="male" required>
+                            <input type="radio" id="genderMale" name="gender" value="male" required aria-label="Male">
                             <label for="genderMale">Male</label>
-                            <input type="radio" id="genderFemale" name="gender" value="female">
+                            <input type="radio" id="genderFemale" name="gender" value="female" aria-label="Female">
                             <label for="genderFemale">Female</label>
                         </div>
                     </div>
@@ -96,19 +184,51 @@
         <section class="seo-blocks">
             <hr>
             <h2>What is My Kua Number?</h2>
-            <p>
-                Your Kua number, also known as your Ming Gua, is a fundamental concept in Feng Shui that reveals your personal energy blueprint. Derived from your birth year and gender, it categorizes you into either the East Group or West Group, each associated with specific lucky and unlucky directions. Our <strong>Kua Number Calculator</strong> makes it easy to instantly determine your Kua number and unlock insights into your optimal living and working environments.
-            </p>
+            <p>If you're asking, "<strong>what is my kua number?</strong>", you're tapping into a core principle of Feng Shui. Your <strong>personal Kua number</strong> (also known as a Ming Gua) is a single digit from 1 to 9 that reveals your personal energy blueprint. It's calculated from your birth year and gender and is used to determine your lucky and unlucky directions. Our <strong>Feng Shui Kua Number Calculator</strong> makes it easy to find your number instantly.</p>
             <hr>
             <h2>How to Calculate Kua Number</h2>
-            <p>
-                Calculating your Kua number involves a few simple steps based on traditional Feng Shui principles. First, you take your birth year (with a special note for those born in January or early February, as the Feng Shui solar year starts around February 4th). Then, based on your gender and whether your birth year is before or after 2000, a specific formula is applied to derive your single-digit Kua number. Our <strong>Feng Shui calculator</strong> automates this entire process, ensuring accuracy and saving you time.
-            </p>
+            <p>Learning <strong>how to calculate Kua number</strong> is straightforward. For example, to find the <strong>kua number for a male born in 1984</strong>: add the last two digits (8 + 4 = 12), reduce to a single digit (1 + 2 = 3), and subtract from 10 (10 - 3 = 7). His Kua number is 7. The formula for <strong>how to calculate kua number for female</strong> is slightly different. Our calculator automates this process for any year.</p>
             <hr>
-            <h2>Feng Shui Lucky Directions & Personal Energy</h2>
-            <p>
-                Once you know your Kua number, you can identify your four auspicious (lucky) and four inauspicious (unlucky) directions. These directions are crucial for optimizing your home or office layout, determining the best sleeping position, and even guiding your daily activities for enhanced well-being and success. Understanding your <strong>Feng Shui lucky directions</strong> and <strong>personal energy</strong> allows you to align with positive chi, promoting harmony, health, and prosperity in your life.
-            </p>
+            <h2>Kua Number Meanings (1-9)</h2>
+            <p>Each <strong>Kua number meaning</strong> is associated with a specific element, direction, and set of characteristics.</p>
+            <ul>
+                <li><strong>Kua Number 1:</strong> (Water Element, North) Represents independence and communication. East Group.</li>
+                <li><strong>Kua Number 2:</strong> (Earth Element, Southwest) Symbolizes harmony, relationships, and care. West Group.</li>
+                <li><strong>Kua Number 3:</strong> (Wood Element, East) Signifies growth, family, and ambition. East Group.</li>
+                <li><strong>Kua Number 4:</strong> (Wood Element, Southeast) Represents creativity, wealth, and gentle progress. East Group.</li>
+                <li><strong>Kua Number 6:</strong> (Metal Element, Northwest) Symbolizes leadership, discipline, and heavenly support. West Group.</li>
+                <li><strong>Kua Number 7:</strong> (Metal Element, West) Represents joy, creativity, and social connections. West Group.</li>
+                <li><strong>Kua Number 8:</strong> (Earth Element, Northeast) Signifies knowledge, stability, and self-improvement. West Group.</li>
+                <li><strong>Kua Number 9:</strong> (Fire Element, South) Represents fame, passion, and recognition. East Group.</li>
+            </ul>
+            <hr>
+            <h2>Kua Number Chart</h2>
+            <p>You can also use this simple <strong>Kua number chart</strong> to find your number. Locate your birth year and find the corresponding Kua number for your gender. Remember to use the previous year if you were born in January or before Feb 4th.</p>
+            <table class="kua-chart">
+                <thead>
+                    <tr>
+                        <th>Birth Year Ends In</th>
+                        <th>Male Kua</th>
+                        <th>Female Kua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>1</td><td>9</td></tr>
+                    <tr><td>1</td><td>9</td><td>1</td></tr>
+                    <tr><td>2</td><td>8</td><td>2</td></tr>
+                    <tr><td>3</td><td>7</td><td>3</td></tr>
+                    <tr><td>4</td><td>6</td><td>4</td></tr>
+                    <tr><td>5</td><td>2 (was 5)</td><td>8 (was 5)</td></tr>
+                    <tr><td>6</td><td>4</td><td>6</td></tr>
+                    <tr><td>7</td><td>3</td><td>7</td></tr>
+                    <tr><td>8</td><td>2</td><td>8</td></tr>
+                    <tr><td>9</td><td>1</td><td>9</td></tr>
+                </tbody>
+            </table>
+            <p class="note" style="text-align:center; margin-top:1rem;">This chart is for birth years up to 1999. The calculation changes for years 2000 and beyond, which our calculator handles automatically.</p>
+            <hr>
+            <h2>Kua Number Compatibility</h2>
+            <p><strong>Kua number compatibility</strong> is an important aspect of Feng Shui for relationships. Generally, people from the same group (East or West) are more compatible. An East Group person (Kua 1, 3, 4, 9) will harmonize well with another East Group person. A West Group person (Kua 2, 6, 7, 8) is best matched with another West Group person. While this is not a standalone <strong>kua number compatibility calculator</strong>, knowing your groups provides a great starting point for assessing relationship dynamics.</p>
         </section>
 
         <section class="faq">
@@ -150,6 +270,16 @@
                 </div>
                 <div class="faq-answer">
                     No, your Kua number is fixed for life, as it's based on your birth year and gender. It's a constant aspect of your <strong>personal energy</strong> in Feng Shui.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Kua Number the same as Driver or Conductor Number?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    No, they are from different numerology systems. The <strong>Kua number</strong> is from Feng Shui and is based on your birth year and gender. The Driver and Conductor numbers are from <strong>Lo Shu Grid</strong> numerology and are calculated from your full date of birth. You can find them using a <a href="/more-tools/loshu-grid.php">Lo Shu Grid Calculator</a>.
                 </div>
             </div>
         </section>
