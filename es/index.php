@@ -48,6 +48,16 @@
 
   // Optional: a share image you host (1200×630 recommended)
   $ogImage = $BASE_URL . 'assets/preview.jpg';
+
+  $loadingPhrases = [
+    "Traduciendo palabras a números...",
+    "Invocando los códigos de la creación...",
+    "Decodificando los patrones numéricos ocultos...",
+    "Alineando letras con valores divinos...",
+    "Calculando tu secuencia de gematría...",
+    "Trazando la suma vibracional de tu nombre...",
+    "Revelando el significado secreto en los números..."
+  ];
 ?>
 
 <!DOCTYPE html>
@@ -208,6 +218,7 @@
 
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
+                <p id="loadingMessage" class="loading-message"></p>
             </div>
 
             <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
@@ -443,6 +454,11 @@
         </div>
     </div>
 
+    <script>
+      window.GematriaLang = {
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+      };
+    </script>
     <script src="/scripts/index.js"></script>
 
 </body>

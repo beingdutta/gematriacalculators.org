@@ -37,6 +37,16 @@
     : '免费数字命理计算器 — Gematrix 和命理学';
 
   $ogImage = $BASE_URL . 'assets/preview.jpg';
+
+  $loadingPhrases = [
+    "将文字转化为数字...",
+    "召唤创世的密码...",
+    "解码隐藏的数字模式...",
+    "将字母与神圣价值对齐...",
+    "计算您的gematria序列...",
+    "追踪您名字的振动总和...",
+    "揭示数字中的秘密含义..."
+  ];
 ?>
 
 <!DOCTYPE html>
@@ -145,7 +155,10 @@
                 <button class="download-btn" onclick="calculateAndDownload()">下载PDF</button>
                 <a href="/zh/decode-gematria-value/" class="decode-btn">解码 Gematria</a>
             </div>
-            <div class="loading-container" id="loading" style="display:none"><div class="spinner"></div></div>
+            <div class="loading-container" id="loading" style="display:none">
+                <div class="spinner"></div>
+                <p id="loadingMessage" class="loading-message"></p>
+            </div>
             <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
                 <div class="result-card">
                     <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
@@ -289,5 +302,10 @@
         </footer>
     </div>
     <script src="/scripts/index.js"></script>
+    <script>
+      window.GematriaLang = {
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+      };
+    </script>
 </body>
 </html>

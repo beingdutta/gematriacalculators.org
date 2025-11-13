@@ -43,6 +43,24 @@ function calculateGematria(word) {
     };
 }
 
+let loadingInterval = null;
+
+// Default English phrases. This will be overridden if language-specific phrases are provided.
+const defaultLoadingPhrases = [
+    "Translating words into numbers...",
+    "Summoning the codes of creation...",
+    "Decoding the hidden numerical patterns...",
+    "Aligning letters with divine values...",
+    "Calculating your gematria sequence...",
+    "Tracing the vibrational sum of your name...",
+    "Revealing the secret meaning in numbers..."
+  ];
+
+
+function stopLoadingMessages() {
+    clearInterval(loadingInterval);
+    document.getElementById('loadingMessage').textContent = '';
+}
 
 function calculate() {
     const inputEl = document.getElementById('inputText');
@@ -61,6 +79,17 @@ function calculate() {
     // show spinner immediately
     loading.style.display = 'flex';
     resultDiv.style.display = 'none';
+
+    // Use language-specific phrases if available, otherwise use default English
+    const loadingPhrases = window.GematriaLang?.loadingPhrases || defaultLoadingPhrases;
+
+    let i = 0;
+    const phraseEl = document.getElementById('loadingMessage');
+    phraseEl.textContent = loadingPhrases[i];
+    loadingInterval = setInterval(() => {
+        i = (i + 1) % loadingPhrases.length;
+        phraseEl.textContent = loadingPhrases[i];
+    }, 1500);
   
     // Simulate a short delay for UX, then perform client-side calculation
     setTimeout(() => {
@@ -88,6 +117,7 @@ function calculate() {
           setTimeout(() => globalFdbk.style.display = 'none', 3000);
         } finally {
           loading.style.display = 'none';
+          stopLoadingMessages();
         }
     }, 6000); // artificial delay set back to 6 seconds for better responsiveness
 
@@ -97,6 +127,7 @@ function clearInput() {
     document.getElementById('inputText').value = '';
     document.querySelector('.result').style.display = 'none';
     document.getElementById('loading').style.display = 'none';
+    stopLoadingMessages();
 }
 
 function toggleMobileMenu() {
@@ -376,6 +407,7 @@ function calculateAndDownload() {
             }, 3000);
         } finally {
             loading.style.display = 'none';
+            stopLoadingMessages();
         }
     }, 3000);
 }

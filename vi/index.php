@@ -37,6 +37,16 @@
     : 'Máy tính Gematria Miễn phí — Gematrix & Numerology';
 
   $ogImage = $BASE_URL . 'assets/preview.jpg';
+
+  $loadingPhrases = [
+    "Đang dịch từ ngữ thành những con số...",
+    "Triệu hồi những mật mã của tạo hóa...",
+    "Giải mã những mẫu số ẩn giấu...",
+    "Sắp xếp các chữ cái với giá trị thiêng liêng...",
+    "Tính toán chuỗi gematria của bạn...",
+    "Truy tìm tổng rung động của tên bạn...",
+    "Tiết lộ ý nghĩa bí mật trong những con số..."
+  ];
 ?>
 
 <!DOCTYPE html>
@@ -182,6 +192,7 @@
 
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
+                <p id="loadingMessage" class="loading-message"></p>
             </div>
 
             <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
@@ -427,6 +438,11 @@
         </div>
     </div>
 
+    <script>
+      window.GematriaLang = {
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+      };
+    </script>
     <script src="/scripts/index.js"></script>
 
 </body>

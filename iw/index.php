@@ -37,6 +37,16 @@
     : 'מחשבון גימטריה חינם — Gematrix ונומרולוגיה';
 
   $ogImage = $BASE_URL . 'assets/preview.jpg';
+
+  $loadingPhrases = [
+    "מתרגם מילים למספרים...",
+    "מזמן את צפני הבריאה...",
+    "מפענח את התבניות המספריות הנסתרות...",
+    "מיישר אותיות עם ערכים אלוהיים...",
+    "מחשב את רצף הגימטריה שלך...",
+    "עוקב אחר הסכום הרטטי של שמך...",
+    "חושף את המשמעות הסודית במספרים..."
+  ];
 ?>
 
 <!DOCTYPE html>
@@ -166,7 +176,10 @@
                 <button class="download-btn" onclick="calculateAndDownload()">הורד PDF</button>
                 <a href="/iw/decode-gematria-value/" class="decode-btn">פענח גימטריה</a>
             </div>
-            <div class="loading-container" id="loading" style="display:none"><div class="spinner"></div></div>
+            <div class="loading-container" id="loading" style="display:none">
+                <div class="spinner"></div>
+                <p id="loadingMessage" class="loading-message"></p>
+            </div>
             <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
                 <div class="result-card">
                     <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
@@ -308,5 +321,10 @@
             <div class="copyright">© <?= date('Y') ?> gematriacalculators.org</div>
         </footer>
     </div>
+    <script>
+      window.GematriaLang = {
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+      };
+    </script>
 </body>
 </html>
