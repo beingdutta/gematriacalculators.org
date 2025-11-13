@@ -26,31 +26,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
-    <style>
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .content-section { background: var(--background-color); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-        h1 { text-align: center; margin-bottom: 1.5rem; }
-        h2 { margin-top: 1.5rem; }
-        p, li { line-height: 1.6; }
-    </style>
+    <link rel="stylesheet" href="/styles/privacy-policy.css">
 </head>
 <body>
     <?php require_once __DIR__ . '/navigation/header.php'; ?>
 
-    <div class="container">
-        <div class="content-section">
-            <h1>Disclaimer</h1>
+    <div class="container" style="padding-top: 2rem;">
+      <header class="header">
+        <h1>Disclaimer</h1>
+        <p class="subtitle">(Terms of Use for Our Tools)</p>
+      </header>
+
+      <main>
+        <div class="policy-page">
+          <div class="policy-section">
+            <h2>1. General Information</h2>
             <p>The information provided by Gematria Calculator (gematriacalculators.org) is for general informational and entertainment purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
-
-            <h2>For Entertainment Purposes Only</h2>
+          </div>
+          <div class="policy-section">
+            <h2>2. For Entertainment Purposes Only</h2>
             <p>The gematria calculations and their interpretations are based on historical and mystical systems of numerology. They should be considered a form of entertainment and personal exploration, not as a source of factual, professional, or divine guidance. The connections and meanings derived from gematria are subjective and open to interpretation.</p>
-
-            <h2>No Professional Advice</h2>
+          </div>
+          <div class="policy-section">
+            <h2>3. No Professional Advice</h2>
             <p>The information on this website is not intended to be a substitute for professional advice. Any reliance you place on such information is strictly at your own risk. We disclaim all liability for any decisions or actions taken based on the content of this site, whether for financial, personal, spiritual, or other matters.</p>
-
-            <h2>External Links Disclaimer</h2>
+          </div>
+          <div class="policy-section">
+            <h2>4. External Links Disclaimer</h2>
             <p>The site may contain (or you may be sent through the site) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site.</p>
+          </div>
         </div>
+      </main>
     </div>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>

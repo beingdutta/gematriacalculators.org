@@ -269,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initMobileNavigation();
   initLanguagePopup();
+  initCookiePopup();
 
   // Add event listeners for all FAQ questions
   document.querySelectorAll('.faq-question').forEach(question => {
@@ -277,6 +278,52 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+// --- Cookie Settings Popup ---
+function createCookiePopup() {
+  const popupHTML = `
+    <button class="cookie-settings-btn" onclick="openCookiePopup()">Cookie Settings</button>
+    <div id="cookiePopup" class="cookie-popup">
+      <div class="cookie-popup-content">
+        <button class="lang-popup-close" onclick="closeCookiePopup()">&times;</button>
+        <h2>Cookie Policy Summary</h2>
+        <p>We use cookies to enhance your experience on our site. Here’s a quick summary:</p>
+        <ul>
+          <li><strong>Essential Cookies:</strong> We use a cookie to remember your theme preference (light or dark mode). This is necessary for the site to function as you expect.</li>
+          <li><strong>Third-Party Cookies:</strong> Services like Google Analytics, Google AdSense, and Microsoft Clarity help us understand site traffic and show relevant ads. These services set their own cookies.</li>
+        </ul>
+        <p>By using our site, you consent to our use of these cookies. For more details, please see our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', popupHTML);
+}
+
+function openCookiePopup() {
+  const popup = document.getElementById('cookiePopup');
+  if (popup) {
+    popup.style.display = 'flex';
+  }
+}
+
+function closeCookiePopup() {
+  const popup = document.getElementById('cookiePopup');
+  if (popup) {
+    popup.style.display = 'none';
+  }
+}
+
+function initCookiePopup() {
+  createCookiePopup();
+  const popup = document.getElementById('cookiePopup');
+  if (popup) {
+    popup.addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeCookiePopup();
+      }
+    });
+  }
+}
 
 // For PDF Generation.
 function generatePDFContent(input, results) {
