@@ -1,8 +1,18 @@
 /* ─────────── GLOBAL ─────────────────────────────────────────────────── */
 let latestCounts = null;            // will hold last calculation (for PDF)
+let loadingInterval = null;
+const loadingPhrases = [
+  "Aligning cosmic energies...",
+  "Consulting ancient charts...",
+  "Mapping your numerological matrix...",
+  "Calculating your Mulank and Bhagyank...",
+  "Revealing your hidden strengths...",
+  "Decoding the planes of destiny...",
+  "Unveiling your path..."
+];
 
 /* ─────────── init & theming ─────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // DOMContentLoaded is a good place for this
   populateDropdowns();
   const saved = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
@@ -37,24 +47,49 @@ function calculateWithDelay(){
         y=+document.getElementById('year').value;
   if(!d||!m||!y){alert('Please select day, month and year.');return;}
   showLoading(true);
+  startLoadingPhrases();
   setTimeout(()=>{
     try{
       latestCounts=calculateLoShuGrid(d,m,y);   // store globally
       renderSummary(latestCounts);
       renderGrid(latestCounts);
       renderTraits(latestCounts);
-    }catch(err){console.error(err);alert('Something went wrong.');}
-    finally{showLoading(false);}
-  },700);
+      document.getElementById('resultArea').classList.remove('hidden');
+      document.getElementById('downloadBtn').classList.remove('hidden');
+    } catch(err) {
+      console.error(err);
+      alert('Something went wrong.');
+    } finally {
+      showLoading(false);
+      stopLoadingPhrases();
+    }
+  },7000);
 }
-function showLoading(state){document.getElementById('loading').style.display=state?'flex':'none';}
+function showLoading(state) {
+  document.getElementById('loading').style.display = state ? 'flex' : 'none';
+}
+function startLoadingPhrases() {
+    let i = 0;
+    const phraseEl = document.getElementById('loadingPhrase');
+    phraseEl.textContent = loadingPhrases[i];
+    loadingInterval = setInterval(() => {
+        i = (i + 1) % loadingPhrases.length;
+        phraseEl.textContent = loadingPhrases[i];
+    }, 1000);
+}
+function stopLoadingPhrases() {
+    clearInterval(loadingInterval);
+    document.getElementById('loadingPhrase').textContent = '';
+}
 function resetForm(){
   ['summary','gridContainer','traitsContainer'].forEach(id=>{
-    document.getElementById(id).innerHTML='';
-    document.getElementById(id).classList.add('hidden');
+    const el = document.getElementById(id);
+    el.innerHTML='';
+    el.classList.add('hidden');
   });
+  document.getElementById('resultArea').classList.add('hidden');
+  document.getElementById('downloadBtn').classList.add('hidden');
   latestCounts=null;
-  showLoading(false);
 }
 
 /* math helpers */
@@ -81,7 +116,7 @@ function renderSummary(counts){
 function renderGrid(counts){
   const wrap=document.getElementById('gridContainer');wrap.innerHTML='';wrap.classList.remove('hidden');
   [[4,9,2],[3,5,7],[8,1,6]].flat().forEach(num=>{
-    const count=counts[num];
+    const count=counts[num] || 0;
     const cell=document.createElement('div');
     cell.className=`loshu-cell ${count?'present':'missing'}`;cell.dataset.num=num;
     const nums=count?Array(count).fill(num).join(' '):`<span class="fade">${num}</span>`;

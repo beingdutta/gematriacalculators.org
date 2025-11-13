@@ -31,7 +31,8 @@
 
     <link rel="canonical" href="https://gematriacalculators.org/more-tools/loshu-grid.php" />
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/loshu-grid.css">
+    <link rel="stylesheet" href="/styles/life-path-number.css">
+    <link rel="stylesheet" href="/styles/loshu-grid-styles.css">
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -93,36 +94,47 @@
       </div>
 
       <!-- ── header ───────────────────────────────────────────────────────── -->
-      <header>
-        <img src="/assets/loshu-grid-header.png" id="themeLogo" alt="Lo Shu Grid logo">
+      <header class="header">
+        <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="Lo Shu Grid logo">
         <h1>Lo Shu Grid Calculator (Online Chart Maker)</h1>
         <p class="subtitle">Decode your numerological matrix from your date of birth</p>
       </header>
 
       <!-- ── form ─────────────────────────────────────────────────────────── -->
       <main>
-        <form id="loshuForm" class="loshu-form">
+        <form id="loshuForm" class="life-path-form">
           <div class="form-row">
-            <div><label for="day">Day</label><select id="day"><option value="">Day</option></select></div>
-            <div><label for="month">Month</label><select id="month"><option value="">Month</option></select></div>
-            <div><label for="year">Year</label><select id="year"><option value="">Year</option></select></div>
+            <div>
+              <label for="day">Day</label>
+              <select id="day" required><option value="">Day</option></select>
+            </div>
+            <div>
+              <label for="month">Month</label>
+              <select id="month" required><option value="">Month</option></select>
+            </div>
+            <div><label for="year">Year</label>
+            <select id="year" required><option value="">Year</option></select></div>
           </div>
 
           <div class="button-container">
-            <button type="submit" class="calculate-btn">Calculate</button>
-            <button type="button" class="download-btn" onclick="downloadPDF()">Download&nbsp;PDF</button>
+            <button type="submit" class="calculate-btn">Calculate Lo Shu Grid</button>
             <button type="reset" class="reset-btn" onclick="resetForm()">Reset</button>
           </div>
         </form>
 
         <!-- ── loader + outputs ───────────────────────────────────────────── -->
-        <div class="loading-container" id="loading"><div class="spinner"></div></div>
+        <div class="loading-container" id="loading">
+            <div class="spinner"></div>
+            <span id="loadingPhrase" class="loading-phrase"></span>
+        </div>
 
-        <!-- everything inside #reportArea can be reused for the PDF -->
-        <div id="reportArea">
-          <div id="summary" class="summary-box hidden"></div>
-          <div id="gridContainer" class="grid-wrapper hidden"></div>
-          <div id="traitsContainer" class="traits-box hidden"></div>
+        <div id="resultArea" class="result-area hidden">
+            <div id="reportArea">
+              <div id="summary" class="summary-box hidden" style="background: var(--card-bg); padding: 1rem; margin: 2rem 0 1.2rem; border-radius: var(--radius); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); font-size: 1.05rem;"></div>
+              <div id="gridContainer" class="grid-wrapper hidden"></div>
+              <div id="traitsContainer" class="traits-box hidden" style="background: var(--card-bg); padding: 1.3rem 1.4rem; border-radius: var(--radius); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); margin-bottom: 2.5rem;"></div>
+            </div>
+            <button type="button" class="download-btn hidden" id="downloadBtn" onclick="downloadPDF()" style="margin-top: 1rem;">Download PDF</button>
         </div>
       </main>
 
@@ -201,18 +213,6 @@
           </div>
         </div>
       </section>
-
-      <h2 class="faq-heading" style="margin-top: 2rem;">Related Gematria FAQs</h2>
-
-      <div class="faq-item">
-          <div class="faq-question">
-              What is the English gematria calculator?
-              <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
-          </div>
-          <div class="faq-answer">
-              An <strong>English Gematria Calculator</strong> is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so calculators use various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
-          </div>
-      </div>
       
       <footer class="footer">
         <div class="copyright">© <?= date('Y') ?> gematriacalculators.org</div>
