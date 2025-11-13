@@ -153,7 +153,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">计算 Gematria</button>
                 <button class="download-btn" onclick="calculateAndDownload()">下载PDF</button>
-                <a href="/zh/decode-gematria-value/" class="decode-btn">解码 Gematria</a>
+                <a href="/decode-gematria-value.php" class="decode-btn">解码 Gematria</a>
             </div>
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
@@ -178,6 +178,18 @@
                     <h3>简单数字占卜: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
                     <p id="simpleBreakdown"><?php if($results): ?>计算: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
                 </div>
+                <div class="promotion-box">
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;">
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">扩展您的视野，超越数字</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">虽然gematria揭示了您生活中的隐藏数字代码，但塔罗牌提供了另一条通往智慧的道路。将数字的逻辑与卡牌的直觉相结合，以获得更完整的视角。从我们的免费每日塔罗牌阅读器中寻求指导，以补充您的旅程。</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                        获取免费塔罗牌解读
+                    </a>
+                </div>
                 <div class="feedback">
                     <p>这个计算器对您有帮助吗？</p>
                     <div class="feedback-buttons">
@@ -188,16 +200,6 @@
                     <div class="feedback-message" id="feedbackMessage"></div>
                 </div>
             </div>
-        </main>
-        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
-            如有反馈、建议或改进意见，请发送邮件至 <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>。
-        </p>
-
-        <!-- SEO SECTION #1 -->
-        <div class="seo-section">
-            <h4>探索隐藏的数字含义</h4>
-            <p>我们的<strong>免费在线gematria计算器</strong>可作为一个强大的<strong>gematria姓名计算器</strong>，并支持<strong>英语到希伯来语gematria</strong>的转换。无论您是为圣经分析寻找<strong>在线gematria计算器</strong>，还是仅仅是一个<strong>简单的gematria计算器</strong>来探索数字含义，这个工具都为您设计。用户经常搜索“<strong>calculator gematria</strong>”或“<strong>gematria calculater</strong>”，我们的工具满足了这一需求。</p>
-            <div class="example">示例: <strong>圣经</strong> = 38 (希伯来文), 180 (英文), 30 (简单)</div>
         </div>
 
         <!-- SEO SECTION #2 -->

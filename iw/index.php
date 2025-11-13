@@ -174,7 +174,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">חשב גימטריה</button>
                 <button class="download-btn" onclick="calculateAndDownload()">הורד PDF</button>
-                <a href="/iw/decode-gematria-value/" class="decode-btn">פענח גימטריה</a>
+                <a href="/decode-gematria-value.php" class="decode-btn">פענח גימטריה</a>
             </div>
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
@@ -198,6 +198,18 @@
                     <div class="copy-notification" id="simpleCopyNotification">הועתק!</div>
                     <h3>גימטריה פשוטה: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
                     <p id="simpleBreakdown"><?php if($results): ?>חישוב: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
+                </div>
+                <div class="promotion-box">
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;">
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">הרחב את התובנה שלך מעבר למספרים</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">בעוד שהגימטריה חושפת את הקוד המספרי החבוי בחייך, הטארוט מציע דרך אחרת לחוכמה. שלב את ההיגיון של המספרים עם האינטואיציה של הקלפים כדי לקבל פרספקטיבה מלאה יותר. חפש הדרכה מקורא הטארוט היומי החינמי שלנו כדי להשלים את מסעך.</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                        קבל קריאת טארוט בחינם
+                    </a>
                 </div>
                 <div class="feedback">
                     <p>האם המחשבון היה שימושי?</p>

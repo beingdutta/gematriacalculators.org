@@ -205,7 +205,7 @@
         <header class="header">
             <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
             <h1>Gematria Calculator (Gematrix)</h1>
-            <p class="subtitle">(Type in a word, name, or number, e.g., God, Bible, to calculate gematria values online)</p>
+            <p class="subtitle">(Type in a word, name e.g., God, Bible, to calculate gematria values online)</p>
         </header>
 
 
@@ -278,6 +278,18 @@
                     </p>
                 </div>
 
+                <div class="promotion-box"> <!-- Recommended CSS: display: flex; align-items: center; gap: 15px; -->
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;"> <!-- Recommended CSS: flex-grow: 1; -->
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Expand Your Insight Beyond Numbers</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.8em;">While gematria reveals the hidden numerical code in your life, tarot offers a different path to wisdom. Combine the logic of numbers with the intuition of the cards to gain a more complete perspective. Seek guidance from our free Daily Tarot Reader to complement your journey.</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 0.1rem;">
+                        Get a Free Tarot Reading
+                    </a>
+                </div>
                 <div class="feedback">
                     <p>Was this calculator helpful?</p>
                     <div class="feedback-buttons">

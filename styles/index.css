@@ -400,6 +400,8 @@ body.menu-open {
 }
 
 .subtitle {
+  white-space: wrap;
+  text-align: center;
 }
 
 .seo-section {
@@ -727,6 +729,57 @@ footer .copyright {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* ===================================================================
+   Promotional Box
+   =================================================================== */
+
+.promotion-box {
+  margin: 1.5rem 0 2rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fdfcff 0%, #f5f0f7 100%);
+  border-radius: var(--radius);
+  border: 1px solid #8E44AD; /* Tarot Purple Border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  gap: 15px;
+}
+
+
+.promotion-box p {
+  font-size: 0.8em;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.promo-content {
+  flex-grow: 1;
+}
+
+.promotion-box .promo-btn {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  background-color: #8E44AD; /* Tarot Purple */
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+}
+
+.promotion-box .promo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(142, 68, 173, 0.4);
+}
+
+[data-theme="dark"] .promotion-box {
+  background: linear-gradient(135deg, #2a2f3c 0%, #242936 100%);
+}
+
 
 
 /* ===================================================================

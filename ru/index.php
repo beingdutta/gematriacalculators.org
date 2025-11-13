@@ -128,7 +128,7 @@
         <div class="button-container">
           <button class="calculate-btn" onclick="calculate()">Рассчитать Гематрию</button>
           <button class="download-btn"  onclick="calculateAndDownload()">Скачать PDF</button>
-          <a href="/ru/decode-gematria-value/" class="decode-btn">Расшифровать гематрию</a>
+          <a href="/decode-gematria-value.php" class="decode-btn">Расшифровать гематрию</a>
         </div>
 
         <div class="loading-container" id="loading" style="display:none">
@@ -165,6 +165,18 @@
             </p>
           </div>
 
+          <div class="promotion-box">
+              <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <div class="promo-content" style="text-align: center;">
+                  <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Расширьте Свое Понимание за Пределы Чисел</p>
+                  <p style="margin: 6px 0 0 0; font-size: 0.9em;">В то время как гематрия раскрывает скрытый числовой код в вашей жизни, таро предлагает другой путь к мудрости. Совместите логику чисел с интуицией карт, чтобы получить более полную перспективу. Ищите руководство у нашего бесплатного Ежедневного Чтеца Таро, чтобы дополнить ваше путешествие.</p>
+              </div>
+              <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                  Получить Бесплатное Гадание на Таро
+                </a>
+            </div>
           <div class="feedback">
             <p>Насколько точны эти результаты?</p>
             <div class="feedback-buttons">

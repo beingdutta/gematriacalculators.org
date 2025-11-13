@@ -187,7 +187,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">Tính Gematria</button>
                 <button class="download-btn" onclick="calculateAndDownload()">Tải xuống PDF</button>
-                <a href="/vi/decode-gematria-value/" class="decode-btn">Giải mã Gematria</a>
+                <a href="/decode-gematria-value.php" class="decode-btn">Giải mã Gematria</a>
             </div>
 
             <div class="loading-container" id="loading" style="display:none">
@@ -241,6 +241,18 @@
                     </p>
                 </div>
 
+                <div class="promotion-box">
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;">
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Mở Rộng Tầm Nhìn Vượt Ra Ngoài Những Con Số</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">Trong khi gematria tiết lộ mã số ẩn trong cuộc sống của bạn, tarot lại cung cấp một con đường khác đến với trí tuệ. Kết hợp logic của các con số với trực giác của các lá bài để có được một góc nhìn đầy đủ hơn. Hãy tìm kiếm sự hướng dẫn từ Trình đọc Tarot Hàng ngày miễn phí của chúng tôi để bổ sung cho hành trình của bạn.</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                        Nhận một bài đọc Tarot miễn phí
+                    </a>
+                </div>
                 <div class="feedback">
                     <p>Máy tính này có hữu ích không?</p>
                     <div class="feedback-buttons">

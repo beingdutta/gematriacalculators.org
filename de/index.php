@@ -120,7 +120,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">Gematria berechnen</button>
                 <button class="download-btn" onclick="calculateAndDownload()">PDF Herunterladen</button>
-                <a href="/de/decode-gematria-value/" class="decode-btn">Gematria Entschlüsseln</a>
+                <a href="/decode-gematria-value.php" class="decode-btn">Gematria Entschlüsseln</a>
             </div>
             <div class="loading-container" id="loading" style="display:none">
                 <div class="spinner"></div>
@@ -145,6 +145,18 @@
                     <h3>Einfache Gematria: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
                     <p id="simpleBreakdown"><?php if($results): ?>Berechnung: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
                 </div>
+                <div class="promotion-box">
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;">
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Erweitern Sie Ihre Einsicht über Zahlen hinaus</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">Während die Gematria den verborgenen numerischen Code in Ihrem Leben enthüllt, bietet das Tarot einen anderen Weg zur Weisheit. Kombinieren Sie die Logik der Zahlen mit der Intuition der Karten, um eine vollständigere Perspektive zu gewinnen. Holen Sie sich eine kostenlose, persönliche Lesung von unserem täglichen Tarot-Leser.</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                        Kostenlose Tarot-Lesung erhalten
+                    </a>
+                </div>
                 <div class="feedback">
                     <p>War dieser Rechner hilfreich?</p>
                     <div class="feedback-buttons">
@@ -155,6 +167,8 @@
                     <div class="feedback-message" id="feedbackMessage"></div>
                 </div>
             </div>
+
+
         </main>
         <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
             Für Feedback, Vorschläge oder Verbesserungen zu diesem Tool senden Sie uns bitte eine E-Mail an <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.

@@ -201,7 +201,7 @@
             <div class="button-container">
                 <button class="calculate-btn" onclick="calculate()">Oblicz Gematrię</button>
                 <button class="download-btn" onclick="calculateAndDownload()">Pobierz PDF</button>
-                <a href="/pl/decode-gematria-value/" class="decode-btn">Dekoduj Gematrię</a>
+                <a href="/decode-gematria-value.php" class="decode-btn">Dekoduj Gematrię</a>
             </div>
 
             <div class="loading-container" id="loading" style="display:none">
@@ -255,6 +255,18 @@
                     </p>
                 </div>
 
+                <div class="promotion-box">
+                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="promo-content" style="text-align: center;">
+                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Rozszerz Swoją Wiedzę Poza Liczby</p>
+                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">Podczas gdy gematria odkrywa ukryty kod numeryczny w Twoim życiu, tarot oferuje inną ścieżkę do mądrości. Połącz logikę liczb z intuicją kart, aby uzyskać pełniejszą perspektywę. Skorzystaj z naszego darmowego Codziennego Czytnika Tarota, aby uzupełnić swoją podróż.</p>
+                    </div>
+                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                        Uzyskaj Darmowe Czytanie Tarota
+                    </a>
+                </div>
                 <div class="feedback">
                     <p>Czy ten kalkulator był pomocny?</p>
                     <div class="feedback-buttons">
