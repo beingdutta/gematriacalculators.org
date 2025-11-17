@@ -31,7 +31,7 @@
     <meta property="og:title" content="Life Path Number Calculator - Find Your Life Path Number">
     <meta property="og:description" content="What is my life path number? Use our free Life Path Number Calculator to find your number and learn the meaning of numbers 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, and 33.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gematriacalculators.org/more-tools/life-path-number-calculator.php">
+    <meta property="og:url" content="https://gematriacalculators.org/more-tools/life-path-number-calculator">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Life Path Number Calculator - Find Your Life Path Number">
@@ -88,6 +88,8 @@
         ]
     }
     </script>
+
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/life-path-number-calculator">
 
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/life-path-number.css">

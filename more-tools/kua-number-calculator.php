@@ -31,7 +31,7 @@
     <meta property="og:title" content="Kua Number Calculator - Find Your Feng Shui Lucky Directions">
     <meta property="og:description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gematriacalculators.org/more-tools/kua-number-calculator.php">
+    <meta property="og:url" content="https://gematriacalculators.org/more-tools/kua-number-calculator">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kua Number Calculator - Find Your Feng Shui Lucky Directions">
@@ -57,7 +57,7 @@
             {
                 "@type": "WebApplication",
                 "name": "Kua Number Calculator",
-                "url": "https://gematriacalculators.org/more-tools/kua-number-calculator.php",
+                "url": "https://gematriacalculators.org/more-tools/kua-number-calculator",
                 "description": "Use our free Kua Number Calculator to find your Feng Shui lucky directions based on your birth year and gender.",
                 "applicationCategory": "Utilities",
                 "operatingSystem": "Any",
@@ -125,6 +125,8 @@
         ]
     }
     </script>
+
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/kua-number-calculator">
 
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/kua-number-calculator.css">

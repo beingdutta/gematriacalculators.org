@@ -31,7 +31,7 @@
     <meta property="og:title" content="Numerology Name Calculator - Free Destiny & Business Name Analysis">
     <meta property="og:description" content="Use our free Numerology Name Calculator to find your Destiny, Soul Urge, and Personality Numbers. Works for your full name and business name numerology.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gematriacalculators.org/more-tools/name-numerology-calculator.php">
+    <meta property="og:url" content="https://gematriacalculators.org/more-tools/name-numerology-calculator">
     <meta property="og:image" content="https://gematriacalculators.org/assets/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Numerology Name Calculator - Free Destiny & Business Name Analysis">
@@ -116,6 +116,8 @@
         ]
     }
     </script>
+
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/name-numerology-calculator">
 
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/name-numerology-calculator.css">
