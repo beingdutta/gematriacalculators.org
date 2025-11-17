@@ -13,7 +13,7 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools</loc>
+  <loc>https://gematriacalculators.org/more-tools/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -23,17 +23,17 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/about-us</loc>
+  <loc>https://gematriacalculators.org/about-us/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/contact-us</loc>
+  <loc>https://gematriacalculators.org/contact-us/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/terms-conditions</loc>
+  <loc>https://gematriacalculators.org/terms-conditions/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -93,37 +93,37 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/simple-vastu-score-calculator</loc>
+  <loc>https://gematriacalculators.org/more-tools/simple-vastu-score-calculator/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/kua-number-calculator</loc>
+  <loc>https://gematriacalculators.org/more-tools/kua-number-calculator/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/angel-number-decoder</loc>
+  <loc>https://gematriacalculators.org/more-tools/angel-number-decoder/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/life-path-number-calculator</loc>
+  <loc>https://gematriacalculators.org/more-tools/life-path-number-calculator/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/loshu-grid</loc>
+  <loc>https://gematriacalculators.org/more-tools/loshu-grid/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/flame-calculator</loc>
+  <loc>https://gematriacalculators.org/more-tools/flame-calculator/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/more-tools/name-numerology-calculator</loc>
+  <loc>https://gematriacalculators.org/more-tools/name-numerology-calculator/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -218,25 +218,8 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://gematriacalculators.org/blogs/Is-There-Any-Merit-in-Gematria</loc>
+  <loc>https://gematriacalculators.org/blogs/Is-There-Any-Merit-in-Gematria/</loc>
   <lastmod>2025-11-08T18:08:08+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://gematriacalculators.org/blogs/how-to-understand-gematria-numbers</loc>
-  <lastmod>2025-11-08T18:08:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://gematriacalculators.org/blogs/why-do-we-need-gematria</loc>
-  <lastmod>2025-11-08T18:08:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://gematriacalculators.org/more-tools/</loc>
-  <lastmod>2025-11-08T18:08:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
-
 </urlset>
