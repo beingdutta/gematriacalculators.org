@@ -45,7 +45,7 @@ $base_path = ($lang_code !== 'en') ? '/' . $lang_code : '';
 $menu_items = [
     ['key' => 'home', 'path' => $base_path ?: '/'],
     ['key' => 'more_tools', 'path' => $base_path . '/more-tools'], // Base path for more-tools section
-    ['key' => 'blog', 'path' => $base_path . '/blog-collections'], // Base path for blog section
+    ['key' => 'blog', 'path' => $base_path . '/blogs/'], // Base path for blog section
     ['key' => 'decode_gematria', 'path' => '/decode-gematria-value/'], // Always point to the root page
     ['key' => 'about_us', 'path' => $base_path . '/about-us'],
     ['key' => 'contact_us', 'path' => $base_path . '/contact-us'],

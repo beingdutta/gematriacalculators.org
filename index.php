@@ -9,8 +9,8 @@
   $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
 
   // SEO: make description STATIC, keep title concise (optionally dynamic)
-  $SITE_NAME        = 'Gematria Calculator';
-  $BASE_URL         = 'https://gematriacalculators.org/';
+  $SITE_NAME = 'Gematria Calculator';
+  $BASE_URL = 'https://gematriacalculators.org/';
 
   // Clean a display version of the query for title/OG only
   $displayInput = trim($inputRaw);
