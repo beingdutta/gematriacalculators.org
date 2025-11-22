@@ -63,11 +63,53 @@
   <link rel="stylesheet" href="/styles/blogs.css">
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is Gematria in simple terms?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In simple terms, Gematria is like a universal decoder ring for language. It's a system that assigns a numerical value to each letter, allowing you to translate any word into a number. Words that share the same number are believed to share the same 'soul' or vibrational essence."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the most famous example of Hebrew Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The most famous example is the Hebrew word for 'Life,' which is 'Chai' (חי). The letters Chet (8) and Yud (10) sum to 18. This is why 18 is considered a lucky number in Jewish culture and why charitable gifts are often given in multiples of 18."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the purpose of Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The purpose of Gematria is to break the illusion of randomness and reveal the hidden, mathematical poetry beneath the surface of reality. It is a tool for cultivating wonder and seeing the deep connections that unite the universe."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php require_once __DIR__ . '/../navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Gematria In Your Own Words</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">What is Gematria? The Secret Language Behind the Veil</h1>

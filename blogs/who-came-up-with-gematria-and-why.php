@@ -63,11 +63,53 @@
   <link rel="stylesheet" href="/styles/blogs.css">
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Who invented Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There was no single inventor of Gematria. It evolved over thousands of years, starting with the Phoenicians who used letters as numbers for efficiency. The practice was later formalized by Greek philosophers as 'Isopsephy' and then adopted and perfected by Jewish mystics and Kabbalists for theological interpretation."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the difference between Gematria and the Greek system of Isopsephy?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Isopsephy is the Greek name for the practice of assigning numerical values to letters. Gematria is the Hebrew term for the same practice, which was likely derived from the Greek word 'geōmetriā'. While the principle is the same, the application differs: Isopsephy was used for riddles and political commentary, whereas Gematria was elevated to a sacred art for interpreting the Torah."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the purpose of Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The primary purpose of Gematria is to reveal a hidden order and deeper meaning within language and sacred texts. It is used to demonstrate that the universe is not random but is built on a mathematical and linguistic code, connecting concepts that appear unrelated on the surface."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php require_once __DIR__ . '/../navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Who Came Up With Gematria?</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">Who Came Up With Gematria? The Architects of Code</h1>

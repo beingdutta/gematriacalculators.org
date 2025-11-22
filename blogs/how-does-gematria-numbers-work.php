@@ -63,11 +63,53 @@
   <link rel="stylesheet" href="/styles/blogs.css">
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do you understand Gematria numbers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Understanding Gematria numbers involves a process of calculation and interpretation. First, a word's numerical value is calculated using a specific cipher (like Hebrew or English Ordinal). Then, this number is compared to other words with the same value to find 'resonance' or a hidden connection. The meaning is derived from the relationship between these connected words."
+    }
+  },{
+    "@type": "Question",
+    "name": "What are Gematria ciphers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ciphers are the rule sets for assigning numbers to letters. Common ciphers include Hebrew Standard (the original system), English Ordinal (A=1, B=2, etc.), and Reverse Ordinal (Z=1, A=26). Different ciphers can reveal different layers of meaning for the same word."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the connection between the Hebrew words for 'Serpent' and 'Messiah' in Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In Hebrew Gematria, both 'Serpent' (Nachash) and 'Messiah' (Mashiach) have a value of 358. This is interpreted to mean that the Messiah is the spiritual antidote to the Serpent; the cure has the same 'weight' as the poison."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php require_once __DIR__ . '/../navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">How to Understand Gematria Numbers</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">Decoding the Signal: How to Understand Gematria Numbers</h1>

@@ -61,10 +61,52 @@
     <link rel="stylesheet" href="/styles/blogs.css">
   </head>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is a Gematria calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Gematria calculator is a digital tool that automates the ancient practice of Gematria. It translates words and phrases into numerical values by applying specific ciphers (like Hebrew or English) and helps users find hidden connections between words that share the same value."
+      }
+    },{
+      "@type": "Question",
+      "name": "How does a Gematria calculator work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works by parsing the input text, converting each letter to its assigned numerical value based on a selected cipher, and summing these values to produce a total. A good calculator will also search a database to show other words that match this total."
+      }
+    },{
+      "@type": "Question",
+      "name": "What is the difference between a Hebrew and an English Gematria calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Hebrew Gematria calculator uses the original, ancient system where Hebrew letters inherently are numbers. An English Gematria calculator is a modern adaptation that applies constructed ciphers (like A=1, B=2) to the English alphabet to find synchronicities in modern language."
+      }
+    }]
+  }
+  </script>
+
   <body class="blog-article">
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
     <div class="container">
       <main>
+        <nav aria-label="breadcrumb" class="breadcrumb-container">
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">What Is a Gematria Calculator?</span><meta itemprop="position" content="3" /></li>
+          </ol>
+        </nav>
         <div class="article-header">
           <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
           <h1 class="article-title">The Digital Oracle: What Is a Gematria Calculator?</h1>

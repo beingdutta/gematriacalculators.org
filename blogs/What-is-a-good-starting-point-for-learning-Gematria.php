@@ -63,10 +63,52 @@
         <link rel="stylesheet" href="/styles/blogs.css">
   </head>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is a good starting point for learning Gematria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A good starting point is to first adopt a mindset of curiosity, not certainty. Then, understand the basic definition of Gematria and familiarize yourself with the foundational Hebrew and Simple English (Ordinal) ciphers. The next step is to use an online Gematria calculator to analyze your own name."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is the first practical step to take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The first practical step is the 'Name Ritual': type your full name into a reliable online Gematria calculator, note the value in the Simple English cipher, and then analyze the list of other words that share the same value. Use this as a tool for self-reflection."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is the most important skill in interpreting Gematria results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important skill is learning to distinguish 'signal' from 'noise.' Instead of forcing connections, look for 'resonance'—clusters of thematically linked words that share the same value. Trust your intuition and prioritize connections that make logical or poetic sense."
+        }
+      }]
+    }
+    </script>
+
     <body class="blog-article">
         <?php require_once __DIR__ . '/../navigation/header.php'; ?>
         <div class="container">
             <main>
+                <nav aria-label="breadcrumb" class="breadcrumb-container">
+                  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+                      <meta itemprop="position" content="2" />
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Starting Point for Learning Gematria</span><meta itemprop="position" content="3" /></li>
+                  </ol>
+                </nav>
                 <div class="article-header">
                     <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
                     <h1 class="article-title">The Initiate's Path: What Is a Good Starting Point for Learning Gematria?</h1>

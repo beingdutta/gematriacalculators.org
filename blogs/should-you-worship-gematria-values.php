@@ -58,11 +58,53 @@
   <link rel="stylesheet" href="/styles/blogs.css">
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Is it wrong to worship Gematria values?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, worshipping Gematria values is considered a spiritual trap and a form of idolatry. Gematria is a tool or a 'map' for understanding deeper meanings, but the number itself is not the sacred thing. Worshipping the value is like worshipping the map instead of traveling the territory."
+    }
+  },{
+    "@type": "Question",
+    "name": "What are the psychological dangers of Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The main psychological danger is Apophenia, the tendency to see meaningful patterns in random data. This can lead to obsession, anxiety, and a feedback loop where one gives away personal power to superstition, fearing 'bad numbers' and seeking 'good numbers' in everyday life."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the true purpose of Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The true purpose of Gematria is to cultivate wonder and illustrate truth, not to invent it. It is a lens for appreciating the intricate design of language and the universe, and a tool for meditating on the connections between concepts. It should be a source of poetry and insight, not dogma."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Worshipping Gematria Values</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">The Idol of Numbers: What's Wrong With Worshipping Gematria Values?</h1>

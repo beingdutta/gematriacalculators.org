@@ -62,12 +62,53 @@
         <link rel="stylesheet" href="/styles/article-general-style.css">
         <link rel="stylesheet" href="/styles/blogs.css">
 
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What is the truth about Gematria?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The truth about Gematria is multi-faceted. Historically, it is a verifiable ancient literary technique. Mathematically, it is a game of probability where patterns are inevitable. Spiritually, it is a meditative tool for finding connection and meaning. The ultimate 'truth' of Gematria is that it acts as a mirror, reflecting the perspective of the user."
+            }
+          },{
+            "@type": "Question",
+            "name": "Is Gematria just a result of coincidence or psychological bias?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While many Gematria matches can be attributed to mathematical probability and the psychological phenomenon of Apophenia (seeing patterns in random data), there are instances in sacred texts that defy simple coincidence, suggesting intentional design. The truth likely lies in a synthesis of both perspectives."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is the ultimate purpose of Gematria?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The ultimate purpose of Gematria is to re-enchant the world. It is a rebellion against a purely materialistic worldview, asserting that reality is alive with meaning and that there is a hidden logic or 'Logos' behind the apparent chaos."
+            }
+          }]
+        }
+        </script>
     </head>
 
     <body class="blog-article">
         <?php require_once __DIR__ . '/../navigation/header.php'; ?>
         <div class="container">
             <main>
+                <nav aria-label="breadcrumb" class="breadcrumb-container">
+                  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+                      <meta itemprop="position" content="2" />
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">The Truth About Gematria</span><meta itemprop="position" content="3" /></li>
+                  </ol>
+                </nav>
                 <div class="article-header">
                 <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
                 <h1 class="article-title">What is the Truth About Gematria? A Journey into the Unknown</h1>

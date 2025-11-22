@@ -1,3 +1,31 @@
+.breadcrumb-container {
+  max-width: 720px;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  margin: 0 0.5rem;
+  color: var(--muted);
+}
+
+.breadcrumb-item a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .back-button {
   position: absolute;
   top: 1rem;

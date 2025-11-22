@@ -51,11 +51,54 @@
   <link rel="stylesheet" href="/styles/article-general-style.css">
   <link rel="stylesheet" href="/styles/blogs.css">
 </head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Why do we need Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We need Gematria to find deeper meaning in a world of information overload. It serves as a spiritual technology to decode hidden patterns in language, connect with ancient traditions, enhance memory, and cultivate a sense of wonder by revealing the mathematical harmony of the universe."
+    }
+  },{
+    "@type": "Question",
+    "name": "How does Gematria help with learning and memory?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gematria is a powerful mnemonic (memory) device. By associating a number with a story or concept (e.g., the value of 'Torah' being 611 helps remember the 613 commandments), it engages both sides of the brain and makes abstract information 'sticky' and easier to recall."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the difference between Gematria and Numerology?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gematria is text-focused, used for interpreting sacred texts and finding connections between words. Numerology is person-focused, often using birth dates for personality analysis and life path predictions. Gematria is metaphysical, while numerology is psychological."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
   
   <div class="container">
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Why Do We Need Gematria?</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">Why Do We Need Gematria? The Ultimate Guide to Meaning, Purpose, and Practice</h1>

@@ -61,10 +61,52 @@
     <link rel="stylesheet" href="/styles/blogs.css">
   </head>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Does the Bible mention Gematria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The word 'Gematria' itself does not appear in the Bible. However, the practice is explicitly used, most famously in Revelation 13:18, which instructs the reader to 'calculate the number of the beast.' This demonstrates that the biblical authors and their audience were familiar with the concept of assigning numerical values to letters."
+      }
+    },{
+      "@type": "Question",
+      "name": "Is using Gematria a sin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Bible forbids divination and sorcery, so using Gematria to predict the future or manipulate events would be considered sinful. However, using it as a method of study (exegesis) to understand deeper connections and confirm theological truths is seen as a holy path, not a forbidden one."
+      }
+    },{
+      "@type": "Question",
+      "name": "What is the difference between Gematria and biblical numerology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gematria is a specific system of alphanumeric code focused on the values of words and phrases. Biblical numerology is a broader study of the symbolic meaning of numbers themselves (e.g., the number 7 representing perfection). Gematria is one tool used within the wider field of biblical numerology."
+      }
+    }]
+  }
+  </script>
+
   <body class="blog-article">
     <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
       <main style="padding-top: 0;">
+        <nav aria-label="breadcrumb" class="breadcrumb-container">
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">What the Bible Says About Gematria</span><meta itemprop="position" content="3" /></li>
+          </ol>
+        </nav>
         <div class="article-header">
           <h1 class="article-title">The Divine Cipher: What Does the Bible Really Say About Gematria?</h1>
           <div class="article-date">Updated: October 2025</div>

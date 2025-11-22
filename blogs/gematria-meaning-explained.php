@@ -23,11 +23,53 @@
 
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is Gematria, explained simply?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gematria is an ancient practice of assigning a numerical value to letters and words. The core idea is that words with the same numerical value share a deep, hidden connection or spiritual essence, revealing a mathematical code beneath the surface of language."
+    }
+  },{
+    "@type": "Question",
+    "name": "How does Gematria work?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gematria works by using a 'cipher'—a key that assigns a number to each letter. A word's value is calculated by summing the values of its letters. The meaning is then found by comparing this value to other words that share the same number, revealing patterns and relationships."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the difference between Hebrew and English Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hebrew Gematria is the original system where letters are inherently numbers, used for interpreting sacred texts like the Torah. English Gematria is a modern adaptation that applies ciphers (like A=1, B=2) to the English alphabet to find synchronicities in modern language and culture."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Gematria Explained</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">Gematria Explained: Peeling Back the Veil of Reality</h1>

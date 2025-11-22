@@ -62,11 +62,53 @@
     <link rel="stylesheet" href="/styles/blogs.css">
 </head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How does Gematria work for the English alphabet?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Since English letters don't have inherent numerical values like Hebrew, Gematria works by applying an agreed-upon rule set, or 'cipher'. The most common is Simple (Ordinal) Gematria, where A=1, B=2, through Z=26."
+    }
+  },{
+    "@type": "Question",
+    "name": "What are the main English Gematria ciphers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The three main ciphers are: 1. Simple Gematria (A=1, Z=26), which is the natural order. 2. Pythagorean or Reduction Gematria, which reduces letters to a single digit (1-9). 3. Reverse Gematria, which inverts the alphabet (Z=1, A=26)."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the purpose of using English Gematria?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "English Gematria is a modern adaptation used to find synchronicities and hidden patterns in modern language, media, and culture. It helps reveal that the English language also has a resonant structure, where key concepts often share numerical values."
+    }
+  }]
+}
+</script>
+
 <body class="blog-article">
   <?php require_once __DIR__ . '/../navigation/header.php'; ?>
   <div class="container">
 
     <main>
+      <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">How Gematria Works in English</span><meta itemprop="position" content="3" /></li>
+        </ol>
+      </nav>
       <div class="article-header">
         <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
         <h1 class="article-title">The Alchemy of Letters: How Gematria Works in English</h1>
