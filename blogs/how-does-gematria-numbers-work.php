@@ -53,7 +53,7 @@
   <title>Decoding the Signal: How to Understand Gematria Numbers</title>
 
   <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-  <link rel="canonical" href="https://gematriacalculators.org/blogs/how-to-understand-gematria-numbers.php">
+  <link rel="canonical" href="https://gematriacalculators.org/blogs/how-does-gematria-numbers-work/">
   
   <!-- Fonts for the Occult Aesthetic -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
