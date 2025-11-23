@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Optimized Description -->
-    <meta name="description" content="Gematria explained by experts: A deep dive into the definition, meaning, and purpose of this ancient code. Learn how to use a gematria calculator to unlock hidden truths.">
+    <meta name="description" content="Gematria explained: A deep dive into the definition, meaning, and purpose of this ancient code. Learn to use a gematria calculator to unlock hidden truths.">
     <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, what is greek gematria calculator, how to use gematria">
     <title>Gematria Explained: The Occult Guide to the Universe's Hidden Code</title>
 
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-    <link rel="canonical" href="https://gematriacalculators.org/blogs/gematria-explained.php">
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/gematria-meaning-explained/">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">

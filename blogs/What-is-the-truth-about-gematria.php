@@ -47,7 +47,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO Optimized Meta Data -->
-        <meta name="description" content="What is the truth about Gematria? A 3000-word deep dive into the ancient mystery. We explore the history, math, and spiritual meaning behind the code, revealing whether it is divine truth or mere coincidence.">
+        <meta name="description" content="What is the truth about Gematria? Explore the history, math, and spiritual meaning of this ancient code to reveal if it's divine truth or mere coincidence.">
         <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, what is the truth about gematria, purpose of gematria">
 
         <title>The Veiled Code: What Is the Truth About Gematria?</title>

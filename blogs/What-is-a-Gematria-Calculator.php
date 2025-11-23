@@ -45,12 +45,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Data -->
-    <meta name="description" content="Unlock the secrets of the digital oracle. A comprehensive guide to the Gematria Calculator, explaining its occult origins, how to use it, and the hidden meanings behind Hebrew, Greek, and English ciphers.">
+    <meta name="description" content="Unlock the secrets of the Gematria Calculator. This guide explains its occult origins, how to use it, and the hidden meanings behind words and names.">
     <meta name="keywords" content="what is a gematria calculator, gematria calculator, hebrew gematria calculator, english gematria calculator, gematria definition, how to use gematria, gematria decoder, what is gematria, gematria meaning, best gematria calculator, jewish gematria calculator, online gematria calculator, meaning of gematria, define gematria, how does gematria work">
     
     <title>The Digital Oracle: What Is a Gematria Calculator? | Complete Guide</title>
     
-    <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-a-Gematria-Calculator.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/blogs/what-is-a-gematria-calculator/" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     
     <!-- Fonts for Storytelling Vibe -->
