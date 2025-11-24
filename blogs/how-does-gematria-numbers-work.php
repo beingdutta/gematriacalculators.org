@@ -47,7 +47,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Optimized Meta Data -->
-  <meta name="description" content="Master the art of decoding reality. A deep, occult guide on how to understand gematria numbers, interpret the output of a gematria calculator, and unlock the hidden meaning behind the code.">
+  <meta name="description" content="A deep guide on how to understand gematria numbers, interpret the output of a gematria calculator, and unlock the hidden meaning behind the code.">
   <meta name="keywords" content="how to understand gematria numbers, gematria calculator, what is gematria, gematria meaning, gematria definition, hebrew gematria calculator, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to read gematria, how to use gematria in life">
   
   <title>Decoding the Signal: How to Understand Gematria Numbers</title>
