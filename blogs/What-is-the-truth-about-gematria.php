@@ -53,7 +53,7 @@
         <title>The Veiled Code: What Is the Truth About Gematria?</title>
 
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-        <link rel="canonical" href="https://gematriacalculators.org/blogs/What-is-the-truth-about-gematria/" />
+        <link rel="canonical" href="https://gematriacalculators.org/blogs/what-is-the-truth-about-gematria/" />
         
         <!-- Typography for the "Occult/Storyteller" Vibe -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
