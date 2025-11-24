@@ -160,7 +160,7 @@
             Gematria is the decoder ring of the universe.
           </p>
           <p>
-            But unlike the plastic toy, this ring wasn't made by a toy company. It was forged by history, theology, and linguistics. It is a system where every letter in an alphabet is assigned a specific numerical value. Once you know the code—the cipher—you can translate any word into a number.
+            But unlike the plastic toy, this ring wasn't made by a toy company. It was forged by history, theology, and linguistics. It is a system where every letter in an alphabet is assigned a specific numerical value. Once you know the code the cipher you can translate any word into a number.
           </p>
           <p>
             Why would you do this? Because in the eyes of the mystic, words that share the same number share the same <em>soul</em>. They are vibrational matches. Just as "listen" and "silent" are anagrams (sharing the same letters), Gematria finds words that are numerical anagrams (sharing the same value).
@@ -232,7 +232,7 @@
             <strong>8 + 10 = 18.</strong>
           </p>
           <p>
-            This is why the number 18 is the luckiest number in Judaism. When you give a gift of money, you give it in multiples of 18 ($18, $36, $180). You are not just giving cash; you are symbolically giving "Life." This is Gematria in action—not as an abstract theory, but as a lived cultural practice.
+            This is why the number 18 is the luckiest number in Judaism. When you give a gift of money, you give it in multiples of 18 ($18, $36, $180). You are not just giving cash; you are symbolically giving "Life." This is Gematria in action not as an abstract theory, but as a lived cultural practice.
           </p>
 
           <h3>The Secret of One and Love</h3>
@@ -323,7 +323,7 @@
 
           <h3>Use It for Meditation</h3>
           <p>
-            Calculate your own name. See what number it holds. Then, find a positive word—like "Light," "Truth," or "Angel"—that shares that number. Use that word as a mantra. It connects your identity to a higher concept.
+            Calculate your own name. See what number it holds. Then, find a positive word like "Light," "Truth," or "Angel" that shares that number. Use that word as a mantra. It connects your identity to a higher concept.
           </p>
 
           <h3>Use It for Analysis</h3>
@@ -362,7 +362,7 @@
 
           <h2 id="conclusion">12. Conclusion: Your Turn to Decode</h2>
           <p>
-            You now know the secret. You know what is a gematria calculator—it is a lens for seeing the invisible. You know the history. You know the methods.
+            You now know the secret. You know what is a gematria calculator it is a lens for seeing the invisible. You know the history. You know the methods.
           </p>
           <p>
             The decoder ring is in your hand. The world is full of messages waiting to be read.
