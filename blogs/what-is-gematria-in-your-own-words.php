@@ -166,7 +166,7 @@
             Why would you do this? Because in the eyes of the mystic, words that share the same number share the same <em>soul</em>. They are vibrational matches. Just as "listen" and "silent" are anagrams (sharing the same letters), Gematria finds words that are numerical anagrams (sharing the same value).
           </p>
           
-                    <span class="caption">The ancient mechanism of converting letters to numbers reveals the hidden architecture of language.</span>
+          <span class="caption">The ancient mechanism of converting letters to numbers reveals the hidden architecture of language.</span>
 
           <h2 id="definition">2. Defining the Indefinable: What is Gematria?</h2>
           <p>

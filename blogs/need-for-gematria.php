@@ -44,6 +44,8 @@
   <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to use gematria, how to use gematria in life">
   <link rel="canonical" href="https://gematriacalculators.org/blogs/need-for-gematria/">
 
+  <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
+
   <title>Why Do We Need Gematria? The Complete Guide to Purpose & Practice</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/index.css">
