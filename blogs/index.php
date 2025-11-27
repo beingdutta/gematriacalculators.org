@@ -79,10 +79,7 @@ $latest_article = array_shift($articles);
     <title>The Gematria Chronicles - Article Index</title>
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link rel="canonical" href="https://gematriacalculators.org/blogs/">
-    
-    <!-- Fonts for Newspaper Aesthetic -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/article-general-style.css">
 
