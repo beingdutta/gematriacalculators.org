@@ -45,7 +45,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Data -->
-    <meta name="description" content="Unlock the secrets of the Gematria Calculator. This guide explains its occult origins, how to use it, and the hidden meanings behind words and names.">
+    <meta name="description" content="Unlock the secrets of the Gematria Calculator. This guide explains its origins, how it works, and how to decode the hidden meanings in words and names.">
     <meta name="keywords" content="what is a gematria calculator, gematria calculator, hebrew gematria calculator, english gematria calculator, gematria definition, how to use gematria, gematria decoder, what is gematria, gematria meaning, best gematria calculator, jewish gematria calculator, online gematria calculator, meaning of gematria, define gematria, how does gematria work">
     
     <title>The Digital Oracle: What Is a Gematria Calculator? | Complete Guide</title>
