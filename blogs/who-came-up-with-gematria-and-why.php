@@ -47,7 +47,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Optimized Meta Data -->
-  <meta name="description" content="Who invented Gematria? A journey through time to discover the origins of this ancient code. From Babylon to Greece to Jerusalem, uncover the architects of the gematria calculator.">
+  <meta name="description" content="Who invented Gematria? Discover the origins of this ancient code, from Babylon to Greece to Jerusalem. Learn why this mystical practice was created and how it evolved.">
   <meta name="keywords" content="who came up with gematria, gematria calculator, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to learn gematria, history of gematria">
   
   <title>The Architects of Code: Who Came Up With Gematria?</title>
