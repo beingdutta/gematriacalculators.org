@@ -53,7 +53,7 @@
   <title>The Architects of Code: Who Came Up With Gematria?</title>
 
   <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
-  <link rel="canonical" href="https://gematriacalculators.org/blogs/who-came-up-with-gematria.php">
+  <link rel="canonical" href="https://gematriacalculators.org/blogs/who-came-up-with-gematria-and-why/">
   
   <!-- Fonts for the Occult Aesthetic -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
