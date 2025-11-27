@@ -46,8 +46,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimized Meta Data -->
-    <meta name="description" content="Unlock the hidden code of the English language. A deep, occult guide on how gematria works using the English alphabet, explaining Simple, Pythagorean, and Reverse ciphers with detailed examples.">
-    <meta name="keywords" content="how does gematria work, english gematria calculator, gematria calculator, what is gematria, gematria meaning, gematria definition, hebrew gematria calculator, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to understand gematria, how to use gematria in life">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="How does Gematria work in English? This guide explains the Simple, Pythagorean, and Reverse ciphers for the English alphabet with detailed examples.">
     
     <title>The Alchemy of Letters: How Gematria Works in English</title>
 
