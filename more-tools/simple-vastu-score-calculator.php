@@ -42,6 +42,7 @@
 
     <meta name="description" content="Get a free Vastu score for your house or flat with our online Vastu Calculator. This Vastu Shastra tool checks room placements to provide an instant Vastu calculation.">
     <meta name="keywords" content="vastu calculator, vastu shastra calculator, vastu score calculator, online vastu calculator free, vastu calculator for house, house vastu calculator, flat vastu calculator, how to calculate vastu for home, vastu calculation, vastu online calculator, vastu numerology calculator">
+
     <meta property="og:title" content="Vastu Calculator Online - Free Vastu Shastra Score for House & Flat">
     <meta property="og:description" content="Get a free Vastu score for your house or flat with our online Vastu Calculator. This Vastu Shastra tool checks room placements to provide an instant Vastu calculation.">
     <meta property="og:type" content="website">
