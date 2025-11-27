@@ -102,7 +102,6 @@
             </nav>
             <div class="article-header">
                 <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
-                <h1 class="article-title">The Number of Life: The Biblical Meaning of 888 Revealed</h1>
                 <div class="article-date">Published: November 07, 2025</div>
             </div>
             <div class="article-content">

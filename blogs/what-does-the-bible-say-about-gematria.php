@@ -45,7 +45,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimized Meta Data -->
-    <meta name="description" content="A master class on the biblical view of Gematria. Discover what the Bible says about hidden codes, learn how to use a gematria calculator for scripture, and unlock the secrets of Revelation 13:18.">
+    <meta name="description" content="What does the Bible say about Gematria? Explore hidden codes in scripture, learn to use a gematria calculator for study, and unlock the meaning of Revelation 13:18.">
     <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, what does the bible say about gematria, biblical numerology, 666 meaning">
     
     <title>The Divine Cipher: What Does the Bible Say About Gematria?</title>
