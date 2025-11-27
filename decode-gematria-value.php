@@ -54,6 +54,35 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What does decoding a gematria value mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Decoding attempts to reverse-map numerical totals back to possible letter combinations. It's a best-effort approximation and not always one-to-one."
+        }
+      },{
+        "@type": "Question",
+        "name": "Can gematria values be reversed with 100% accuracy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Since multiple combinations can lead to the same total, it's impossible to decode with perfect accuracy, especially when using scaled systems like English Gematria."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is the logic behind your decoder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It divides the input total by 6 (for English Gematria), then greedily peels off letters from Z to A whose values add up to the original sum."
+        }
+      }]
+    }
+    </script>
+
   </head>
 
   <body>
@@ -61,7 +90,6 @@
     <div class="container">
 
       <header class="header">
-        <a href="/"><img src="/assets/talisman-header-icon.png" id="themeLogo" alt="Gematria Decoder Logo"></a>
         <h1>Decode Gematria Values</h1>
         <p class="subtitle">
           Paste your English Gematria totals (e.g. <code>312</code> or <code>312, 678</code>)
@@ -86,12 +114,10 @@
           <div class="spinner"></div>
         </div>
 
-        <div class="result" id="decodeResult" style="display: none;">
-          <div class="result-card">
-            <button class="copy-btn" onclick="copyValue('decodedText','decodeCopyNotification')">📋</button>
-            <div class="copy-notification" id="decodeCopyNotification">Copied!</div>
-            <h3>Decoded Text: <span id="decodedText"></span></h3>
-          </div>
+        <div class="result" id="decodeResult" style="display: none; border: none; box-shadow: none; padding: 1rem; background: var(--background-alt); text-align: center;">
+          <h3 style="margin: 0; font-size: 1.1rem;">
+            Decoded Text: <span id="decodedText" style="word-break: break-all; overflow-wrap: break-word; color: var(--primary-color); font-weight: 600;"></span>
+          </h3>
         </div>
       </main>
 
@@ -128,14 +154,7 @@
 
       <!-- FOOTER -->
       <footer class="footer">
-        <div class="footer-links">
-          <a href="/">Home</a>
-          <a href="/blog-collections/">Blog</a>
-          <a href="/about-us/">About Us</a>
-          <a href="/contact-us/">Contact Us</a>
-          <a href="/terms-conditions/">Terms & Conditions</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-        </div>
+        <!-- Footer links are now in the header nav -->
         <div class="copyright">
           © <?= date('Y') ?> gematriacalculators.org
         </div>

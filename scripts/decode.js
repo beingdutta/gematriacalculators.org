@@ -1,50 +1,71 @@
+/**
+ * Clears the input field and resets the result area.
+ */
 function clearDecodeInput() {
-  document.getElementById('decodeInput').value = '';
-  document.getElementById('decodeResult').style.display = 'none';
-  document.getElementById('loading').style.display = 'none';
+    document.getElementById('decodeInput').value = '';
+    document.getElementById('decodeResult').style.display = 'none';
+    document.getElementById('decodedText').textContent = '';
 }
 
-// GREEDY DECODE: sum = total/6 → peel off 26→1
-function greedyDecode(total) {
-  if (total % 6 !== 0) return '';        // no exact match
-  let sum = total / 6;
-  const letters = [];
-  while (sum > 0) {
-    const val = Math.min(26, sum);
-    letters.push(String.fromCharCode(64 + val));
-    sum -= val;
-  }
-  return letters.join('');
-}
-
-// MAIN DECODE ENTRY
-function decode() {
-  const inputEl = document.getElementById('decodeInput');
-  const raw = inputEl.value.trim();
-  if (!raw) {
-    inputEl.classList.add('error');
-    setTimeout(() => inputEl.classList.remove('error'), 500);
-    alert('Please enter at least one numeric total to decode!');
-    return;
-  }
-
-  const loading = document.getElementById('loading');
-  loading.style.display = 'flex';
-
-  setTimeout(() => {
-    try {
-      // pull out all numbers, decode each greedily
-      const nums = raw.match(/\d+/g) || [];
-      const decoded = nums
-        .map(n => greedyDecode(parseInt(n, 10)))
-        .join(' ');
-      document.getElementById('decodedText').textContent = decoded || '(no match)';
-      document.getElementById('decodeResult').style.display = 'block';
-    } catch (err) {
-      console.error('Decode error:', err);
-      alert('Error while decoding.');
-    } finally {
-      loading.style.display = 'none';
+/**
+ * Decodes a single numerical value into a string.
+ * @param {number} total - The English Gematria total to decode.
+ * @returns {string} The decoded string or "no match".
+ */
+function decodeSingleValue(total) {
+    if (isNaN(total) || total <= 0 || total % 6 !== 0) {
+        return "no match";
     }
-  }, 200);
+
+    let simpleTotal = total / 6;
+    let result = '';
+    // Start from Z to find the largest possible letters that fit.
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('').reverse();
+
+    for (const letter of letters) {
+        const value = letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+        while (simpleTotal >= value) {
+            simpleTotal -= value;
+            result += letter;
+        }
+    }
+
+    // If there's a small remainder, append the corresponding letter.
+    if (simpleTotal > 0 && simpleTotal <= 26) {
+        result += String.fromCharCode(64 + simpleTotal);
+    }
+
+    // Always return a result, even if imperfect. Reverse it for readability.
+    return result.split('').reverse().join('') || "no match";
+}
+
+/**
+ * Main function to trigger the decoding process from the UI.
+ */
+function decode() {
+    const inputElement = document.getElementById('decodeInput');
+    const resultElement = document.getElementById('decodeResult');
+    const textElement = document.getElementById('decodedText');
+    const loadingElement = document.getElementById('loading');
+
+    const input = inputElement.value.trim();
+    if (!input) {
+        textElement.textContent = 'Please enter a value.';
+        resultElement.style.display = 'block';
+        return;
+    }
+
+    loadingElement.style.display = 'flex';
+    resultElement.style.display = 'none';
+
+    setTimeout(() => {
+        const totals = input.split(/[\s,]+/).filter(n => n.trim() !== '').map(Number);
+        const decodedParts = totals.map(total => decodeSingleValue(total));
+        const finalResult = decodedParts.join(' ');
+
+        textElement.textContent = finalResult;
+
+        loadingElement.style.display = 'none';
+        resultElement.style.display = 'block';
+    }, 6000); // Simulate processing time
 }
