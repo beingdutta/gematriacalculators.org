@@ -41,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimized Meta Data -->
-    <meta name="description" content="Is there any merit in Gematria? A deep, balanced investigation into the validity of this ancient practice. We explore the historical, mathematical, psychological, and spiritual arguments for and against gematria.">
+    <meta name="description" content="Is there merit in Gematria? This balanced investigation explores the validity of this ancient practice, weighing the historical.">
     <meta name="keywords" content="is there any merit in gematria, gematria calculator, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, gematria vs numerology, how to use gematria">
 
     <title>The Scales of Truth: Is There Any Merit in Gematria?</title>
