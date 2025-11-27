@@ -41,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimized Meta Data -->
-    <meta name="description" content="The ultimate guide to Gematria: Understand gematria meaning, learn how to use a gematria calculator, and explore Hebrew, Greek, and Jewish gematria definitions. Discover how this ancient decoder works.">
+    <meta name="description" content="The ultimate guide to Gematria. Learn its meaning, how to use a gematria calculator, and explore Hebrew and Greek definitions. Discover how this ancient decoder works.">
     <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, what is greek gematria calculator, how to use gematria">
     
     <title>What Is Gematria? The Complete Guide & Calculator Manual</title>
