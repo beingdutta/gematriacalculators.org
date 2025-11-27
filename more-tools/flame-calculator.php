@@ -9,10 +9,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Use our FLAMES calculator to find your relationship status: Friends, Love, Affection, Marriage, Enemies, or Siblings. A fun, fast online love compatibility game.">
+    <meta name="description" content="Use our FLAMES calculator to find your relationship status: Friends, Love, Affection, Marriage, Enemies, or Siblings.">
     <meta name="keywords" content="flames calculator, love calculator flames, flames calculator percentage, flames calculator love, flames calculator online, flames calculator by name, how to calculate flames, flames calculator app, flames calculator true, twin flame calculator">
     <title>FLAME Calculator – Free Gematria/FLAME Tools</title>
-    <link rel="canonical" href="https://gematriacalculators.org/tool-pages/flame-calculator" />
+    <link rel="canonical" href="https://gematriacalculators.org/tool-pages/flame-calculator/" />
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/flame-calculator.css" />
@@ -52,6 +52,55 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is a FLAMES calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A FLAMES calculator is a fun, nostalgic game that takes two names, removes matching letters, and uses the total remaining count to eliminate options in the FLAMES acronym: Friends, Love, Affection, Marriage, Enemies, Siblings. Our tool is an accurate, online love calculator flames version you can trust for entertainment."
+        }
+      },{
+        "@type": "Question",
+        "name": "How does the FLAMES algorithm work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The FLAMES calculator compares letters in both names, removes common ones, and totals the rest. This count drives elimination across the F-L-A-M-E-S letters in circular fashion until one remains. This simple algorithm is the heart of the flames calculator by name logic."
+        }
+      },{
+        "@type": "Question",
+        "name": "Can I use this flames calculator app more than once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can use the flames calculator app as many times as you want! Just click 'Calculate Again' and enter a new pair of names. It's perfect for parties, friends, or curiosity."
+        }
+      },{
+        "@type": "Question",
+        "name": "Is this flames calculator true or just for fun?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While our flames calculator true results follow the original rules of the FLAMES game, it’s meant for entertainment and fun, not scientific matchmaking. Use it to share laughs or break the ice with a crush!"
+        }
+      },{
+        "@type": "Question",
+        "name": "Does this support twin flame name checks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can use this twin flame calculator to test spiritual or soulmate-style name matches, just like with casual friendships or love interests. It's a lighthearted way to explore name compatibility with anyone."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is the English gematria calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An English Gematria Calculator is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so calculators use various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning."
+        }
+      }]
+    }
+    </script>
   </head>
 
 <body>
