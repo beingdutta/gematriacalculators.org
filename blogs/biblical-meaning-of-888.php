@@ -93,16 +93,11 @@
     <div class="container">
         <main>
             <nav aria-label="breadcrumb" class="breadcrumb-container">
-              <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-                  <meta itemprop="position" content="1" />
-                </li>
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
-                  <meta itemprop="position" content="2" />
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Biblical Meaning of 888</span><meta itemprop="position" content="3" /></li>
+              <h2 class="sr-only">Breadcrumb</h2>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/blogs/">Blogs</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Biblical Meaning of 888</li>
               </ol>
             </nav>
             <div class="article-header">
