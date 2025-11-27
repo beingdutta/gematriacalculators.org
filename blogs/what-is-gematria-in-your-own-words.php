@@ -47,7 +47,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Optimized Meta Data -->
-  <meta name="description" content="What is Gematria? A simple guide explaining this ancient code. Learn to use a gematria calculator, understand the meaning behind numbers, and unlock the universe.">
+  <meta name="description" content="What is Gematria? A simple guide explaining this ancient code. Learn to use a gematria calculator">
   <meta name="keywords" content="what is gematria, gematria calculator, gematria meaning, gematria definition, hebrew gematria calculator, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to read gematria, how to use gematria in life, gematria explained">
   
   <title>What is Gematria? The Hidden Language Explained</title>
