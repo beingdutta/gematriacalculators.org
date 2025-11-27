@@ -52,6 +52,8 @@
     <meta name="twitter:description" content="Use our free Kua Number Calculator to find your Feng Shui lucky directions. Instantly discover your personal energy for harmony and success.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/kua-number-calculator/">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",

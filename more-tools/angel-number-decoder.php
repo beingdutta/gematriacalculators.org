@@ -52,7 +52,7 @@
     <meta name="twitter:description" content="Discover the spiritual meaning of angel numbers like 111, 222, 333, 444, 555, 777, 1111, and more with our free Angel Number Decoder. Find your message.">
     <meta name="twitter:image" content="https://gematriacalculators.org/assets/preview.jpg">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/angel-number-decoder">
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/angel-number-decoder/">
 
     <script type="application/ld+json">
     {
