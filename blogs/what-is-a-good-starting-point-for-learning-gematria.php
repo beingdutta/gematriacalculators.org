@@ -61,7 +61,7 @@
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/article-general-style.css">
         <link rel="stylesheet" href="/styles/blogs.css">
-  </head>
+    </head>
 
     <script type="application/ld+json">
     {

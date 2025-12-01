@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <?php
-  require_once __DIR__ . '/../helpers.php';
-  $qs = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
+    require_once __DIR__ . '/../helpers.php';
+    $qs = $_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '';
 ?>
 <html lang="en" data-theme="light">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1DQQSD51V4');
     </script>
 
     <!-- Clarity tracking code -->
@@ -25,14 +25,14 @@
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
 
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    ym(105402705, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", accurateTrackBounce: true, trackLinks: true });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
@@ -63,28 +63,32 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the biblical meaning of 888?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The number 888 is the Gematria value of the name 'Jesus' (Iesous) in Greek. It represents resurrection, new beginnings, and the perfection of the new creation in Christ, standing in contrast to the number 666."
+      "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the biblical meaning of 888?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The number 888 is the Gematria value of the name 'Jesus' (Iesous) in Greek. It represents resurrection, new beginnings, and the perfection of the new creation in Christ, standing in contrast to the number 666."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How is the number 888 calculated for Jesus?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The number is calculated using the Greek system of Isopsephy. The Greek letters for Jesus (Ἰησοῦς) are Iota (10) + Eta (8) + Sigma (200) + Omicron (70) + Upsilon (400) + Sigma (200), which sum to 888."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What does the number 8 symbolize in the Bible?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The number 8 symbolizes a new beginning, regeneration, and resurrection. This is seen in events like circumcision on the 8th day, the 8 people saved on Noah's Ark, and Sunday being the '8th day' of the week, the day of Christ's resurrection."
+            }
         }
-      },{
-        "@type": "Question",
-        "name": "How is the number 888 calculated for Jesus?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The number is calculated using the Greek system of Isopsephy. The Greek letters for Jesus (Ἰησοῦς) are Iota (10) + Eta (8) + Sigma (200) + Omicron (70) + Upsilon (400) + Sigma (200), which sum to 888."
-        }
-      },{
-        "@type": "Question",
-        "name": "What does the number 8 symbolize in the Bible?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The number 8 symbolizes a new beginning, regeneration, and resurrection. This is seen in events like circumcision on the 8th day, the 8 people saved on Noah's Ark, and Sunday being the '8th day' of the week, the day of Christ's resurrection."
-        }
-      }]
+      ]
     }
     </script>
 </head>
@@ -93,15 +97,16 @@
     <div class="container">
         <main>
             <nav aria-label="breadcrumb" class="breadcrumb-container">
-              <h2 class="sr-only">Breadcrumb</h2>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/blogs/">Blogs</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Biblical Meaning of 888</li>
-              </ol>
+                <h2 class="sr-only">Breadcrumb</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/blogs/">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Biblical Meaning of 888</li>
+                </ol>
             </nav>
             <div class="article-header">
                 <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
+                <h1 class="article-title">The Number of Life: The Biblical Meaning of 888 Revealed</h1>
                 <div class="article-date">Published: November 07, 2025</div>
             </div>
             <div class="article-content">
@@ -286,11 +291,11 @@
 
     <script src="/scripts/index.js"></script>
     <script>
-      function sendFeedback(emoji) {
-        const feedbackMessage = document.getElementById('feedbackMessage');
-        feedbackMessage.style.display = 'block';
-        setTimeout(() => { feedbackMessage.style.display = 'none'; }, 2000);
-      }
+        function sendFeedback(emoji) {
+            const feedbackMessage = document.getElementById('feedbackMessage');
+            feedbackMessage.style.display = 'block';
+            setTimeout(() => { feedbackMessage.style.display = 'none'; }, 2000);
+        }
     </script>
 </body>
 </html>

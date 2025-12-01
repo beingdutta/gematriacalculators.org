@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-  <head>
+<head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
     <script>
@@ -52,45 +52,45 @@
     <link rel="stylesheet" href="/styles/article-general-style.css">
     <link rel="stylesheet" href="/styles/blogs.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body class="blog-article">
+<body class="blog-article">
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/navigation/header.php'; ?>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is gematria used for mainly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Historically, it is used to demonstrate the unity of the Torah, to resolve apparent contradictions in texts, and to reveal mystical secrets regarding the Messiah and the creation of the world."
-        }
-      },{
-        "@type": "Question",
-        "name": "What is the purpose of gematria in Kabbalah?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Kabbalah, the purpose of gematria is to understand the energy of the universe. Since the world was created through speech (letters), understanding the numerical value of letters is akin to understanding the atomic weight of spiritual elements."
-        }
-      }]
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is gematria used for mainly?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Historically, it is used to demonstrate the unity of the Torah, to resolve apparent contradictions in texts, and to reveal mystical secrets regarding the Messiah and the creation of the world."
+            }
+        },{
+            "@type": "Question",
+            "name": "What is the purpose of gematria in Kabbalah?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Kabbalah, the purpose of gematria is to understand the energy of the universe. Since the world was created through speech (letters), understanding the numerical value of letters is akin to understanding the atomic weight of spiritual elements."
+            }
+        }]
     }
     </script>
     <div class="container">
         <main>
             <nav aria-label="breadcrumb" class="breadcrumb-container">
-              <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-                  <meta itemprop="position" content="1" />
-                </li>
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
-                  <meta itemprop="position" content="2" />
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">What Is Gematria?</span><meta itemprop="position" content="3" /></li>
-              </ol>
+                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/blogs/"><span itemprop="name">Blogs</span></a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">What Is Gematria?</span><meta itemprop="position" content="3" /></li>
+                </ol>
             </nav>
             <div class="article-header">
                 <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
@@ -302,14 +302,14 @@
 
     <script src="/scripts/index.js"></script>
     <script>
-      function sendFeedback(emoji) {
-        const feedbackMessage = document.getElementById('feedbackMessage');
-        feedbackMessage.style.display = 'block';
-        setTimeout(() => {
-          feedbackMessage.style.display = 'none';
-        }, 2000);
-        console.log("Feedback:", emoji);
-      }
+        function sendFeedback(emoji) {
+            const feedbackMessage = document.getElementById('feedbackMessage');
+            feedbackMessage.style.display = 'block';
+            setTimeout(() => {
+                feedbackMessage.style.display = 'none';
+            }, 2000);
+            console.log("Feedback:", emoji);
+        }
     </script>
-  </body>
+</body>
 </html>

@@ -10,6 +10,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>More Numerology & Mystical Tools - Gematria Calculators</title>
+        <meta name="description" content="Explore a collection of numerology and mystical tools, including a Vastu Score Calculator, Kua Number Calculator, Angel Number Decoder, and Life Path Number Calculator.">
         <link rel="canonical" href="https://gematriacalculators.org/more-tools.php">
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/more-tools.css">
