@@ -157,6 +157,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/more-tools.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
@@ -166,23 +167,6 @@
     <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     
     <div class="container">
-
-        <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085; font-size: 13px;">
-                🌍 Dziękujemy za zaufanie! Teraz wspieramy wiele języków: 
-                <span title="English">angielski</span>, 
-                <span title="Русский">rosyjski</span>, 
-                <span title="Deutsch">niemiecki</span>, 
-                <span title="Español">hiszpański</span>, 
-                <span title="Português">portugalski</span>, 
-                <span title="Italiano">włoski</span>, 
-                <span title="עברית">hebrajski</span>, 
-                <strong>polski</strong> i 
-                <span title="中文">chiński</span> i
-                <span title="Tiếng Việt">wietnamski</span>!
-            </p>
-        </div>
 
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
@@ -300,22 +284,45 @@
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Odkryj Ukryte Znaczenia Numeryczne</h4>
-            <p>Ten <strong>darmowy kalkulator gematrii online</strong> działa jako potężne narzędzie do obliczania <strong>gematrii imion</strong> i obsługuje konwersje z <strong>gematrii angielskiej na hebrajską</strong>. Niezależnie od tego, czy szukasz <strong>kalkulatora gematrii online</strong> do analizy biblijnej, czy po prostu <strong>prostego kalkulatora gematrii</strong> do odkrywania znaczeń liczb, to narzędzie jest stworzone dla Ciebie. Użytkownicy często szukają terminów takich jak "<strong>kalkulator gematria</strong>" lub "<strong>gematria calculater</strong>" — i to narzędzie zapewnia poszukiwaną funkcjonalność.</p>
-            <div class="example">Przykład: <strong>Biblia</strong> = 38 (Hebrajski), 180 (Angielski), 30 (Prosty)</div>
+            <p>Ten darmowy kalkulator gematrii online działa jako potężne narzędzie do obliczania gematrii imion i obsługuje konwersje z gematrii angielskiej na hebrajską. Niezależnie od tego, czy szukasz kalkulatora gematrii online do analizy biblijnej, czy po prostu prostego kalkulatora gematrii do odkrywania znaczeń liczb, to narzędzie jest stworzone dla Ciebie. Użytkownicy często szukają terminów takich jak "kalkulator gematria" lub "gematria calculater" — i to narzędzie zapewnia poszukiwaną funkcjonalność.</p>
+            <div class="example">Przykład: Biblia = 38 (Hebrajski), 180 (Angielski), 30 (Prosty)</div>
         </div>
+
+        <!-- MORE TOOLS SECTION -->
+        <section class="more-tools-section">
+            <h2>Odkryj więcej narzędzi do codziennego przewodnictwa</h2>
+            <div class="tool-grid">
+                <?php
+                    $tools = [
+                        ['title' => 'Prosty Kalkulator Wyniku Vastu', 'desc' => 'Uzyskaj szybki wynik zgodności Vastu dla swojego domu.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                        ['title' => 'Kalkulator Liczby Kua', 'desc' => 'Znajdź swoje szczęśliwe kierunki Feng Shui na sukces.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                        ['title' => 'Dekoder Liczb Anielskich', 'desc' => 'Odkryj wiadomości od wszechświata w liczbach.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Kalkulator Liczby Drogi Życia', 'desc' => 'Odkryj swoje główne przeznaczenie na podstawie daty urodzenia.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                        ['title' => 'Kalkulator Siatki Loshu', 'desc' => 'Stwórz swoją numerologiczną siatkę energetyczną.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                        ['title' => 'Kalkulator Numerologii Imienia', 'desc' => 'Oblicz swoje liczby Przeznaczenia i Pragnienia Duszy.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                    ];
+
+                    foreach ($tools as $tool) {
+                        echo '
+                        <div class="tool-card">
+                            <div class="tool-icon">'.$tool['icon'].'</div>
+                            <h3>'.$tool['title'].'</h3>
+                            <p>'.$tool['desc'].'</p>
+                            <a href="'.$tool['url'].'" class="calculate-btn">Otwórz Narzędzie</a>
+                        </div>';
+                    }
+                ?>
+            </div>
+        </section>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Nasz najlepszy <strong>kalkulator gematrii</strong> (znany również jako <strong>gematrix</strong>) został zaprojektowany z myślą o dokładności i prostocie. Jest idealny dla uczonych, poszukiwaczy duchowych lub każdego zainteresowanego świętymi tekstami. Dzięki naszemu <strong>kalkulatorowi gematrii hebrajskiej</strong> możesz użyć naszego <strong>dekodera gematrii</strong> do analizy duchowych imion lub odkrywania ezoterycznych powiązań. Wypróbuj dziś <strong>darmowy prosty kalkulator gematrii</strong> i zanurz się w świecie liczb z pewnością siebie. To świetna alternatywa dla Gematrix.org.</p>
+            <p>Nasz najlepszy kalkulator gematrii (znany również jako gematrix) został zaprojektowany z myślą o dokładności i prostocie. Jest idealny dla uczonych, poszukiwaczy duchowych lub każdego zainteresowanego świętymi tekstami. Dzięki naszemu kalkulatorowi gematrii hebrajskiej możesz użyć naszego dekodera gematrii do analizy duchowych imion lub odkrywania ezoterycznych powiązań. Wypróbuj dziś darmowy prosty kalkulator gematrii i zanurz się w świecie liczb z pewnością siebie. To świetna alternatywa dla Gematrix.org.</p>
         </div>
-
-        <hr class="divider">
-        <br>
 
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
 
-        <!-- FAQ & FOOTER -->
         <!-- Language Popup -->
         <div class="lang-popup">
             <div class="lang-popup-content">
@@ -335,11 +342,12 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <!-- FAQ ITEMS -->
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
             <h2 class="faq-heading">Często Zadawane Pytania</h2>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Czym jest Gematria?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
@@ -348,75 +356,75 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Czym jest kalkulator gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <strong>Darmowy kalkulator gematrii</strong> to narzędzie online, które automatycznie oblicza wartość liczbową słowa lub frazy. Działa jako nowoczesny <strong>generator gematrii</strong> oparty na starożytnych systemach numerologicznych.
+                    Darmowy kalkulator gematrii to narzędzie online, które automatycznie oblicza wartość liczbową słowa lub frazy. Działa jako nowoczesny generator gematrii oparty na starożytnych systemach numerologicznych.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Jak korzystać z kalkulatora gematrii online?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Aby skorzystać z naszego najlepszego <strong>darmowego kalkulatora gematrii online</strong>, wystarczy wpisać słowo lub frazę w polu tekstowym, a następnie kliknąć „Oblicz Gematrię”, aby wygenerować jego wartości w systemach hebrajskim, angielskim i prostym.
+                    Aby skorzystać z naszego najlepszego darmowego kalkulatora gematrii online, wystarczy wpisać słowo lub frazę w polu tekstowym, a następnie kliknąć „Oblicz Gematrię”, aby wygenerować jego wartości w systemach hebrajskim, angielskim i prostym.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Jak zrozumieć prosty kalkulator gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Nasz <strong>prosty kalkulator gematrii</strong> przypisuje A=1, B=2, C=3, … Z=26, a następnie sumuje te wartości. Wpisz słowo takie jak „Prawda”, a otrzymasz sumę, którą możesz porównać z innymi słowami o tej samej wartości.
+                    Nasz prosty kalkulator gematrii przypisuje A=1, B=2, C=3, … Z=26, a następnie sumuje te wartości. Wpisz słowo takie jak „Prawda”, a otrzymasz sumę, którą możesz porównać z innymi słowami o tej samej wartości.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Jak korzystać z biblijnego kalkulatora gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Nasz <strong>biblijny kalkulator gematrii</strong> jest przeznaczony do analizy tekstów i imion biblijnych. Otrzymasz natychmiastowe wartości <strong>gematrii hebrajskiej, angielskiej i prostej</strong>. Nasz kalkulator obsługuje znaki hebrajskie, co czyni go najlepszym <strong>kalkulatorem gematrii do badań biblijnych</strong>. Wspieramy również zasady <strong>greckiego kalkulatora gematrii</strong>.
+                    Nasz biblijny kalkulator gematrii jest przeznaczony do analizy tekstów i imion biblijnych. Otrzymasz natychmiastowe wartości gematrii hebrajskiej, angielskiej i prostej. Nasz kalkulator obsługuje znaki hebrajskie, co czyni go najlepszym kalkulatorem gematrii do badań biblijnych. Wspieramy również zasady greckiego kalkulatora gematrii.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Jak działa wyszukiwarka gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Nasza <strong>wyszukiwarka gematrii</strong> i <strong>dekoder gematrii</strong> pozwalają znaleźć słowa o określonych wartościach liczbowych. Możesz wyszukiwać za pomocą systemów <strong>gematrii hebrajskiej, angielskiej lub prostej</strong>.
+                    Nasza wyszukiwarka gematrii i dekoder gematrii pozwalają znaleźć słowa o określonych wartościach liczbowych. Możesz wyszukiwać za pomocą systemów gematrii hebrajskiej, angielskiej lub prostej.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Czy mogę obliczać frazy ze spacjami?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Tak! Ten <strong>kalkulator gematrii imion</strong> automatycznie ignoruje spacje i znaki specjalne. Wspieramy <strong>kalkulator gematrii imion i znaczeń</strong> dla wszystkich użytkowników za darmo.
+                    Tak! Ten kalkulator gematrii imion automatycznie ignoruje spacje i znaki specjalne. Wspieramy kalkulator gematrii imion i znaczeń dla wszystkich użytkowników za darmo.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Czym jest kalkulator gematrii angielskiej?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <strong>Kalkulator Gematrii Angielskiej</strong> przypisuje wartości liczbowe literom alfabetu angielskiego. Nasz <strong>angielski kalkulator gematrii</strong> używa różnych szyfrów, takich jak Gematria Prosta (A=1, B=2), aby odkryć ukryte warstwy znaczenia.
+                    Kalkulator Gematrii Angielskiej przypisuje wartości liczbowe literom alfabetu angielskiego. Nasz angielski kalkulator gematrii używa różnych szyfrów, takich jak Gematria Prosta (A=1, B=2), aby odkryć ukryte warstwy znaczenia.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Kto powinien używać kalkulatora gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <strong>Kalkulator numerologii i gematrii</strong> jest dla każdego, kto jest ciekawy ukrytej struktury numerycznej języka. Jest idealny dla:
+                    Kalkulator numerologii i gematrii jest dla każdego, kto jest ciekawy ukrytej struktury numerycznej języka. Jest idealny dla:
                     <ul>
                         <li><strong>Poszukiwaczy Duchowych</strong> badających święte teksty jak Biblia.</li>
                         <li><strong>Pisarzy i Artystów</strong> szukających twórczej inspiracji i głębi symbolicznej.</li>
@@ -427,16 +435,18 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Czym jest żydowski kalkulator gematrii?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <strong>Żydowski Kalkulator Gematrii</strong> (lub <strong>Hebrajski Kalkulator Gematrii</strong>) opiera się na żydowskiej tradycji przypisywania wartości liczbowych literom hebrajskim. Ten typ <strong>hebrajskiego kalkulatora gematrii</strong> jest niezbędny do badania wartości liczbowych biblijnych imion i pojęć.
+                    Żydowski Kalkulator Gematrii (lub Hebrajski Kalkulator Gematrii) opiera się na żydowskiej tradycji przypisywania wartości liczbowych literom hebrajskim. Ten typ hebrajskiego kalkulatora gematrii jest niezbędny do badania wartości liczbowych biblijnych imion i pojęć.
                 </div>
             </div>
+        </section>
 
-            <!-- COPYRIGHT NOTICE -->
+        <!-- FOOTER -->
+        <footer class="footer">
             <div class="copyright">
                 © <?= date('Y') ?> gematriacalculators.org
             </div>

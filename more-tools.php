@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="stylesheet" href="/styles/more-tools.css">
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -35,15 +36,15 @@
                     <?php
                         // Define tools array
                         $tools = [
-                            ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home based on room placements.', 'icon' => '🏠', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
-                            ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions based on your birth year and gender.', 'icon' => '🧭', 'url' => '/more-tools/kua-number-calculator.php'],
-                            ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in repeating numbers.', 'icon' => '✨', 'url' => '/more-tools/angel-number-decoder.php'],
-                            ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny number from your birth date.', 'icon' => '✨', 'url' => '/more-tools/life-path-number-calculator.php'],
-                            ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '🔢', 'url' => '/more-tools/loshu-grid.php'],
-                            ['title' => 'FLAME Calculator', 'desc' => 'Find love compatibility with the classic FLAME game.', 'icon' => '❤️', 'url' => '/more-tools/flame-calculator.php'],
+                            ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home based on room placements.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                            ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions based on your birth year and gender.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                            ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in repeating numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                            ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny number from your birth date.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                            ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                            ['title' => 'FLAME Calculator', 'desc' => 'Find love compatibility with the classic FLAME game.', 'icon' => '<i class="fa-solid fa-heart"></i>', 'url' => '/more-tools/flame-calculator.php'],
                             //['title' => 'Kundli Finder', 'desc' => 'Generate a basic Kundli using birth details.', 'icon' => '🪐', 'url' => '#'],
                             //['title' => 'Angel Number Decoder', 'desc' => 'Uncover meanings of recurring numbers.', 'icon' => '👼', 'url' => '#'],
-                            ['title' => 'Name Numerology Calculator', 'desc' => 'Calculate your Destiny, Soul Urge, and Personality numbers.', 'icon' => '📝', 'url' => '/more-tools/name-numerology-calculator.php'],
+                            ['title' => 'Name Numerology Calculator', 'desc' => 'Calculate your Destiny, Soul Urge, and Personality numbers.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
                             //['title' => 'Name Meaning Analyzer', 'desc' => 'Decode spiritual and mystical significance of names.', 'icon' => '📝', 'url' => '#']
                         ];
 

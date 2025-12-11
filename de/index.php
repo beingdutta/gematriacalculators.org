@@ -117,28 +117,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/more-tools.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
     <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085; font-size: 13px;">
-                🌍 Danke für Ihr Vertrauen! Wir unterstützen jetzt mehrere Sprachen:
-                <span title="English">Englisch</span>,
-                <span title="Русский">Russisch</span>,
-                <strong>Deutsch</strong>,
-                <span title="Español">Spanisch</span>,
-                <span title="Português">Portugiesisch</span>,
-                <span title="Italiano">Italienisch</span>,
-                <span title="עברית">Hebräisch</span>,
-                <span title="Polski">Polnisch</span>,
-                <span title="中文">Chinesisch</span> und
-                <span title="Tiếng Việt">Vietnamesisch</span>!
-            </p>
-        </div>
-
         <div class="recent-phrases ticker-bar">
             <h4>Letzte Suchen:</h4>
             <div class="ticker"><div class="ticker__list"></div></div>
@@ -213,36 +198,43 @@
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Entdecken Sie verborgene numerische Bedeutungen</h4>
-            <p>Dieser <strong>kostenlose Online-Gematria-Rechner</strong> fungiert als leistungsstarker <strong>Gematria-Namensrechner</strong> und unterstützt Konvertierungen von <strong>englischer zu hebräischer Gematria</strong>. Ob Sie einen <strong>Online-Gematria-Rechner</strong> für biblische Analysen oder nur einen <strong>einfachen Gematria-Rechner</strong> zur Erkundung von Zahlenbedeutungen suchen, dieses Tool ist für Sie konzipiert. Benutzer suchen oft nach Begriffen wie "<strong>calculator gematria</strong>" oder "<strong>gematria calculater</strong>" – und dieses Tool bietet die Funktionalität, die sie suchen.</p>
-            <div class="example">Beispiel: <strong>Bibel</strong> = 38 (Hebräisch), 180 (Englisch), 30 (Einfach)</div>
+            <p>Dieser kostenlose Online-Gematria-Rechner fungiert als leistungsstarker Gematria-Namensrechner und unterstützt Konvertierungen von englischer zu hebräischer Gematria. Ob Sie einen Online-Gematria-Rechner für biblische Analysen oder nur einen einfachen Gematria-Rechner zur Erkundung von Zahlenbedeutungen suchen, dieses Tool ist für Sie konzipiert. Benutzer suchen oft nach Begriffen wie "calculator gematria" oder "gematria calculater" – und dieses Tool bietet die Funktionalität, die sie suchen.</p>
+            <div class="example">Beispiel: Bibel = 38 (Hebräisch), 180 (Englisch), 30 (Einfach)</div>
         </div>
+
+        <!-- MORE TOOLS SECTION -->
+        <section class="more-tools-section">
+            <h2>Entdecken Sie weitere Tools für die tägliche Führung</h2>
+            <div class="tool-grid">
+                <?php
+                    $tools = [
+                        ['title' => 'Einfacher Vastu-Score-Rechner', 'desc' => 'Erhalten Sie eine schnelle Vastu-Konformitätsbewertung für Ihr Zuhause.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                        ['title' => 'Kua-Zahl-Rechner', 'desc' => 'Finden Sie Ihre Feng-Shui-Glücksrichtungen für den Erfolg.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                        ['title' => 'Engelszahlen-Decoder', 'desc' => 'Entdecken Sie Botschaften des Universums in Zahlen.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Lebensweg-Zahl-Rechner', 'desc' => 'Entdecken Sie Ihr Kerndestin aus Ihrem Geburtsdatum.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                        ['title' => 'Loshu-Gitter-Rechner', 'desc' => 'Erstellen Sie Ihr numerologisches Energiegitter.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                        ['title' => 'Namensnumerologie-Rechner', 'desc' => 'Berechnen Sie Ihre Schicksals- und Seelenwunsch-Zahlen.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                    ];
+
+                    foreach ($tools as $tool) {
+                        echo '
+                        <div class="tool-card">
+                            <div class="tool-icon">'.$tool['icon'].'</div>
+                            <h3>'.$tool['title'].'</h3>
+                            <p>'.$tool['desc'].'</p>
+                            <a href="'.$tool['url'].'" class="calculate-btn">Werkzeug öffnen</a>
+                        </div>';
+                    }
+                ?>
+            </div>
+        </section>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Unser bester <strong>Gematria-Rechner</strong> (oft als <strong>gematrix</strong> oder <strong>gmetrix calculator</strong> bezeichnet) ist auf Genauigkeit und Einfachheit ausgelegt. Er ist perfekt für Gelehrte, spirituell Suchende oder jeden, der sich für die heiligen Texte interessiert. Mit unserem besten <strong>hebräischen Gematria-Rechner</strong> können Sie unseren <strong>Gematria-Decoder</strong> verwenden, um spirituelle Namen zu analysieren oder esoterische Verbindungen zu erforschen. Probieren Sie noch heute den <strong>kostenlosen einfachen Gematria-Rechner</strong> aus und tauchen Sie mit Zuversicht in die Welt der Zahlen ein. Es ist eine großartige Alternative zu Gematrix.org.</p>
+            <p>Unser bester Gematria-Rechner (oft als gematrix oder gmetrix calculator bezeichnet) ist auf Genauigkeit und Einfachheit ausgelegt. Er ist perfekt für Gelehrte, spirituell Suchende oder jeden, der sich für die heiligen Texte interessiert. Mit unserem besten hebräischen Gematria-Rechner können Sie unseren Gematria-Decoder verwenden, um spirituelle Namen zu analysieren oder esoterische Verbindungen zu erforschen. Probieren Sie noch heute den kostenlosen einfachen Gematria-Rechner aus und tauchen Sie mit Zuversicht in die Welt der Zahlen ein. Es ist eine großartige Alternative zu Gematrix.org.</p>
         </div>
-
-        <hr class="divider">
-        <br>
 
         <!-- GLOBAL FEEDBACK BANNER -->
-        <div class="global-feedback-message" id="globalFeedback"></div>
-
-        <!-- Recent Searches -->
-        <div class="recent-phrases">
-            <h4>Letzte Suchen:</h4>
-            <a href="?input=bibel">Bibel</a> |
-            <a href="?input=elohim frequenz 432">Elohim Frequenz 432</a> |
-            <a href="?input=heiliges licht jahwes">Heiliges Licht Jahwes</a> |
-            <a href="?input=saturn">Saturn</a> |
-            <a href="?input=wahrheit in sichtweite versteckt">Wahrheit in Sichtweite versteckt</a> |
-            <a href="?input=metatron spricht in zahlen">Metatron spricht in Zahlen</a> |
-            <a href="?input=frieden über chaos immer">Frieden über Chaos immer</a>
-        </div>
-        <div class="seo-section">
-            <p>Unser Rechner ist genau, schnell und einfach zu bedienen. Perfekt für Forscher, spirituell Suchende und alle, die sich für Zahlen und ihre Geheimnisse interessieren.</p>
-        </div>
-        <hr class="divider"><br>
         <div class="global-feedback-message" id="globalFeedback"></div>
 
         <!-- Language Popup -->

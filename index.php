@@ -177,6 +177,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/more-tools.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
@@ -188,23 +189,6 @@
     <?php require_once __DIR__ . '/navigation/header.php'; ?>
     
     <div class="container">
-        <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085; font-size: 13px;">
-                🌍 Thank you for your trust! We now support multiple languages:
-                <strong>English</strong>,
-                <span title="Русский">Russian</span>,
-                <span title="Deutsch">German</span>,
-                <span title="Español">Spanish</span>,
-                <span title="Português">Portuguese</span>,
-                <span title="Italiano">Italian</span>,
-                <span title="עברית">Hebrew</span>,
-                <span title="Polski">Polish</span> and 
-                <span title="中文">Chinese</span> and
-                <span title="Tiếng Việt">Vietnamese</span>!
-            </p>
-        </div>
-
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
             <h4>Recent searches:</h4>
@@ -217,9 +201,9 @@
         </div>
 
         <header class="header">
-            <img src="/assets/talisman-header-icon.png" id="themeLogo" alt="gematria calculator site logo">
+            <!-- Logo removed for a cleaner look -->
             <h1>Gematria Calculator (Gematrix)</h1>
-            <p class="subtitle">(Type in a word, name e.g., God, Bible, to calculate gematria values online)</p>
+            <p class="subtitle">Decode the numerical values of words, names, and phrases with English, Hebrew, and Simple Gematria.</p>
         </header>
 
 
@@ -320,21 +304,44 @@
             For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
         </p>
 
-
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Discover Hidden Numerical Meanings</h4>
-            <p>Our <strong>free gematria calculator online</strong> works as a powerful <strong>gematria name calculator</strong> and supports English to <strong>Hebrew gematria</strong> conversions. Whether you're looking for an <strong>online gematria calculator</strong> for biblical analysis or just a <strong>simple gematria calc</strong> to explore number meanings, this tool is designed for you. Users often search for terms like "<strong>calculator gematria</strong>", "<strong>hebrew numerology calculator</strong>", and "<strong>gematria calculater</strong>" — and this tool provides the functionality they seek. Even if you misspell it as 'gemetria' or 'germatria', our engine understands you.</p>
-            <div class="example">Example: <strong>Bible</strong> = 38 (Hebrew), 180 (English), 30 (Simple)</div>
+            <p>Our free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for an online gematria calculator for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "gematria calculater" — and this tool provides the functionality they seek. Even if you misspell it as 'gemetria' or 'germatria', our engine understands you.</p>
+            <div class="example">Example: Bible = 38 (Hebrew), 180 (English), 30 (Simple)</div>
         </div>
+
+        <!-- MORE TOOLS SECTION -->
+        <section class="more-tools-section">
+            <h2>Explore More Tools for Daily Guidance</h2>
+            <div class="tool-grid">
+                <?php
+                    $tools = [
+                        ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                        ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions for success.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                        ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny from your birth date.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                        ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                        ['title' => 'Name Numerology Calculator', 'desc' => 'Calculate your Destiny and Soul Urge numbers.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                    ];
+
+                    foreach ($tools as $tool) {
+                        echo '
+                        <div class="tool-card">
+                            <div class="tool-icon">'.$tool['icon'].'</div>
+                            <h3>'.$tool['title'].'</h3>
+                            <p>'.$tool['desc'].'</p>
+                            <a href="'.$tool['url'].'" class="calculate-btn">Open Tool</a>
+                        </div>';
+                    }
+                ?>
+            </div>
+        </section>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Our best <strong>gematria calculator</strong> (often referred to as a <strong>gematrix</strong> or <strong>gmetrix calculator</strong>) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best <strong>Hebrew gematria calculator</strong>, you can use our <strong>gematria decoder</strong> on biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most <strong>simple gematria calculator free</strong> today and dive into the world of symbolic number meanings with confidence. This tool is a great alternative to other platforms like Gematrix.org or the Gematrinator.</p>
+            <p>Our best gematria calculator (often referred to as a gematrix or gmetrix calculator) is designed for accuracy, speed, and simplicity. It’s perfect for scholars, spiritual seekers, or anyone interested in the mystical traditions behind sacred texts. With our best Hebrew gematria calculator, you can use our gematria decoder on biblical passages, analyze spiritual names, or explore esoteric connections — all in one place. Try the most simple gematria calculator free today and dive into the world of symbolic number meanings with confidence. This tool is a great alternative to other platforms like Gematrix.org or the Gematrinator.</p>
         </div>
-
-        <hr class="divider">
-        <br>
 
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
@@ -359,9 +366,8 @@
             </div>
         </div>
 
-        <!-- FAQ & FOOTER -->
-        <footer class="footer">
-            <!-- FAQ ITEMS -->
+        <!-- FAQ Section -->
+        <section class="faq-section">
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">
@@ -379,7 +385,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    A <strong>free gematria calculator</strong> is an online tool that automatically computes the numerical value of a word, phrase, or name by assigning numeric values to each letter. It's a modern <strong>gematria generator</strong> based on ancient numerology systems.
+                    A free gematria calculator is an online tool that automatically computes the numerical value of a word, phrase, or name by assigning numeric values to each letter. It's a modern gematria generator based on ancient numerology systems.
                 </div>
             </div>
 
@@ -389,7 +395,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    The <strong>meaning of Gematria</strong> lies in its use as a method of exegesis, or critical interpretation, for uncovering the deeper, hidden meanings within sacred texts. By converting words and phrases into numerical values, Gematria reveals relationships between different concepts that are not apparent from the plain text. For example, in <strong>bible gematria</strong>, finding that two different words share the same numerical value can suggest a conceptual or spiritual connection between them, offering a new layer of understanding.
+                    The meaning of Gematria lies in its use as a method of exegesis, or critical interpretation, for uncovering the deeper, hidden meanings within sacred texts. By converting words and phrases into numerical values, Gematria reveals relationships between different concepts that are not apparent from the plain text. For example, in bible gematria, finding that two different words share the same numerical value can suggest a conceptual or spiritual connection between them, offering a new layer of understanding.
                 </div>
             </div>
 
@@ -399,7 +405,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    To use our best <strong>free gematria calculator online</strong>, simply type a word, phrase, or name into the input box, then click “Calculate Gematria” to generate its numerical values across Hebrew, English, and Simple systems. For a record, you can also download a PDF report.
+                    To use our best free gematria calculator online, simply type a word, phrase, or name into the input box, then click “Calculate Gematria” to generate its numerical values across Hebrew, English, and Simple systems. For a record, you can also download a PDF report.
                 </div>
             </div>
 
@@ -409,7 +415,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Our <strong>simple gematria calculator</strong> assigns A=1, B=2, C=3, … Z=26, then sums those values. Enter a word like “Truth” and it outputs the total, which you can compare against other words sharing the same value.
+                    Our simple gematria calculator assigns A=1, B=2, C=3, … Z=26, then sums those values. Enter a word like “Truth” and it outputs the total, which you can compare against other words sharing the same value.
                 </div>
             </div>
 
@@ -419,7 +425,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Our <strong>Bible gematria calculator</strong> is designed for analyzing biblical texts and names. Simply enter any word or phrase from the Bible, and you'll get instant <strong>Hebrew, English, and Simple gematria</strong> values. Our calculator supports both modern and biblical Hebrew characters, making it the best <strong>gematria calculator for biblical research</strong>. We also support <strong>Greek Gematria calculator</strong> principles for New Testament analysis.
+                    Our Bible gematria calculator is designed for analyzing biblical texts and names. Simply enter any word or phrase from the Bible, and you'll get instant Hebrew, English, and Simple gematria values. Our calculator supports both modern and biblical Hebrew characters, making it the best gematria calculator for biblical research. We also support Greek Gematria calculator principles for New Testament analysis.
                 </div>
             </div>
             
@@ -429,7 +435,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Our <strong>gematria search engine</strong> and <strong>gematria decoder</strong> allow you to find words and phrases with specific numerical values. You can search using <strong>Hebrew, English, or Simple gematria</strong> systems. This feature is particularly useful for biblical research and finding connections between different words and concepts.
+                    Our gematria search engine and gematria decoder allow you to find words and phrases with specific numerical values. You can search using Hebrew, English, or Simple gematria systems. This feature is particularly useful for biblical research and finding connections between different words and concepts.
                 </div>
             </div>
 
@@ -439,7 +445,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Yes! This <strong>gematria name calculator</strong> automatically ignores spaces and special characters, focusing only on alphabetical letters. We support <strong>gematria calculator names</strong> and meaning for all users anytime 24*7 for free. Our calculator is especially useful for analyzing multi-word phrases from religious texts.
+                    Yes! This gematria name calculator automatically ignores spaces and special characters, focusing only on alphabetical letters. We support gematria calculator names and meaning for all users anytime 24*7 for free. Our calculator is especially useful for analyzing multi-word phrases from religious texts.
                 </div>
             </div>
 
@@ -449,7 +455,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    An <strong>English Gematria Calculator</strong> is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so our <strong>gematria english calculator</strong> uses various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
+                    An English Gematria Calculator is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so our gematria english calculator uses various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
                 </div>
             </div>
 
@@ -459,13 +465,13 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    A <strong>numerology gematria calculator</strong> is for anyone curious about the hidden numerical structure of language. It's perfect for:
+                    A numerology gematria calculator is for anyone curious about the hidden numerical structure of language. It's perfect for:
                     <ul>
-                        <li><strong>Spiritual Seekers</strong> exploring sacred texts like the Bible.</li>
-                        <li><strong>Writers and Artists</strong> looking for creative inspiration and symbolic depth.</li>
-                        <li><strong>History Buffs</strong> interested in ancient interpretive methods.</li>
-                        <li><strong>Numerology Enthusiasts</strong> analyzing names, dates, and concepts.</li>
-                        <li><strong>Anyone who loves puzzles</strong> and finding hidden patterns in the world around them.</li>
+                        <li>Spiritual Seekers exploring sacred texts like the Bible.</li>
+                        <li>Writers and Artists looking for creative inspiration and symbolic depth.</li>
+                        <li>History Buffs interested in ancient interpretive methods.</li>
+                        <li>Numerology Enthusiasts analyzing names, dates, and concepts.</li>
+                        <li>Anyone who loves puzzles and finding hidden patterns in the world around them.</li>
                     </ul>
                 </div>
             </div>
@@ -476,11 +482,13 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    A <strong>Jewish Gematria Calculator</strong> (or <strong>Gematria Calculator Hebrew</strong>) is a tool based on the ancient Jewish tradition of assigning numerical values to the 22 letters of the Hebrew alphabet. It primarily uses the <em>Mispar Hechrechi</em> (Standard) system, which is fundamental to Kabbalah and the interpretation of the Torah. This type of <strong>gematria hebrew calculator</strong> is essential for studying the numerical values of biblical names, concepts, and verses to uncover deeper theological and mystical connections.
+                    A Jewish Gematria Calculator (or Gematria Calculator Hebrew) is a tool based on the ancient Jewish tradition of assigning numerical values to the 22 letters of the Hebrew alphabet. It primarily uses the <em>Mispar Hechrechi</em> (Standard) system, which is fundamental to Kabbalah and the interpretation of the Torah. This type of gematria hebrew calculator is essential for studying the numerical values of biblical names, concepts, and verses to uncover deeper theological and mystical connections.
                 </div>
             </div>
+        </section>
 
-            <!-- COPYRIGHT NOTICE -->
+        <!-- FOOTER -->
+        <footer class="footer">
             <div class="copyright">
                 © <?= date('Y') ?> gematriacalculators.org
             </div>

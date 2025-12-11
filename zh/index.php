@@ -148,6 +148,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/more-tools.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
@@ -155,23 +156,6 @@
 <body>
     <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     <div class="container">
-        <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085; font-size: 13px;">
-                🌍 感谢您的信任！我们现在支持多种语言：
-                <span title="English">英语</span>、
-                <span title="Русский">俄语</span>、
-                <span title="Deutsch">德语</span>、
-                <span title="Español">西班牙语</span>、
-                <span title="Português">葡萄牙语</span>、
-                <span title="Italiano">意大利语</span>、
-                <span title="עברית">希伯来语</span>、
-                <span title="Polski">波兰语</span>和
-                <strong>中文</strong>和
-                <span title="Tiếng Việt">越南语</span>！
-            </p>
-        </div>
-
         <div class="recent-phrases ticker-bar">
             <h4>最近搜索：</h4>
             <button class="lang-change-btn">切换语言</button>
@@ -237,34 +221,52 @@
                     <div class="feedback-message" id="feedbackMessage"></div>
                 </div>
             </div>
+        </main>
+
+        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+            有关此工具的反馈、建议或改进，请发送电子邮件至 <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>。
+        </p>
+
+        <!-- SEO SECTION #1 -->
+        <div class="seo-section">
+            <h4>发现隐藏的数字含义</h4>
+            <p>我们的免费在线gematria计算器可作为强大的gematria名称计算器，并支持英语到希伯来语的gematria转换。无论您是寻找用于圣经分析的在线gematria计算器，还是只是一个简单的gematria计算器来探索数字含义，这个工具都是为您设计的。用户经常搜索“gematria计算器”、“希伯来命理学计算器”和“gematria calculater”等术语——这个工具提供了他们寻求的功能。即使您拼错为“gemetria”或“germatria”，我们的引擎也能理解。</p>
+            <div class="example">例如：圣经 = 38 (希伯来文), 180 (英文), 30 (简单)</div>
         </div>
+        
+        <!-- MORE TOOLS SECTION -->
+        <section class="more-tools-section">
+            <h2>探索更多工具以获得日常指导</h2>
+            <div class="tool-grid">
+                <?php
+                    $tools = [
+                        ['title' => '简单Vastu分数计算器', 'desc' => '为您的房屋快速获取Vastu合规分数。', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                        ['title' => 'Kua数字计算器', 'desc' => '找到您的风水幸运方向以获得成功。', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                        ['title' => '天使数字解码器', 'desc' => '揭示宇宙在数字中传达的信息。', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => '生命路径数字计算器', 'desc' => '从您的出生日期发现您的核心命运。', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                        ['title' => '洛书九宫格计算器', 'desc' => '规划您的命理能量网格。', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                        ['title' => '姓名命理计算器', 'desc' => '计算您的命运和灵魂冲动数字。', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                    ];
+
+                    foreach ($tools as $tool) {
+                        echo '
+                        <div class="tool-card">
+                            <div class="tool-icon">'.$tool['icon'].'</div>
+                            <h3>'.$tool['title'].'</h3>
+                            <p>'.$tool['desc'].'</p>
+                            <a href="'.$tool['url'].'" class="calculate-btn">打开工具</a>
+                        </div>';
+                    }
+                ?>
+            </div>
+        </section>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>我们最好的<strong>gematria计算器</strong>（通常称为<strong>gematrix</strong>或<strong>gmetrix计算器</strong>）旨在提供准确性和简便性。它非常适合学者、精神探索者或任何对神圣文本感兴趣的人。使用我们最好的<strong>希伯来gematria计算器</strong>，您可以使用我们的<strong>gematria解码器</strong>分析精神名称或探索深奥的联系。今天就免费试用最<strong>简单的gematria计算器</strong>，自信地探索数字世界。这是Gematrix.org的一个很好的替代品。</p>
+            <p>我们最好的gematria计算器（通常称为gematrix或gmetrix计算器）旨在提供准确性和简便性。它非常适合学者、精神探索者或任何对神圣文本感兴趣的人。使用我们最好的希伯来gematria计算器，您可以使用我们的gematria解码器分析精神名称或探索深奥的联系。今天就免费试用最简单的gematria计算器，自信地探索数字世界。这是Gematrix.org的一个很好的替代品。</p>
         </div>
-
-        <hr class="divider">
-        <br>
 
         <!-- GLOBAL FEEDBACK BANNER -->
-        <div class="global-feedback-message" id="globalFeedback"></div>
-
-        <!-- Recent Searches -->
-        <div class="recent-phrases">
-            <h4>最近搜索：</h4>
-            <a href="#">圣经</a> |
-            <a href="#">埃洛希姆频率432</a> |
-            <a href="#">雅威的圣光</a> |
-            <a href="#">土星</a> |
-            <a href="#">显而易见的隐藏真相</a> |
-            <a href="#">梅塔特隆用数字说话</a> |
-            <a href="#">永远和平胜过混乱</a>
-        </div>
-        <div class="seo-section">
-            <p>我们的计算器准确、快速且易于使用。完美适合研究者、灵性探索者以及所有对数字及其秘密感兴趣的人。</p>
-        </div>
-        <hr class="divider"><br>
         <div class="global-feedback-message" id="globalFeedback"></div>
 
         <!-- Language Popup -->
@@ -286,42 +288,71 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
             <h2 class="faq-heading">常见问题解答</h2>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>什么是Gematria？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>什么是Gematria？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">Gematria是一种字母数字代码，它根据字母为一个名称、单词或短语分配一个数值。它常用于犹太神秘主义和圣经解释。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>什么是gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>什么是gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">一个<strong>免费的gematria计算器</strong>是一个在线工具，可以自动计算一个单词或短语的数值。它作为一个现代的<strong>gematria生成器</strong>，基于古老的命理学系统。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>如何在线使用Gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>如何在线使用Gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">要使用我们最好的<strong>免费在线gematria计算器</strong>，只需在输入框中输入一个单词或短语，然后点击“计算Gematria”即可生成其在希伯来语、英语和简单系统中的数值。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>如何理解简单Gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>如何理解简单Gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">我们的<strong>简单gematria计算器</strong>分配A=1, B=2, C=3, … Z=26，然后将这些值相加。输入像“Truth”这样的单词，它会输出总和，您可以将其与其他具有相同值的单词进行比较。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>如何使用圣经gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>如何使用圣经gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">我们的<strong>圣经gematria计算器</strong>专为分析圣经文本和名称而设计。您将立即获得<strong>希伯来语、英语和简单gematria</strong>的值。我们的计算器支持希伯来字符，使其成为<strong>圣经研究的最佳gematria计算器</strong>。我们还支持<strong>希腊gematria计算器</strong>的原则。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>gematria搜索引擎如何工作？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>gematria搜索引擎如何工作？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">我们的<strong>gematria搜索引擎</strong>和<strong>gematria解码器</strong>允许您查找具有特定数值的单词。您可以使用<strong>希伯来语、英语或简单gematria</strong>系统进行搜索。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>我可以计算带空格的短语吗？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>我可以计算带空格的短语吗？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">是的！这个<strong>gematria名称计算器</strong>会自动忽略空格和特殊字符。我们为所有用户免费提供<strong>gematria计算器名称和含义</strong>的支持。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>什么是英语gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>什么是英语gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer"><strong>英语Gematria计算器</strong>为英文字母分配数值。我们的<strong>gematria英语计算器</strong>使用各种密码，如简单Gematria（A=1, B=2），以揭示隐藏的意义层次。</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>谁应该使用gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>谁应该使用gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer">
                     <strong>命理学gematria计算器</strong>适合任何对语言隐藏的数字结构感到好奇的人。它非常适合：
                     <ul>
@@ -334,9 +365,14 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)"><span>什么是犹太gematria计算器？</span><svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+                <div class="faq-question">
+                    <span>什么是犹太gematria计算器？</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
                 <div class="faq-answer"><strong>犹太Gematria计算器</strong>（或<strong>希伯来Gematria计算器</strong>）基于为希伯来字母分配数值的犹太传统。这种类型的<strong>gematria希伯来计算器</strong>对于研究圣经名称和概念的数值至关重要。</div>
             </div>
+        </section>
+        <footer class="footer">
             <div class="copyright">© <?= date('Y') ?> gematriacalculators.org</div>
         </footer>
     </div>

@@ -168,6 +168,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/more-tools.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
@@ -177,23 +178,6 @@
     <?php require_once __DIR__ . '/../navigation/header.php'; ?>
     
     <div class="container">
-        <!-- Language Support Info -->
-        <div class="language-support-info" style="background: #f0f8ff; padding: 12px; margin: 2px 0 10px 0; border-radius: 8px; text-align: center; border: 1px solid #cce5ff;">
-          <p style="margin: 0; color: #004085; font-size: 13px;">
-                🌍 Grazie per la fiducia! Ora supportiamo diverse lingue: 
-                <span title="English">inglese</span>, 
-                <span title="Русский">russo</span>, 
-                <span title="Deutsch">tedesco</span>, 
-                <span title="Español">spagnolo</span>, 
-                <span title="Português">portoghese</span>, 
-                <strong>italiano</strong>, 
-                <span title="עברית">ebraico</span>, 
-                <span title="Polski">polacco</span> e 
-                <span title="中文">cinese</span> e
-                <span title="Tiếng Việt">vietnamita</span>!
-            </p>
-        </div>
-
         <!-- ——— Recent Searches Ticker ——— -->
         <div class="recent-phrases ticker-bar">
             <h4>Ricerche recenti:</h4>
@@ -310,22 +294,45 @@
         <!-- SEO SECTION #1 -->
         <div class="seo-section">
             <h4>Scopri Significati Numerici Nascosti</h4>
-            <p>Questo <strong>calcolatore di gematria gratuito online</strong> funziona come un potente <strong>calcolatore di nomi di gematria</strong> e supporta le conversioni dalla <strong>gematria inglese a quella ebraica</strong>. Che tu stia cercando un <strong>calcolatore di gematria online</strong> per l'analisi biblica o semplicemente un <strong>calcolatore di gematria semplice</strong> per esplorare significati numerici, questo strumento è progettato per te. Gli utenti cercano spesso "<strong>calcolatore gematria</strong>" o "<strong>gematria calculater</strong>", e il nostro strumento soddisfa questa esigenza.</p>
-            <div class="example">Esempio: <strong>Bibbia</strong> = 38 (Ebraico), 180 (Inglese), 30 (Semplice)</div>
+            <p>Questo calcolatore di gematria gratuito online funziona come un potente calcolatore di nomi di gematria e supporta le conversioni dalla gematria inglese a quella ebraica. Che tu stia cercando un calcolatore di gematria online per l'analisi biblica o semplicemente un calcolatore di gematria semplice per esplorare significati numerici, questo strumento è progettato per te. Gli utenti cercano spesso "calcolatore gematria" o "gematria calculater", e il nostro strumento soddisfa questa esigenza.</p>
+            <div class="example">Esempio: Bibbia = 38 (Ebraico), 180 (Inglese), 30 (Semplice)</div>
         </div>
+
+        <!-- MORE TOOLS SECTION -->
+        <section class="more-tools-section">
+            <h2>Esplora altri strumenti per una guida quotidiana</h2>
+            <div class="tool-grid">
+                <?php
+                    $tools = [
+                        ['title' => 'Calcolatore Semplice del Punteggio Vastu', 'desc' => 'Ottieni un punteggio rapido di conformità Vastu per la tua casa.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                        ['title' => 'Calcolatore del Numero Kua', 'desc' => 'Trova le tue direzioni fortunate del Feng Shui per il successo.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                        ['title' => 'Decodificatore dei Numeri Angelici', 'desc' => 'Scopri i messaggi dell\'universo nei numeri.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Calcolatore del Numero del Percorso di Vita', 'desc' => 'Scopri il tuo destino principale dalla tua data di nascita.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                        ['title' => 'Calcolatore della Griglia Loshu', 'desc' => 'Mappa la tua griglia energetica numerologica.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                        ['title' => 'Calcolatore di Numerologia del Nome', 'desc' => 'Calcola i tuoi numeri del Destino e del Desiderio dell\'Anima.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                    ];
+
+                    foreach ($tools as $tool) {
+                        echo '
+                        <div class="tool-card">
+                            <div class="tool-icon">'.$tool['icon'].'</div>
+                            <h3>'.$tool['title'].'</h3>
+                            <p>'.$tool['desc'].'</p>
+                            <a href="'.$tool['url'].'" class="calculate-btn">Apri Strumento</a>
+                        </div>';
+                    }
+                ?>
+            </div>
+        </section>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
-            <p>Il nostro miglior <strong>calcolatore di gematria</strong> (spesso chiamato <strong>gematrix</strong>) è progettato per precisione e semplicità. È perfetto per studiosi, ricercatori spirituali o chiunque sia interessato ai testi sacri. Con il nostro <strong>calcolatore di gematria ebraica</strong>, puoi usare il nostro <strong>decodificatore di gematria</strong> per analizzare nomi spirituali o esplorare connessioni esoteriche. Prova oggi il <strong>calcolatore di gematria semplice gratuito</strong> e immergiti nel mondo dei numeri con fiducia. È un'ottima alternativa a Gematrix.org.</p>
+            <p>Il nostro miglior calcolatore di gematria (spesso chiamato gematrix) è progettato per precisione e semplicità. È perfetto per studiosi, ricercatori spirituali o chiunque sia interessato ai testi sacri. Con il nostro calcolatore di gematria ebraica, puoi usare il nostro decodificatore di gematria per analizzare nomi spirituali o esplorare connessioni esoteriche. Prova oggi il calcolatore di gematria semplice gratuito e immergiti nel mondo dei numeri con fiducia. È un'ottima alternativa a Gematrix.org.</p>
         </div>
-
-        <hr class="divider">
-        <br>
 
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
 
-        <!-- FAQ & FOOTER -->
         <!-- Language Popup -->
         <div class="lang-popup">
             <div class="lang-popup-content">
@@ -345,11 +352,12 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <!-- FAQ ITEMS -->
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
             <h2 class="faq-heading">Domande Frequenti</h2>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Che cos'è la Gematria?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
@@ -358,75 +366,75 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Cos'è un calcolatore di gematria?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Un <strong>calcolatore di gematria gratuito</strong> è uno strumento online che calcola automaticamente il valore numerico di una parola o frase. Funziona come un moderno <strong>generatore di gematria</strong> basato su antichi sistemi di numerologia.
+                    Un calcolatore di gematria gratuito è uno strumento online che calcola automaticamente il valore numerico di una parola o frase. Funziona come un moderno generatore di gematria basato su antichi sistemi di numerologia.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Come si usa il calcolatore di gematria online?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Per usare il nostro miglior <strong>calcolatore di gematria gratuito online</strong>, basta digitare una parola o frase nella casella di input, quindi cliccare su “Calcola Gematria” per generare i suoi valori nei sistemi Ebraico, Inglese e Semplice.
+                    Per usare il nostro miglior calcolatore di gematria gratuito online, basta digitare una parola o frase nella casella di input, quindi cliccare su “Calcola Gematria” per generare i suoi valori nei sistemi Ebraico, Inglese e Semplice.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Come funziona il calcolatore di gematria semplice?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Il nostro <strong>calcolatore di gematria semplice</strong> assegna A=1, B=2, C=3, … Z=26, e poi somma questi valori. Inserisci una parola come “Verità” e ti darà il totale, che puoi confrontare con altre parole che hanno lo stesso valore.
+                    Il nostro calcolatore di gematria semplice assegna A=1, B=2, C=3, … Z=26, e poi somma questi valori. Inserisci una parola come “Verità” e ti darà il totale, che puoi confrontare con altre parole che hanno lo stesso valore.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Come si usa il calcolatore di gematria biblica?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Il nostro <strong>calcolatore di gematria biblica</strong> è progettato per analizzare testi e nomi biblici. Otterrai valori istantanei di <strong>gematria ebraica, inglese e semplice</strong>. Il nostro calcolatore supporta caratteri ebraici, rendendolo il miglior <strong>calcolatore di gematria per la ricerca biblica</strong>. Supportiamo anche i principi del <strong>calcolatore di gematria greca</strong>.
+                    Il nostro calcolatore di gematria biblica è progettato per analizzare testi e nomi biblici. Otterrai valori istantanei di gematria ebraica, inglese e semplice. Il nostro calcolatore supporta caratteri ebraici, rendendolo il miglior calcolatore di gematria per la ricerca biblica. Supportiamo anche i principi del calcolatore di gematria greca.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Come funziona il motore di ricerca di gematria?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Il nostro <strong>motore di ricerca di gematria</strong> e <strong>decodificatore di gematria</strong> ti permettono di trovare parole con valori numerici specifici. Puoi cercare usando i sistemi di <strong>gematria ebraica, inglese o semplice</strong>.
+                    Il nostro motore di ricerca di gematria e decodificatore di gematria ti permettono di trovare parole con valori numerici specifici. Puoi cercare usando i sistemi di gematria ebraica, inglese o semplice.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Posso calcolare frasi con spazi?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Sì! Questo <strong>calcolatore di nomi di gematria</strong> ignora automaticamente spazi e caratteri speciali. Supportiamo il <strong>calcolatore di nomi e significati di gematria</strong> per tutti gli utenti gratuitamente.
+                    Sì! Questo calcolatore di nomi di gematria ignora automaticamente spazi e caratteri speciali. Supportiamo il calcolatore di nomi e significati di gematria per tutti gli utenti gratuitamente.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Cos'è il calcolatore di gematria inglese?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Un <strong>Calcolatore di Gematria Inglese</strong> assegna valori numerici alle lettere dell'alfabeto inglese. Il nostro <strong>calcolatore di gematria inglese</strong> utilizza varie cifrature come la Gematria Semplice (A=1, B=2) per rivelare strati nascosti di significato.
+                    Un Calcolatore di Gematria Inglese assegna valori numerici alle lettere dell'alfabeto inglese. Il nostro calcolatore di gematria inglese utilizza varie cifrature come la Gematria Semplice (A=1, B=2) per rivelare strati nascosti di significato.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Chi dovrebbe usare il calcolatore di gematria?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Un <strong>calcolatore di numerologia e gematria</strong> è per chiunque sia curioso della struttura numerica nascosta del linguaggio. È perfetto per:
+                    Un calcolatore di numerologia e gematria è per chiunque sia curioso della struttura numerica nascosta del linguaggio. È perfetto per:
                     <ul>
                         <li>Ricercatori spirituali che esplorano testi sacri come la Bibbia.</li>
                         <li>Scrittori e artisti in cerca di ispirazione creativa e profondità simbolica.</li>
@@ -437,16 +445,18 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>Cos'è il calcolatore di gematria ebraica?</span>
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Un <strong>Calcolatore di Gematria Ebraica</strong> (o <strong>Calcolatore di Gematria Ebraico</strong>) si basa sulla tradizione ebraica di assegnare valori numerici alle lettere ebraiche. Questo tipo di <strong>calcolatore di gematria ebraica</strong> è essenziale per studiare i valori numerici di nomi e concetti biblici.
+                    Un Calcolatore di Gematria Ebraica (o Calcolatore di Gematria Ebraico) si basa sulla tradizione ebraica di assegnare valori numerici alle lettere ebraiche. Questo tipo di calcolatore di gematria ebraica è essenziale per studiare i valori numerici di nomi e concetti biblici.
                 </div>
             </div>
+        </section>
 
-            <!-- COPYRIGHT NOTICE -->
+        <!-- FOOTER -->
+        <footer class="footer">
             <div class="copyright">
                 © <?= date('Y') ?> gematriacalculators.org
             </div>

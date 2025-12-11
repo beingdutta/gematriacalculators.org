@@ -4,22 +4,23 @@
 
 /* Color, spacing, and typography variables */
 :root {
-  --primary:    #4A90E2;
+  --primary:    #3A7DCA; /* Deeper, more professional blue */
   --secondary:  #50E3C2;
-  --bg:         #F5F7FA;
-  --text:       #333333;
-  --card-bg:    #FFFFFF;
-  --border:     #EAEAEA;
-  --muted:      #777777;
+  --bg:         #FFFFFF; /* Clean white background */
+  --text:       #212529; /* Darker, more readable text */
+  --card-bg:    #F8F9FA; /* Very light grey for cards */
+  --border:     #DEE2E6; /* Softer border color */
+  --muted:      #6C757D; /* Standard muted text color */
   --error:      #E74C3C;
 
   --radius:     8px;
   --font:       'Inter', sans-serif;
-  --transition: all 0.2s ease;
+  --transition: all 0.2s ease-in-out;
 }
 
 /* Dark theme overrides */
 [data-theme="dark"] {
+  --primary: #5D9CEC;
   --bg:      #1A1B26; /* Darker background */
   --text:    #C9D1D9; /* Softer text */
   --card-bg: #242936; /* Slightly lighter card background */
@@ -37,7 +38,8 @@
 /* Dark theme text color overrides for hardcoded black elements */
 [data-theme="dark"] .subtitle,
 [data-theme="dark"] .faq-heading,
-[data-theme="dark"] .header h1,
+[data-theme="dark"] .header h1, 
+[data-theme="dark"] .seo-section h4,
 [data-theme="dark"] .blog-heading {
   color: var(--text);
 }
@@ -54,13 +56,13 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  padding-top: 60px; /* Add padding to prevent content from being hidden by the fixed header */
+  padding-top: 80px; /* More space for the new header */
   transition: var(--transition);
 }
 
 /* Container wrapper */
 .container {
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
   padding: 1rem;
   display: flex;
@@ -84,20 +86,28 @@ body {
 .header {
   text-align: center;
   position: relative;
-  padding: 2.5rem 1rem 2rem 1rem; /* Increased vertical padding */
-  margin-bottom: 2rem; /* Add space below the header */
-  border-bottom: 1px solid var(--border); /* Subtle separator */
+  padding: 2rem 1rem 2.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none; /* Removed border */
 }
 
 #themeLogo {
-  display: block;
-  width: 120px; /* Reduced size for better initial content visibility */
-  margin: 0 auto 1rem auto; /* Adjusted margin for new size */
+  display: none; /* Removed logo */
 }
 
 .header h1 {
-  font-size: 2.5rem; /* Larger main title */
-  margin-bottom: 0.75rem; /* Space below title */
+  font-size: 2.8rem; /* Larger title */
+  font-weight: 700; /* Keep title bold for hierarchy */
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-weight: 400; /* Not bold */
 }
 
 .theme-toggle .icon-sun,
@@ -361,12 +371,12 @@ body {
 }
 
 .lang-switcher-btn {
+    font-weight: 400;
     background: var(--card-bg);
     border: 1px solid var(--primary);
     color: var(--primary);
     padding: 0.3rem 0.8rem;
     border-radius: var(--radius);
-    font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
     position: absolute;
@@ -476,26 +486,35 @@ body.menu-open {
    Typography Helpers & SEO Sections
    =================================================================== */
 
-.language-support-info p {
-  font-size: 11px; /* Set font size to 11px */
-}
-
-.subtitle {
-  white-space: wrap;
-  text-align: center;
-}
-
 .seo-section {
-  text-align: center;
+  text-align: left;
   margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
+.seo-section h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.seo-section p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 .example {
   background: var(--card-bg);
   padding: 0.75rem;
   margin-top: 1rem;
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  box-shadow: none;
 }
 
 
@@ -519,18 +538,20 @@ body.menu-open {
 
 .input-group input {
   flex: 1;
-  padding: 1rem 1.25rem; /* More padding for a taller input */
+  padding: 0.9rem 1.25rem;
   border: 1px solid var(--border);
-  border-radius: 12px; /* Slightly larger border-radius */
-  font-size: 1rem;
-  background: #FFFFFF; /* Force white background */
-  color: #333333; /* Force dark text for readability */
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  background: var(--bg);
+  color: var(--text);
   transition: border-color var(--transition);
+  box-shadow: none; /* Removed shadow */
 }
 
 .input-group input:focus {
   outline: none;
   border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58, 125, 202, 0.2); /* Softer focus ring */
 }
 
 .input-group .secondary {
@@ -577,7 +598,7 @@ body.menu-open {
 button,
 .decode-btn,
 .calculate-btn, .download-btn { /* Apply consistent padding to all buttons */
-  padding: 1rem 1.75rem; /* More generous padding */
+  padding: 0.9rem 1.5rem;
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -586,26 +607,33 @@ button,
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: 12px; /* Consistent border-radius */
-  font-weight: 600; /* Bolder text */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Default shadow */
+  border-radius: var(--radius);
+  font-weight: 500; /* Medium weight, not bold */
+  box-shadow: none; /* Removed heavy shadows */
 }
 
 .calculate-btn {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2); /* Primary specific shadow */
+}
+
+.calculate-btn:hover {
+  background: #316ab3; /* Darker shade on hover */
+  transform: translateY(-1px);
 }
 
 .download-btn {
   background: var(--secondary);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(80, 227, 194, 0.2); /* Secondary specific shadow */
+}
+
+.download-btn:hover {
+  background: #45d4b4;
+  transform: translateY(-1px);
 }
 
 .button-container button:hover, .button-container .decode-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .decode-btn {
@@ -614,11 +642,21 @@ button,
   color: var(--primary);
 }
 
+.decode-btn {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--card-bg);
+}
+
 .decode-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
-  background: var(--primary);
-  color: #fff;
+  background: #e9ecef;
+  border-color: #ced4da;
+  color: var(--text);
+}
+
+[data-theme="dark"] .decode-btn:hover {
+  background: #2c3344;
+  border-color: #444c56;
 }
 
 
@@ -671,23 +709,24 @@ button,
 }
 
 .result-card {
-  background: transparent; /* Make result cards transparent */
-  padding: 1.5rem; /* More padding */
+  background: var(--card-bg);
+  padding: 1.25rem;
   margin: 1.25rem 0; /* Adjusted margin */
-  border-radius: 12px; /* Consistent border-radius */
+  border-radius: var(--radius);
   border: 1px solid var(--border); /* Add a subtle border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   position: relative;
 }
 
 .result-card h3 {
-  font-size: 1.3rem; /* Larger heading for results */
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--primary); /* Highlight with primary color */
+  font-weight: 600; /* Semi-bold for heading */
 }
 
 .result-card h3 span {
-  font-weight: 700; /* Make the total stand out */
+  font-weight: 600; /* Same weight, just colored */
+  color: var(--primary);
 }
 
 .result-card p {
@@ -818,23 +857,24 @@ footer .copyright {
    =================================================================== */
 
 .promotion-box {
+  background: linear-gradient(135deg, rgba(58, 125, 202, 0.05), rgba(80, 227, 194, 0.05));
+  border: 1px solid var(--border);
+  flex-direction: row;
+  text-align: left;
+  padding: 1.25rem;
   margin: 1.5rem 0 2rem 0;
-  padding: 1rem;
-  background: linear-gradient(135deg, #fdfcff 0%, #f5f0f7 100%);
   border-radius: var(--radius);
-  border: 1px solid #8E44AD; /* Tarot Purple Border */
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
   display: flex;
-  flex-direction: column; /* Stack items vertically */
   align-items: center;
   gap: 15px;
 }
 
 
 .promotion-box p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: var(--text);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   line-height: 1.5;
 }
 
@@ -843,9 +883,8 @@ footer .copyright {
 }
 
 .promotion-box .promo-btn {
-  display: inline-block;
   padding: 0.8rem 1.75rem;
-  background-color: #8E44AD; /* Tarot Purple */
+  background-color: var(--primary);
   color: white;
   text-decoration: none;
   border-radius: var(--radius);
@@ -855,8 +894,8 @@ footer .copyright {
 }
 
 .promotion-box .promo-btn:hover {
+  background-color: #316ab3;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(142, 68, 173, 0.4);
 }
 
 [data-theme="dark"] .promotion-box {
@@ -869,18 +908,19 @@ footer .copyright {
    FAQ Section
    =================================================================== */
 
-.faq-heading {
+.faq-section {
+  margin: 2rem 0;
+  padding-top: 0;
+  border-top: none;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #000000;
 }
 
 .faq-item {
-  margin: 1rem 0;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  background: transparent;
+  text-align: left; /* Reset text-align for content */
+  transition: all var(--transition);
+  border-bottom: 1px solid var(--border);
 }
 
 .faq-question {
@@ -889,18 +929,74 @@ footer .copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.faq-question:hover {
+  color: var(--primary);
 }
 
 .faq-answer {
   padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-answer ul {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.faq-answer li {
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.faq-item.active {
+  /* No box, so no active state styles for the container */
 }
 
 .faq-item.active .faq-answer {
   max-height: 500px;
   padding-bottom: 1rem;
+}
+
+.more-tools-section {
+  margin: 2rem 0 4rem 0;
+  text-align: center;
+}
+
+.more-tools-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.faq-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.dark .more-tools-section h2, .dark .faq-heading {
+    color: var(--text);
 }
 
 .chevron {
@@ -914,6 +1010,8 @@ footer .copyright {
 .faq-item:last-of-type {
   margin-bottom: 3rem;
 }
+
+/* hr.divider is removed from HTML */
 
 
 /* ===================================================================
