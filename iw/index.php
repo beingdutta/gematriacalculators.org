@@ -173,52 +173,65 @@
                 <button class="download-btn" onclick="calculateAndDownload()">הורד PDF</button>
                 <a href="/decode-gematria-value.php" class="decode-btn">פענח גימטריה</a>
             </div>
-            <div class="loading-container" id="loading" style="display:none">
-                <div class="spinner"></div>
-                <p id="loadingMessage" class="loading-message"></p>
-            </div>
-            <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="hebrewCopyNotification">הועתק!</div>
-                    <h3>גימטריה עברית: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
-                    <p id="hebrewBreakdown"><?php if($results): ?>חישוב: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?></p>
-                </div>
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="englishCopyNotification">הועתק!</div>
-                    <h3>גימטריה אנגלית: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
-                    <p id="englishBreakdown"><?php if($results): ?>חישוב: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?></p>
-                </div>
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="simpleCopyNotification">הועתק!</div>
-                    <h3>גימטריה פשוטה: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
-                    <p id="simpleBreakdown"><?php if($results): ?>חישוב: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
-                </div>
-                <div class="promotion-box">
-                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="promo-content" style="text-align: center;">
-                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">הרחב את התובנה שלך מעבר למספרים</p>
-                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">בעוד שהגימטריה חושפת את הקוד המספרי החבוי בחייך, הטארוט מציע דרך אחרת לחוכמה. שלב את ההיגיון של המספרים עם האינטואיציה של הקלפים כדי לקבל פרספקטיבה מלאה יותר. חפש הדרכה מקורא הטארוט היומי החינמי שלנו כדי להשלים את מסעך.</p>
-                    </div>
-                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                        קבל קריאת טארוט בחינם
-                    </a>
-                </div>
-                <div class="feedback">
-                    <p>האם המחשבון היה שימושי?</p>
-                    <div class="feedback-buttons">
-                    <button onclick="sendFeedback('😞')">😞</button>
-                    <button onclick="sendFeedback('😐')">😐</button>
-                    <button onclick="sendFeedback('😊')">😊</button>
-                    </div>
-                    <div class="feedback-message" id="feedbackMessage"></div>
-                </div>
-            </div>
         </main>
+        <div class="loading-container" id="loading" style="display:none">
+            <div class="spinner"></div>
+            <p id="loadingMessage" class="loading-message"></p>
+        </div>
+
+        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+            <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">פלט גימטריה עבור: <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="hebrewCopyNotification">הועתק!</div>
+                <h3>גימטריה עברית: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
+                <p id="hebrewBreakdown"><?php if($results): ?>חישוב: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?></p>
+            </div>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="englishCopyNotification">הועתק!</div>
+                <h3>גימטריה אנגלית: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
+                <p id="englishBreakdown"><?php if($results): ?>חישוב: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?></p>
+            </div>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="simpleCopyNotification">הועתק!</div>
+                <h3>גימטריה פשוטה: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
+                <p id="simpleBreakdown"><?php if($results): ?>חישוב: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
+            </div>
+            <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+                <button class="download-btn" onclick="calculateAndDownload()">הורד PDF</button>
+                <button class="calculate-btn" onclick="calculateAgain()">חשב שוב</button>
+            </div>
+            <div class="promotion-box">
+                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="promo-content" style="text-align: center;">
+                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">הרחב את התובנה שלך מעבר למספרים</p>
+                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">בעוד שהגימטריה חושפת את הקוד המספרי החבוי בחייך, הטארוט מציע דרך אחרת לחוכמה. שלב את ההיגיון של המספרים עם האינטואיציה של הקלפים כדי לקבל פרספקטיבה מלאה יותר. חפש הדרכה מקורא הטארוט היומי החינמי שלנו כדי להשלים את מסעך.</p>
+                </div>
+                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                    קבל קריאת טארוט בחינם
+                </a>
+            </div>
+
+            <!-- More Tools (Result View) -->
+            <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+                <?= $moreToolsHtml ?>
+            </div>
+
+            <div class="feedback">
+                <p>האם המחשבון היה שימושי?</p>
+                <div class="feedback-buttons">
+                <button onclick="sendFeedback('😞')">😞</button>
+                <button onclick="sendFeedback('😐')">😐</button>
+                <button onclick="sendFeedback('😊')">😊</button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
+
         <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
             להצעות, משוב או שיפורים, כתבו לנו לכתובת <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
         </p>
@@ -235,6 +248,10 @@
             <p><strong>מחשבון הגימטריה</strong> הטוב ביותר שלנו (המכונה לעתים קרובות <strong>gematrix</strong> או <strong>gmetrix calculator</strong>) מיועד לדיוק ופשטות. הוא מושלם עבור חוקרים, מחפשים רוחניים, או כל מי שמתעניין בטקסטים קדושים. עם <strong>מחשבון הגימטריה העברי</strong> הטוב ביותר שלנו, תוכלו להשתמש ב<strong>מפענח הגימטריה</strong> שלנו כדי לנתח שמות רוחניים או לחקור קשרים אזוטריים. נסו את <strong>מחשבון הגימטריה הפשוט החינמי</strong> היום וצללו לעולם המספרים בביטחון. זהו חלופה מצוינת ל-Gematrix.org.</p>
         </div>
 
+        <?php
+        // Capture More Tools HTML for reuse in both locations
+        ob_start();
+        ?>
         <!-- MORE TOOLS SECTION -->
         <section class="more-tools-section">
             <h2>חקור כלים נוספים להכוונה יומיומית</h2>
@@ -261,31 +278,20 @@
                 ?>
             </div>
         </section>
+        <?php
+        $moreToolsHtml = ob_get_clean();
+        ?>
+
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
         <hr class="divider">
 
         <!-- GLOBAL FEEDBACK BANNER -->
         <div class="global-feedback-message" id="globalFeedback"></div>
 
-        <!-- Language Popup -->
-        <div class="lang-popup">
-            <div class="lang-popup-content">
-                <button class="lang-popup-close" onclick="closeLangPopup()">&times;</button>
-                <h4>בחירת שפה</h4>
-                <div class="lang-grid">
-                    <a href="<?= $BASE_URL . 'ru/' . ltrim($qs, '?') ?>">Русский</a>
-                    <a href="<?= $BASE_URL . ltrim($qs, '?') ?>">English</a>
-                    <a href="<?= $BASE_URL . 'es/' . ltrim($qs, '?') ?>">Español</a>
-                    <a href="<?= $BASE_URL . 'de/' . ltrim($qs, '?') ?>">Deutsch</a>
-                    <a href="<?= $BASE_URL . 'it/' . ltrim($qs, '?') ?>">Italiano</a>
-                    <a href="<?= $BASE_URL . 'pt/' . ltrim($qs, '?') ?>">Português</a>
-                    <a href="<?= $BASE_URL . 'pl/' . ltrim($qs, '?') ?>">Polski</a>
-                    <a href="<?= $BASE_URL . 'iw/' . ltrim($qs, '?') ?>">עברית</a>
-                    <a href="<?= $BASE_URL . 'zh/' . ltrim($qs, '?') ?>">中文</a>
-                    <a href="<?= $BASE_URL . 'vi/' . ltrim($qs, '?') ?>">Tiếng Việt</a>
-                </div>
-            </div>
-        </div>
         <section class="faq-section">
             <h2 class="faq-heading">שאלות נפוצות</h2>
             <div class="faq-item">
@@ -344,7 +350,8 @@
     </div>
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "פלט גימטריה עבור: "
       };
     </script>
 </body>

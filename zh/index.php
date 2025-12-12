@@ -176,65 +176,16 @@
                 <button class="download-btn" onclick="calculateAndDownload()">下载PDF</button>
                 <a href="/decode-gematria-value.php" class="decode-btn">解码 Gematria</a>
             </div>
-            <div class="loading-container" id="loading" style="display:none">
-                <div class="spinner"></div>
-                <p id="loadingMessage" class="loading-message"></p>
-            </div>
-            <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="hebrewCopyNotification">已复制！</div>
-                    <h3>希伯来文数字占卜: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
-                    <p id="hebrewBreakdown"><?php if($results): ?>计算: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?></p>
-                </div>
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="englishCopyNotification">已复制！</div>
-                    <h3>英文数字占卜: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
-                    <p id="englishBreakdown"><?php if($results): ?>计算: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?></p>
-                </div>
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-                    <div class="copy-notification" id="simpleCopyNotification">已复制！</div>
-                    <h3>简单数字占卜: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
-                    <p id="simpleBreakdown"><?php if($results): ?>计算: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
-                </div>
-                <div class="promotion-box">
-                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="promo-content" style="text-align: center;">
-                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">扩展您的视野，超越数字</p>
-                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">虽然gematria揭示了您生活中的隐藏数字代码，但塔罗牌提供了另一条通往智慧的道路。将数字的逻辑与卡牌的直觉相结合，以获得更完整的视角。从我们的免费每日塔罗牌阅读器中寻求指导，以补充您的旅程。</p>
-                    </div>
-                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                        获取免费塔罗牌解读
-                    </a>
-                </div>
-                <div class="feedback">
-                    <p>这个计算器对您有帮助吗？</p>
-                    <div class="feedback-buttons">
-                    <button onclick="sendFeedback('😞')">😞</button>
-                    <button onclick="sendFeedback('😐')">😐</button>
-                    <button onclick="sendFeedback('😊')">😊</button>
-                    </div>
-                    <div class="feedback-message" id="feedbackMessage"></div>
-                </div>
-            </div>
         </main>
-
-        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
-            有关此工具的反馈、建议或改进，请发送电子邮件至 <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>。
-        </p>
-
-        <!-- SEO SECTION #1 -->
-        <div class="seo-section">
-            <h4>发现隐藏的数字含义</h4>
-            <p>我们的免费在线gematria计算器可作为强大的gematria名称计算器，并支持英语到希伯来语的gematria转换。无论您是寻找用于圣经分析的在线gematria计算器，还是只是一个简单的gematria计算器来探索数字含义，这个工具都是为您设计的。用户经常搜索“gematria计算器”、“希伯来命理学计算器”和“gematria calculater”等术语——这个工具提供了他们寻求的功能。即使您拼错为“gemetria”或“germatria”，我们的引擎也能理解。</p>
-            <div class="example">例如：圣经 = 38 (希伯来文), 180 (英文), 30 (简单)</div>
+        <div class="loading-container" id="loading" style="display:none">
+            <div class="spinner"></div>
+            <p id="loadingMessage" class="loading-message"></p>
         </div>
-        
-        <!-- MORE TOOLS SECTION -->
+
+        <?php
+        // Capture More Tools HTML for reuse in both locations
+        ob_start();
+        ?>
         <section class="more-tools-section">
             <h2>探索更多工具以获得日常指导</h2>
             <div class="tool-grid">
@@ -260,6 +211,77 @@
                 ?>
             </div>
         </section>
+        <?php
+        $moreToolsHtml = ob_get_clean();
+        ?>
+
+        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+            <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Gematria 结果： <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="hebrewCopyNotification">已复制！</div>
+                <h3>希伯来文数字占卜: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
+                <p id="hebrewBreakdown"><?php if($results): ?>计算: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?></p>
+            </div>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="englishCopyNotification">已复制！</div>
+                <h3>英文数字占卜: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
+                <p id="englishBreakdown"><?php if($results): ?>计算: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?></p>
+            </div>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+                <div class="copy-notification" id="simpleCopyNotification">已复制！</div>
+                <h3>简单数字占卜: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
+                <p id="simpleBreakdown"><?php if($results): ?>计算: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?></p>
+            </div>
+            <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+                <button class="download-btn" onclick="calculateAndDownload()">下载PDF</button>
+                <button class="calculate-btn" onclick="calculateAgain()">再次计算</button>
+            </div>
+            <div class="promotion-box">
+                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="promo-content" style="text-align: center;">
+                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">扩展您的视野，超越数字</p>
+                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">虽然gematria揭示了您生活中的隐藏数字代码，但塔罗牌提供了另一条通往智慧的道路。将数字的逻辑与卡牌的直觉相结合，以获得更完整的视角。从我们的免费每日塔罗牌阅读器中寻求指导，以补充您的旅程。</p>
+                </div>
+                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                    获取免费塔罗牌解读
+                </a>
+            </div>
+
+            <!-- More Tools (Result View) -->
+            <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+                <?= $moreToolsHtml ?>
+            </div>
+            <div class="feedback">
+                <p>这个计算器对您有帮助吗？</p>
+                <div class="feedback-buttons">
+                <button onclick="sendFeedback('😞')">😞</button>
+                <button onclick="sendFeedback('😐')">😐</button>
+                <button onclick="sendFeedback('😊')">😊</button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
+
+        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+            有关此工具的反馈、建议或改进，请发送电子邮件至 <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>。
+        </p>
+
+        <!-- SEO SECTION #1 -->
+        <div class="seo-section">
+            <h4>发现隐藏的数字含义</h4>
+            <p>我们的免费在线gematria计算器可作为强大的gematria名称计算器，并支持英语到希伯来语的gematria转换。无论您是寻找用于圣经分析的在线gematria计算器，还是只是一个简单的gematria计算器来探索数字含义，这个工具都是为您设计的。用户经常搜索“gematria计算器”、“希伯来命理学计算器”和“gematria calculater”等术语——这个工具提供了他们寻求的功能。即使您拼错为“gemetria”或“germatria”，我们的引擎也能理解。</p>
+            <div class="example">例如：圣经 = 38 (希伯来文), 180 (英文), 30 (简单)</div>
+        </div>
+        
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
@@ -379,7 +401,8 @@
     <script src="/scripts/index.js"></script>
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "Gematria 结果： "
       };
     </script>
 </body>

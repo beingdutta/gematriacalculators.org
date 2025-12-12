@@ -72,13 +72,16 @@ function calculate() {
       return;
     }
   
-    const loading     = document.getElementById('loading');
-    const resultDiv   = document.querySelector('.result');
-    const globalFdbk  = document.getElementById('globalFeedback');
+    const loading = document.getElementById('loading');
+    const resultDiv = document.querySelector('.result');
+    const calculatorMain = document.querySelector('main.calculator');
+    const globalFdbk = document.getElementById('globalFeedback');
+    const header = document.querySelector('header.header');
   
     // show spinner immediately
     loading.style.display = 'flex';
-    resultDiv.style.display = 'none';
+    resultDiv.style.display = 'none'; // ensure results are hidden
+    if (header) header.style.display = 'none';
 
     // Use language-specific phrases if available, otherwise use default English
     const loadingPhrases = window.GematriaLang?.loadingPhrases || defaultLoadingPhrases;
@@ -106,7 +109,23 @@ function calculate() {
           document.getElementById('englishBreakdown').innerHTML = 'Calculation: (' + data.simple.breakdown.join(' + ') + ') × 6';
           document.getElementById('simpleBreakdown').innerHTML  = 'Calculation: ' + data.simple.breakdown.join(' + ');
 
+          // Update Result Header
+          const resultHeader = document.getElementById('resultHeader');
+          if (resultHeader) {
+             const prefix = window.GematriaLang?.resultHeaderPrefix || "Gematria Output for: ";
+             const safeQuery = query.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+             resultHeader.innerHTML = `${prefix} <span style="color: var(--primary-color);">${safeQuery}</span>`;
+          }
+
+          // Hide calculator and show results
+          calculatorMain.style.display = 'none';
           resultDiv.style.display = 'block';
+          if (header) header.style.display = 'none';
+          
+          // Move tools section to result area
+          document.getElementById('more-tools-original').style.display = 'none';
+          document.getElementById('more-tools-result').style.display = 'block';
+
           globalFdbk.textContent  = '✓ Results calculated successfully!';
           globalFdbk.style.display = 'block';
           setTimeout(() => globalFdbk.style.display = 'none', 3000); // Shorter display for success
@@ -123,11 +142,33 @@ function calculate() {
 
   }
 
+function calculateAgain() {
+    const calculatorMain = document.querySelector('main.calculator');
+    const resultDiv = document.querySelector('.result');
+    const header = document.querySelector('header.header');
+    
+    resultDiv.style.display = 'none';
+    calculatorMain.style.display = 'block';
+    if (header) header.style.display = 'block';
+    
+    // Reset tools section to original area
+    document.getElementById('more-tools-original').style.display = 'block';
+    document.getElementById('more-tools-result').style.display = 'none';
+    
+    // Optional: scroll to the top of the calculator and focus the input
+    calculatorMain.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('inputText').focus();
+}
+
 function clearInput() {
     document.getElementById('inputText').value = '';
     document.querySelector('.result').style.display = 'none';
     document.getElementById('loading').style.display = 'none';
     stopLoadingMessages();
+    
+    // Reset tools section to original area
+    document.getElementById('more-tools-original').style.display = 'block';
+    document.getElementById('more-tools-result').style.display = 'none';
 }
 
 function toggleMobileMenu() {
@@ -154,6 +195,17 @@ function initMobileNavigation() {
             if (navLinks.classList.contains('active') && !isClickInside) {
                 toggleMobileMenu();
             }
+        });
+
+        // Handle submenu toggling for mobile nav
+        navLinks.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parentDropdown = this.closest('.nav-dropdown');
+                if (parentDropdown) {
+                    parentDropdown.classList.toggle('open');
+                }
+            });
         });
     }
 }

@@ -28,7 +28,7 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Gematria Calculator — Free Gematrix & Numerology Calculator';
+    $pageTitle = 'Gematria Calculator - Free Gematrix & Numerology Calculator';
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
@@ -200,14 +200,14 @@
             </div>
         </div>
 
-        <header class="header">
+        <header class="header" id="main-header" style="<?= $results ? 'display:none;' : '' ?>">
             <!-- Logo removed for a cleaner look -->
             <h1>Gematria Calculator (Gematrix)</h1>
             <p class="subtitle">Decode the numerical values of words, names, and phrases with English, Hebrew, and Simple Gematria.</p>
         </header>
 
 
-        <main class="calculator">
+        <main class="calculator" id="main-calculator" style="<?= $results ? 'display:none;' : '' ?>">
             <div class="input-group">
                 <input
                     id="inputText"
@@ -219,99 +219,21 @@
             </div>
 
             <div class="button-container">
-                <button class="calculate-btn" onclick="calculate()">Calculate Gematria</button>
+                <button class="calculate-btn" onclick="document.getElementById('main-calculator').style.display='none'; document.getElementById('main-header').style.display='none'; calculate()">Calculate Gematria</button>
                 <button class="download-btn" onclick="calculateAndDownload()">Download PDF</button>
                 <a href="/decode-gematria-value/" class="decode-btn">Decode Gematria</a>
             </div>
-
-
-            <div class="loading-container" id="loading" style="display:none">
-                <div class="spinner"></div>
-                <p id="loadingMessage" class="loading-message"></p>
-            </div>
-
-            <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="hebrewCopyNotification">Copied!</div>
-                    <h3>Hebrew Gematria: <span id="hebrewValue">
-                    <?= $results['hebrew']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="hebrewBreakdown">
-                    <?php if($results): ?>
-                        Calculation: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="englishCopyNotification">Copied!</div>
-                    <h3>English Gematria: <span id="englishValue">
-                    <?= $results['english']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="englishBreakdown">
-                    <?php if($results): ?>
-                        Calculation: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="simpleCopyNotification">Copied!</div>
-                    <h3>Simple Gematria: <span id="simpleValue">
-                    <?= $results['simple']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="simpleBreakdown">
-                    <?php if($results): ?>
-                        Calculation: <?= implode(' + ', $results['simple']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="promotion-box"> <!-- Recommended CSS: display: flex; align-items: center; gap: 15px; -->
-                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="promo-content" style="text-align: center;"> <!-- Recommended CSS: flex-grow: 1; -->
-                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Expand Your Insight Beyond Numbers</p>
-                        <p style="margin: 6px 0 0 0; font-size: 0.8em;">While gematria reveals the hidden numerical code in your life, tarot offers a different path to wisdom. Combine the logic of numbers with the intuition of the cards to gain a more complete perspective. Seek guidance from our free Daily Tarot Reader to complement your journey.</p>
-                    </div>
-                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 0.1rem;">
-                        Get a Free Tarot Reading
-                    </a>
-                </div>
-                <div class="feedback">
-                    <p>Was this calculator helpful?</p>
-                    <div class="feedback-buttons">
-                    <button onclick="sendFeedback('😞')">😞</button>
-                    <button onclick="sendFeedback('😐')">😐</button>
-                    <button onclick="sendFeedback('😊')">😊</button>
-                    </div>
-                    <div class="feedback-message" id="feedbackMessage"></div>
-                </div>
-            </div>
         </main>
 
-        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
-            For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
-        </p>
-
-        <!-- SEO SECTION #1 -->
-        <div class="seo-section">
-            <h4>Discover Hidden Numerical Meanings</h4>
-            <p>Our free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for an online gematria calculator for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "gematria calculater" — and this tool provides the functionality they seek. Even if you misspell it as 'gemetria' or 'germatria', our engine understands you.</p>
-            <div class="example">Example: Bible = 38 (Hebrew), 180 (English), 30 (Simple)</div>
+        <div class="loading-container" id="loading" style="display:none">
+            <div class="spinner"></div>
+            <p id="loadingMessage" class="loading-message"></p>
         </div>
 
-        <!-- MORE TOOLS SECTION -->
+        <?php
+        // Capture More Tools HTML for reuse in both locations
+        ob_start();
+        ?>
         <section class="more-tools-section">
             <h2>Explore More Tools for Daily Guidance</h2>
             <div class="tool-grid">
@@ -337,6 +259,105 @@
                 ?>
             </div>
         </section>
+        <?php
+        $moreToolsHtml = ob_get_clean();
+        ?>
+
+        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+            <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Gematria Output for: <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="hebrewCopyNotification">Copied!</div>
+                <h3>Hebrew Gematria: <span id="hebrewValue">
+                <?= $results['hebrew']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="hebrewBreakdown">
+                <?php if($results): ?>
+                    Calculation: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="englishCopyNotification">Copied!</div>
+                <h3>English Gematria: <span id="englishValue">
+                <?= $results['english']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="englishBreakdown">
+                <?php if($results): ?>
+                    Calculation: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="simpleCopyNotification">Copied!</div>
+                <h3>Simple Gematria: <span id="simpleValue">
+                <?= $results['simple']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="simpleBreakdown">
+                <?php if($results): ?>
+                    Calculation: <?= implode(' + ', $results['simple']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+            <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+                <button class="download-btn" onclick="calculateAndDownload()">Download PDF</button>
+                <button class="calculate-btn" onclick="calculateAgain(); clearInput(); document.getElementById('main-calculator').style.display='block'; document.getElementById('main-header').style.display='block'">Calculate Again</button>
+            </div>
+
+            <div class="promotion-box"> <!-- Recommended CSS: display: flex; align-items: center; gap: 15px; -->
+                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="promo-content" style="text-align: center;"> <!-- Recommended CSS: flex-grow: 1; -->
+                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Expand Your Insight Beyond Numbers</p>
+                    <p style="margin: 6px 0 0 0; font-size: 0.8em;">While gematria reveals the hidden numerical code in your life, tarot offers a different path to wisdom. Combine the logic of numbers with the intuition of the cards to gain a more complete perspective. Seek guidance from our free Daily Tarot Reader to complement your journey.</p>
+                </div>
+                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 0.1rem;">
+                    Get a Free Tarot Reading
+                </a>
+            </div>
+
+            <!-- More Tools (Result View) -->
+            <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+                <?= $moreToolsHtml ?>
+            </div>
+
+            <div class="feedback">
+                <p>Was this calculator helpful?</p>
+                <div class="feedback-buttons">
+                <button onclick="sendFeedback('😞')">😞</button>
+                <button onclick="sendFeedback('😐')">😐</button>
+                <button onclick="sendFeedback('😊')">😊</button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
+
+        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+            For feedback, suggestions, or improvements to this tool, please email us at <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
+        </p>
+
+        <!-- SEO SECTION #1 -->
+        <div class="seo-section">
+            <h4>Discover Hidden Numerical Meanings</h4>
+            <p>Our free gematria calculator online works as a powerful gematria name calculator and supports English to Hebrew gematria conversions. Whether you're looking for an online gematria calculator for biblical analysis or just a simple gematria calc to explore number meanings, this tool is designed for you. Users often search for terms like "calculator gematria", "hebrew numerology calculator", and "gematria calculater" — and this tool provides the functionality they seek. Even if you misspell it as 'gemetria' or 'germatria', our engine understands you.</p>
+            <div class="example">Example: Bible = 38 (Hebrew), 180 (English), 30 (Simple)</div>
+        </div>
+
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
@@ -522,7 +543,8 @@
 
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "Gematria Output for: "
       };
     </script>
     <script src="/scripts/index.js"></script>

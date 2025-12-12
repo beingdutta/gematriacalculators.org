@@ -151,64 +151,107 @@
           <button class="download-btn"  onclick="calculateAndDownload()">Скачать PDF</button>
           <a href="/decode-gematria-value.php" class="decode-btn">Расшифровать гематрию</a>
         </div>
-
-        <div class="loading-container" id="loading" style="display:none">
-            <div class="spinner"></div>
-            <p id="loadingMessage" class="loading-message"></p>
-        </div>
-
-        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-          <!-- Hebrew -->
-          <div class="result-card">
-            <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-            <div class="copy-notification" id="hebrewCopyNotification">Скопировано!</div>
-            <h3>Еврейская гематрия: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
-            <p id="hebrewBreakdown">
-              <?php if ($results): ?>Расчёт: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?>
-            </p>
-          </div>
-          <!-- English -->
-          <div class="result-card">
-            <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-            <div class="copy-notification" id="englishCopyNotification">Скопировано!</div>
-            <h3>Английская гематрия: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
-            <p id="englishBreakdown">
-              <?php if ($results): ?>Расчёт: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?>
-            </p>
-          </div>
-          <!-- Simple -->
-          <div class="result-card">
-            <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
-            <div class="copy-notification" id="simpleCopyNotification">Скопировано!</div>
-            <h3>Простая гематрия: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
-            <p id="simpleBreakdown">
-              <?php if ($results): ?>Расчёт: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?>
-            </p>
-          </div>
-
-          <div class="promotion-box">
-              <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i>
-              </div>
-              <div class="promo-content" style="text-align: center;">
-                  <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Расширьте Свое Понимание за Пределы Чисел</p>
-                  <p style="margin: 6px 0 0 0; font-size: 0.9em;">В то время как гематрия раскрывает скрытый числовой код в вашей жизни, таро предлагает другой путь к мудрости. Совместите логику чисел с интуицией карт, чтобы получить более полную перспективу. Ищите руководство у нашего бесплатного Ежедневного Чтеца Таро, чтобы дополнить ваше путешествие.</p>
-              </div>
-              <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                  Получить Бесплатное Гадание на Таро
-                </a>
-            </div>
-          <div class="feedback">
-            <p>Насколько точны эти результаты?</p>
-            <div class="feedback-buttons">
-              <button onclick="sendFeedback('😞')">😞</button>
-              <button onclick="sendFeedback('😐')">😐</button>
-              <button onclick="sendFeedback('😊')">😊</button>
-            </div>
-            <div class="feedback-message" id="feedbackMessage"></div>
-          </div>
-        </div>
       </main>
+      <div class="loading-container" id="loading" style="display:none">
+          <div class="spinner"></div>
+          <p id="loadingMessage" class="loading-message"></p>
+      </div>
+
+      <?php
+      // Capture More Tools HTML for reuse in both locations
+      ob_start();
+      ?>
+      <section class="more-tools-section">
+          <h2>Исследуйте больше инструментов для ежедневного руководства</h2>
+          <div class="tool-grid">
+              <?php
+                  $tools = [
+                      ['title' => 'Простой калькулятор оценки Васту', 'desc' => 'Получите быструю оценку соответствия Васту для вашего дома.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                      ['title' => 'Калькулятор числа Куа', 'desc' => 'Найдите свои счастливые направления по Фэн-шуй для успеха.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                      ['title' => 'Декодер ангельских чисел', 'desc' => 'Раскройте послания вселенной в числах.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                      ['title' => 'Калькулятор числа жизненного пути', 'desc' => 'Узнайте свою основную судьбу по дате рождения.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                      ['title' => 'Калькулятор сетки Ло-шу', 'desc' => 'Составьте карту своей нумерологической энергетической сетки.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                      ['title' => 'Калькулятор нумерологии имени', 'desc' => 'Рассчитайте свои числа Судьбы и Душевного стремления.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                  ];
+
+                  foreach ($tools as $tool) {
+                      echo '
+                      <div class="tool-card">
+                          <div class="tool-icon">'.$tool['icon'].'</div>
+                          <h3>'.$tool['title'].'</h3>
+                          <p>'.$tool['desc'].'</p>
+                          <a href="'.$tool['url'].'" class="calculate-btn">Открыть инструмент</a>
+                      </div>';
+                  }
+              ?>
+          </div>
+      </section>
+      <?php
+      $moreToolsHtml = ob_get_clean();
+      ?>
+
+      <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+        <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Результат гематрии для: <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+        <!-- Hebrew -->
+        <div class="result-card">
+          <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+          <div class="copy-notification" id="hebrewCopyNotification">Скопировано!</div>
+          <h3>Еврейская гематрия: <span id="hebrewValue"><?= $results['hebrew']['total'] ?? 0 ?></span></h3>
+          <p id="hebrewBreakdown">
+            <?php if ($results): ?>Расчёт: <?= implode(' + ', $results['hebrew']['breakdown']) ?><?php endif ?>
+          </p>
+        </div>
+        <!-- English -->
+        <div class="result-card">
+          <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+          <div class="copy-notification" id="englishCopyNotification">Скопировано!</div>
+          <h3>Английская гематрия: <span id="englishValue"><?= $results['english']['total'] ?? 0 ?></span></h3>
+          <p id="englishBreakdown">
+            <?php if ($results): ?>Расчёт: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6<?php endif ?>
+          </p>
+        </div>
+        <!-- Simple -->
+        <div class="result-card">
+          <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')"><i class="fa-regular fa-copy"></i></button>
+          <div class="copy-notification" id="simpleCopyNotification">Скопировано!</div>
+          <h3>Простая гематрия: <span id="simpleValue"><?= $results['simple']['total'] ?? 0 ?></span></h3>
+          <p id="simpleBreakdown">
+            <?php if ($results): ?>Расчёт: <?= implode(' + ', $results['simple']['breakdown']) ?><?php endif ?>
+          </p>
+        </div>
+
+        <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+            <button class="download-btn" onclick="calculateAndDownload()">Скачать PDF</button>
+            <button class="calculate-btn" onclick="calculateAgain()">Рассчитать снова</button>
+        </div>
+
+        <div class="promotion-box">
+            <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="promo-content" style="text-align: center;">
+                <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Расширьте Свое Понимание за Пределы Чисел</p>
+                <p style="margin: 6px 0 0 0; font-size: 0.9em;">В то время как гематрия раскрывает скрытый числовой код в вашей жизни, таро предлагает другой путь к мудрости. Совместите логику чисел с интуицией карт, чтобы получить более полную перспективу. Ищите руководство у нашего бесплатного Ежедневного Чтеца Таро, чтобы дополнить ваше путешествие.</p>
+            </div>
+            <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                Получить Бесплатное Гадание на Таро
+              </a>
+          </div>
+
+          <!-- More Tools (Result View) -->
+          <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+              <?= $moreToolsHtml ?>
+          </div>
+        <div class="feedback">
+          <p>Насколько точны эти результаты?</p>
+          <div class="feedback-buttons">
+            <button onclick="sendFeedback('😞')">😞</button>
+            <button onclick="sendFeedback('😐')">😐</button>
+            <button onclick="sendFeedback('😊')">😊</button>
+          </div>
+          <div class="feedback-message" id="feedbackMessage"></div>
+        </div>
+      </div>
 
       <p class="note" style="color:var(--error);font-weight:400;margin-top:0.75rem;text-align:center">
         По вопросам и предложениям пишите на <a href="mailto:admins@gematriacalculators.org" style="color:var(--error);text-decoration:underline;">admins@gematriacalculators.org</a>.
@@ -221,32 +264,10 @@
         <div class="example">Пример: Библия = 38 (еврейская), 180 (английская), 30 (простая)</div>
       </div>
 
-        <!-- MORE TOOLS SECTION -->
-        <section class="more-tools-section">
-            <h2>Исследуйте больше инструментов для ежедневного руководства</h2>
-            <div class="tool-grid">
-                <?php
-                    $tools = [
-                        ['title' => 'Простой калькулятор оценки Васту', 'desc' => 'Получите быструю оценку соответствия Васту для вашего дома.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
-                        ['title' => 'Калькулятор числа Куа', 'desc' => 'Найдите свои счастливые направления по Фэн-шуй для успеха.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'Декодер ангельских чисел', 'desc' => 'Раскройте послания вселенной в числах.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
-                        ['title' => 'Калькулятор числа жизненного пути', 'desc' => 'Узнайте свою основную судьбу по дате рождения.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
-                        ['title' => 'Калькулятор сетки Ло-шу', 'desc' => 'Составьте карту своей нумерологической энергетической сетки.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
-                        ['title' => 'Калькулятор нумерологии имени', 'desc' => 'Рассчитайте свои числа Судьбы и Душевного стремления.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
-                    ];
-
-                    foreach ($tools as $tool) {
-                        echo '
-                        <div class="tool-card">
-                            <div class="tool-icon">'.$tool['icon'].'</div>
-                            <h3>'.$tool['title'].'</h3>
-                            <p>'.$tool['desc'].'</p>
-                            <a href="'.$tool['url'].'" class="calculate-btn">Открыть инструмент</a>
-                        </div>';
-                    }
-                ?>
-            </div>
-        </section>
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
       <!-- green international note -->
       <div class="seo-section" style="color:green;">
@@ -378,7 +399,8 @@
     </div>
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "Результат гематрии для: "
       };
     </script>
   </body>

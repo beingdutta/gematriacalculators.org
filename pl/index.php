@@ -202,80 +202,124 @@
                 <a href="/decode-gematria-value.php" class="decode-btn">Dekoduj Gematrię</a>
             </div>
 
-            <div class="loading-container" id="loading" style="display:none">
-                <div class="spinner"></div>
-                <p id="loadingMessage" class="loading-message"></p>
-            </div>
+            <?php
+            // Capture More Tools HTML for reuse in both locations
+            ob_start();
+            ?>
+            <section class="more-tools-section">
+                <h2>Odkryj więcej narzędzi do codziennego przewodnictwa</h2>
+                <div class="tool-grid">
+                    <?php
+                        $tools = [
+                            ['title' => 'Prosty Kalkulator Wyniku Vastu', 'desc' => 'Uzyskaj szybki wynik zgodności Vastu dla swojego domu.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
+                            ['title' => 'Kalkulator Liczby Kua', 'desc' => 'Znajdź swoje szczęśliwe kierunki Feng Shui na sukces.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
+                            ['title' => 'Dekoder Liczb Anielskich', 'desc' => 'Odkryj wiadomości od wszechświata w liczbach.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                            ['title' => 'Kalkulator Liczby Drogi Życia', 'desc' => 'Odkryj swoje główne przeznaczenie na podstawie daty urodzenia.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
+                            ['title' => 'Kalkulator Siatki Loshu', 'desc' => 'Stwórz swoją numerologiczną siatkę energetyczną.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
+                            ['title' => 'Kalkulator Numerologii Imienia', 'desc' => 'Oblicz swoje liczby Przeznaczenia i Pragnienia Duszy.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
+                        ];
 
-            <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="hebrewCopyNotification">Skopiowano!</div>
-                    <h3>Gematria Hebrajska: <span id="hebrewValue">
-                    <?= $results['hebrew']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="hebrewBreakdown">
-                    <?php if($results): ?>
-                        Obliczenie: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
+                        foreach ($tools as $tool) {
+                            echo '
+                            <div class="tool-card">
+                                <div class="tool-icon">'.$tool['icon'].'</div>
+                                <h3>'.$tool['title'].'</h3>
+                                <p>'.$tool['desc'].'</p>
+                                <a href="'.$tool['url'].'" class="calculate-btn">Otwórz Narzędzie</a>
+                            </div>';
+                        }
+                    ?>
                 </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="englishCopyNotification">Skopiowano!</div>
-                    <h3>Gematria Angielska: <span id="englishValue">
-                    <?= $results['english']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="englishBreakdown">
-                    <?php if($results): ?>
-                        Obliczenie: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="simpleCopyNotification">Skopiowano!</div>
-                    <h3>Prosta Gematria: <span id="simpleValue">
-                    <?= $results['simple']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="simpleBreakdown">
-                    <?php if($results): ?>
-                        Obliczenie: <?= implode(' + ', $results['simple']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="promotion-box">
-                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="promo-content" style="text-align: center;">
-                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Rozszerz Swoją Wiedzę Poza Liczby</p>
-                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">Podczas gdy gematria odkrywa ukryty kod numeryczny w Twoim życiu, tarot oferuje inną ścieżkę do mądrości. Połącz logikę liczb z intuicją kart, aby uzyskać pełniejszą perspektywę. Skorzystaj z naszego darmowego Codziennego Czytnika Tarota, aby uzupełnić swoją podróż.</p>
-                    </div>
-                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                        Uzyskaj Darmowe Czytanie Tarota
-                    </a>
-                </div>
-                <div class="feedback">
-                    <p>Czy ten kalkulator był pomocny?</p>
-                    <div class="feedback-buttons">
-                    <button onclick="sendFeedback('😞')">😞</button>
-                    <button onclick="sendFeedback('😐')">😐</button>
-                    <button onclick="sendFeedback('😊')">😊</button>
-                    </div>
-                    <div class="feedback-message" id="feedbackMessage"></div>
-                </div>
-            </div>
+            </section>
+            <?php
+            $moreToolsHtml = ob_get_clean();
+            ?>
         </main>
+        <div class="loading-container" id="loading" style="display:none">
+            <div class="spinner"></div>
+            <p id="loadingMessage" class="loading-message"></p>
+        </div>
+
+        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+            <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Wynik Gematrii dla: <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="hebrewCopyNotification">Skopiowano!</div>
+                <h3>Gematria Hebrajska: <span id="hebrewValue">
+                <?= $results['hebrew']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="hebrewBreakdown">
+                <?php if($results): ?>
+                    Obliczenie: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="englishCopyNotification">Skopiowano!</div>
+                <h3>Gematria Angielska: <span id="englishValue">
+                <?= $results['english']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="englishBreakdown">
+                <?php if($results): ?>
+                    Obliczenie: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="simpleCopyNotification">Skopiowano!</div>
+                <h3>Prosta Gematria: <span id="simpleValue">
+                <?= $results['simple']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="simpleBreakdown">
+                <?php if($results): ?>
+                    Obliczenie: <?= implode(' + ', $results['simple']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+                <button class="download-btn" onclick="calculateAndDownload()">Pobierz PDF</button>
+                <button class="calculate-btn" onclick="calculateAgain()">Oblicz Ponownie</button>
+            </div>
+
+            <div class="promotion-box">
+                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="promo-content" style="text-align: center;">
+                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Rozszerz Swoją Wiedzę Poza Liczby</p>
+                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">Podczas gdy gematria odkrywa ukryty kod numeryczny w Twoim życiu, tarot oferuje inną ścieżkę do mądrości. Połącz logikę liczb z intuicją kart, aby uzyskać pełniejszą perspektywę. Skorzystaj z naszego darmowego Codziennego Czytnika Tarota, aby uzupełnić swoją podróż.</p>
+                </div>
+                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                    Uzyskaj Darmowe Czytanie Tarota
+                </a>
+            </div>
+
+            <!-- More Tools (Result View) -->
+            <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+                <?= $moreToolsHtml ?>
+            </div>
+
+            <div class="feedback">
+                <p>Czy ten kalkulator był pomocny?</p>
+                <div class="feedback-buttons">
+                <button onclick="sendFeedback('😞')">😞</button>
+                <button onclick="sendFeedback('😐')">😐</button>
+                <button onclick="sendFeedback('😊')">😊</button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
 
         <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
             W sprawie opinii, sugestii lub ulepszeń tego narzędzia, prosimy o kontakt mailowy na adres <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
@@ -288,32 +332,10 @@
             <div class="example">Przykład: Biblia = 38 (Hebrajski), 180 (Angielski), 30 (Prosty)</div>
         </div>
 
-        <!-- MORE TOOLS SECTION -->
-        <section class="more-tools-section">
-            <h2>Odkryj więcej narzędzi do codziennego przewodnictwa</h2>
-            <div class="tool-grid">
-                <?php
-                    $tools = [
-                        ['title' => 'Prosty Kalkulator Wyniku Vastu', 'desc' => 'Uzyskaj szybki wynik zgodności Vastu dla swojego domu.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
-                        ['title' => 'Kalkulator Liczby Kua', 'desc' => 'Znajdź swoje szczęśliwe kierunki Feng Shui na sukces.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'Dekoder Liczb Anielskich', 'desc' => 'Odkryj wiadomości od wszechświata w liczbach.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
-                        ['title' => 'Kalkulator Liczby Drogi Życia', 'desc' => 'Odkryj swoje główne przeznaczenie na podstawie daty urodzenia.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
-                        ['title' => 'Kalkulator Siatki Loshu', 'desc' => 'Stwórz swoją numerologiczną siatkę energetyczną.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
-                        ['title' => 'Kalkulator Numerologii Imienia', 'desc' => 'Oblicz swoje liczby Przeznaczenia i Pragnienia Duszy.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
-                    ];
-
-                    foreach ($tools as $tool) {
-                        echo '
-                        <div class="tool-card">
-                            <div class="tool-icon">'.$tool['icon'].'</div>
-                            <h3>'.$tool['title'].'</h3>
-                            <p>'.$tool['desc'].'</p>
-                            <a href="'.$tool['url'].'" class="calculate-btn">Otwórz Narzędzie</a>
-                        </div>';
-                    }
-                ?>
-            </div>
-        </section>
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
@@ -480,7 +502,8 @@
 
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "Wynik Gematrii dla: "
       };
     </script>
     <script src="/scripts/index.js"></script>

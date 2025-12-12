@@ -31,8 +31,8 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     font-size: 1.2rem;
-    background: #FFFFFF; /* Force white background */
-    color: #333333; /* Force dark text for readability */
+    background: var(--card-bg);
+    color: var(--text);
     transition: border-color var(--transition);
     -webkit-appearance: none;
     -moz-appearance: none;

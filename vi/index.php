@@ -187,94 +187,16 @@
                 <button class="download-btn" onclick="calculateAndDownload()">Tải xuống PDF</button>
                 <a href="/decode-gematria-value.php" class="decode-btn">Giải mã Gematria</a>
             </div>
-
-            <div class="loading-container" id="loading" style="display:none">
-                <div class="spinner"></div>
-                <p id="loadingMessage" class="loading-message"></p>
-            </div>
-
-            <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="hebrewCopyNotification">Đã sao chép!</div>
-                    <h3>Gematria tiếng Do Thái: <span id="hebrewValue">
-                    <?= $results['hebrew']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="hebrewBreakdown">
-                    <?php if($results): ?>
-                        Phép tính: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="englishCopyNotification">Đã sao chép!</div>
-                    <h3>Gematria tiếng Anh: <span id="englishValue">
-                    <?= $results['english']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="englishBreakdown">
-                    <?php if($results): ?>
-                        Phép tính: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="result-card">
-                    <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
-                        <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <div class="copy-notification" id="simpleCopyNotification">Đã sao chép!</div>
-                    <h3>Gematria đơn giản: <span id="simpleValue">
-                    <?= $results['simple']['total'] ?? 0 ?>
-                    </span></h3>
-                    <p id="simpleBreakdown">
-                    <?php if($results): ?>
-                        Phép tính: <?= implode(' + ', $results['simple']['breakdown']) ?>
-                    <?php endif ?>
-                    </p>
-                </div>
-
-                <div class="promotion-box">
-                    <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="promo-content" style="text-align: center;">
-                        <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Mở Rộng Tầm Nhìn Vượt Ra Ngoài Những Con Số</p>
-                        <p style="margin: 6px 0 0 0; font-size: 0.9em;">Trong khi gematria tiết lộ mã số ẩn trong cuộc sống của bạn, tarot lại cung cấp một con đường khác đến với trí tuệ. Kết hợp logic của các con số với trực giác của các lá bài để có được một góc nhìn đầy đủ hơn. Hãy tìm kiếm sự hướng dẫn từ Trình đọc Tarot Hàng ngày miễn phí của chúng tôi để bổ sung cho hành trình của bạn.</p>
-                    </div>
-                    <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                        Nhận một bài đọc Tarot miễn phí
-                    </a>
-                </div>
-                <div class="feedback">
-                    <p>Máy tính này có hữu ích không?</p>
-                    <div class="feedback-buttons">
-                    <button onclick="sendFeedback('😞')">😞</button>
-                    <button onclick="sendFeedback('😐')">😐</button>
-                    <button onclick="sendFeedback('😊')">😊</button>
-                    </div>
-                    <div class="feedback-message" id="feedbackMessage"></div>
-                </div>
-            </div>
         </main>
-
-        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
-            Để có phản hồi, đề xuất hoặc cải tiến cho công cụ này, vui lòng gửi email cho chúng tôi tại <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
-        </p>
-
-        <!-- SEO SECTION #1 -->
-        <div class="seo-section">
-            <h4>Khám phá ý nghĩa số bị ẩn</h4>
-            <p>Máy tính gematria trực tuyến miễn phí này hoạt động như một máy tính tên gematria mạnh mẽ và hỗ trợ chuyển đổi gematria từ tiếng Anh sang tiếng Do Thái. Cho dù bạn đang tìm kiếm một máy tính gematria trực tuyến để phân tích kinh thánh hay chỉ là một phép tính gematria đơn giản để khám phá ý nghĩa của các con số, công cụ này được thiết kế dành cho bạn. Người dùng thường tìm kiếm "máy tính gematria" hoặc "gematria calculater", và công cụ của chúng tôi đáp ứng nhu cầu đó.</p>
-            <div class="example">Ví dụ: Kinh Thánh = 38 (Tiếng Do Thái), 180 (Tiếng Anh), 30 (Đơn giản)</div>
+        <div class="loading-container" id="loading" style="display:none">
+            <div class="spinner"></div>
+            <p id="loadingMessage" class="loading-message"></p>
         </div>
 
-        <!-- MORE TOOLS SECTION -->
+        <?php
+        // Capture More Tools HTML for reuse in both locations
+        ob_start();
+        ?>
         <section class="more-tools-section">
             <h2>Khám phá thêm các công cụ để được hướng dẫn hàng ngày</h2>
             <div class="tool-grid">
@@ -293,13 +215,112 @@
                         <div class="tool-card">
                             <div class="tool-icon">'.$tool['icon'].'</div>
                             <h3>'.$tool['title'].'</h3>
-                            <p>'.$tool['desc'].'</p>
+                            <p>'.$tool['desc'].'p>
                             <a href="'.$tool['url'].'" class="calculate-btn">Mở Công cụ</a>
                         </div>';
                     }
                 ?>
             </div>
         </section>
+        <?php
+        $moreToolsHtml = ob_get_clean();
+        ?>
+
+        <div class="result" id="result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+            <h2 id="resultHeader" style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600; background-color: var(--background-alt); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Kết quả Gematria cho: <span style="color: var(--primary-color);"><?= htmlspecialchars($displayInput) ?></span></h2>
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('hebrewValue','hebrewCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="hebrewCopyNotification">Đã sao chép!</div>
+                <h3>Gematria tiếng Do Thái: <span id="hebrewValue">
+                <?= $results['hebrew']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="hebrewBreakdown">
+                <?php if($results): ?>
+                    Phép tính: <?= implode(' + ', $results['hebrew']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('englishValue','englishCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="englishCopyNotification">Đã sao chép!</div>
+                <h3>Gematria tiếng Anh: <span id="englishValue">
+                <?= $results['english']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="englishBreakdown">
+                <?php if($results): ?>
+                    Phép tính: (<?= implode(' + ', $results['simple']['breakdown']) ?>) × 6
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="result-card">
+                <button class="copy-btn" onclick="copyValue('simpleValue','simpleCopyNotification')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+                <div class="copy-notification" id="simpleCopyNotification">Đã sao chép!</div>
+                <h3>Gematria đơn giản: <span id="simpleValue">
+                <?= $results['simple']['total'] ?? 0 ?>
+                </span></h3>
+                <p id="simpleBreakdown">
+                <?php if($results): ?>
+                    Phép tính: <?= implode(' + ', $results['simple']['breakdown']) ?>
+                <?php endif ?>
+                </p>
+            </div>
+
+            <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
+                <button class="download-btn" onclick="calculateAndDownload()">Tải xuống PDF</button>
+                <button class="calculate-btn" onclick="calculateAgain()">Tính lại</button>
+            </div>
+
+            <div class="promotion-box">
+                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="promo-content" style="text-align: center;">
+                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Mở Rộng Tầm Nhìn Vượt Ra Ngoài Những Con Số</p>
+                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">Trong khi gematria tiết lộ mã số ẩn trong cuộc sống của bạn, tarot lại cung cấp một con đường khác đến với trí tuệ. Kết hợp logic của các con số với trực giác của các lá bài để có được một góc nhìn đầy đủ hơn. Hãy tìm kiếm sự hướng dẫn từ Trình đọc Tarot Hàng ngày miễn phí của chúng tôi để bổ sung cho hành trình của bạn.</p>
+                </div>
+                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
+                    Nhận một bài đọc Tarot miễn phí
+                </a>
+            </div>
+
+            <!-- More Tools (Result View) -->
+            <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
+                <?= $moreToolsHtml ?>
+            </div>
+            <div class="feedback">
+                <p>Máy tính này có hữu ích không?</p>
+                <div class="feedback-buttons">
+                <button onclick="sendFeedback('😞')">😞</button>
+                <button onclick="sendFeedback('😐')">😐</button>
+                <button onclick="sendFeedback('😊')">😊</button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
+
+        <p class="note" style="color: var(--error); font-weight: 400; margin-top: 0.75rem; text-align: center;">
+            Để có phản hồi, đề xuất hoặc cải tiến cho công cụ này, vui lòng gửi email cho chúng tôi tại <a href="mailto:admins@gematriacalculators.org" style="color: var(--error); text-decoration: underline;">admins@gematriacalculators.org</a>.
+        </p>
+
+        <!-- SEO SECTION #1 -->
+        <div class="seo-section">
+            <h4>Khám phá ý nghĩa số bị ẩn</h4>
+            <p>Máy tính gematria trực tuyến miễn phí này hoạt động như một máy tính tên gematria mạnh mẽ và hỗ trợ chuyển đổi gematria từ tiếng Anh sang tiếng Do Thái. Cho dù bạn đang tìm kiếm một máy tính gematria trực tuyến để phân tích kinh thánh hay chỉ là một phép tính gematria đơn giản để khám phá ý nghĩa của các con số, công cụ này được thiết kế dành cho bạn. Người dùng thường tìm kiếm "máy tính gematria" hoặc "gematria calculater", và công cụ của chúng tôi đáp ứng nhu cầu đó.</p>
+            <div class="example">Ví dụ: Kinh Thánh = 38 (Tiếng Do Thái), 180 (Tiếng Anh), 30 (Đơn giản)</div>
+        </div>
+
+        <!-- More Tools (Original View) -->
+        <div id="more-tools-original" style="<?= $results ? 'display:none;' : 'display:block;' ?>">
+            <?= $moreToolsHtml ?>
+        </div>
 
         <!-- SEO SECTION #2 -->
         <div class="seo-section">
@@ -475,7 +496,8 @@
 
     <script>
       window.GematriaLang = {
-        loadingPhrases: <?= json_encode($loadingPhrases) ?>
+        loadingPhrases: <?= json_encode($loadingPhrases) ?>,
+        resultHeaderPrefix: "Kết quả Gematria cho: "
       };
     </script>
     <script src="/scripts/index.js"></script>
