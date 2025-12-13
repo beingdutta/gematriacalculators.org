@@ -1068,6 +1068,10 @@ footer .copyright {
     /* This rule is now more specific and correct inside the .nav-links block */
   }
 
+  .ticker-bar {
+    display: none !important;
+  }
+
   .recent-phrases h4 {
     margin-right: auto;
   }
@@ -1328,14 +1332,16 @@ footer .copyright {
 /* Close button */
 .modal-close {
   position: absolute;
-  top: -0.2rem;
-  right: -0.6rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
-  font-size: 2.3rem;
   cursor: pointer;
   color: var(--muted, #888);
   box-shadow: none; /* Remove inherited box-shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-close:hover {
@@ -1544,4 +1550,26 @@ html[dir="rtl"] .ticker__list {
 
 .cookie-popup-content li {
   margin-bottom: 0.5rem;
+}
+
+/* ─── Support Modal Styles ─── */
+.support-modal-content {
+    max-width: 400px;
+}
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+.radio-group label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: var(--primary);
 }

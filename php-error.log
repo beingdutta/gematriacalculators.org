@@ -1,0 +1,15 @@
+[13-Dec-2025 12:05:49 Europe/Berlin] Received support response: 
+[13-Dec-2025 12:05:49 Europe/Berlin] Invalid response value: 
+[13-Dec-2025 12:09:40 Europe/Berlin] Request Method: POST | Received response value: Yes
+[13-Dec-2025 12:09:41 Europe/Berlin] Successfully inserted response ID: 1
+[13-Dec-2025 12:10:37 Europe/Berlin] Request Method: POST | Received response value: No
+[13-Dec-2025 12:10:38 Europe/Berlin] Successfully inserted response ID: 2
+[13-Dec-2025 12:20:07 Europe/Berlin] Request Method: POST | Received response value: No
+[13-Dec-2025 12:20:07 Europe/Berlin] Successfully inserted response ID: 3
+[13-Dec-2025 12:22:03 Europe/Berlin] Request Method: POST | Received response value: No
+[13-Dec-2025 12:22:04 Europe/Berlin] Successfully inserted response ID: 4
+[13-Dec-2025 12:24:01 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in E:\gematriacalculators.org\save.php:19
+Stack trace:
+#0 E:\gematriacalculators.org\save.php(19): mysqli->__construct('srv559.hstgr.io', 'u628985654_gema...', Object(SensitiveParameterValue), 'u628985654_gema...')
+#1 {main}
+  thrown in E:\gematriacalculators.org\save.php on line 19

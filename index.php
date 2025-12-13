@@ -516,31 +516,6 @@
         </footer>
     </div>
 
-    <div id="exitModal" class="modal">
-        <div class="modal-content animate-scale">
-            <button class="modal-close" id="exitModalClose" aria-label="Close Modal">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </button>
-            <h2><i class="fa-solid fa-star text-primary"></i> Don’t Leave Yet!</h2>
-            <p>Have you tried our exciting new tools?</p>
-            <div class="modal-links">
-                <a href="https://vpnleaderboard.com/" class="outline-button">
-                    <i class="fa-solid fa-shield-halved"></i> VPN Leaderboard
-                </a>
-                <a href="http://tarotcardgenerator.online/" class="outline-button">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Daily Tarot Reader
-                </a>
-                <a href="https://www.snowdayscalculatorai.com/" class="outline-button">
-                    <i class="fa-solid fa-snowflake"></i> US Snowday Calculator
-                </a>
-            </div>
-            <p style="margin-top: 1rem;">
-                <i class="fa-solid fa-face-smile-wink fa-lg text-primary"></i>
-                Enjoy and come back soon!
-            </p>
-        </div>
-    </div>
-
     <script>
       window.GematriaLang = {
         loadingPhrases: <?= json_encode($loadingPhrases) ?>,

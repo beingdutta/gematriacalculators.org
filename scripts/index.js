@@ -582,43 +582,70 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(initializeTicker, 300000);
 });
 
-
-//  Exit-Intent / Timed Modal Logic 
-
-let exitModalShown = false;
-const modal       = document.getElementById('exitModal');
-const closeBtn    = document.getElementById('exitModalClose');
-
-function showExitModal() {
-  if (exitModalShown) return;
-  exitModalShown = true;
-  if (modal) {
-    modal.style.display = 'flex';
-  }
-}
-
-function hideExitModal() {
-  if (modal) modal.style.display = 'none';
-}
-
-// 1) Show after 25 seconds on page
+// --- Support Modal Logic ---
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(showExitModal, 30000);
+    const supportModal = document.getElementById('supportModal');
+    const closeBtn = document.getElementById('supportModalClose');
+    const supportForm = document.getElementById('supportForm');
 
-  // 2) Exit-intent: when mouse leaves at the top
-  document.addEventListener('mouseout', e => {
-    if (!e.toElement && !e.relatedTarget && e.clientY <= 0) {
-      showExitModal();
+    // Modal Delay: 7 seconds.
+    setTimeout(() => {
+        // TEST MODE: Removed localStorage check so it always shows
+        console.log('Support Modal: 7s timer fired. Showing modal (Test Mode).');
+        if (supportModal) {
+            supportModal.style.display = 'flex';
+        }
+    }, 14000);
+
+    // Close modal handler
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            supportModal.style.display = 'none';
+        });
     }
-  });
-});
 
-// Close handlers
-if (closeBtn) {
-  closeBtn.addEventListener('click', hideExitModal);
-}
-if (modal) {
-  modal.addEventListener('click', e => {
-    if (e.target === modal) hideExitModal();
-  });
-}
+    // Close on click outside
+    window.addEventListener('click', (e) => {
+        if (e.target === supportModal) {
+            supportModal.style.display = 'none';
+        }
+    });
+
+    // Handle Form Submit
+    if (supportForm) {
+        supportForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(supportForm);
+            const response = formData.get('support');
+
+            console.log('Support Modal: Submitting response:', response);
+
+            // 1. Collapse modal immediately & save state
+            supportModal.style.display = 'none';
+            // TEST MODE: Commented out to prevent caching
+            // localStorage.setItem('supportResponseGiven', 'true');
+
+            // 2. Perform DB operation in background
+            fetch('/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ response: response })
+            })
+            .then(async res => {
+                console.log('Support Modal: Server responded with status:', res.status);
+                const text = await res.text();
+                console.log('Support Modal: Server response body:', text);
+                try {
+                    const json = JSON.parse(text);
+                    console.log('Support Modal: Parsed JSON:', json);
+                } catch (e) {
+                    console.error('Support Modal: Failed to parse JSON response');
+                }
+            })
+            .catch(err => console.error('Support Modal: Fetch error:', err));
+        });
+    }
+});
