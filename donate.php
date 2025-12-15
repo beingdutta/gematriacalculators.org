@@ -14,14 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
     
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAvfy_YmvRt7Gf6kYjuQYACVCI8P-hPXIWtqxqmI8K3EfERJl_X1EXGs-xI1LKylkKVWHHXZL4B948PiE&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+
     <style>
         .donate-section {
-            padding: 4rem 1rem;
+            padding: 1rem 1rem;
             min-height: 60vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .donate-card {
             background: var(--background-alt, #ffffff);
@@ -42,19 +44,6 @@
             line-height: 1.6;
             color: var(--text-color, #555);
         }
-        .paypal-container {
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 8px;
-            word-break: break-all;
-            font-family: monospace;
-            margin-top: 1rem;
-            color: #333;
-        }
-        [data-theme="dark"] .paypal-container {
-            background: #2d2d2d;
-            color: #eee;
-        }
     </style>
 </head>
 <body>
@@ -63,14 +52,13 @@
     
     <div class="container">
         <section class="donate-section">
-            <div class="donate-card">
-                <h1>Donate Us</h1>
-                <p>Thank you for using Gematria Calculator. If you find our tools valuable, please consider supporting us to help keep the servers running and development active.</p>
-                
-                <div class="paypal-container">
-                    <strong>PayPal Link:</strong><br>
-                    https://paypal.me/gematria
-                </div>
+            <div class="donate-card">                                
+                <div id="paypal-container-5TS6RTE42SKQS" style="margin-top: 1rem; max-width: 300px; margin-left: auto; margin-right: auto;"></div>
+                <script>
+                  paypal.HostedButtons({
+                    hostedButtonId: "5TS6RTE42SKQS",
+                  }).render("#paypal-container-5TS6RTE42SKQS")
+                </script>
             </div>
         </section>
 

@@ -131,6 +131,7 @@ if ($current_path_normalized === '') { // Handle root path
     </button>
 </nav>
 
+<?php if (basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
 <!-- Support Modal (Global) -->
 <div id="supportModal" class="modal" style="display: none;">
     <div class="modal-content animate-scale support-modal-content">
@@ -151,3 +152,4 @@ if ($current_path_normalized === '') { // Handle root path
         </form>
     </div>
 </div>
+<?php endif; ?>

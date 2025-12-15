@@ -632,7 +632,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ response: response })
+                body: JSON.stringify({ response: response }),
+                keepalive: true
             })
             .then(async res => {
                 console.log('Support Modal: Server responded with status:', res.status);
@@ -646,6 +647,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(err => console.error('Support Modal: Fetch error:', err));
+
+            if (response === 'Yes') {
+                window.open('/donate.php', '_blank');
+            }
         });
     }
 });

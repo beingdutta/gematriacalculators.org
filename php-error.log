@@ -13,3 +13,14 @@ Stack trace:
 #0 E:\gematriacalculators.org\save.php(19): mysqli->__construct('srv559.hstgr.io', 'u628985654_gema...', Object(SensitiveParameterValue), 'u628985654_gema...')
 #1 {main}
   thrown in E:\gematriacalculators.org\save.php on line 19
+[15-Dec-2025 19:55:28 Europe/Berlin] Request Method: POST | Received response value: Yes
+[15-Dec-2025 19:55:28 Europe/Berlin] Successfully inserted response ID: 40
+[15-Dec-2025 19:58:17 Europe/Berlin] Request Method: POST | Received response value: Yes
+[15-Dec-2025 19:58:18 Europe/Berlin] Successfully inserted response ID: 41
+[15-Dec-2025 20:01:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in E:\gematriacalculators.org\save.php:19
+Stack trace:
+#0 E:\gematriacalculators.org\save.php(19): mysqli->__construct('srv559.hstgr.io', 'u628985654_gema...', Object(SensitiveParameterValue), 'u628985654_gema...')
+#1 {main}
+  thrown in E:\gematriacalculators.org\save.php on line 19
+[15-Dec-2025 20:02:06 Europe/Berlin] Request Method: POST | Received response value: Yes
+[15-Dec-2025 20:02:06 Europe/Berlin] Successfully inserted response ID: 42
