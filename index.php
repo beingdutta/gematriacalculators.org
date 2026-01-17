@@ -5,8 +5,8 @@
   require_once __DIR__ . '/helpers.php';
 
   // 2) fetch the URL‐param (for deep-linking) and, if present, run the server-side calculation
-  $inputRaw = $_GET['input'] ?? '';
-  $results  = $inputRaw !== '' ? gematria($inputRaw) : null;
+  $inputRaw = ''; // No longer getting from URL params
+  $results  = null; // Results are not pre-calculated
 
   // SEO: make description STATIC, keep title concise (optionally dynamic)
   $SITE_NAME = 'Gematria Calculator';
