@@ -9,28 +9,16 @@
    FLAME CALCULATOR – PAGE‐SPECIFIC STYLES
    ===================================================================================== */
 
-/* Override the primary color from index.css (blue) to a flame orange-red */
-:root {
-  --primary:   #FF5722; /* used for buttons, active states, etc. */
-  --secondary: #FFC107; /* a lighter orange if needed */
-}
-
 /* ----------------------------------
    1) Calculator Layout & Inputs
    ---------------------------------- */
 
 /* Re‐style .calculator to allow three‐column arrangement */
 .calculator {
-  background: var(--card-bg);
-  padding: 2rem 1rem;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-/* Change the header text “FLAME Calculator” to the same orange-red */
-.header h1 {
-  color: var(--primary);
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 5rem;
 }
 
 /* The row containing "Your Name" input | 🔥 icon | "Partner's Name" input */
@@ -38,8 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;              /* reduced from 1.5rem to 1rem to bring columns closer */
-  margin-bottom: 2.5rem;  /* increased space above the buttons */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Each column (label + input) */
@@ -47,7 +35,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
 }
 
 .flame-col label {
@@ -55,6 +43,7 @@
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: var(--text);
+  text-align: center;
 }
 
 .flame-col input {
@@ -88,7 +77,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1.5rem;  /* increased from 0.5rem to 1.5rem for more breathing room */
 }
 
 /* Calculate button (uses orange-red) */
@@ -167,7 +155,7 @@
 }
 
 /* White modal box */
-.modal {
+.flame-modal {
   background: var(--card-bg);
   border-radius: var(--radius);
   max-width: 500px;
@@ -179,7 +167,7 @@
 }
 
 /* Close button (×) in top-right */
-.modal-close {
+.flame-modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -192,7 +180,7 @@
 }
 
 /* Modal header: “NameA 🔥 NameB” */
-.modal-header {
+.flame-modal-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,13 +190,13 @@
   font-weight: 600;
 }
 
-.modal-header .flame-icon-large {
+.flame-modal-header .flame-icon-large {
   font-size: 1.75rem;
   color: var(--primary);
 }
 
 /* Modal body placeholder */
-.modal-body {
+.flame-modal-body {
   min-height: 200px; /* space for spinner or result */
   display: flex;
   flex-direction: column;
@@ -227,19 +215,19 @@
 }
 
 /* After spinner finishes, show this result block */
-.modal-result-content p {
+.flame-modal-result-content p {
   margin: 1rem 0 1.5rem;
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--text);
 }
 
-.modal-result-content .result-emoji {
+.flame-modal-result-content .result-emoji {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
-.modal-result-content .result-text {
+.flame-modal-result-content .result-text {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -247,7 +235,7 @@
 }
 
 /* Modal footer: “Calculate Again” */
-.modal-footer {
+.flame-modal-footer {
   margin-top: 1rem;
 }
 
@@ -282,8 +270,11 @@
    4) SEO Section (text already centered in HTML)
    ---------------------------------- */
 .seo-section {
-  margin: 1rem 0;  /* reduced from 2rem to 1rem */
-  text-align: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
 }
 
 .seo-section h2 {
