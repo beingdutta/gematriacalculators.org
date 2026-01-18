@@ -141,7 +141,6 @@
       <div id="inputError" class="error-message">Please enter both names.</div>
     </main>
 
-    <hr class="grey-rule" />
     <section class="seo-section">
       <h2>Discover Your Relationship Fate with the FLAMES Calculator</h2>
       <p>

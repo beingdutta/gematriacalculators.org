@@ -131,8 +131,8 @@
 .grey-rule {
   border: none;
   height: 1px;
-  background-color: #ddd;
-  margin: 1rem 0;  /* reduced from 2rem to 1rem to tighten SEO spacing */
+  background-color: var(--border);
+  margin: 2.5rem 0; /* Increased margin for better visual separation */
 }
 
 

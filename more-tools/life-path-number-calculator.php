@@ -157,12 +157,11 @@
         </main>
 
         <section class="seo-blocks">
-            <hr>
             <h2>What is My Life Path Number?</h2>
             <p>
-                Your Life Path Number is the single most important number in your numerology chart. Derived from your date of birth, it reveals your life's purpose, the main lessons you are here to learn, and the central challenges and opportunities you will encounter. Our <strong>Life Path Number Calculator</strong> simplifies this complex calculation, giving you instant access to this core aspect of your identity.
+                Your Life Path Number is the single most important number in your numerology chart. Derived from your date of birth, it reveals your life's purpose, the main lessons you are here to learn, and the central challenges and opportunities you will encounter. Our Life Path Number Calculator simplifies this complex calculation, giving you instant access to this core aspect of your identity.
             </p> 
-            <hr>
+            <hr style="margin: 2.5rem 0;">
             <h2>How to Calculate Your Life Path Number</h2>
             <p>
                 The calculation involves reducing your month, day, and year of birth to single digits (or Master Numbers 11, 22, 33), then adding them together. For example, for a birth date of October 25, 1985:
@@ -202,14 +201,14 @@
                     <li><strong>Year:</strong> The year is 1985. 1 + 9 + 8 + 5 = 23. Then, 2 + 3 = <strong>5</strong>.</li>
                     <li><strong>Final Sum:</strong> 1 (Month) + 7 (Day) + 5 (Year) = 13. Finally, 1 + 3 = <strong>4</strong>.</li>
                 </ol>
-                The Life Path Number is 4. If you're wondering <strong>how to find your life path number</strong>, our calculator automates this entire process for you.
+                The Life Path Number is 4. If you're wondering how to find your life path number, our calculator automates this entire process for you.
             </p>
-            <hr>
+            <hr style="margin: 2.5rem 0;">
         </section>
 
         <section class="seo-blocks">
             <h2>Life Path Number Meanings (1-9, 11, 22, 33)</h2>
-            <p>Each <strong>numerology life path number</strong> has a unique energy and purpose. Below are the meanings for each number.</p>
+            <p>Each numerology life path number has a unique energy and purpose. Below are the meanings for each number.</p>
 
             <h3>Life Path Number 1</h3>
             <p>As a Life Path 1, you are a natural leader, innovator, and pioneer. You are driven, independent, and have a strong desire to be number one. Your journey is about learning to embrace your individuality and lead with confidence.</p>
@@ -218,37 +217,37 @@
             <p>Life Path 2 is the number of the diplomat and peacemaker. You are intuitive, sensitive, and work best in partnership. Your purpose is to bring harmony, cooperation, and balance to your environment.</p>
 
             <h3>Life Path Number 3</h3>
-            <p>The <strong>3 life path number</strong> is associated with creativity, communication, and joy. You have a natural gift for self-expression, whether through art, writing, or speaking. Your path is about inspiring and uplifting others.</p>
+            <p>The 3 life path number is associated with creativity, communication, and joy. You have a natural gift for self-expression, whether through art, writing, or speaking. Your path is about inspiring and uplifting others.</p>
 
             <h3>Life Path Number 4</h3>
             <p>As a Life Path 4, you are the builder and the foundation of society. You are practical, organized, and hardworking. Your journey is about creating lasting security and stability through discipline and determination.</p>
 
             <h3>Life Path Number 5</h3>
-            <p>The <strong>life path number 5</strong> signifies freedom, adventure, and change. You are a versatile and curious soul who thrives on new experiences. Your purpose is to embrace change and live life to the fullest.</p>
+            <p>The life path number 5 signifies freedom, adventure, and change. You are a versatile and curious soul who thrives on new experiences. Your purpose is to embrace change and live life to the fullest.</p>
 
             <h3>Life Path Number 6</h3>
             <p>Life Path 6 is the number of the nurturer and caregiver. You are responsible, loving, and have a strong sense of community. Your path is about serving others and creating a harmonious home and family life.</p>
 
             <h3>Life Path Number 7</h3>
-            <p>The <strong>life path number 7</strong> belongs to the seeker and the analyst. You are a deep thinker with a love for knowledge and truth. Your journey is an introspective one, focused on spiritual wisdom and understanding the mysteries of life.</p>
+            <p>The life path number 7 belongs to the seeker and the analyst. You are a deep thinker with a love for knowledge and truth. Your journey is an introspective one, focused on spiritual wisdom and understanding the mysteries of life.</p>
 
             <h3>Life Path Number 8</h3>
             <p>Life Path 8 is the number of ambition, power, and material success. You are a natural executive with strong leadership skills. Your purpose is to master the material world while maintaining spiritual balance.</p>
 
             <h3>Life Path Number 9</h3>
-            <p>The <strong>9 life path number</strong> is that of the humanitarian and the compassionate leader. You have a deep concern for the well-being of humanity. Your path is about selfless service, wisdom, and letting go of the past.</p>
+            <p>The 9 life path number is that of the humanitarian and the compassionate leader. You have a deep concern for the well-being of humanity. Your path is about selfless service, wisdom, and letting go of the past.</p>
 
             <h3>Life Path Number 10</h3>
-            <p>While often reduced to 1 (1+0=1), seeing 10 signifies that the leadership potential of the 1 is amplified by the spiritual completeness of the 0. The <strong>life path number 10</strong> indicates a person who can easily tap into their higher self to guide their pioneering efforts.</p>
+            <p>While often reduced to 1 (1+0=1), seeing 10 signifies that the leadership potential of the 1 is amplified by the spiritual completeness of the 0. The life path number 10 indicates a person who can easily tap into their higher self to guide their pioneering efforts.</p>
 
             <h3>Life Path Number 11</h3>
-            <p>The <strong>11 life path number</strong> is a Master Number representing heightened intuition, spiritual insight, and enlightenment. As a Master Number 11, you are a spiritual messenger meant to inspire others. This is the path of the "Spiritual Teacher."</p>
+            <p>The 11 life path number is a Master Number representing heightened intuition, spiritual insight, and enlightenment. As a Master Number 11, you are a spiritual messenger meant to inspire others. This is the path of the "Spiritual Teacher."</p>
 
             <h3>Life Path Number 22</h3>
             <p>Life Path 22 is the "Master Builder" Master Number. It combines the practicality of the 4 with the intuitive power of the 11. You have the unique ability to turn grand dreams into tangible reality, creating things of lasting value for humanity.</p>
 
             <h3>Life Path Number 33</h3>
-            <p>The <strong>life path number 33</strong> is the "Master Teacher" Master Number, the most spiritually evolved of all. It represents unconditional love, healing, and selfless service. Your purpose is to uplift and heal humanity on a grand scale.</p>
+            <p>The life path number 33 is the "Master Teacher" Master Number, the most spiritually evolved of all. It represents unconditional love, healing, and selfless service. Your purpose is to uplift and heal humanity on a grand scale.</p>
         </section>
 
         <section class="faq">
@@ -259,7 +258,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Master Numbers (11, 22, and 33) are higher-vibration numbers that are not reduced to a single digit in the final step of the calculation. A <strong>Master Number 11</strong> indicates heightened intuition, a <strong>Master Number 22</strong> points to master building abilities, and a <strong>Master Number 33</strong> signifies a master teacher and healer. They represent a higher potential for achievement but also come with greater challenges.
+                    Master Numbers (11, 22, and 33) are higher-vibration numbers that are not reduced to a single digit in the final step of the calculation. A Master Number 11 indicates heightened intuition, a Master Number 22 points to master building abilities, and a Master Number 33 signifies a master teacher and healer. They represent a higher potential for achievement but also come with greater challenges.
                 </div>
             </div>
 
@@ -269,7 +268,7 @@
                     <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    Yes, numerology suggests that certain Life Path Numbers are more naturally compatible than others. For example, the pragmatic 4 often gets along well with the visionary 8, while the free-spirited 5 may clash with the home-loving 6. Understanding <strong>life path number compatibility</strong> can offer insights into your relationships with friends, family, and partners.
+                    Yes, numerology suggests that certain Life Path Numbers are more naturally compatible than others. For example, the pragmatic 4 often gets along well with the visionary 8, while the free-spirited 5 may clash with the home-loving 6. Understanding life path number compatibility can offer insights into your relationships with friends, family, and partners.
                 </div>
             </div>
 

@@ -155,33 +155,32 @@
 
       <!-- ── SEO coloured intro blocks ────────────────────────────────────── -->
       <section class="seo-blocks">
-        <hr>
         <h2>What is a Lo Shu Grid?</h2>
         <p>
-          The <strong>Lo Shu Grid</strong> is a 3x3 magic square used in Chinese numerology and Feng Shui. This <strong>birth chart numerology loshu grid</strong> maps the numbers from your date of birth to reveal your personality, hidden talents, and life challenges. Our <strong>loshu grid calculator online</strong> automates this ancient <strong>loshu grid calculation</strong> to create your personal <strong>loshu grid chart</strong> instantly.
+          The Lo Shu Grid is a 3x3 magic square used in Chinese numerology and Feng Shui. This birth chart numerology loshu grid maps the numbers from your date of birth to reveal your personality, hidden talents, and life challenges. Our loshu grid calculator online automates this ancient loshu grid calculation to create your personal loshu grid chart instantly.
         </p>
-        <hr>
+        <hr style="margin: 2.5rem 0;">
         <h2>How to Read Your Lo Shu Grid Chart</h2>
         <p>
-          Learning <strong>how to read loshu grid</strong> charts involves analyzing the presence, absence, and repetition of numbers. Each number corresponds to a specific element and direction, influencing different aspects of your life. A complete <strong>loshu grid analysis</strong> examines the vertical, horizontal, and diagonal planes to provide a deep <strong>loshu grid prediction</strong> about your character and destiny.
+          Learning how to read loshu grid charts involves analyzing the presence, absence, and repetition of numbers. Each number corresponds to a specific element and direction, influencing different aspects of your life. A complete loshu grid analysis examines the vertical, horizontal, and diagonal planes to provide a deep loshu grid prediction about your character and destiny.
         </p>
-        <hr>
+        <hr style="margin: 2.5rem 0;">
         <h2>The 8 Planes of the Lo Shu Grid</h2>
-        <p>The grid is analyzed through 8 "planes" or lines, each revealing a different aspect of your personality. For example, the diagonal plane of 4-5-6 relates to willpower, while the <strong>loshu grid 951</strong> plane (top-to-bottom) is the "Plane of Determination," indicating a determined and persistent nature. Our <strong>loshu grid creator</strong> automatically highlights these for you.</p>
+        <p>The grid is analyzed through 8 "planes" or lines, each revealing a different aspect of your personality. For example, the diagonal plane of 4-5-6 relates to willpower, while the loshu grid 951 plane (top-to-bottom) is the "Plane of Determination," indicating a determined and persistent nature. Our loshu grid creator automatically highlights these for you.</p>
         <ul>
             <li><strong>Thought Plane (4-9-2):</strong> Reveals your mental clarity and thinking style.</li>
             <li><strong>Will Plane (3-5-7):</strong> Shows your determination and courage.</li>
             <li><strong>Action Plane (8-1-6):</strong> Indicates your practicality and ability to execute plans.</li>
         </ul>
-        <hr>
+        <hr style="margin: 2.5rem 0;">
         <h2>Lo Shu Grid Compatibility for Marriage</h2>
         <p>
-          <strong>Lo Shu grid compatibility</strong> is a popular method for assessing relationships. By comparing the grids of two individuals, you can analyze their core numbers (Mulank and Bhagyank) and missing numbers to understand their energetic dynamics. This is especially useful for <strong>loshu grid marriage compatibility</strong>, as it can highlight areas of natural harmony and potential friction, helping partners understand each other better.
+          Lo Shu grid compatibility is a popular method for assessing relationships. By comparing the grids of two individuals, you can analyze their core numbers (Mulank and Bhagyank) and missing numbers to understand their energetic dynamics. This is especially useful for loshu grid marriage compatibility, as it can highlight areas of natural harmony and potential friction, helping partners understand each other better.
         </p>
-        <hr>
+        <hr style="margin: 2.5rem 0;">
         <h2>Missing Numbers in Lo Shu Grid</h2>
         <p>
-          Missing numbers in your grid are just as important as the ones that are present. They indicate karmic lessons or areas for development in your life. For example, <strong>if only number 5 is missing in loshu grid</strong>, it might suggest a need to develop flexibility, discipline, and emotional balance. Our tool helps you identify and understand the importance of these missing energies.
+          Missing numbers in your grid are just as important as the ones that are present. They indicate karmic lessons or areas for development in your life. For example, if only number 5 is missing in loshu grid, it might suggest a need to develop flexibility, discipline, and emotional balance. Our tool helps you identify and understand the importance of these missing energies.
         </p>
       </section>
 
@@ -214,7 +213,7 @@
             <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            Yes. After you calculate your Lo Shu Grid, just click the “Download PDF” button to save a printable and shareable <strong>loshu grid pdf</strong> of your numerology chart. This feature is perfect if you want to keep a record or share your analysis with friends, clients, or family.
+            Yes. After you calculate your Lo Shu Grid, just click the “Download PDF” button to save a printable and shareable loshu grid pdf of your numerology chart. This feature is perfect if you want to keep a record or share your analysis with friends, clients, or family.
           </div>
         </div>
 
