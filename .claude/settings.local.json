@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn \"ins class=\" /e/gematriacalculators.org/*.php)",
+      "Bash(grep -rn \"adsbygoogle\" /e/gematriacalculators.org/*.php)",
+      "Bash(grep -rn \"alt=\" /e/gematriacalculators.org/*.php)",
+      "Bash(grep -n \"<!-- Ad\\\\|<!-- ads\\\\|Ad space\" /e/gematriacalculators.org/*.php)"
+    ]
+  }
+}

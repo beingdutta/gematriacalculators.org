@@ -7,40 +7,7 @@
 <html lang="en" data-theme="light">
 
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,8 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/privacy-policy.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
-
   </head>
 
   <body>
@@ -66,74 +31,87 @@
 
       <main>
         <div class="policy-page">
+          <p style="color: var(--text-secondary); font-size: 0.9em;">Last updated: March 2025</p>
+
           <div class="policy-section">
             <h2>1. Introduction</h2>
-            <p>Welcome to gematriacalculator.org ("Advanced Gematria Calculator"), your premier online resource for <strong>hebrew gematria calculator</strong>, <strong>biblical gematria calculator</strong>, and <strong>english gematria calculator</strong> services. This privacy policy explains how we handle information for our <strong>gematria calculator app</strong> and web platform.</p>
+            <p>Welcome to gematriacalculators.org. This Privacy Policy explains how we collect, use, and protect your information when you visit and use our website. By using our site, you agree to the practices described in this policy.</p>
           </div>
 
           <div class="policy-section">
-            <h2>2. Information Collection</h2>
-            <p>Our <strong>gematria numerology calculator</strong> and <strong>gematria name calculator</strong> tools are designed with privacy in mind. We only collect:</p>
+            <h2>2. Information We Collect</h2>
+            <p>We collect the following types of information:</p>
             <ul>
-              <li>Text inputs for <strong>gematria value calculator</strong> processing</li>
-              <li>Anonymous usage statistics for our <strong>gematria calculator online</strong> services</li>
-              <li>Optional email addresses for <strong>gematria effect calculator</strong> result notifications</li>
+              <li><strong>Usage data:</strong> Anonymous information about how you interact with the site, collected through Google Analytics and Microsoft Clarity (pages visited, time on site, browser type, etc.).</li>
+              <li><strong>Text inputs:</strong> Words or phrases you enter into the calculator. These are processed locally in your browser and are not stored on our servers.</li>
+              <li><strong>Contact form submissions:</strong> If you contact us, we collect your name and email address to respond to your inquiry.</li>
+              <li><strong>Cookies:</strong> We use cookies for theme preference (light/dark mode) and analytics. See Section 5 for details.</li>
             </ul>
           </div>
 
           <div class="policy-section">
-            <h2>3. Data Usage</h2>
-            <p>Information collected through our <strong>jewish gematria calculator</strong> and <strong>simple gematria calculator</strong> tools is used to:</p>
+            <h2>3. How We Use Your Information</h2>
+            <p>We use collected information to:</p>
             <ul>
-              <li>Provide accurate <strong>numerology gematria calculator</strong> results</li>
-              <li>Improve <strong>gematria.com calculator</strong> functionality</li>
-              <li>Enhance user experience for <strong>bible gematria calculator</strong> operations</li>
+              <li>Operate and improve the website and calculator tools</li>
+              <li>Understand how users interact with our site so we can improve it</li>
+              <li>Respond to your inquiries submitted via the contact form</li>
+              <li>Display relevant advertisements through Google AdSense</li>
             </ul>
           </div>
 
           <div class="policy-section">
-            <h2>4. Data Protection</h2>
-            <p>We implement industry-standard security measures for our <strong>gematria calculator hebrew</strong> and <strong>gematria calculator english</strong> services, including:</p>
+            <h2>4. Data Retention</h2>
+            <p>We do not store calculator inputs on our servers. Anonymous analytics data is retained according to the default retention periods of Google Analytics (26 months). Contact form data is retained only as long as needed to respond to your inquiry.</p>
+          </div>
+
+          <div class="policy-section">
+            <h2>5. Cookies and Third-Party Services</h2>
+            <p>Our website uses the following third-party services, which may set their own cookies:</p>
             <ul>
-              <li>SSL encryption for all <strong>gematria calculator names</strong> calculations</li>
-              <li>Regular security audits of our <strong>gematria calculator app</strong> infrastructure</li>
-              <li>Limited data retention for <strong>gematria value calculator</strong> inputs</li>
+              <li><strong>Google Analytics:</strong> Tracks anonymous site usage statistics. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+              <li><strong>Google AdSense:</strong> Displays advertisements. Google may use cookies to serve ads based on your interests. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Policy</a>.</li>
+              <li><strong>Microsoft Clarity:</strong> Session recording and heatmaps for UX analysis. <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</li>
+              <li><strong>Yandex Metrica:</strong> Analytics for Russian-language users. <a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">Yandex Privacy Policy</a>.</li>
             </ul>
+            <p>You can manage or disable cookies through your browser settings. Note that disabling cookies may affect site functionality.</p>
           </div>
 
           <div class="policy-section">
-            <h2>5. Third-Party Services</h2>
-            <p>Our <strong>gematria numerology calculator</strong> may use:</p>
+            <h2>6. Your Rights (GDPR / CCPA)</h2>
+            <p>Depending on your location, you may have the right to:</p>
             <ul>
-              <li>Google Analytics for <strong>gematria calculator online</strong> usage tracking</li>
-              <li>Ad networks for <strong>biblical gematria calculator</strong> service support</li>
-              <li>Cloud hosting for <strong>hebrew gematria calculator</strong> operations</li>
+              <li>Access the personal data we hold about you</li>
+              <li>Request correction or deletion of your personal data</li>
+              <li>Object to or restrict certain processing of your data</li>
+              <li>Opt out of analytics tracking by using browser extensions such as the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
             </ul>
+            <p>To exercise any of these rights, contact us at the address below.</p>
           </div>
 
           <div class="policy-section">
-            <h2>6. User Rights</h2>
-            <p>Users of our <strong>gematria calculator app</strong> and web tools can:</p>
-            <ul>
-              <li>Request deletion of <strong>gematria name calculator</strong> history</li>
-              <li>Opt-out of <strong>gematria effect calculator</strong> notifications</li>
-              <li>Access collected data from <strong>gematria.com calculator</strong> services</li>
-            </ul>
+            <h2>7. Data Security</h2>
+            <p>We use HTTPS (SSL encryption) to protect data in transit. We do not store sensitive personal information on our servers. However, no internet transmission is 100% secure, and we cannot guarantee absolute security.</p>
           </div>
 
           <div class="policy-section">
-            <h2>7. Policy Changes</h2>
-            <p>Updates to this privacy policy for our <strong>english gematria calculator</strong> and other tools will be posted on this page. Continued use of our <strong>jewish gematria calculator</strong> services constitutes acceptance of changes.</p>
+            <h2>8. Children's Privacy</h2>
+            <p>Our website is not directed at children under 13 years of age. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
           </div>
 
           <div class="policy-section">
-            <h2>8. Contact Us</h2>
-            <p>For questions about our <strong>simple gematria calculator</strong> privacy practices:</p>
-            <p>Email: admins@gematriacalculator.org<br>
+            <h2>9. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+          </div>
+
+          <div class="policy-section">
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
+            <p>Email: <a href="mailto:admins@gematriacalculators.org">admins@gematriacalculators.org</a><br>
               Website: <a href="/">gematriacalculators.org</a>
             </p>
           </div>
-          
+
         </div>
       </main>
 

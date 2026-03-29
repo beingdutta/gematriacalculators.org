@@ -64,40 +64,7 @@
     <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
      
     <script type="application/ld+json">
@@ -205,18 +172,6 @@
             <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
                 <button class="download-btn" onclick="calculateAndDownload()">PDF Herunterladen</button>
                 <button class="calculate-btn" onclick="calculateAgain()">Erneut berechnen</button>
-            </div>
-            <div class="promotion-box">
-                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div class="promo-content" style="text-align: center;">
-                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Erweitern Sie Ihre Einsicht über Zahlen hinaus</p>
-                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">Während die Gematria den verborgenen numerischen Code in Ihrem Leben enthüllt, bietet das Tarot einen anderen Weg zur Weisheit. Kombinieren Sie die Logik der Zahlen mit der Intuition der Karten, um eine vollständigere Perspektive zu gewinnen. Holen Sie sich eine kostenlose, persönliche Lesung von unserem täglichen Tarot-Leser.</p>
-                </div>
-                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                    Kostenlose Tarot-Lesung erhalten
-                </a>
             </div>
 
             <!-- More Tools (Result View) -->

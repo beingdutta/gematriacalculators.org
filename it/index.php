@@ -63,40 +63,7 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="light">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
     <meta charset="UTF-8">
     <meta name="p:domain_verify" content="9a2f772bde6a1162d2e6c441caf23a2a"/>
@@ -302,18 +269,6 @@
                 <button class="calculate-btn" onclick="calculateAgain()">Calcola di Nuovo</button>
             </div>
 
-            <div class="promotion-box">
-                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div class="promo-content" style="text-align: center;">
-                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Espandi la Tua Visione Oltre i Numeri</p>
-                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">Mentre la gematria svela il codice numerico nascosto nella tua vita, i tarocchi offrono un percorso diverso verso la saggezza. Combina la logica dei numeri con l'intuizione delle carte per ottenere una prospettiva più completa. Cerca la guida del nostro Lettore di Tarocchi Quotidiano gratuito per completare il tuo viaggio.</p>
-                </div>
-                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                    Ottieni una Lettura dei Tarocchi Gratuita
-                </a>
-            </div>
 
             <!-- More Tools (Result View) -->
             <div id="more-tools-result" style="<?= $results ? 'display:block;' : 'display:none;' ?>">
@@ -485,30 +440,6 @@
         </footer>
     </div>
 
-    <div id="exitModal" class="modal">
-        <div class="modal-content animate-scale">
-            <button class="modal-close" id="exitModalClose" aria-label="Chiudi Modal">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </button>
-            <h2><i class="fa-solid fa-star text-primary"></i> Non Andare Via Ancora!</h2>
-            <p>Hai provato i nostri nuovi strumenti?</p>
-            <div class="modal-links">
-                <a href="https://vpnleaderboard.com/" class="outline-button">
-                    <i class="fa-solid fa-shield-halved"></i> VPN Leaderboard
-                </a>
-                <a href="http://tarotcardgenerator.online/" class="outline-button">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> Lettore di Tarocchi Quotidiano
-                </a>
-                <a href="https://www.snowdayscalculatorai.com/" class="outline-button">
-                    <i class="fa-solid fa-snowflake"></i> Calcolatore Giorni di Neve USA
-                </a>
-            </div>
-            <p style="margin-top: 1rem;">
-                <i class="fa-solid fa-face-smile-wink fa-lg text-primary"></i>
-                Divertiti e torna presto!
-            </p>
-        </div>
-    </div>
 
     <script>
       window.GematriaLang = {

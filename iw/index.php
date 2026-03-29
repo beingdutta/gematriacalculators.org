@@ -52,40 +52,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl" data-theme="light">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,18 +169,6 @@
             <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
                 <button class="download-btn" onclick="calculateAndDownload()">הורד PDF</button>
                 <button class="calculate-btn" onclick="calculateAgain()">חשב שוב</button>
-            </div>
-            <div class="promotion-box">
-                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div class="promo-content" style="text-align: center;">
-                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">הרחב את התובנה שלך מעבר למספרים</p>
-                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">בעוד שהגימטריה חושפת את הקוד המספרי החבוי בחייך, הטארוט מציע דרך אחרת לחוכמה. שלב את ההיגיון של המספרים עם האינטואיציה של הקלפים כדי לקבל פרספקטיבה מלאה יותר. חפש הדרכה מקורא הטארוט היומי החינמי שלנו כדי להשלים את מסעך.</p>
-                </div>
-                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                    קבל קריאת טארוט בחינם
-                </a>
             </div>
 
             <!-- More Tools (Result View) -->

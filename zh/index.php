@@ -93,40 +93,7 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -238,18 +205,6 @@
             <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
                 <button class="download-btn" onclick="calculateAndDownload()">下载PDF</button>
                 <button class="calculate-btn" onclick="calculateAgain()">再次计算</button>
-            </div>
-            <div class="promotion-box">
-                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div class="promo-content" style="text-align: center;">
-                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">扩展您的视野，超越数字</p>
-                    <p style="margin: 6px 0 0 0; font-size: 0.9em;">虽然gematria揭示了您生活中的隐藏数字代码，但塔罗牌提供了另一条通往智慧的道路。将数字的逻辑与卡牌的直觉相结合，以获得更完整的视角。从我们的免费每日塔罗牌阅读器中寻求指导，以补充您的旅程。</p>
-                </div>
-                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 1rem;">
-                    获取免费塔罗牌解读
-                </a>
             </div>
 
             <!-- More Tools (Result View) -->

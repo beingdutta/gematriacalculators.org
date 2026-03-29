@@ -130,23 +130,3 @@ if ($current_path_normalized === '') { // Handle root path
       <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
 </nav>
-
-<?php if (basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
-<!-- Support Modal (Global) -->
-<div id="supportModal" class="modal" style="display: none;">
-    <div class="modal-content animate-scale support-modal-content">
-        <h2 style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; color: var(--primary);"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-            Support Us?
-        </h2>
-        <p>We are dedicated to keeping this service free for the community. To help us cover server costs and keep the site running, would you consider supporting us?</p>
-        <form id="supportForm">
-            <div class="radio-group">
-                <label><input type="radio" name="support" value="Yes" required> Yes I'm in</label>
-                <label><input type="radio" name="support" value="No" required> Not this time</label>
-            </div>
-            <button type="submit" class="calculate-btn" style="width: 100%; margin-top: 1rem;">Submit</button>
-        </form>
-    </div>
-</div>
-<?php endif; ?>

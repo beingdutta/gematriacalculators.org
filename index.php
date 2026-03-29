@@ -28,11 +28,11 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Gematria Calculator - Free Gematrix & Numerology Calculator';
+    $pageTitle = 'Gematria Calculator | Free Online Gematrix & Bible Gematria Tool';
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
-  $metaDescription = 'The web\'s best free Gematria Calculator. Get instant and accurate results with our gematrix and numerology tool, supporting English, Hebrew, and Simple Gematria. Perfect for biblical analysis, name meanings, and decoding values.';
+  $metaDescription = 'Free Gematria Calculator for English, Hebrew, and Simple Gematria. Instantly calculate the gematria value of any word, name, or phrase. Trusted by numerology and biblical study enthusiasts worldwide.';
 
   // Canonical: point root when empty; deep-link when there's an input
   $canonicalUrl = $BASE_URL;
@@ -63,40 +63,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
     <meta charset="UTF-8">
     <meta name="p:domain_verify" content="9a2f772bde6a1162d2e6c441caf23a2a"/>
@@ -173,6 +140,56 @@
     }
     </script>
 
+    <!-- FAQPage schema for rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Gematria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gematria is an alphanumeric code that assigns a numerical value to a name, word or phrase based on its letters. It is commonly used in Jewish mysticism and biblical interpretation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a gematria calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A free gematria calculator is an online tool that automatically computes the numerical value of a word, phrase, or name by assigning numeric values to each letter. It supports English, Hebrew, and Simple Gematria systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I use the gematria calculator online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Type any word, name, or phrase into the input box, then click Calculate Gematria. You will instantly receive its numerical values across Hebrew, English, and Simple Gematria systems. You can also download a PDF report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Hebrew and English Gematria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hebrew Gematria assigns values based on the traditional Hebrew alphabet (Alef=1, Bet=2, etc.) used in the Torah. English Gematria uses the English alphabet with values multiplied by 6 (A=6, B=12, C=18, etc.). Simple Gematria assigns A=1 through Z=26."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the gematria calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this gematria calculator is completely free to use with no registration required. It supports unlimited calculations for English, Hebrew, and Simple Gematria systems."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -202,8 +219,8 @@
 
         <header class="header" id="main-header" style="<?= $results ? 'display:none;' : '' ?>">
             <!-- Logo removed for a cleaner look -->
-            <h1>Gematria Calculator (Gematrix)</h1>
-            <p class="subtitle">Decode the numerical values of words, names, and phrases with English, Hebrew, and Simple Gematria.</p>
+            <h1>Gematria Calculator</h1>
+            <p class="subtitle">Free online gematrix tool — decode the numerical value of any word, name, or phrase using English, Hebrew, and Simple Gematria systems.</p>
         </header>
 
 
@@ -312,19 +329,6 @@
             <div class="button-container" style="margin-top: 2rem; justify-content: center; gap: 15px;">
                 <button class="download-btn" onclick="calculateAndDownload()">Download PDF</button>
                 <button class="calculate-btn" onclick="calculateAgain(); clearInput(); document.getElementById('main-calculator').style.display='block'; document.getElementById('main-header').style.display='block'">Calculate Again</button>
-            </div>
-
-            <div class="promotion-box"> <!-- Recommended CSS: display: flex; align-items: center; gap: 15px; -->
-                <div class="promo-icon" style="font-size: 2.5rem; color: var(--primary-color); flex-shrink: 0;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div class="promo-content" style="text-align: center;"> <!-- Recommended CSS: flex-grow: 1; -->
-                    <p style="margin: 0; font-weight: 600; font-size: 1.05em;">Expand Your Insight Beyond Numbers</p>
-                    <p style="margin: 6px 0 0 0; font-size: 0.8em;">While gematria reveals the hidden numerical code in your life, tarot offers a different path to wisdom. Combine the logic of numbers with the intuition of the cards to gain a more complete perspective. Seek guidance from our free Daily Tarot Reader to complement your journey.</p>
-                </div>
-                <a href="https://tarotcardgenerator.online/" target="_blank" class="promo-btn" style="white-space: nowrap; margin-top: 0.1rem;">
-                    Get a Free Tarot Reading
-                </a>
             </div>
 
             <!-- More Tools (Result View) -->
@@ -512,6 +516,9 @@
         <footer class="footer">
             <div class="copyright">
                 © <?= date('Y') ?> gematriacalculators.org
+            </div>
+            <div style="margin-top:0.5rem; font-size:0.8em;">
+                <a href="#" onclick="window.openCookieSettings && window.openCookieSettings(); return false;" style="color:var(--text-secondary); text-decoration:underline;">Cookie Preferences</a>
             </div>
         </footer>
     </div>

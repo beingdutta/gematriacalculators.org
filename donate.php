@@ -10,10 +10,11 @@
     <meta name="description" content="Support Gematria Calculator. Your donations help us maintain and improve our free tools.">
     
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
+    <link rel="canonical" href="https://gematriacalculators.org/donate/">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
-    
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
     <script src="https://www.paypal.com/sdk/js?client-id=BAAvfy_YmvRt7Gf6kYjuQYACVCI8P-hPXIWtqxqmI8K3EfERJl_X1EXGs-xI1LKylkKVWHHXZL4B948PiE&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
     <style>

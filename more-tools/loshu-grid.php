@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Shu Grid Calculator - Online Numerology Chart Maker</title>
+    <title>Lo Shu Grid Calculator – Free Numerology Birth Chart Maker</title>
 
-    <meta name="description" content="Create your Lo Shu Grid chart online with our free calculator. Enter your birth date for a complete numerology analysis, including compatibility and predictions.">
+    <meta name="description" content="Free Lo Shu Grid Calculator – enter your birth date to generate your numerology chart instantly. Includes grid analysis, missing numbers, compatibility, and predictions.">
     <meta name="keywords" content="loshu grid, loshu grid calculator, loshu grid chart, how to make loshu grid, birth chart numerology loshu grid, how to read loshu grid, loshu grid analysis, loshu grid calculator online, loshu grid creator, loshu grid numerology, loshu grid compatibility, loshu grid marriage compatibility, loshu grid prediction">
 
-    <link rel="canonical" href="https://gematriacalculators.org/more-tools/loshu-grid.php" />
+    <link rel="canonical" href="https://gematriacalculators.org/more-tools/loshu-grid/" />
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/life-path-number.css">
     <link rel="stylesheet" href="/styles/loshu-grid-styles.css">
@@ -64,40 +64,7 @@
     }
     </script>
 
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DQQSD51V4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1DQQSD51V4');
-    </script>
-
-    <!-- Clarity tracking code -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "rcxnkrgboo");
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105402705', 'ym');
-
-        ym(105402705, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105402705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4198904821948931" crossorigin="anonymous"></script>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/navigation/head-tracking.php'; ?>
 
   </head>
 
