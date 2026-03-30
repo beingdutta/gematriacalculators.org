@@ -34,25 +34,37 @@
 
       <main>
         <div class="result-card contact-page">
-          <h4>How to Reach Us</h4>
+
+          <h2>Get in Touch</h2>
+          <p>You can reach us by email or by using the contact form below. We respond to all messages, though response times may vary depending on volume. Please read the section below before writing so we can direct you to the right answer as quickly as possible.</p>
+
+          <h2>Common Questions Before You Write</h2>
 
           <div class="result-card">
-            <h3>✉️ Email Support</h3>
-            <p>For technical issues or calculator questions:<br>
-              <strong>admins@gematriacalculators.org</strong></p>
+            <h3>Calculation errors or unexpected results</h3>
+            <p>If a word returned a value that seems wrong, please include the word you entered, which system (Hebrew / English / Simple) produced the unexpected result, and the value you received. We will verify the cipher table and correct any bugs.</p>
           </div>
 
           <div class="result-card">
-            <h3>📬 Spiritual Guidance</h3>
-            <p>For numerology interpretations:<br>
-              <strong>admins@gematriacalculators.org</strong></p>
+            <h3>Questions about how a cipher works</h3>
+            <p>The <a href="/about-us/">About page</a> explains all three calculation systems in detail, including the letter-value tables used for each. The <a href="/blogs/">blog section</a> covers the history and methodology of gematria in depth. If those resources do not answer your question, feel free to write to us.</p>
+          </div>
+
+          <div class="result-card">
+            <h3>Feature requests and suggestions</h3>
+            <p>We welcome suggestions for new features, additional cipher systems, or improvements to existing tools. Please describe the feature and how it would be useful.</p>
+          </div>
+
+          <div class="result-card">
+            <h3>Email</h3>
+            <p>You can also write directly to: <strong><a href="mailto:admins@gematriacalculators.org">admins@gematriacalculators.org</a></strong></p>
           </div>
 
           <div class="contact-form">
-            <h4>Send Us a Message</h4>
+            <h2>Send Us a Message</h2>
             <input type="text" id="contactName" placeholder="Your Name">
             <input type="email" id="contactEmail" placeholder="Your Email">
-            <textarea id="contactMessage" placeholder="Type your message here..."></textarea>
+            <textarea id="contactMessage" placeholder="Describe your question or issue..."></textarea>
             <button onclick="submitContactForm()">Send Message</button>
           </div>
 
@@ -70,7 +82,7 @@
       <footer class="footer">
         <!-- Footer links are now in the header nav -->
         <div class="copyright">
-          © 2025 gematriacalculators.org
+          © <?= date('Y') ?> gematriacalculators.org
         </div>
         <!-- Language Popup -->
         <div class="lang-popup">

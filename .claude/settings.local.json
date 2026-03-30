@@ -4,7 +4,19 @@
       "Bash(grep -rn \"ins class=\" /e/gematriacalculators.org/*.php)",
       "Bash(grep -rn \"adsbygoogle\" /e/gematriacalculators.org/*.php)",
       "Bash(grep -rn \"alt=\" /e/gematriacalculators.org/*.php)",
-      "Bash(grep -n \"<!-- Ad\\\\|<!-- ads\\\\|Ad space\" /e/gematriacalculators.org/*.php)"
+      "Bash(grep -n \"<!-- Ad\\\\|<!-- ads\\\\|Ad space\" /e/gematriacalculators.org/*.php)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $f ===\")",
+      "Read(//e/gematriacalculators.org/**)",
+      "Bash(done)",
+      "Bash(do echo:*)",
+      "Bash(sed -i 's|<title>The Alchemy of Letters: How Gematria Works in English</title>|<title>How Does Gematria Work in English? Ciphers, Systems \\\\&amp; Examples</title>|' how-does-gematria-work-in-detail-using-the-english-alphabet.php)",
+      "Bash(sed -i 's|<h1 class=\"\"article-title\"\">The Alchemy of Letters: How Gematria Works in English</h1>|<h1 class=\"\"article-title\"\">How Does Gematria Work in English? Ciphers, Systems \\\\&amp; Examples</h1>|' how-does-gematria-work-in-detail-using-the-english-alphabet.php)",
+      "Bash(grep -h \"<title>\" *.php)"
+    ],
+    "additionalDirectories": [
+      "E:\\gematriacalculators.org"
     ]
   }
 }

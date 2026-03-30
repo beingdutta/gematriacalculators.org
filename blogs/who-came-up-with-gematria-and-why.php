@@ -17,7 +17,7 @@
     <meta name="description" content="Who invented Gematria? Discover the origins of this ancient code, from Babylon to Greece to Jerusalem. Learn why this mystical practice was created and how it evolved.">
     <meta name="keywords" content="who came up with gematria, gematria calculator, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to learn gematria, history of gematria">
     
-    <title>The Architects of Code: Who Came Up With Gematria?</title>
+    <title>Who Invented Gematria? Origins, History & Key Historical Figures</title>
 
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link rel="canonical" href="https://gematriacalculators.org/blogs/who-came-up-with-gematria-and-why/">
@@ -79,7 +79,7 @@
             </nav>
             <div class="article-header">
                 <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
-                <h1 class="article-title">Who Came Up With Gematria? The Architects of Code</h1>
+                <h1 class="article-title">Who Invented Gematria? Origins, History & Key Historical Figures</h1>
                 <div class="article-date">Published: September 20, 2025</div>
             </div>
             <div class="article-content">
@@ -87,16 +87,7 @@
 
                     <div class="intro-block">
                         <p>
-                            You are asking for a name. You want to know the single genius who looked at a letter and saw a number. But asking "Who invented Gematria?" is like asking "Who invented music?" or "Who invented fire?"
-                        </p>
-                        <p>
-                            There was no single inventor. There was no patent filed in a dusty library in Babylon. Instead, Gematria is the child of a thousand-year conversation between merchants, mystics, and mathematicians.
-                        </p>
-                        <p>
-                            It is a story that begins in the mud of Mesopotamia, travels through the marble halls of Greece, and finds its soul in the holy temples of Jerusalem. Today, it lives on in the digital code of the <strong>online gematria calculator</strong>.
-                        </p>
-                        <p>
-                            Come with me. Let us trace the bloodline of this ancient art.
+                            Gematria was not invented by a single person. It evolved over centuries across several cultures independently, emerging wherever alphabets and number systems overlapped. The earliest documented examples come from Assyrian royal inscriptions in the 8th century BCE. The Greek adaptation — called Isopsephy — developed independently by the 5th century BCE. Hebrew Gematria became formalised during the Second Temple period and was systematised in the Talmud. This article traces that complete history: who used gematria, when, in what context, and what purposes it served across each culture and period.
                         </p>
                     </div>
 

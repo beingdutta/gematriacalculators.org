@@ -17,7 +17,7 @@
     <meta name="description" content="What is the truth about Gematria? Explore the history, math, and spiritual meaning of this ancient code to reveal if it's divine truth or mere coincidence.">
     <meta name="keywords" content="gematria calculator, gematria, gematria meaning, gematria definition, hebrew gematria calculator, what is gematria, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, what is the truth about gematria, purpose of gematria">
 
-    <title>The Veiled Code: What Is the Truth About Gematria?</title>
+    <title>What Is the Truth About Gematria? History, Math & Scholarly Perspectives</title>
 
     <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
     <link rel="canonical" href="https://gematriacalculators.org/blogs/what-is-the-truth-about-gematria/" />
@@ -78,7 +78,7 @@
             </nav>
             <div class="article-header">
             <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
-            <h1 class="article-title">What is the Truth About Gematria? A Journey into the Unknown</h1>
+            <h1 class="article-title">What Is the Truth About Gematria? History, Math & Scholarly Perspectives</h1>
                 <div class="article-date">Published: November 08, 2025</div>
             </div>
             <div class="article-content">
@@ -86,16 +86,7 @@
                     
                     <div class="intro-block">
                         <p>
-                            You have arrived here because you felt a tug. A whisper in the back of your mind suggesting that the world is not what it seems. You looked at a word, and for a fleeting moment, you saw a number. You looked at a coincidence, and you saw a pattern.
-                        </p>
-                        <p>
-                            The question you are asking—"What is the truth about gematria?"—is not a simple query. It is a dangerous question. It is a question that has occupied the minds of kings, mystics, madmen, and scholars for over three thousand years.
-                        </p>
-                        <p>
-                            Is it a divine code woven into the fabric of reality by the Grand Architect? Is it a sophisticated literary tool used by ancient scribes to hide secrets in plain sight? Or is it a trick of the mind, a beautiful delusion born of our desperate need for order in a chaotic universe?
-                        </p>
-                        <p>
-                            To answer this, we must go beyond the surface. We must unlock the gematria decoder and look at the machinery of the cosmos itself.
+                            Gematria has been practised for over three thousand years, yet it remains genuinely contested: is it a deliberate literary technique embedded by ancient scribes, a product of mathematical probability and human pattern recognition, or something that carries real spiritual weight? This article examines all three positions. It looks at the documented historical uses of gematria in the Torah, Talmud, and New Testament; explains the mathematical reasons why numerical coincidences are far more common than they appear; and presents the case made by religious scholars for intentional design. The goal is to give you a balanced, evidence-based picture so you can draw your own conclusions.
                         </p>
                     </div>
 

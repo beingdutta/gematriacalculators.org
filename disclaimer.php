@@ -4,7 +4,7 @@
   $BASE_URL = 'https://gematriacalculators.org/';
   $pageTitle = 'Disclaimer | ' . $SITE_NAME;
   $metaDescription = 'Disclaimer for Gematria Calculator. Understand the terms of use for our numerology and gematrix tools.';
-  $canonicalUrl = $BASE_URL . 'disclaimer.php';
+  $canonicalUrl = $BASE_URL . 'disclaimer/';
 ?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -38,8 +38,8 @@
             <p>The information provided by Gematria Calculator (gematriacalculators.org) is for general informational and entertainment purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
           </div>
           <div class="policy-section">
-            <h2>2. For Entertainment Purposes Only</h2>
-            <p>The gematria calculations and their interpretations are based on historical and mystical systems of numerology. They should be considered a form of entertainment and personal exploration, not as a source of factual, professional, or divine guidance. The connections and meanings derived from gematria are subjective and open to interpretation.</p>
+            <h2>2. Educational and Personal Use</h2>
+            <p>The gematria calculations provided on this site are based on documented historical cipher systems used in Jewish tradition, Kabbalah, and related fields of study. Results are intended for personal research, educational exploration, and historical study. The connections and meanings derived from gematria values are subjective and open to individual interpretation. We make no claim that any particular gematria result carries inherent spiritual, religious, or prophetic significance.</p>
           </div>
           <div class="policy-section">
             <h2>3. No Professional Advice</h2>

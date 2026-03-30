@@ -17,7 +17,7 @@
         <meta name="description" content="How does Gematria work with the English alphabet? This guide explains the Simple, Pythagorean, and Reverse ciphers with detailed examples and analysis.">
         <meta name="keywords" content="how does gematria work, english gematria calculator, gematria calculator, what is gematria, gematria meaning, gematria definition, hebrew gematria calculator, gematria decoder, define gematria, hebrew gematria, jewish gematria calculator, online gematria calculator, best gematria calculator, meaning of gematria, how to understand gematria, how to use gematria in life">
         
-        <title>The Alchemy of Letters: How Gematria Works in English</title>
+        <title>How Does Gematria Work in English? Ciphers, Systems &amp; Examples</title>
 
         <link rel="icon" href="/assets/talisman-site-icon.png" sizes="32x32">
         <link rel="canonical" href="https://gematriacalculators.org/blogs/how-does-gematria-work-in-detail-using-the-english-alphabet/">
@@ -79,7 +79,7 @@
                 </nav>
                 <div class="article-header">
                     <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
-                    <h1 class="article-title">The Alchemy of Letters: How Gematria Works in English</h1>
+                    <h1 class="article-title">How Does Gematria Work in English? Ciphers, Systems &amp; Examples</h1>
                     <div class="article-date">Published: May 22, 2025</div>
                 </div>
                 <div class="article-content">
@@ -87,16 +87,7 @@
 
                         <div class="intro-block">
                             <p>
-                                You have heard the whispers. You know that in the ancient temples of Jerusalem and Athens, letters were not just sounds—they were numbers. They were keys to a hidden architecture of reality. But what about the language you speak today? What about English?
-                            </p>
-                            <p>
-                                Can you use an English gematria calculator to decode the secrets of your own life?
-                            </p>
-                            <p>
-                                The answer is yes. But to do so, you must understand the mechanics. You must understand how the machine works under the hood. You are asking how does gematria work in a language where "A" is not naturally "1."
-                            </p>
-                            <p>
-                                This is your grimoire. We will strip away the confusion and show you the gears of the cipher.
+                                Unlike Hebrew and Greek, where letters and numbers were historically the same symbols, English has no built-in numerical system — so all English gematria ciphers are constructed frameworks applied to the alphabet. This article explains exactly how each major English Gematria system works: Simple Ordinal (A=1 through Z=26), English Gematria (A=6 through Z=156), Reverse Ordinal (Z=1), and Reduction ciphers. For each system, we show the full letter-value table, explain the reasoning behind the cipher design, and provide worked examples so you can follow and verify every calculation yourself.
                             </p>
                         </div>
 

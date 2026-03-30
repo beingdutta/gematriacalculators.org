@@ -78,7 +78,7 @@
                 </nav>
                 <div class="article-header">
                     <button class="back-button" onclick="window.location.href='/blogs/'">← Back to Articles</button>
-                    <h1 class="article-title">The Initiate's Path: What Is a Good Starting Point for Learning Gematria?</h1>
+                    <h1 class="article-title">What Is a Good Starting Point for Learning Gematria? A Beginner's Guide</h1>
                     <div class="article-date">Published: July 02, 2025</div>
                 </div>
                 <div class="article-content">
@@ -86,16 +86,7 @@
                         
                         <div class="intro-block">
                             <p>
-                                You stand at the threshold of a hidden world. You have heard the term whispered in dark corners of the internet or read it in ancient texts. Gematria. The word itself sounds like a spell.
-                            </p>
-                            <p>
-                                You want to enter. You want to peel back the skin of reality and see the mathematical bones underneath. But the gate is daunting. There are strange alphabets, complex charts, and thousands of years of mystical tradition.
-                            </p>
-                            <p>
-                                You ask: <em>"Where do I begin?"</em>
-                            </p>
-                            <p>
-                                Fear not, seeker. Every master was once a beginner. Every journey into the occult begins with a single step. This guide is your lantern. We will light the path, one stone at a time.
+                                If you are new to gematria, the sheer number of cipher systems, historical traditions, and interpretive frameworks can seem overwhelming. This guide gives you a clear, structured starting point. It begins with the simplest system (Simple English Gematria, where A=1 through Z=26), explains why starting with Hebrew is valuable even without language knowledge, recommends the most useful reference texts for understanding how gematria has been applied historically, and outlines a practical study sequence that will give you a solid foundation before you move into more complex ciphers or Kabbalistic frameworks.
                             </p>
                         </div>
 
