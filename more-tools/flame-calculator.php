@@ -141,37 +141,62 @@
 
     <hr class="grey-rule" />
     <section class="faq-section">
-      <h2 class="faq-heading">Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What is a FLAMES calculator?</span>
-          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer">
-          A FLAMES calculator is a fun, nostalgic game that takes two names, removes matching letters, and uses the total remaining count to eliminate options in the FLAMES acronym: Friends, Love, Affection, Marriage, Enemies, Siblings. Our tool is an accurate, online love calculator flames version you can trust for entertainment.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What is FLAMES full form?</span>
-          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer">
-          FLAMES stands for Friends, Love, Affection, Marriage, Enemies, Siblings. Each letter represents a possible relationship outcome determined by the game.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Is the flames game real or fake?</span>
-          <svg class="chevron" width="24" height="24"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="faq-answer">
-          The FLAMES game is a fun activity intended for entertainment purposes and is not based on any scientific principles or real-life prediction. It's a game of chance, and the results should be taken lightly and enjoyed as a bit of fun.
-        </div>
-      </div>
-    </section>
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>What is a FLAMES calculator?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      A FLAMES calculator is a fun, nostalgic game that takes two names, removes matching letters, and uses the total remaining count to eliminate options in the FLAMES acronym: Friends, Love, Affection, Marriage, Enemies, Siblings. Our tool is an accurate, online love calculator flames version you can trust for entertainment.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>How does the FLAMES algorithm work?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      The FLAMES calculator compares letters in both names, removes common ones, and totals the rest. This count drives elimination across the F-L-A-M-E-S letters in circular fashion until one remains. This simple algorithm is the heart of the flames calculator by name logic.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Can I use this flames calculator app more than once?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      Yes, you can use the flames calculator app as many times as you want! Just click 'Calculate Again' and enter a new pair of names. It's perfect for parties, friends, or curiosity.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Is this flames calculator true or just for fun?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      While our flames calculator true results follow the original rules of the FLAMES game, it’s meant for entertainment and fun, not scientific matchmaking. Use it to share laughs or break the ice with a crush!
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Does this support twin flame name checks?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      Yes! You can use this twin flame calculator to test spiritual or soulmate-style name matches, just like with casual friendships or love interests. It's a lighthearted way to explore name compatibility with anyone.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>What is the English gematria calculator?</span>
+      <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="faq-answer">
+      An English Gematria Calculator is a tool that assigns numerical values to the letters of the English alphabet. Unlike Hebrew, English doesn't have a single ancient system, so calculators use various ciphers like Simple Gematria (A=1, B=2), Reverse Ordinal (A=26, B=25), and Reduction. This allows you to explore the numerical patterns and symbolic connections between English words, names, and phrases, revealing hidden layers of meaning.
+    </div>
+  </div>
+</section>
 
     <hr class="grey-rule" />
     <footer class="footer">

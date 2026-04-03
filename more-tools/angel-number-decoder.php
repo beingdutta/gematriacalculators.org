@@ -176,6 +176,24 @@
         </section>
 
         <section class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a free angel number decoder?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, this tool is a free angel number decoder. Enter any repeating number (e.g., 111, 222, 444) to discover its spiritual meaning instantly.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How are angel numbers connected to numerology and gematria?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Angel numbers are a part of numerology, and their meanings can be explored further using gematria and numerology calculators. Try our <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a> or <a href="/more-tools/simple-vastu-score-calculator.php">Simple Gematria Calculator</a> for deeper insights.
+                </div>
+            </div>
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">

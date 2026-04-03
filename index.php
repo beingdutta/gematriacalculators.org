@@ -28,11 +28,11 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Gematria Calculator | Free Online Gematrix & Bible Gematria Tool';
+    $pageTitle = 'Best Gematria Calculator Online | Free Gematrix, Name & Bible Numerology Tool';
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
-  $metaDescription = 'Free Gematria Calculator for English, Hebrew, and Simple Gematria. Instantly calculate the gematria value of any word, name, or phrase. Trusted by numerology and biblical study enthusiasts worldwide.';
+  $metaDescription = 'Best free gematria calculator for English, Hebrew, and Simple Gematria. Instantly calculate gematria values for any word, name, or phrase. Includes Gematria decoder, name calculator, and Bible numerology tools. Trusted worldwide.';
 
   // Canonical: point root when empty; deep-link when there's an input
   $canonicalUrl = $BASE_URL;
@@ -70,11 +70,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Keep keywords minimal or remove (search engines largely ignore this) -->
-    <meta name="keywords" content="gematria calculator, gematrix, gematria, hebrew gematria, english gematria, simple gematria, gematria decoder, numerology calculator">
+    <meta name="keywords" content="gematria calculator, free gematria calculator, gematria calculator online, gematria calculator italiano, gematria-rechner deutsch, гематрия калькулятор, calculadora de gematría hebrea, simple gematria calculator, name numerology calculator, loshu grid calculator, life path number calculator, kua number calculator, angel number decoder">
 
     <!-- Static/clean SEO -->
-    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
-    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <title>Gematria Calculator | Free Online Gematria, Name Numerology, Loshu Grid, Life Path, Kua Number, Angel Number Decoder</title>
+    <meta name="description" content="Free gematria calculator – instantly calculate gematria values for any word, name, or phrase. Includes name numerology, loshu grid, life path number, kua number, angel number decoder, and more. Top-rated gematria calculator for English, Italian, German, Spanish, Russian.">
     <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
 
     <!-- Open Graph -->

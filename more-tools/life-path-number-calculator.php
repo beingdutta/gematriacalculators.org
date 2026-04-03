@@ -218,6 +218,24 @@
         </section>
 
         <section class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a free life path number calculator?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, this tool is a free life path number calculator. Enter your birth date to instantly find your life path number and its meaning. For name numerology, try our <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a>.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does the life path number relate to gematria and numerology?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    The life path number is a core concept in numerology, calculated from your birth date. For deeper analysis, explore your name's numbers with our <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a> or check simple gematria values with our <a href="/more-tools/simple-vastu-score-calculator.php">Simple Gematria Calculator</a>.
+                </div>
+            </div>
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">

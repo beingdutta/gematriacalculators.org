@@ -216,6 +216,24 @@
         </section>
 
         <section class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a free Kua number calculator?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, this tool is a free Kua number calculator. Enter your birth year and gender to find your Kua number and lucky directions. For numerology, try our <a href="/more-tools/life-path-number-calculator.php">Life Path Number Calculator</a> or <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a>.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does Kua number relate to numerology and gematria?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Kua number is a Feng Shui concept, but many users also explore numerology and gematria for deeper personal insights. Try our <a href="/more-tools/simple-vastu-score-calculator.php">Simple Gematria Calculator</a> for number meanings.
+                </div>
+            </div>
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">

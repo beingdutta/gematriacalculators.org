@@ -193,8 +193,28 @@
             Absolutely. This is a completely free Lo Shu Grid Calculator online. You can use it as often as you like with no hidden fees, no subscriptions, and no need to register. Your privacy is fully respected while you gain access to powerful numerological insights at no cost.
           </div>
         </div>
+      <section class="faq">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a free Lo Shu Grid calculator?</span>
+            <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes, this tool is a free Lo Shu Grid calculator. Enter your birth date to generate your numerology grid. For more numerology tools, try our <a href="/more-tools/life-path-number-calculator.php">Life Path Number Calculator</a> or <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a>.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does the Lo Shu Grid relate to numerology and gematria?</span>
+            <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            The Lo Shu Grid is a numerology tool from Chinese tradition. For Western numerology and gematria, try our <a href="/more-tools/simple-vastu-score-calculator.php">Simple Gematria Calculator</a> and <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a>.
+          </div>
+        </div>
       </section>
-      
+
       <footer class="footer">
         <div class="copyright">© <?= date('Y') ?> gematriacalculators.org</div>
       </footer>

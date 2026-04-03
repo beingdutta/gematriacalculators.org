@@ -5,10 +5,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numerology Name Calculator - Free Destiny & Business Name Analysis</title>
+    <title>Gematria Calculator Names | Free Name Numerology & Destiny Number Tool</title>
 
-    <meta name="description" content="Use our free Numerology Name Calculator to find your Destiny, Soul Urge, and Personality Numbers. Works for your full name and business name numerology.">
-    <meta name="keywords" content="name numerology calculator, numerology name calculator, business name numerology calculator, chaldean name numerology calculator, numerology name value, numerology calculator name, destiny number calculator, soul urge calculator, personality number calculator, numerology name meaning, numerology of my name, name numerology chart">
+    <meta name="description" content="Free gematria calculator for names. Instantly calculate the gematria value and numerology meaning of any name. Includes destiny, soul urge, and personality numbers. Perfect for name numerology and gematria analysis.">
+    <meta name="keywords" content="gematria calculator names, name numerology calculator, free name gematria calculator, destiny number calculator, numerology calculator name, gematria name meaning, gematria calculator, numerology of my name">
     <meta property="og:title" content="Numerology Name Calculator - Free Destiny & Business Name Analysis">
     <meta property="og:description" content="Use our free Numerology Name Calculator to find your Destiny, Soul Urge, and Personality Numbers. Works for your full name and business name numerology.">
     <meta property="og:type" content="website">
@@ -177,6 +177,24 @@
         </section>
 
         <section class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a free gematria calculator for names?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes! This tool is a free gematria calculator for names. Enter any name to instantly see its gematria value and numerology meaning. For simple gematria, try our <a href="/more-tools/simple-vastu-score-calculator.php">Simple Gematria Calculator</a>.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does name numerology relate to gematria?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Both systems assign numbers to letters, but gematria is rooted in Hebrew and Greek traditions, while numerology uses the Pythagorean or Chaldean systems. Our calculators let you explore both approaches.
+                </div>
+            </div>
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">

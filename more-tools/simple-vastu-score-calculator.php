@@ -5,10 +5,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vastu Calculator Online - Free Vastu Shastra Score for House & Flat</title>
+    <title>Simple Gematria Calculator | Free Online Gematria & Numerology Tool</title>
 
-    <meta name="description" content="Get a free Vastu score for your house or flat with our online Vastu Calculator.">
-    <meta name="keywords" content="vastu calculator, vastu shastra calculator, vastu score calculator, online vastu calculator free, vastu calculator for house, house vastu calculator, flat vastu calculator, how to calculate vastu for home, vastu calculation, vastu online calculator, vastu numerology calculator">
+    <meta name="description" content="Free simple gematria calculator. Instantly calculate simple gematria values for any word, name, or phrase. Includes numerology and Bible gematria tools." >
+    <meta name="keywords" content="simple gematria calculator, free gematria calculator, gematria calculator online, gematria calculator, bible gematria, numerology calculator">
 
     <meta property="og:title" content="Vastu Calculator Online - Free Vastu Shastra Score for House & Flat">
     <meta property="og:description" content="Get a free Vastu score for your house or flat with our online Vastu Calculator.">
@@ -192,6 +192,24 @@
         </section>
 
         <section class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a simple gematria calculator for quick results?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, this page offers a free simple gematria calculator for instant results. For name numerology, try our <a href="/more-tools/name-numerology-calculator.php">Name Numerology Calculator</a>.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use this for Bible gematria?</span>
+                    <svg class="chevron" width="24" height="24" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, you can enter any word or phrase to calculate its simple gematria value, including Bible terms and verses.
+                </div>
+            </div>
             <h2 class="faq-heading">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <div class="faq-question">

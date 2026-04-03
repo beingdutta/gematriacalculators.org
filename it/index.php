@@ -28,11 +28,11 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Calcolatore di Gematria Gratuito — Gematrix e Numerologia | ' . $SITE_NAME;
+    $pageTitle = 'Miglior Calcolatore di Gematria Online | Gematria Gratis, Nomi & Numerologia Biblica';
   }
 
   // DESCRIPTION: STATIC (don't vary per query — stabilizes snippets/CTR)
-  $metaDescription = 'Il miglior calcolatore di Gematria gratuito. Ottieni risultati immediati e precisi con il nostro strumento di gematrix e numerologia, che supporta Gematria Ebraica, Inglese e Semplice. Perfetto per analisi biblica e decodifica di valori.';
+  $metaDescription = 'Miglior calcolatore di gematria gratuito per italiano, inglese, ebraico e semplice. Calcola istantaneamente il valore gematrico di parole, nomi o frasi. Include decoder gematria, calcolatore nomi e strumenti di numerologia biblica.';
 
   // Canonical: point root when empty; deep-link when there's an input
   $canonicalUrl = $BASE_URL . 'it/';
@@ -70,7 +70,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Keep keywords minimal or remove (search engines largely ignore this) -->
-    <meta name="keywords" content="calcolatore gematria, gematria ebraica, gematria inglese, gematria semplice">
+    <meta name="keywords" content="calcolatore gematria, calcolatore gematria italiano, calcolatore gematria gratis, calcolatore nomi gematria, gematria biblica, gematria decoder, gematria online, gematria ebraica, gematria inglese, numerologia">
 
     <!-- Static/clean SEO -->
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>

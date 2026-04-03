@@ -22,10 +22,10 @@
       $SITE_NAME
     );
   } else {
-    $pageTitle = 'Kostenloser Gematria-Rechner — Gematrix & Numerologie | ' . $SITE_NAME;
+    $pageTitle = 'Bester Gematria-Rechner Online | Kostenloser Gematrix, Namens- & Bibel-Numerologie Rechner';
   }
 
-  $metaDescription = 'Der beste kostenlose Gematria-Rechner. Erhalten Sie sofortige und genaue Ergebnisse mit unserem Gematrix- und Numerologie-Tool, das englische, hebräische und einfache Gematria unterstützt. Perfekt für biblische Analysen und die Entschlüsselung von Werten.';
+  $metaDescription = 'Bester kostenloser Gematria-Rechner für Deutsch, Englisch, Hebräisch und einfache Gematria. Berechnen Sie sofort den Gematria-Wert von Wörtern, Namen oder Sätzen. Inklusive Gematria-Decoder, Namensrechner und Bibel-Numerologie.';
 
   $canonicalUrl = $BASE_URL . 'de/';
   if (!empty($inputRaw)) {
@@ -57,7 +57,7 @@
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
     <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta name="keywords" content="gematria rechner, hebräische gematria, englische gematria, einfache gematria">
+    <meta name="keywords" content="bester gematria rechner, kostenloser gematria rechner, gematria rechner deutsch, gematria rechner namen, gematria bibel, gematria decoder, gematria online, hebräische gematria, englische gematria, numerologie rechner, gematria-rechner deutsch kostenlos">
     <meta property="og:title" content="<?= htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:type" content="website">
