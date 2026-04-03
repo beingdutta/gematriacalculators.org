@@ -258,7 +258,7 @@
                     $tools = [
                         ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                         ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions for success.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                         ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny from your birth date.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                         ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                         ['title' => 'Name Numerology Calculator', 'desc' => 'Calculate your Destiny and Soul Urge numbers.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

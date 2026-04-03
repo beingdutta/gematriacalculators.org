@@ -1,5 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Redirect old .php URL to canonical trailing slash version for Angel Number Decoder
+    RewriteRule ^more-tools/angel-number-decoder\.php$ /more-tools/angel-number-decoder/ [R=301,L]
+    RewriteRule ^more-tools/simple-vastu-score-calculator\.php$ /more-tools/simple-vastu-score-calculator/ [R=301,L]
     
     # --- CANONICAL REDIRECTS ---
     

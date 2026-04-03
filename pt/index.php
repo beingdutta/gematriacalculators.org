@@ -179,7 +179,7 @@
                         $tools = [
                             ['title' => 'Calculadora de Pontuação Vastu Simples', 'desc' => 'Obtenha uma pontuação rápida de conformidade Vastu para sua casa.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                             ['title' => 'Calculadora de Número Kua', 'desc' => 'Encontre suas direções da sorte do Feng Shui para o sucesso.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                            ['title' => 'Decodificador de Números de Anjo', 'desc' => 'Descubra mensagens do universo nos números.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                            ['title' => 'Decodificador de Números de Anjo', 'desc' => 'Descubra mensagens do universo nos números.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                             ['title' => 'Calculadora de Número do Caminho da Vida', 'desc' => 'Descubra o seu destino principal a partir da sua data de nascimento.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                             ['title' => 'Calculadora de Grade Loshu', 'desc' => 'Mapeie sua grade de energia numerológica.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                             ['title' => 'Calculadora de Numerologia do Nome', 'desc' => 'Calcule seus números de Destino e Desejo da Alma.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

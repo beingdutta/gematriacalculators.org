@@ -38,7 +38,7 @@
                         $tools = [
                             ['title' => 'Simple Vastu Score Calculator', 'desc' => 'Get a quick Vastu compliance score for your home based on room placements.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                             ['title' => 'Kua Number Calculator', 'desc' => 'Find your Feng Shui lucky directions based on your birth year and gender.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                            ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in repeating numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                            ['title' => 'Angel Number Decoder', 'desc' => 'Uncover messages from the universe in repeating numbers.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                             ['title' => 'Life Path Number Calculator', 'desc' => 'Discover your core destiny number from your birth date.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                             ['title' => 'Loshu Grid Calculator', 'desc' => 'Map out your numerological energy grid.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                             ['title' => 'FLAME Calculator', 'desc' => 'Find love compatibility with the classic FLAME game.', 'icon' => '<i class="fa-solid fa-heart"></i>', 'url' => '/more-tools/flame-calculator.php'],

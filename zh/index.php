@@ -160,7 +160,7 @@
                     $tools = [
                         ['title' => '简单Vastu分数计算器', 'desc' => '为您的房屋快速获取Vastu合规分数。', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                         ['title' => 'Kua数字计算器', 'desc' => '找到您的风水幸运方向以获得成功。', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => '天使数字解码器', 'desc' => '揭示宇宙在数字中传达的信息。', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => '天使数字解码器', 'desc' => '揭示宇宙在数字中传达的信息。', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                         ['title' => '生命路径数字计算器', 'desc' => '从您的出生日期发现您的核心命运。', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                         ['title' => '洛书九宫格计算器', 'desc' => '规划您的命理能量网格。', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                         ['title' => '姓名命理计算器', 'desc' => '计算您的命运和灵魂冲动数字。', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

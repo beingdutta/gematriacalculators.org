@@ -127,7 +127,7 @@
                     $tools = [
                         ['title' => 'Einfacher Vastu-Score-Rechner', 'desc' => 'Erhalten Sie eine schnelle Vastu-Konformitätsbewertung für Ihr Zuhause.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                         ['title' => 'Kua-Zahl-Rechner', 'desc' => 'Finden Sie Ihre Feng-Shui-Glücksrichtungen für den Erfolg.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'Engelszahlen-Decoder', 'desc' => 'Entdecken Sie Botschaften des Universums in Zahlen.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Engelszahlen-Decoder', 'desc' => 'Entdecken Sie Botschaften des Universums in Zahlen.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                         ['title' => 'Lebensweg-Zahl-Rechner', 'desc' => 'Entdecken Sie Ihr Kerndestin aus Ihrem Geburtsdatum.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                         ['title' => 'Loshu-Gitter-Rechner', 'desc' => 'Erstellen Sie Ihr numerologisches Energiegitter.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                         ['title' => 'Namensnumerologie-Rechner', 'desc' => 'Berechnen Sie Ihre Schicksals- und Seelenwunsch-Zahlen.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

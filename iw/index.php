@@ -215,7 +215,7 @@
                     $tools = [
                         ['title' => 'מחשבון ציון ואסטו פשוט', 'desc' => 'קבל ציון תאימות ואסטו מהיר לביתך.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                         ['title' => 'מחשבון מספר קואה', 'desc' => 'מצא את כיווני המזל שלך בפנג שואי להצלחה.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'מפענח מספרי מלאכים', 'desc' => 'גלה מסרים מהיקום במספרים.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'מפענח מספרי מלאכים', 'desc' => 'גלה מסרים מהיקום במספרים.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                         ['title' => 'מחשבון מספר נתיב חיים', 'desc' => 'גלה את ייעודך המרכזי מתאריך הלידה שלך.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                         ['title' => 'מחשבון רשת לו-שו', 'desc' => 'מפה את רשת האנרגיה הנומרולוגית שלך.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                         ['title' => 'מחשבון נומרולוגיית שמות', 'desc' => 'חשב את מספרי הגורל והנשמה שלך.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

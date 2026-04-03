@@ -180,7 +180,7 @@
                         $tools = [
                             ['title' => 'Prosty Kalkulator Wyniku Vastu', 'desc' => 'Uzyskaj szybki wynik zgodności Vastu dla swojego domu.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                             ['title' => 'Kalkulator Liczby Kua', 'desc' => 'Znajdź swoje szczęśliwe kierunki Feng Shui na sukces.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                            ['title' => 'Dekoder Liczb Anielskich', 'desc' => 'Odkryj wiadomości od wszechświata w liczbach.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                            ['title' => 'Dekoder Liczb Anielskich', 'desc' => 'Odkryj wiadomości od wszechświata w liczbach.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                             ['title' => 'Kalkulator Liczby Drogi Życia', 'desc' => 'Odkryj swoje główne przeznaczenie na podstawie daty urodzenia.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                             ['title' => 'Kalkulator Siatki Loshu', 'desc' => 'Stwórz swoją numerologiczną siatkę energetyczną.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                             ['title' => 'Kalkulator Numerologii Imienia', 'desc' => 'Oblicz swoje liczby Przeznaczenia i Pragnienia Duszy.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

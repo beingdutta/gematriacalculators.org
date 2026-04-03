@@ -134,7 +134,7 @@
                   $tools = [
                       ['title' => 'Простой калькулятор оценки Васту', 'desc' => 'Получите быструю оценку соответствия Васту для вашего дома.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                       ['title' => 'Калькулятор числа Куа', 'desc' => 'Найдите свои счастливые направления по Фэн-шуй для успеха.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                      ['title' => 'Декодер ангельских чисел', 'desc' => 'Раскройте послания вселенной в числах.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                      ['title' => 'Декодер ангельских чисел', 'desc' => 'Раскройте послания вселенной в числах.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                       ['title' => 'Калькулятор числа жизненного пути', 'desc' => 'Узнайте свою основную судьбу по дате рождения.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                       ['title' => 'Калькулятор сетки Ло-шу', 'desc' => 'Составьте карту своей нумерологической энергетической сетки.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                       ['title' => 'Калькулятор нумерологии имени', 'desc' => 'Рассчитайте свои числа Судьбы и Душевного стремления.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],

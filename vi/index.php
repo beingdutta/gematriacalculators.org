@@ -171,7 +171,7 @@
                     $tools = [
                         ['title' => 'Máy tính điểm Vastu đơn giản', 'desc' => 'Nhận điểm tuân thủ Vastu nhanh chóng cho ngôi nhà của bạn.', 'icon' => '<i class="fa-solid fa-house"></i>', 'url' => '/more-tools/simple-vastu-score-calculator.php'],
                         ['title' => 'Máy tính số Kua', 'desc' => 'Tìm hướng may mắn theo Phong thủy để thành công.', 'icon' => '<i class="fa-solid fa-compass"></i>', 'url' => '/more-tools/kua-number-calculator.php'],
-                        ['title' => 'Bộ giải mã số thiên thần', 'desc' => 'Khám phá thông điệp từ vũ trụ trong các con số.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder.php'],
+                        ['title' => 'Bộ giải mã số thiên thần', 'desc' => 'Khám phá thông điệp từ vũ trụ trong các con số.', 'icon' => '<i class="fa-solid fa-wand-magic-sparkles"></i>', 'url' => '/more-tools/angel-number-decoder/'],
                         ['title' => 'Máy tính số đường đời', 'desc' => 'Khám phá vận mệnh cốt lõi của bạn từ ngày sinh.', 'icon' => '<i class="fa-solid fa-route"></i>', 'url' => '/more-tools/life-path-number-calculator.php'],
                         ['title' => 'Máy tính lưới Lạc Thư', 'desc' => 'Lập bản đồ lưới năng lượng số học của bạn.', 'icon' => '<i class="fa-solid fa-table-cells"></i>', 'url' => '/more-tools/loshu-grid.php'],
                         ['title' => 'Máy tính thần số học theo tên', 'desc' => 'Tính toán các con số Định mệnh và Thôi thúc Linh hồn của bạn.', 'icon' => '<i class="fa-solid fa-signature"></i>', 'url' => '/more-tools/name-numerology-calculator.php'],
